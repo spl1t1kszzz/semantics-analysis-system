@@ -1,0 +1,873 @@
+# text =   На основании триггера на определенные ключевые слова она сможет определять, к примеру, признаки обмана, мошенничества.
+# relations = ""
+На O
+основании O
+триггера O
+на O
+определенные O
+ключевые B-Subject
+слова I-Subject
+она O
+сможет O
+определять O
+, O
+к O
+примеру O
+, O
+признаки B-Subject
+обмана I-Subject
+, O
+мошенничества O
+. O
+
+# text =   То есть, сформировав некоторый корпус слов-триггеров, вполне возможно классифицировать сайты по их текстовому содержанию.
+# relations = ""
+То O
+есть O
+, O
+сформировав O
+некоторый O
+корпус B-Corpus
+слов I-Corpus
+- I-Corpus
+триггеров I-Corpus
+, O
+вполне O
+возможно O
+классифицировать B-Task
+сайты O
+по O
+их O
+текстовому O
+содержанию O
+. O
+
+# text =   Задача распознавания текста относится к сфере обработки естественного языка или NLP (natural language processing).
+# relations = "Task_isSolvedIn_Science 0 0, Science_IsAlternativeNameFor_Science 2 0, Science_IsAlternativeNameFor_Science 1 2"
+Задача B-Task
+распознавания I-Task
+текста I-Task
+относится O
+к O
+сфере O
+обработки B-Science
+естественного I-Science
+языка I-Science
+или O
+NLP B-Science
+( O
+natural B-Science
+language I-Science
+processing I-Science
+) O
+. O
+
+# text = Распознавание текста входит в область обработки естественного языка, или NLP (Natural Language Processing).
+# relations = "Task_isSolvedIn_Science 0 0, Science_IsAlternativeNameFor_Science 2 0, Science_IsAlternativeNameFor_Science 1 2"
+Распознавание O
+текста O
+входит O
+в O
+область B-Science
+обработки I-Science
+естественного I-Science
+языка I-Science
+, O
+или O
+NLP B-Science
+( O
+Natural B-Science
+Language I-Science
+Processing I-Science
+) O
+. O
+
+# text =   NLP — направление искусственного интеллекта, нацеленное на обработку и анализ данных на естественном языке и обучение машин взаимодействию с людьми [1].
+# relations = "Method_isUsedIn_Science 0 0"
+NLP B-Science
+— O
+направление B-Science_includes_Science
+искусственного I-Science
+интеллекта I-Science
+, O
+нацеленное O
+на O
+обработку O
+и O
+анализ B-Method
+данных I-Method
+на O
+естественном O
+языке O
+и O
+обучение O
+машин O
+взаимодействию O
+с O
+людьми O
+[ O
+1 O
+] O
+. O
+
+# text =   Такой подход называется методом вложения слов (word embedding).
+# relations = "Method_IsAlternativeNameFor_Method 1 0"
+Такой O
+подход O
+называется O
+методом B-Method
+вложения I-Method
+слов I-Method
+( O
+word B-Method
+embedding I-Method
+) O
+. O
+
+# text =   Используя данные, состоящие из таких векторов, мы можем применять различные методы Machine Learning.
+# relations = ""
+Используя O
+данные O
+, O
+состоящие O
+из O
+таких O
+векторов O
+, O
+мы O
+можем O
+применять O
+различные O
+методы O
+Machine B-Science
+Learning I-Science
+. O
+
+# text =   И поскольку искусственные нейронные сети лучшим образом справляются с векторно-матричными вычислениями, то выбор в их пользу становиться очевидным.
+# relations = ""
+И O
+поскольку O
+искусственные B-Method_ML
+нейронные I-Method_ML
+сети I-Method_ML
+лучшим O
+образом O
+справляются O
+с O
+векторно B-Method
+- I-Method
+матричными I-Method
+вычислениями I-Method
+, O
+то O
+выбор O
+в O
+их O
+пользу O
+становиться O
+очевидным O
+. O
+
+# text =   Искусственная нейронная сеть — это математическая модель, а также ее программное или аппаратное воплощение, построенные по принципу организации и функционирования биологических нейронных сетей — сетей нервных клеток живого организма.
+# relations = "Method_includes_Method 1 0"
+Искусственная B-Method_ML
+нейронная I-Method_ML
+сеть I-Method_ML
+— O
+это O
+математическая B-Method
+модель I-Method
+, O
+а O
+также O
+ее O
+программное O
+или O
+аппаратное O
+воплощение O
+, O
+построенные O
+по O
+принципу O
+организации O
+и O
+функционирования O
+биологических O
+нейронных O
+сетей O
+— O
+сетей O
+нервных O
+клеток O
+живого O
+организма O
+. O
+
+# text =   Современные модели представляют собой так называемые глубокие модели.
+# relations = ""
+Современные O
+модели O
+представляют O
+собой O
+так O
+называемые O
+глубокие B-Model
+модели I-Model
+. O
+
+# text =   И в ее решении наилучшие метрики точности были достигнуты рекуррентными нейронными сетями, LSTM (сети с долгой краткосрочной памятью).
+# relations = "Method_includes_Method 0 1, Metric_isAppliedTo_Method 0 0, Metric_isAppliedTo_Method 0 1, Method_IsAlternativeNameFor_Method 2 1"
+И O
+в O
+ее O
+решении O
+наилучшие O
+метрики O
+точности B-Metric
+были O
+достигнуты O
+рекуррентными B-Method_ML
+нейронными I-Method_ML
+сетями I-Method_ML
+, O
+LSTM B-Method_ML
+( O
+сети B-Method_ML
+с I-Method_ML
+долгой I-Method_ML
+краткосрочной I-Method_ML
+памятью I-Method_ML
+) O
+. O
+
+# text =   Лучшие показатели точности в ее решении были достигнуты с использованием рекуррентных нейронных сетей, таких как LSTM (сети с долгой краткосрочной памятью).
+# relations = "Method_includes_Method 0 1, Metric_isAppliedTo_Method 0 0, Metric_isAppliedTo_Method 0 1, Method_IsAlternativeNameFor_Method 2 1"
+Лучшие O
+показатели O
+точности B-Metric
+в O
+ее O
+решении O
+были O
+достигнуты O
+с O
+использованием O
+рекуррентных B-Method_ML
+нейронных I-Method_ML
+сетей I-Method_ML
+, O
+таких O
+как O
+LSTM B-Method_ML
+( O
+сети B-Method_ML
+с I-Method_ML
+долгой I-Method_ML
+краткосрочной I-Method_ML
+памятью I-Method_ML
+) O
+. O
+
+# text =   Позже свое превосходство в этой нише обрели NLP-модели-трансформеры.
+# relations = ""
+Позже O
+свое O
+превосходство O
+в O
+этой O
+нише O
+обрели O
+NLP B-Model
+- I-Model
+модели I-Model
+- I-Model
+трансформеры I-Model
+. O
+
+# text =  Описание упомянутых рекуррентных нейросетей (RNN), LSTM и GRU выходит за рамки темы статьи.
+# relations = "Method_IsAlternativeNameFor_Method 1 0"
+Описание O
+упомянутых O
+рекуррентных B-Method_ML
+нейросетей I-Method_ML
+( O
+RNN B-Method_ML
+) O
+, O
+LSTM B-Method_ML
+и O
+GRU B-Method_ML
+выходит O
+за O
+рамки O
+темы O
+статьи O
+. O
+
+# text =   Однако RNN способны фиксировать зависимости только в одном направлении языка.
+# relations = "Method_solves_Task 0 0"
+Однако O
+RNN B-Method_ML
+способны B-Method_solves_Task
+фиксировать B-Task
+зависимости I-Task
+только O
+в O
+одном O
+направлении O
+языка O
+. O
+
+# text =   Кроме этого, RNN не очень хороши в захвате долгосрочных зависимостей.
+# relations = "Method_solves_Task 0 0"
+Кроме O
+этого O
+, O
+RNN B-Method_ML
+не O
+очень O
+хороши B-Method_solves_Task
+в I-Method_solves_Task
+захвате B-Task
+долгосрочных I-Task
+зависимостей I-Task
+. O
+
+# text =  LSTM избегают проблемы долговременной зависимости, запоминая значения как на короткие, так и на длинные промежутки времени.
+# relations = ""
+LSTM B-Method_ML
+избегают O
+проблемы O
+долговременной O
+зависимости O
+, O
+запоминая O
+значения O
+как O
+на O
+короткие O
+, O
+так O
+и O
+на O
+длинные O
+промежутки O
+времени O
+. O
+
+# text =   Это объясняется тем, что LSTM не использует функцию активации внутри своих рекуррентных компонентов.
+# relations = ""
+Это O
+объясняется O
+тем O
+, O
+что O
+LSTM B-Method_ML
+не O
+использует O
+функцию B-Method
+активации I-Method
+внутри O
+своих O
+рекуррентных O
+компонентов O
+. O
+
+# text =   LSTM часто используются в машинном переводе и в задачах генерирования текстов на естественном языке.
+# relations = "Method_isUsedIn_Science 0 0, Method_solves_Task 0 0"
+LSTM B-Method_ML
+часто O
+используются B-Method_isUsedIn_Science
+в I-Method_isUsedIn_Science
+машинном B-Science
+переводе I-Science
+и O
+в O
+задачах O
+генерирования B-Task
+текстов I-Task
+на O
+естественном O
+языке O
+. O
+
+# text = Часто в машинном переводе и задачах генерации текстов на естественном языке применяют LSTM.
+# relations = "Method_isUsedIn_Science 0 0, Method_solves_Task 0 0"
+Часто O
+в O
+машинном B-Science
+переводе I-Science
+и O
+задачах O
+генерации B-Task
+текстов I-Task
+на O
+естественном O
+языке O
+применяют B-Method_isUsedIn_Science
+LSTM B-Method_ML
+. O
+
+# text =   Прежде чем использовать такой мощный и в то же время сложный инструмент, наша команда протестировала и более простые NLP-методы машинного обучения, в том числе «наивный байесовский классификатор», алгоритмы, использующие bag-of-words («мешок слов» — метод представления слов) и tf-idf (метрика определения частоты вхождения слов), а также простейшие модели нейронных сетей, состоящие из небольшого количества скрытых слоев.
+# relations = ""
+Прежде O
+чем O
+использовать O
+такой O
+мощный O
+и O
+в O
+то O
+же O
+время O
+сложный O
+инструмент O
+, O
+наша O
+команда O
+протестировала O
+и O
+более O
+простые O
+NLP B-Method_ML
+- I-Method_ML
+методы I-Method_ML
+машинного I-Method_ML
+обучения I-Method_ML
+, O
+в O
+том O
+числе O
+« O
+наивный B-Method_ML
+байесовский I-Method_ML
+классификатор I-Method_ML
+» O
+, O
+алгоритмы O
+, O
+использующие O
+bag B-Method
+- I-Method
+of I-Method
+- I-Method
+words I-Method
+( O
+« O
+мешок B-Method
+слов I-Method
+» O
+— O
+метод B-Method
+представления I-Method
+слов I-Method
+) O
+и O
+tf B-Metric
+- I-Metric
+idf I-Metric
+( O
+метрика B-Metric
+определения I-Metric
+частоты I-Metric
+вхождения I-Metric
+слов I-
+) O
+, O
+а O
+также O
+простейшие O
+модели O
+нейронных O
+сетей O
+, O
+состоящие O
+из O
+небольшого O
+количества O
+скрытых O
+слоев O
+. O
+
+# text =   BERT, или Bidirectional Encoder Representations from Transformers, — нейросетевая модель-трансформер от Google, на которой сегодня строится большинство инструментов автоматической обработки языка.
+# relations = "Model_hasAuthor_Organization 1 0, Model_IsShortNameFor_Model 0 1"
+BERT B-Model
+, O
+или O
+Bidirectional B-Model
+Encoder I-Model
+Representations I-Model
+from I-Model
+Transformers I-Model
+, O
+— O
+нейросетевая O
+модель O
+- O
+трансформер O
+от B-Model_hasAuthor_Organization
+Google B-Organization
+, O
+на O
+которой O
+сегодня O
+строится O
+большинство O
+инструментов O
+автоматической O
+обработки O
+языка O
+. O
+
+# text =   BERT, сокращение от Bidirectional Encoder Representations from Transformers, представляет собой нейросетевую модель-трансформер от Google, на базе которой в настоящее время разрабатывается большинство средств автоматической обработки языка.
+# relations = "Model_hasAuthor_Organization 1 0, Model_IsShortNameFor_Model 0 1"
+BERT B-Model
+, O
+сокращение O
+от O
+Bidirectional B-Model
+Encoder I-Model
+Representations I-Model
+from I-Model
+Transformers I-Model
+, O
+представляет O
+собой O
+нейросетевую O
+модель O
+- O
+трансформер O
+от B-Model_hasAuthor_Organization
+Google B-Organization
+, O
+на O
+базе O
+которой O
+в O
+настоящее O
+время O
+разрабатывается O
+большинство O
+средств O
+автоматической O
+обработки O
+языка O
+. O
+
+# text =  Релиз BERT в 2018 году стал некоторой переломной точкой в развитии NLP-моделей.
+# relations = "Date_isDateOf_Model 0 0, Model_includes_Model 1 0"
+Релиз O
+BERT B-Model
+в O
+2018 B-Date
+году I-Date
+стал O
+некоторой O
+переломной O
+точкой O
+в O
+развитии O
+NLP B-Model
+- I-Model
+моделей I-Model
+. O
+
+# text =  Выход модели BERT в 2018 году стал своеобразным переломным моментом в развитии моделей обработки естественного языка (NLP).
+# relations = "Date_isDateOf_Model 0 0, Model_includes_Model 1 0"
+Выход O
+модели O
+BERT B-Model
+в O
+2018 B-Date
+году I-Date
+стал O
+своеобразным O
+переломным O
+моментом O
+в O
+развитии O
+моделей B-Model
+обработки I-Model
+естественного I-Model
+языка I-Model
+( O
+NLP B-Science
+) O
+. O
+
+# text =   Его появлению предшествовал ряд недавних разработок в области обработки естественного языка (BERT, ELMO и Ко в картинках — как в NLP пришло трансферное обучение): Semi-supervised Sequence learning (Andrew Dai и Quoc Le), ELMo (Matthew Peters и исследователи из AI2 и UW CSE), ULMFiT (Jeremy Howard и Sebastian Ruder), OpenAI Transformer (исследователи OpenAI Radford, Narasimhan, Salimans, и Sutskever) и Трансформер (Vaswani et al).
+# relations = "Model_hasAuthor_Person 6 8, Model_hasAuthor_Person 5 7, Model_hasAuthor_Person 5 6, Model_hasAuthor_Person 5 5, Model_hasAuthor_Organization 5 1, Model_hasAuthor_Person 4 4, Model_hasAuthor_Person 4 3, Model_hasAuthor_Organization 3 0, Model_hasAuthor_Person 3 2, Method_hasAuthor_Person 0 0, Method_hasAuthor_Person 0 1, Method_isUsedIn_Science 0 0, "
+Его O
+появлению O
+предшествовал O
+ряд O
+недавних O
+разработок O
+в O
+области O
+обработки O
+естественного O
+языка O
+( O
+BERT B-Model
+, O
+ELMO B-Model
+и O
+Ко B-Model
+в O
+картинках O
+— O
+как O
+в O
+NLP B-Science
+пришло B-Method_isUsedIn_Science
+трансферное B-Method_ML
+обучение I-Method_ML
+): O
+Semi B-Method_ML
+- I-Method_ML
+supervised I-Method_ML
+Sequence I-Method_ML
+learning I-Method_ML
+( O
+Andrew B-Person
+Dai I-Person
+и O
+Quoc B-Person
+Le I-Person
+) O
+, O
+ELMo B-Model
+( O
+Matthew B-Person
+Peters I-Person
+и O
+исследователи O
+из O
+AI2 B-Organization
+и O
+UW B-Organization
+CSE B-Organization
+) O
+, O
+ULMFiT B-Model
+( O
+Jeremy B-Person
+Howard I-Person
+и O
+Sebastian B-Person
+Ruder I-Person
+) O
+, O
+OpenAI B-Model
+Transformer I-Model
+( O
+исследователи O
+OpenAI B-Organization
+Radford I-Organization
+, O
+Narasimhan B-Person
+, O
+Salimans B-Person
+, O
+и O
+Sutskever B-Person
+) O
+и O
+Трансформер B-Model
+( O
+Vaswani B-Person
+et O
+al O
+)O 
+. O
+
+# text =  Трансформеры в машинном обучении — это семейство архитектур нейронных сетей, общая идея которых основана на так называемом «самовнимании» (self-attention).
+# relations = ""
+Трансформеры B-Model
+в O
+машинном B-Science
+обучении I-Science
+— O
+это O
+семейство O
+архитектур O
+нейронных O
+сетей O
+, O
+общая O
+идея O
+которых O
+основана O
+на O
+так O
+называемом O
+« O
+самовнимании B-Method
+» O
+( O
+self B-Method
+- I-Method
+attention I-Method
+) O
+. O
+
+# text =   Однако алгоритм Self-attention не сразу поймет смысл предложения.
+# relations = ""
+Однако O
+алгоритм O
+Self B-Method
+- I-Method
+attention I-Method
+не O
+сразу O
+поймет O
+смысл O
+предложения O
+. O
+
+# text = По своей сути BERT — это обученный стек энкодеров Трансформера.
+# relations = "Model_includes_Model 1 0"
+По O
+своей O
+сути O
+BERT B-Model
+— O
+это O
+обученный O
+стек O
+энкодеров B-Model
+Трансформера I-Model
+. O
+
+# text =   Разработкой и обучением модели BERT занималась целая группа исследователей Google AI Language на многомиллионном наборе слов на разных языках (более 100).
+# relations = "Model_hasAuthor_Organization 0 0"
+Разработкой O
+и O
+обучением O
+модели O
+BERT B-Model
+занималась B-Model_hasAuthor_Organization
+целая O
+группа O
+исследователей O
+Google B-Organization
+AI I-Organization
+Language I-Organization
+на O
+многомиллионном O
+наборе O
+слов O
+на O
+разных O
+языках O
+( O
+более O
+100 O
+) O
+. O
+
+# text =   И мы дообучили BERT распознавать текстовое содержимое сайтов по 63 категориям (медицина, здоровье, видео, интернет-магазины, юмористические сайты, эротика, оружие, секты, криминал и пр.).
+# relations = ""
+И O
+мы O
+дообучили O
+BERT B-Model
+распознавать O
+текстовое O
+содержимое O
+сайтов O
+по O
+63 O
+категориям O
+( O
+медицина B-Science
+, O
+здоровье O
+, O
+видео O
+, O
+интернет O
+- O
+магазины O
+, O
+юмористические O
+сайты O
+, O
+эротика O
+, O
+оружие O
+, O
+секты O
+, O
+криминал O
+и пр. O
+) O
+. O
+
+# text =   Smart-Cat на первом этапе проводит их предобработку.
+# relations = ""
+Smart B-App_system
+- I-App_system
+Cat I-App_system
+на O
+первом O
+этапе O
+проводит O
+их O
+предобработку O
+. O
+
+# text =   Для удобства работы с категоризатором Smart-Cat мы создали специальный Telegram-бот.
+# relations = ""
+Для O
+удобства O
+работы O
+с O
+категоризатором O
+Smart B-App_system
+- I-App_system
+Cat I-App_system
+мы O
+создали O
+специальный O
+Telegram B-Technology
+- I-Technology
+бот I-Technology
+. O
+
+# text =   После своей работы BERT-bot отправит CSV-таблицу.
+# relations = ""
+После O
+своей O
+работы O
+BERT B-Technology
+- I-Technology
+bot I-Technology
+отправит O
+CSV O
+- O
+таблицу O
+. O
+
+# text =   Но, как я уже сказал ранее, такие модели могут применяться не только в задачах классификации текста.
+# relations = ""
+Но O
+, O
+как O
+я O
+уже O
+сказал O
+ранее O
+, O
+такие O
+модели B-Model
+могут B-Model_isUsedForSolving_Task
+применяться I-Model_isUsedForSolving_Task
+не O
+только O
+в O
+задачах O
+классификации B-Task
+текста I-Task
+. O

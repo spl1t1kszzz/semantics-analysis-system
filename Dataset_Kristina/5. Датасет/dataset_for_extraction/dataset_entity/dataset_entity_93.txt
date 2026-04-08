@@ -1,0 +1,233 @@
+# text =   Удалось найти лишь это упоминание про систему Deepgram.
+# relations = ""
+Удалось O
+найти O
+лишь O
+это O
+упоминание O
+про O
+систему O
+Deepgram B-App_system
+. O
+
+# text =   Также очень похожая функциональность есть у Microsoft в Streams, но нигде не нашел упоминания про поддержку русского языка, судя по всему, ее тоже нет.
+# relations = "Application_hasAuthor_Organization 0 0"
+Также O
+очень O
+похожая O
+функциональность O
+есть O
+у O
+Microsoft B-Organization
+в O
+Streams B-App_system
+, O
+но O
+нигде O
+не O
+нашел O
+упоминания O
+про O
+поддержку O
+русского O
+языка O
+, O
+судя O
+по O
+всему O
+, O
+ее O
+тоже O
+нет O
+. O
+
+# text =   Нейросети, которые могут преобразовывать речь в текст называются (сюрприз-сюрприз), speech-to-text.
+# relations = "Task_IsAlternativeNameFor_Task 1 0"
+Нейросети O
+, O
+которые O
+могут O
+преобразовывать B-Task
+речь I-Task
+в I-Task
+текст I-Task
+называются O
+( O
+сюрприз O
+- O
+сюрприз O
+) O
+, O
+speech B-Task
+- I-Task
+to I-Task
+- I-Task
+text I-Task
+. O
+
+# text =   Если получится найти публичный сервис speech-to-text, то его можно использовать, чтобы «оцифровать» речь во всех вебинарах, а сделать потом нечеткий поиск по тексту – более простая задача.
+# relations = "Application_isUsedForSolving_Task 0 0"
+Если O
+получится O
+найти O
+публичный O
+сервис B-App_system
+speech I-App_system
+- I-App_system
+to I-App_system
+- I-App_system
+text I-App_system
+, O
+то O
+его O
+можно O
+использовать O
+, O
+чтобы O
+« O
+оцифровать O
+» O
+речь O
+во O
+всех O
+вебинарах O
+, O
+а O
+сделать O
+потом O
+нечеткий O
+поиск B-Task
+по I-Task
+тексту I-Task
+– O
+более O
+простая O
+задача O
+. O
+
+# text =   Поиск сервисов, способных делать speech-to-text показал, что таких систем масса, в том числе и разработанных в России, есть среди них также глобальные облачные провайдеры вроде Google, Amazon, MS Azure.
+# relations = ""
+Поиск O
+сервисов O
+, O
+способных O
+делать O
+speech B-App_system
+- I-App_system
+to I-App_system
+- I-App_system
+text I-App_system
+показал O
+, O
+что O
+таких O
+систем O
+масса O
+, O
+в O
+том O
+числе O
+и O
+разработанных O
+в O
+России O
+, O
+есть O
+среди O
+них O
+также O
+глобальные O
+облачные O
+провайдеры O
+вроде O
+Google B-Organization
+, O
+Amazon B-Organization
+, O
+MS B-Organization
+Azure I-Organization
+. O
+
+# text =   Custom Vocabularies – позволяет создать «словарь» из тех, слов, которые должна «выучить» нейросеть перед тем, как приступить к распознаванию.
+# relations = "Application_isUsedForSolving_Task 0 0"
+Custom B-App_system
+Vocabularies I-App_system
+– O
+позволяет O
+создать O
+« O
+словарь O
+» O
+из O
+тех O
+, O
+слов O
+, O
+которые O
+должна O
+« O
+выучить O
+» O
+нейросеть O
+перед O
+тем O
+, O
+как O
+приступить O
+к O
+распознаванию B-Task
+. O
+
+# text =   Можно попробовать прикрутить к итоговому набору текстов алгоритм BERT (Bi-directional Encoder Representation from Transformer), описание есть тут.
+# relations = "Model_IsShortNameFor_Model 0 1"
+Можно O
+попробовать O
+прикрутить O
+к O
+итоговому O
+набору O
+текстов O
+алгоритм O
+BERT B-Model
+( O
+Bi B-Model
+- I-Model
+directional I-Model
+Encoder I-Model
+Representation I-Model
+from I-Model
+Transformer I-Model
+) O
+, O
+описание O
+есть O
+тут O
+. O
+
+# text =   Вы можете попробовать интегрировать алгоритм BERT (Bi-directional Encoder Representation from Transformer) в окончательный набор текстов, описание которого доступно здесь.
+# relations = "Model_IsShortNameFor_Model 0 1"
+Вы O
+можете O
+попробовать O
+интегрировать O
+алгоритм O
+BERT B-Model
+( O
+Bi B-Model
+- I-Model
+directional I-Model
+Encoder I-Model
+Representation I-Model
+from I-Model
+Transformer I-Model
+) O
+в O
+окончательный O
+набор O
+текстов O
+, O
+описание O
+которого O
+доступно O
+здесь O
+. O

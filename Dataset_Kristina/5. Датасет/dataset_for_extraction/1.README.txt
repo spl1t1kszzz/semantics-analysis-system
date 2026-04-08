@@ -1,0 +1,94 @@
+Ниже представлены метки. В скобках указаны подклассы классов, если такие были найдены в тексте.
+
+1. Классы:
+[   Task, 
+    Object,
+    Metric, 
+    Model, 
+    Dataset, 
+    Organization, 
+    Science, 
+    Person,
+    Publication, 
+    Method,
+    Application (Library, App_system, Technology),
+    Environment, 
+    InfoResource (Corpus),
+    Activity
+]
+
+2. Атрибуты:
+[   Date,
+    Value,
+    Lang
+]
+
+3. Отношения:
+
+С атрибутами
+[   Date_isDateOf_Application,
+    Date_isDateOf_Method,
+    Date_isDateOf_Model,
+
+    Metric_IsAlternativeNameFor_Metric,
+    Metric_hasValue_Value,
+
+    Method_IsAlternativeNameFor_Method,
+    Science_IsAlternativeNameFor_Science,
+    Task_IsAlternativeNameFor_Task,
+    Organization_IsAlternativeNameFor_Organization,
+    Application_IsAlternativeNameFor_Application,
+    Model_IsShortNameFor_Model,
+    InfoResource_IsAlternativeNameFor_InfoResource,
+    Model_Language_Lang,
+    InfoResource_Language_Lang
+]
+
+Между классами
+[   include_InfoResource,
+    include_Object,
+    include_Method,
+
+    Object_isUsedInSolving_Task,
+
+    Method_hasAuthor_Person,
+    Method_hasAuthor_Organization,
+    Application_hasAuthor_Person,
+    Application_hasAuthor_Organization,
+    Model_hasAuthor_Person,
+    Model_hasAuthor_Organization,
+    Activity_hasAuthor_Organization,
+
+    Method_solves_Task,
+    Method_uses_Method,
+    Method_uses_Model,
+
+    Method_is_applied_to_Object,
+
+    Method_isUsedIn_Science,
+    Method_isUsedIn_Application,
+
+    Model_includes_Model,    
+                    
+    Model_isTrainedOn_Dataset,
+    Model_isUsedIn_Application,
+    Model_isUsedIn_Activity,
+    Model_isUsedForSolving_Task,
+            
+    Metric_isUsedFor_Model,
+    Metric_isAppliedTo_Method,
+    Metric_isUsedIn_Task,
+
+    Environment_isUsedIn_Application,
+
+    Application_isUsedIn_Activity,
+    Application_isUsedIn_Science,
+    Application_isUsedForSolving_Task,
+
+    Application_is_applied_to_Object,
+
+    Dataset_isTrainedForSolving_Task,
+
+    Task_isSolvedIn_Science
+    
+]

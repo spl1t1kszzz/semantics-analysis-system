@@ -6,12 +6,12 @@ from rich.text import Text
 
 from display_scores import parse_scores
 
-if len(sys.argv) < 1 + 2:
-    print('usage: compare_scores.py <scores1>.json <scores2>.json')
-    exit(0)
+# if len(sys.argv) < 1 + 2:
+#     print('usage: compare_scores.py <scores1>.json <scores2>.json')
+#     exit(0)
 
-scores1_path = sys.argv[-2]
-scores2_path = sys.argv[-1]
+scores1_path = "tests/scores.json"
+scores2_path = "tests/new_scores.json"
 
 storage1 = {}
 storage2 = {}

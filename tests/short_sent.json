@@ -1,0 +1,4655 @@
+{
+  "sentences": [
+    {
+      "id": 1,
+      "text": "1 January 2010 at 07:59 Заметки об NLP (часть 2) Artificial Intelligence Natural Language Processing.",
+      "terms": [
+        {
+          "class": "Science",
+          "value": "NLP",
+          "start_pos": 35
+        },
+        {
+          "class": "Science",
+          "value": "Artificial Intelligence",
+          "start_pos": 49
+        },
+        {
+          "class": "Science",
+          "value": "Natural Language Processing",
+          "start_pos": 73
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Science",
+            "value": "Natural Language Processing",
+            "start_pos": 73
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Science",
+            "value": "NLP",
+            "start_pos": 35
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Заметки об NLP (Natural Language Processing).",
+      "terms": [
+        {
+          "class": "Science",
+          "value": "NLP",
+          "start_pos": 11
+        },
+        {
+          "class": "Science",
+          "value": "Natural Language Processing",
+          "start_pos": 16
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Science",
+            "value": "Natural Language Processing",
+            "start_pos": 16
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Science",
+            "value": "NLP",
+            "start_pos": 11
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Хотя в первой части я и говорил, что не собираюсь останавливаться на морфологии, видимо, совсем без неё не получится",
+      "terms": [
+        {
+          "class": "Science",
+          "value": "морфологии",
+          "start_pos": 69
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 4,
+      "text": "Всё-таки обработка предложений сильно завязана на предшествующий морфологический анализ.",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "обработка предложений",
+          "start_pos": 9
+        },
+        {
+          "class": "Method",
+          "value": "морфологический анализ",
+          "start_pos": 65
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Method",
+            "value": "морфологический анализ",
+            "start_pos": 65
+          },
+          "predicate": "solves",
+          "term2": {
+            "class": "Task",
+            "value": "обработка предложений",
+            "start_pos": 9
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Наш с вами родной русский язык очень хорош (для нас) и труден (для иностранцев) богатой фонетикой и разнообразием грамматических средств.",
+      "terms": [
+        {
+          "class": "Lang",
+          "value": "русский язык",
+          "start_pos": 18
+        },
+        {
+          "class": "Science",
+          "value": "фонетикой",
+          "start_pos": 88
+        },
+        {
+          "class": "Object",
+          "value": "грамматических средств",
+          "start_pos": 114
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 6,
+      "text": "Во-первых, в них не так много незнакомых нам фонем.",
+      "terms": [
+        {
+          "class": "Object",
+          "value": "фонем",
+          "start_pos": 45
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 7,
+      "text": "Во-вторых, обилие грамматических явлений редко сталкивает нас с чем-либо непонятным.",
+      "terms": [
+        {
+          "class": "Object",
+          "value": "грамматических явлений",
+          "start_pos": 18
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 8,
+      "text": "А для американца, например, само понятие рода или падежа совершенно неочевидно.",
+      "terms": [
+        {
+          "class": "Object",
+          "value": "рода",
+          "start_pos": 41
+        },
+        {
+          "class": "Object",
+          "value": "падежа",
+          "start_pos": 50
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 9,
+      "text": "Теперь о морфологии.",
+      "terms": [
+        {
+          "class": "Science",
+          "value": "морфологии",
+          "start_pos": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 10,
+      "text": "Автоматические морфологические анализаторы работают хорошо.",
+      "terms": [
+        {
+          "class": "Object",
+          "value": "Автоматические морфологические анализаторы",
+          "start_pos": 0
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 11,
+      "text": "Если кому интересно посмотреть, как работает автоматический анализатор — можно поэкспериментировать на сайте С.А. Старостина.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "автоматический анализатор",
+          "start_pos": 45
+        },
+        {
+          "class": "InfoResource",
+          "value": "сайте",
+          "start_pos": 103
+        },
+        {
+          "class": "Person",
+          "value": "С.А. Старостина",
+          "start_pos": 109
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 12,
+      "text": "Смею предположить, что едва ли не все морфологические анализаторы русского так или иначе опираются на Грамматический словарь Зализняка.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "морфологические анализаторы",
+          "start_pos": 38
+        },
+        {
+          "class": "InfoResource",
+          "value": "Грамматический словарь Зализняка",
+          "start_pos": 102
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 13,
+      "text": "Сам я пользуюсь разработками Алексея Сокирко, «обёрнутыми» в удобный интерфейс на сайте Lemmatizer.",
+      "terms": [
+        {
+          "class": "Person",
+          "value": "Алексея Сокирко",
+          "start_pos": 29
+        },
+        {
+          "class": "InfoResource",
+          "value": "Lemmatizer",
+          "start_pos": 88
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 14,
+      "text": "Судите сами: упомянутый русский морфологический анализатор Алексея Сокирко оперирует базой данных в 18,5 мегабайт.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "русский морфологический анализатор Алексея Сокирко",
+          "start_pos": 24
+        },
+        {
+          "class": "InfoResource",
+          "value": "базой данных",
+          "start_pos": 85
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 15,
+      "text": "На Грамоте предлагают относить их к «предикативам», но общепринятого подхода нет.",
+      "terms": [
+        {
+          "class": "InfoResource",
+          "value": "Грамоте",
+          "start_pos": 3
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 16,
+      "text": "Например, ещё одна «фича» анализатора Сокирко: он называет глаголы в личной форме («бегаю») глаголами, а в начальной форме («бегать») — инфинитивами.",
+      "terms": [
+        {
+          "class": "InfoResource",
+          "value": "анализатора Сокирко",
+          "start_pos": 26
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 17,
+      "text": "Tags: NLP, обработка текстовб, компьютерная лингвистика.",
+      "terms": [
+        {
+          "class": "Science",
+          "value": "NLP",
+          "start_pos": 6
+        },
+        {
+          "class": "Task",
+          "value": "обработка текстов",
+          "start_pos": 11
+        },
+        {
+          "class": "Science",
+          "value": "компьютерная лингвистика",
+          "start_pos": 31
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 18,
+      "text": "Туториал по фреймворку для программирования датасетов MTS AI corporate blog.",
+      "terms": [
+        {
+          "class": "Science",
+          "value": "программирования",
+          "start_pos": 27
+        },
+        {
+          "class": "Organization",
+          "value": "MTS AI",
+          "start_pos": 54
+        },
+        {
+          "class": "InfoResource",
+          "value": "corporate blog",
+          "start_pos": 61
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 19,
+      "text": "Я Игорь Буянов, старший разработчик группы разметки данных MTS AI.",
+      "terms": [
+        {
+          "class": "Person",
+          "value": "Игорь Буянов",
+          "start_pos": 2
+        },
+        {
+          "class": "Method",
+          "value": "разметки",
+          "start_pos": 43
+        },
+        {
+          "class": "Organization",
+          "value": "MTS AI",
+          "start_pos": 59
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 20,
+      "text": "Недавно рассказывал о том, как делать иерархически датасет из Википедии.",
+      "terms": [
+        {
+          "class": "InfoResource",
+          "value": "Википедии",
+          "start_pos": 62
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 21,
+      "text": "В этом посте хочу рассказать вам о Сноркеле - фреймворке для программирования данных (data programming).",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Сноркеле",
+          "start_pos": 35
+        },
+        {
+          "class": "Environment",
+          "value": "фреймворке для программирования данных",
+          "start_pos": 46
+        },
+        {
+          "class": "Task",
+          "value": "data programming",
+          "start_pos": 86
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 22,
+      "text": "Проект стартовал в Стэнфорде как инструмент для помощи в разметке датасетов для задачи information extraction, а сейчас разработчики делают платформу для пользования внешними заказчиками.",
+      "terms": [
+        {
+          "class": "Activity",
+          "value": "Проект",
+          "start_pos": 0
+        },
+        {
+          "class": "Organization",
+          "value": "Стэнфорде",
+          "start_pos": 19
+        },
+        {
+          "class": "Object",
+          "value": "инструмент",
+          "start_pos": 33
+        },
+        {
+          "class": "Task",
+          "value": "разметке датасетов",
+          "start_pos": 57
+        },
+        {
+          "class": "Task",
+          "value": "information extraction",
+          "start_pos": 87
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Activity",
+            "value": "Проект",
+            "start_pos": 0
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Стэнфорде",
+            "start_pos": 19
+          }
+        },
+        {
+          "term1": {
+            "class": "Object",
+            "value": "инструмент",
+            "start_pos": 33
+          },
+          "predicate": "isUsedInSolving",
+          "term2": {
+            "class": "Task",
+            "value": "разметке датасетов",
+            "start_pos": 57
+          }
+        },
+        {
+          "term1": {
+            "class": "Object",
+            "value": "инструмент",
+            "start_pos": 33
+          },
+          "predicate": "isUsedInSolving",
+          "term2": {
+            "class": "Task",
+            "value": "information extraction",
+            "start_pos": 87
+          }
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "text": "В разметочные функции (labeling functions) закодированы все возможные правила, по которым можно поставить какую-либо метку каждому примеру из набора данных.",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "разметочные функции",
+          "start_pos": 2
+        },
+        {
+          "class": "Method",
+          "value": "labeling functions",
+          "start_pos": 23
+        },
+        {
+          "class": "Method",
+          "value": "правила",
+          "start_pos": 70
+        },
+        {
+          "class": "Dataset",
+          "value": "набора данных",
+          "start_pos": 142
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Method",
+            "value": "labeling functions",
+            "start_pos": 23
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Method",
+            "value": "разметочные функции",
+            "start_pos": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "text": "В качестве основы для таких функций используются:внешние базы данных, такие как WordNet или WikiBase.",
+      "terms": [
+        {
+          "class": "InfoResource",
+          "value": "базы данных",
+          "start_pos": 57
+        },
+        {
+          "class": "InfoResource",
+          "value": "WordNet",
+          "start_pos": 80
+        },
+        {
+          "class": "InfoResource",
+          "value": "WikiBase",
+          "start_pos": 92
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 25,
+      "text": "Генеративная модель, являющаяся сердцем Сноркеля, попытается учесть недостатки отдельных функций.",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "Генеративная модель",
+          "start_pos": 0
+        },
+        {
+          "class": "Application",
+          "value": "Сноркеля",
+          "start_pos": 40
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Генеративная модель",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Сноркеля",
+            "start_pos": 40
+          }
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "text": "Для наглядности оставляю здесь иллюстрацию с последовательностью работы со Снокрелем для задачи information extraction из оригинальной статьи.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Снокрелем",
+          "start_pos": 75
+        },
+        {
+          "class": "Task",
+          "value": "information extraction",
+          "start_pos": 96
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Снокрелем",
+            "start_pos": 75
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "information extraction",
+            "start_pos": 96
+          }
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "text": "Авторы оригинальной статьи представляют ее как факторный граф, или графическую вероятностную модель.",
+      "terms": [
+        {
+          "class": "Object",
+          "value": "факторный граф",
+          "start_pos": 47
+        },
+        {
+          "class": "Model",
+          "value": "графическую вероятностную модель",
+          "start_pos": 67
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 28,
+      "text": "Тогда модель определяется так, чтобы обучить эту модель без доступа к истинным меткам, это нужно обучаться с помощью логарифмического негативного маргинализированного правдоподобия, зная матрицу.",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "логарифмического негативного маргинализированного правдоподобия",
+          "start_pos": 117
+        },
+        {
+          "class": "Object",
+          "value": "матрицу",
+          "start_pos": 187
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Method",
+            "value": "логарифмического негативного маргинализированного правдоподобия",
+            "start_pos": 117
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "матрицу",
+            "start_pos": 187
+          }
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "text": "Оптимизацию авторы проводили с помощью SGD с семплированием Гиббса.",
+      "terms": [
+        {
+          "class": "Activity",
+          "value": "Оптимизацию",
+          "start_pos": 0
+        },
+        {
+          "class": "Method",
+          "value": "SGD",
+          "start_pos": 39
+        },
+        {
+          "class": "Method",
+          "value": "семплированием Гиббса",
+          "start_pos": 45
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 30,
+      "text": "Загрузим заранее обученную модель fastText, чей выбор объясняется наличием огромного количества опечаток в текстах.",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "fastText",
+          "start_pos": 34
+        },
+        {
+          "class": "Object",
+          "value": "текстах",
+          "start_pos": 107
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 31,
+      "text": "Таким образом мы получили опорный вектор для класса \"диарея\".",
+      "terms": [
+        {
+          "class": "Object",
+          "value": "опорный вектор",
+          "start_pos": 26
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 32,
+      "text": "Зайдя на несколько из них я увидел что большая половина типа Wix используют технологию Искусственного Интеллекта, чтобы создать шаблон разметки страницы и далее её уже заполнить.",
+      "terms": [
+        {
+          "class": "Organization",
+          "value": "Wix",
+          "start_pos": 61
+        },
+        {
+          "class": "Application",
+          "value": "технологию Искусственного Интеллекта",
+          "start_pos": 76
+        },
+        {
+          "class": "Task",
+          "value": "создать шаблон разметки страницы",
+          "start_pos": 120
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Application",
+            "value": "технологию Искусственного Интеллекта",
+            "start_pos": 76
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "создать шаблон разметки страницы",
+            "start_pos": 120
+          }
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "В финале я могу его редактировать путем Drag & Drop.",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "Drag & Drop",
+          "start_pos": 40
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 34,
+      "text": "Некоторое время назад к нам обратился заказчик с не совсем обычной задачей — воспроизвести сервис IBM Watson Personality Insights, который анализировал текст, написанный человеком и определял по нему ряд личностных характеристик.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "IBM Watson Personality Insights",
+          "start_pos": 98
+        },
+        {
+          "class": "Task",
+          "value": "анализировал текст",
+          "start_pos": 139
+        },
+        {
+          "class": "Object",
+          "value": "личностных характеристик",
+          "start_pos": 204
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Application",
+            "value": "IBM Watson Personality Insights",
+            "start_pos": 98
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "личностных характеристик",
+            "start_pos": 204
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "IBM Watson Personality Insights",
+            "start_pos": 98
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "анализировал текст",
+            "start_pos": 139
+          }
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "text": "Основная идея данного сервиса состояла в том, что он получает на вход текст написанный определенным человеком и определяет по этому тексту четыре группы характеристик личности.",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "определяет",
+          "start_pos": 112
+        },
+        {
+          "class": "Object",
+          "value": "тексту",
+          "start_pos": 132
+        },
+        {
+          "class": "Object",
+          "value": "группы характеристик личности",
+          "start_pos": 146
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Object",
+            "value": "тексту",
+            "start_pos": 132
+          },
+          "predicate": "isUsedInSolving",
+          "term2": {
+            "class": "Task",
+            "value": "определяет",
+            "start_pos": 112
+          }
+        },
+        {
+          "term1": {
+            "class": "Object",
+            "value": "группы характеристик личности",
+            "start_pos": 146
+          },
+          "predicate": "isUsedInSolving",
+          "term2": {
+            "class": "Task",
+            "value": "определяет",
+            "start_pos": 112
+          }
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "Например, Personality Insights использовался в психотерапии для оценки состояния пациентов [5], в искусстве (оценка личности персонажей пьес Шекспира) [6], определении спама [7] а также в научных исследованиях.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Personality Insights",
+          "start_pos": 10
+        },
+        {
+          "class": "Science",
+          "value": "психотерапии",
+          "start_pos": 47
+        },
+        {
+          "class": "Task",
+          "value": "оценки состояния пациентов",
+          "start_pos": 64
+        },
+        {
+          "class": "Science",
+          "value": "искусстве",
+          "start_pos": 98
+        },
+        {
+          "class": "Task",
+          "value": "оценка личности персонажей пьес Шекспира",
+          "start_pos": 109
+        },
+        {
+          "class": "Task",
+          "value": "определении спама",
+          "start_pos": 156
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Task",
+            "value": "оценка личности персонажей пьес Шекспира",
+            "start_pos": 109
+          },
+          "predicate": "isSolvedIn",
+          "term2": {
+            "class": "Science",
+            "value": "искусстве",
+            "start_pos": 98
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "оценки состояния пациентов",
+            "start_pos": 64
+          },
+          "predicate": "isSolvedIn",
+          "term2": {
+            "class": "Science",
+            "value": "психотерапии",
+            "start_pos": 47
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Personality Insights",
+            "start_pos": 10
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "определении спама",
+            "start_pos": 156
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Personality Insights",
+            "start_pos": 10
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "оценка личности персонажей пьес Шекспира",
+            "start_pos": 109
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Personality Insights",
+            "start_pos": 10
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Science",
+            "value": "искусстве",
+            "start_pos": 98
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Personality Insights",
+            "start_pos": 10
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "оценки состояния пациентов",
+            "start_pos": 64
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Personality Insights",
+            "start_pos": 10
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Science",
+            "value": "психотерапии",
+            "start_pos": 47
+          }
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "Personality Insights был применен в психотерапии для оценки состояния пациентов, в искусстве (анализ личности персонажей пьес Шекспира), выявлении спама, а также в научных исследованиях.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Personality Insights",
+          "start_pos": 0
+        },
+        {
+          "class": "Science",
+          "value": "психотерапии",
+          "start_pos": 36
+        },
+        {
+          "class": "Task",
+          "value": "оценки состояния пациентов",
+          "start_pos": 53
+        },
+        {
+          "class": "Science",
+          "value": "искусстве",
+          "start_pos": 83
+        },
+        {
+          "class": "Task",
+          "value": "анализ личности персонажей пьес Шекспира",
+          "start_pos": 94
+        },
+        {
+          "class": "Task",
+          "value": "выявлении спама",
+          "start_pos": 137
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Task",
+            "value": "анализ личности персонажей пьес Шекспира",
+            "start_pos": 94
+          },
+          "predicate": "isSolvedIn",
+          "term2": {
+            "class": "Science",
+            "value": "искусстве",
+            "start_pos": 83
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "оценки состояния пациентов",
+            "start_pos": 53
+          },
+          "predicate": "isSolvedIn",
+          "term2": {
+            "class": "Science",
+            "value": "психотерапии",
+            "start_pos": 36
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Personality Insights",
+            "start_pos": 0
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "выявлении спама",
+            "start_pos": 137
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Personality Insights",
+            "start_pos": 0
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "анализ личности персонажей пьес Шекспира",
+            "start_pos": 94
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Personality Insights",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Science",
+            "value": "искусстве",
+            "start_pos": 83
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Personality Insights",
+            "start_pos": 0
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "оценки состояния пациентов",
+            "start_pos": 53
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Personality Insights",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Science",
+            "value": "психотерапии",
+            "start_pos": 36
+          }
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "text": "На сайте Personality Insights качество моделей Watson оценивалось с помощью двух показателей — средней абсолютной ошибки (MAE) и коэффициента корреляции.",
+      "terms": [
+        {
+          "class": "InfoResource",
+          "value": "Personality Insights",
+          "start_pos": 9
+        },
+        {
+          "class": "Model",
+          "value": "Watson",
+          "start_pos": 47
+        },
+        {
+          "class": "Metric",
+          "value": "средней абсолютной ошибки",
+          "start_pos": 95
+        },
+        {
+          "class": "Metric",
+          "value": "MAE",
+          "start_pos": 122
+        },
+        {
+          "class": "Metric",
+          "value": "коэффициента корреляции",
+          "start_pos": 129
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "MAE",
+            "start_pos": 122
+          },
+          "predicate": "isUsedFor",
+          "term2": {
+            "class": "Model",
+            "value": "Watson",
+            "start_pos": 47
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "коэффициента корреляции",
+            "start_pos": 129
+          },
+          "predicate": "isUsedFor",
+          "term2": {
+            "class": "Model",
+            "value": "Watson",
+            "start_pos": 47
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "средней абсолютной ошибки",
+            "start_pos": 95
+          },
+          "predicate": "isUsedFor",
+          "term2": {
+            "class": "Model",
+            "value": "Watson",
+            "start_pos": 47
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "MAE",
+            "start_pos": 122
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Metric",
+            "value": "средней абсолютной ошибки",
+            "start_pos": 95
+          }
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "text": "На платформе Personality Insights модели Watson оценивались по двум метрикам — средней абсолютной ошибке (MAE) и коэффициенту корреляции.",
+      "terms": [
+        {
+          "class": "InfoResource",
+          "value": "Personality Insights",
+          "start_pos": 13
+        },
+        {
+          "class": "Model",
+          "value": "Watson",
+          "start_pos": 41
+        },
+        {
+          "class": "Metric",
+          "value": "средней абсолютной ошибке",
+          "start_pos": 79
+        },
+        {
+          "class": "Metric",
+          "value": "MAE",
+          "start_pos": 106
+        },
+        {
+          "class": "Metric",
+          "value": "коэффициенту корреляции",
+          "start_pos": 113
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "MAE",
+            "start_pos": 106
+          },
+          "predicate": "isUsedFor",
+          "term2": {
+            "class": "Model",
+            "value": "Watson",
+            "start_pos": 41
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "коэффициенту корреляции",
+            "start_pos": 113
+          },
+          "predicate": "isUsedFor",
+          "term2": {
+            "class": "Model",
+            "value": "Watson",
+            "start_pos": 41
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "средней абсолютной ошибке",
+            "start_pos": 79
+          },
+          "predicate": "isUsedFor",
+          "term2": {
+            "class": "Model",
+            "value": "Watson",
+            "start_pos": 41
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "MAE",
+            "start_pos": 106
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Metric",
+            "value": "средней абсолютной ошибке",
+            "start_pos": 79
+          }
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "В литературе для предсказания характеристик Big 5 использовались различные методы линейная регрессия с использованием признаков полученных латентным семантическим анализом [11], ридж-регрессия по большому набору собранных вручную признаков [12], SVM с признаками TF/IDF [13], word2vec и doc2vec [14].",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "предсказания характеристик",
+          "start_pos": 17
+        },
+        {
+          "class": "Method",
+          "value": "линейная регрессия",
+          "start_pos": 82
+        },
+        {
+          "class": "Method",
+          "value": "латентным семантическим анализом",
+          "start_pos": 139
+        },
+        {
+          "class": "Method",
+          "value": "ридж-регрессия",
+          "start_pos": 178
+        },
+        {
+          "class": "Method",
+          "value": "SVM",
+          "start_pos": 246
+        },
+        {
+          "class": "Metric",
+          "value": "TF",
+          "start_pos": 263
+        },
+        {
+          "class": "Metric",
+          "value": "IDF",
+          "start_pos": 266
+        },
+        {
+          "class": "Model",
+          "value": "word2vec",
+          "start_pos": 276
+        },
+        {
+          "class": "Model",
+          "value": "doc2vec",
+          "start_pos": 287
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Model",
+            "value": "word2vec",
+            "start_pos": 276
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "предсказания характеристик",
+            "start_pos": 17
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "doc2vec",
+            "start_pos": 287
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "предсказания характеристик",
+            "start_pos": 17
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "линейная регрессия",
+            "start_pos": 82
+          },
+          "predicate": "solves",
+          "term2": {
+            "class": "Task",
+            "value": "предсказания характеристик",
+            "start_pos": 17
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "латентным семантическим анализом",
+            "start_pos": 139
+          },
+          "predicate": "solves",
+          "term2": {
+            "class": "Task",
+            "value": "предсказания характеристик",
+            "start_pos": 17
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "ридж-регрессия",
+            "start_pos": 178
+          },
+          "predicate": "solves",
+          "term2": {
+            "class": "Task",
+            "value": "предсказания характеристик",
+            "start_pos": 17
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "SVM",
+            "start_pos": 246
+          },
+          "predicate": "solves",
+          "term2": {
+            "class": "Task",
+            "value": "предсказания характеристик",
+            "start_pos": 17
+          }
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "text": "В более современных работах присутствуют сверточные нейронные сети [15, 16], а также предобученные модели BERT [17]",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "сверточные нейронные сети",
+          "start_pos": 41
+        },
+        {
+          "class": "Model",
+          "value": "BERT",
+          "start_pos": 106
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 42,
+      "text": "Модель, которую построил заказчик использовала вектора слов word2vec и рекуррентную нейронную сеть на базе GRU (gated recurrent unit) (Рис 1а).",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "Модель",
+          "start_pos": 0
+        },
+        {
+          "class": "Model",
+          "value": "word2vec",
+          "start_pos": 60
+        },
+        {
+          "class": "Model",
+          "value": "рекуррентную нейронную сеть",
+          "start_pos": 71
+        },
+        {
+          "class": "Model",
+          "value": "GRU",
+          "start_pos": 107
+        },
+        {
+          "class": "Model",
+          "value": "gated recurrent unit",
+          "start_pos": 112
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Model",
+            "value": "GRU",
+            "start_pos": 107
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Model",
+            "value": "gated recurrent unit",
+            "start_pos": 112
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "рекуррентную нейронную сеть",
+            "start_pos": 71
+          },
+          "predicate": "isModificationOf",
+          "term2": {
+            "class": "Model",
+            "value": "GRU",
+            "start_pos": 107
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "рекуррентную нейронную сеть",
+            "start_pos": 71
+          },
+          "predicate": "isPartOf",
+          "term2": {
+            "class": "Model",
+            "value": "Модель",
+            "start_pos": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "text": "Обучалась модель с функцией ошибки MSE (среднеквадратичное отклонение).",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "модель",
+          "start_pos": 10
+        },
+        {
+          "class": "Metric",
+          "value": "MSE",
+          "start_pos": 35
+        },
+        {
+          "class": "Metric",
+          "value": "среднеквадратичное отклонение",
+          "start_pos": 40
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "среднеквадратичное отклонение",
+            "start_pos": 40
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Metric",
+            "value": "MSE",
+            "start_pos": 35
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "MSE",
+            "start_pos": 35
+          },
+          "predicate": "isUsedFor",
+          "term2": {
+            "class": "Model",
+            "value": "модель",
+            "start_pos": 10
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "среднеквадратичное отклонение",
+            "start_pos": 40
+          },
+          "predicate": "isUsedFor",
+          "term2": {
+            "class": "Model",
+            "value": "модель",
+            "start_pos": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "text": "Сигмоидная функция активации обычно не очень хорошо подходит для задачи регрессии.",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "Сигмоидная функция активации",
+          "start_pos": 0
+        },
+        {
+          "class": "Task",
+          "value": "регрессии",
+          "start_pos": 72
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 45,
+      "text": "В литературе для регрессии рекомендуют использовать линейную активацию или RelU.",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "регрессии",
+          "start_pos": 17
+        },
+        {
+          "class": "Method",
+          "value": "линейную активацию",
+          "start_pos": 52
+        },
+        {
+          "class": "Method",
+          "value": "RelU",
+          "start_pos": 75
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Method",
+            "value": "линейную активацию",
+            "start_pos": 52
+          },
+          "predicate": "solves",
+          "term2": {
+            "class": "Task",
+            "value": "регрессии",
+            "start_pos": 17
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "RelU",
+            "start_pos": 75
+          },
+          "predicate": "solves",
+          "term2": {
+            "class": "Task",
+            "value": "регрессии",
+            "start_pos": 17
+          }
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "text": "Вычислив MAE отдельно для характеристики личности и отдельно для потребительских предпочтений получили значения 0.11 и 0.148 соответственно, т. е. потребительские предпочтения сильно портят общую картину.",
+      "terms": [
+        {
+          "class": "Metric",
+          "value": "MAE",
+          "start_pos": 9
+        },
+        {
+          "class": "Value",
+          "value": "0.11",
+          "start_pos": 112
+        },
+        {
+          "class": "Value",
+          "value": "0.148",
+          "start_pos": 119
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "MAE",
+            "start_pos": 9
+          },
+          "predicate": "hasValue",
+          "term2": {
+            "class": "Value",
+            "value": "0.11",
+            "start_pos": 112
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "MAE",
+            "start_pos": 9
+          },
+          "predicate": "hasValue",
+          "term2": {
+            "class": "Value",
+            "value": "0.148",
+            "start_pos": 119
+          }
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "text": "Замена BERT на более современную модель XLM RoBERTa large позволило улучшить результаты (эта модель более ресурсозатратная и медленная, но заказчик сказал, что скорость работы не критична).",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "BERT",
+          "start_pos": 7
+        },
+        {
+          "class": "Model",
+          "value": "XLM RoBERTa large",
+          "start_pos": 40
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 48,
+      "text": "Итоговый MAE составил 0.073 для характеристик личности и 0.098 для потребительских предпочтений.",
+      "terms": [
+        {
+          "class": "Metric",
+          "value": "MAE",
+          "start_pos": 9
+        },
+        {
+          "class": "Value",
+          "value": "0.073",
+          "start_pos": 22
+        },
+        {
+          "class": "Value",
+          "value": "0.098",
+          "start_pos": 57
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "MAE",
+            "start_pos": 9
+          },
+          "predicate": "hasValue",
+          "term2": {
+            "class": "Value",
+            "value": "0.073",
+            "start_pos": 22
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "MAE",
+            "start_pos": 9
+          },
+          "predicate": "hasValue",
+          "term2": {
+            "class": "Value",
+            "value": "0.098",
+            "start_pos": 57
+          }
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "text": "Получились немного разные цифры, но средний коэффициент корреляции по всем параметрам составил 0.68, что говорит о том, что характеристики, выдаваемые с разных переводов одного текста должны быть весьма похожи.",
+      "terms": [
+        {
+          "class": "Metric",
+          "value": "коэффициент корреляции",
+          "start_pos": 44
+        },
+        {
+          "class": "Value",
+          "value": "0.68",
+          "start_pos": 95
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "коэффициент корреляции",
+            "start_pos": 44
+          },
+          "predicate": "hasValue",
+          "term2": {
+            "class": "Value",
+            "value": "0.68",
+            "start_pos": 95
+          }
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "text": "Надо сказать, что признаки, формируемые верхними слоями подобных моделей не всегда являются самыми лучшими, точнее даже сказать, как правило, не являются — в классических задачах, таких как поиск именованных сущностей или ответы на вопросы по тексту, признаки верхних уровней работают хуже, чем признаки промежуточных [18].",
+      "terms": [
+        {
+          "class": "Object",
+          "value": "признаки",
+          "start_pos": 18
+        },
+        {
+          "class": "Task",
+          "value": "поиск именованных сущностей",
+          "start_pos": 190
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Object",
+            "value": "признаки",
+            "start_pos": 18
+          },
+          "predicate": "isUsedInSolving",
+          "term2": {
+            "class": "Task",
+            "value": "поиск именованных сущностей",
+            "start_pos": 190
+          }
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "text": "Veridical Data Science — программная статья о методологии верификации моделей.",
+      "terms": [
+        {
+          "class": "InfoResource",
+          "value": "Veridical Data Science",
+          "start_pos": 0
+        },
+        {
+          "class": "Task",
+          "value": "верификации моделей",
+          "start_pos": 58
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 52,
+      "text": "Чтобы обеспечить надежную проверку и разработать механизмы проверки и пополнения знаний, нужны специалисты смежных областей, одновременно обладающие компетенциями в ML и в предметной области (медицине, лингвистике, нейробиологии, образовании и т.д.).",
+      "terms": [
+        {
+          "class": "Science",
+          "value": "медицине",
+          "start_pos": 192
+        },
+        {
+          "class": "Science",
+          "value": "лингвистике",
+          "start_pos": 202
+        },
+        {
+          "class": "Science",
+          "value": "нейробиологии",
+          "start_pos": 215
+        },
+        {
+          "class": "Science",
+          "value": "образовании",
+          "start_pos": 230
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 53,
+      "text": "В частности, развивается causal inference и commonsense reasoning.",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "causal inference",
+          "start_pos": 25
+        },
+        {
+          "class": "Method",
+          "value": "commonsense reasoning",
+          "start_pos": 44
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 54,
+      "text": "Часть докладов посвящена мета-обучению (о том, как учиться учиться) и соединению DL-технологий с логикой 1 и 2 порядка — термин Artificial General Intelligence (AGI) становится обычным термином в выступлениях спикеров.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "DL-технологий",
+          "start_pos": 81
+        },
+        {
+          "class": "Application",
+          "value": "Artificial General Intelligence",
+          "start_pos": 128
+        },
+        {
+          "class": "Application",
+          "value": "AGI",
+          "start_pos": 161
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 55,
+      "text": "Google запускает Coral ai – аналог raspberry pi, мини-компьютер для внедрения нейросетей в экспериментальные установки.",
+      "terms": [
+        {
+          "class": "Organization",
+          "value": "Google",
+          "start_pos": 0
+        },
+        {
+          "class": "Application",
+          "value": "Coral ai",
+          "start_pos": 17
+        },
+        {
+          "class": "Application",
+          "value": "raspberry pi",
+          "start_pos": 35
+        },
+        {
+          "class": "Method",
+          "value": "нейросетей",
+          "start_pos": 78
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Coral ai",
+            "start_pos": 17
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Google",
+            "start_pos": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "text": "Federated learning – направление ML, в котором отдельные модели учатся независимо друг от друга, а затем объединяются в единую модель (без централизации исходных данных), с поправками на редкие события, аномалии, персонализацию и т.д.",
+      "terms": [
+        {
+          "class": "Science",
+          "value": "Federated learning",
+          "start_pos": 0
+        },
+        {
+          "class": "Science",
+          "value": "ML",
+          "start_pos": 33
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Science",
+            "value": "Federated learning",
+            "start_pos": 0
+          },
+          "predicate": "isExampleOf",
+          "term2": {
+            "class": "Science",
+            "value": "ML",
+            "start_pos": 33
+          }
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "text": "Генеративные модели на основании federated learning – будущее перспективное направление по мнению Google, которое находится “в ранних стадиях экспоненциального роста”.",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "Генеративные модели",
+          "start_pos": 0
+        },
+        {
+          "class": "Method",
+          "value": "federated learning",
+          "start_pos": 33
+        },
+        {
+          "class": "Organization",
+          "value": "Google",
+          "start_pos": 98
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Method",
+            "value": "federated learning",
+            "start_pos": 33
+          },
+          "predicate": "isUsedForTraining",
+          "term2": {
+            "class": "Model",
+            "value": "Генеративные модели",
+            "start_pos": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "text": "Чатботы и искусственный интеллект для понимания естественного языка (NLU – Natural Language Understanding) тема достаточно горячая, про нее не раз говорилось на Хабре.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Чатботы",
+          "start_pos": 0
+        },
+        {
+          "class": "Application",
+          "value": "искусственный интеллект",
+          "start_pos": 10
+        },
+        {
+          "class": "Task",
+          "value": "понимания естественного языка",
+          "start_pos": 38
+        },
+        {
+          "class": "Task",
+          "value": "NLU",
+          "start_pos": 69
+        },
+        {
+          "class": "Task",
+          "value": "Natural Language Understanding",
+          "start_pos": 75
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Task",
+            "value": "NLU",
+            "start_pos": 69
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Task",
+            "value": "понимания естественного языка",
+            "start_pos": 38
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "Natural Language Understanding",
+            "start_pos": 75
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Task",
+            "value": "понимания естественного языка",
+            "start_pos": 38
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "Natural Language Understanding",
+            "start_pos": 75
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Task",
+            "value": "NLU",
+            "start_pos": 69
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Чатботы",
+            "start_pos": 0
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "понимания естественного языка",
+            "start_pos": 38
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Чатботы",
+            "start_pos": 0
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "NLU",
+            "start_pos": 69
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Чатботы",
+            "start_pos": 0
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "Natural Language Understanding",
+            "start_pos": 75
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "искусственный интеллект",
+            "start_pos": 10
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "понимания естественного языка",
+            "start_pos": 38
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "искусственный интеллект",
+            "start_pos": 10
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "NLU",
+            "start_pos": 69
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "искусственный интеллект",
+            "start_pos": 10
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "Natural Language Understanding",
+            "start_pos": 75
+          }
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "text": "Хотя AI — это достаточно широкая область, включающая в себя машинное зрение, предиктивный анализ, машинный перевод и другие области – понимание естественного языка (NLU) и его генерация (NLG) является значительной и быстрорастущей его частью.",
+      "terms": [
+        {
+          "class": "Science",
+          "value": "AI",
+          "start_pos": 5
+        },
+        {
+          "class": "Science",
+          "value": "машинное зрение",
+          "start_pos": 60
+        },
+        {
+          "class": "Method",
+          "value": "предиктивный анализ",
+          "start_pos": 77
+        },
+        {
+          "class": "Task",
+          "value": "машинный перевод",
+          "start_pos": 98
+        },
+        {
+          "class": "Task",
+          "value": "понимание естественного языка",
+          "start_pos": 134
+        },
+        {
+          "class": "Task",
+          "value": "NLU",
+          "start_pos": 165
+        },
+        {
+          "class": "Task",
+          "value": "генерация",
+          "start_pos": 176
+        },
+        {
+          "class": "Task",
+          "value": "NLG",
+          "start_pos": 187
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Task",
+            "value": "генерация",
+            "start_pos": 176
+          },
+          "predicate": "isSolvedIn",
+          "term2": {
+            "class": "Science",
+            "value": "AI",
+            "start_pos": 5
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "NLG",
+            "start_pos": 187
+          },
+          "predicate": "isSolvedIn",
+          "term2": {
+            "class": "Science",
+            "value": "AI",
+            "start_pos": 5
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "NLG",
+            "start_pos": 187
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Task",
+            "value": "генерация",
+            "start_pos": 176
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "NLU",
+            "start_pos": 165
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Task",
+            "value": "понимание естественного языка",
+            "start_pos": 134
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "NLU",
+            "start_pos": 165
+          },
+          "predicate": "isSolvedIn",
+          "term2": {
+            "class": "Science",
+            "value": "AI",
+            "start_pos": 5
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "машинный перевод",
+            "start_pos": 98
+          },
+          "predicate": "isSolvedIn",
+          "term2": {
+            "class": "Science",
+            "value": "AI",
+            "start_pos": 5
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "понимание естественного языка",
+            "start_pos": 134
+          },
+          "predicate": "isSolvedIn",
+          "term2": {
+            "class": "Science",
+            "value": "AI",
+            "start_pos": 5
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "предиктивный анализ",
+            "start_pos": 77
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Science",
+            "value": "AI",
+            "start_pos": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "text": "Опуская историю, начавшуюся еще в 50-е годы с Алана Тьюринга и программы Элиза в 60-е годы, а также научные исследования в области лингвистики и машинного обучения 90-х годов, значимым событием более новой истории стало появление языка разметки AIML (Artificial Intelligence Markup Language), разработанной в 2001-м году Ричардом Уэлсом (Richard Wallace) и созданным на его основе чатботом A.L.I.C.E.",
+      "terms": [
+        {
+          "class": "Person",
+          "value": "Алана Тьюринга",
+          "start_pos": 46
+        },
+        {
+          "class": "Application",
+          "value": "Элиза",
+          "start_pos": 73
+        },
+        {
+          "class": "Science",
+          "value": "машинного обучения",
+          "start_pos": 145
+        },
+        {
+          "class": "Method",
+          "value": "AIML",
+          "start_pos": 245
+        },
+        {
+          "class": "Method",
+          "value": "Artificial Intelligence Markup Language",
+          "start_pos": 251
+        },
+        {
+          "class": "Date",
+          "value": "2001-м",
+          "start_pos": 309
+        },
+        {
+          "class": "Person",
+          "value": "Ричардом Уэлсом",
+          "start_pos": 321
+        },
+        {
+          "class": "Person",
+          "value": "Richard Wallace",
+          "start_pos": 338
+        },
+        {
+          "class": "Application",
+          "value": "A.L.I.C.E.",
+          "start_pos": 390
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Person",
+            "value": "Richard Wallace",
+            "start_pos": 338
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Person",
+            "value": "Ричардом Уэлсом",
+            "start_pos": 321
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Элиза",
+            "start_pos": 73
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Science",
+            "value": "машинного обучения",
+            "start_pos": 145
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "A.L.I.C.E.",
+            "start_pos": 390
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Science",
+            "value": "машинного обучения",
+            "start_pos": 145
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "A.L.I.C.E.",
+            "start_pos": 390
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Person",
+            "value": "Ричардом Уэлсом",
+            "start_pos": 321
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "A.L.I.C.E.",
+            "start_pos": 390
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Person",
+            "value": "Richard Wallace",
+            "start_pos": 338
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "AIML",
+            "start_pos": 245
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "A.L.I.C.E.",
+            "start_pos": 390
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "Artificial Intelligence Markup Language",
+            "start_pos": 251
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "A.L.I.C.E.",
+            "start_pos": 390
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "AIML",
+            "start_pos": 245
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Person",
+            "value": "Ричардом Уэлсом",
+            "start_pos": 321
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "AIML",
+            "start_pos": 245
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Person",
+            "value": "Richard Wallace",
+            "start_pos": 338
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "Artificial Intelligence Markup Language",
+            "start_pos": 251
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Person",
+            "value": "Ричардом Уэлсом",
+            "start_pos": 321
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "Artificial Intelligence Markup Language",
+            "start_pos": 251
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Person",
+            "value": "Richard Wallace",
+            "start_pos": 338
+          }
+        },
+        {
+          "term1": {
+            "class": "Date",
+            "value": "2001-м",
+            "start_pos": 309
+          },
+          "predicate": "isDateOf",
+          "term2": {
+            "class": "Method",
+            "value": "AIML",
+            "start_pos": 245
+          }
+        },
+        {
+          "term1": {
+            "class": "Date",
+            "value": "2001-м",
+            "start_pos": 309
+          },
+          "predicate": "isDateOf",
+          "term2": {
+            "class": "Method",
+            "value": "Artificial Intelligence Markup Language",
+            "start_pos": 251
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "Artificial Intelligence Markup Language",
+            "start_pos": 251
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Method",
+            "value": "AIML",
+            "start_pos": 245
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "AIML",
+            "start_pos": 245
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Science",
+            "value": "машинного обучения",
+            "start_pos": 145
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "Artificial Intelligence Markup Language",
+            "start_pos": 251
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Science",
+            "value": "машинного обучения",
+            "start_pos": 145
+          }
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "text": "В течение последующих десяти лет подходы к написанию чатботов во многом представляли из себя переработки или улучшения этой методологии, получившей название «rule-based подход» или «подход на основе формальных правил».",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "rule-based",
+          "start_pos": 158
+        },
+        {
+          "class": "Method",
+          "value": "подход на основе формальных правил",
+          "start_pos": 182
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 62,
+      "text": "Именно эти технологии, вместе с заметным продвижением в области технологий синтеза и распознавания речи, а также распространением мессенджеров и вебчатов – обусловили стремительный рост количества внедрений NLU-технологий в 2015-2018-м годах.",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "синтеза и распознавания речи",
+          "start_pos": 75
+        },
+        {
+          "class": "Method",
+          "value": "NLU-технологий",
+          "start_pos": 207
+        },
+        {
+          "class": "Date",
+          "value": "2015-2018-м",
+          "start_pos": 224
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Method",
+            "value": "NLU-технологий",
+            "start_pos": 207
+          },
+          "predicate": "solves",
+          "term2": {
+            "class": "Task",
+            "value": "синтеза и распознавания речи",
+            "start_pos": 75
+          }
+        },
+        {
+          "term1": {
+            "class": "Date",
+            "value": "2015-2018-м",
+            "start_pos": 224
+          },
+          "predicate": "isDateOf",
+          "term2": {
+            "class": "Method",
+            "value": "NLU-технологий",
+            "start_pos": 207
+          }
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "text": "Продвижение в области технологий синтеза и распознавания речи, а также расширение использования мессенджеров и веб-чатов, в сочетании с этими технологиями, существенно способствовали быстрому распространению NLU-технологий в период с 2015 по 2018 год.",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "NLU-технологий",
+          "start_pos": 208
+        },
+        {
+          "class": "Date",
+          "value": "2015",
+          "start_pos": 234
+        },
+        {
+          "class": "Date",
+          "value": "2018",
+          "start_pos": 242
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Date",
+            "value": "2015",
+            "start_pos": 234
+          },
+          "predicate": "isDateOf",
+          "term2": {
+            "class": "Method",
+            "value": "NLU-технологий",
+            "start_pos": 208
+          }
+        },
+        {
+          "term1": {
+            "class": "Date",
+            "value": "2018",
+            "start_pos": 242
+          },
+          "predicate": "isDateOf",
+          "term2": {
+            "class": "Method",
+            "value": "NLU-технологий",
+            "start_pos": 208
+          }
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "text": "Голосовые ассистенты (IVA): Alexa от Amazon, Google Assistant от Google, Siri от Apple, Cortana от Microsoft, Алиса от Яндекса – они определяют интенты (намерения) пользователей и исполняют команды.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Голосовые ассистенты",
+          "start_pos": 0
+        },
+        {
+          "class": "Application",
+          "value": "IVA",
+          "start_pos": 22
+        },
+        {
+          "class": "Application",
+          "value": "Alexa",
+          "start_pos": 28
+        },
+        {
+          "class": "Organization",
+          "value": "Amazon",
+          "start_pos": 37
+        },
+        {
+          "class": "Application",
+          "value": "Google Assistant",
+          "start_pos": 45
+        },
+        {
+          "class": "Organization",
+          "value": "Google",
+          "start_pos": 65
+        },
+        {
+          "class": "Application",
+          "value": "Siri",
+          "start_pos": 73
+        },
+        {
+          "class": "Organization",
+          "value": "Apple",
+          "start_pos": 81
+        },
+        {
+          "class": "Application",
+          "value": "Cortana",
+          "start_pos": 88
+        },
+        {
+          "class": "Organization",
+          "value": "Microsoft",
+          "start_pos": 99
+        },
+        {
+          "class": "Application",
+          "value": "Алиса",
+          "start_pos": 110
+        },
+        {
+          "class": "Organization",
+          "value": "Яндекса",
+          "start_pos": 119
+        },
+        {
+          "class": "Object",
+          "value": "интенты",
+          "start_pos": 144
+        },
+        {
+          "class": "Object",
+          "value": "намерения",
+          "start_pos": 153
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Object",
+            "value": "намерения",
+            "start_pos": 153
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Object",
+            "value": "интенты",
+            "start_pos": 144
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Алиса",
+            "start_pos": 110
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "интенты",
+            "start_pos": 144
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Cortana",
+            "start_pos": 88
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "интенты",
+            "start_pos": 144
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Siri",
+            "start_pos": 73
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "интенты",
+            "start_pos": 144
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Google Assistant",
+            "start_pos": 45
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "интенты",
+            "start_pos": 144
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Alexa",
+            "start_pos": 28
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "интенты",
+            "start_pos": 144
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Алиса",
+            "start_pos": 110
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "намерения",
+            "start_pos": 153
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Cortana",
+            "start_pos": 88
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "намерения",
+            "start_pos": 153
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Siri",
+            "start_pos": 73
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "намерения",
+            "start_pos": 153
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Google Assistant",
+            "start_pos": 45
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "намерения",
+            "start_pos": 153
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Alexa",
+            "start_pos": 28
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "намерения",
+            "start_pos": 153
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Алиса",
+            "start_pos": 110
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Яндекса",
+            "start_pos": 119
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Cortana",
+            "start_pos": 88
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Microsoft",
+            "start_pos": 99
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Siri",
+            "start_pos": 73
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Apple",
+            "start_pos": 81
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Google Assistant",
+            "start_pos": 45
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Google",
+            "start_pos": 65
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Alexa",
+            "start_pos": 28
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Amazon",
+            "start_pos": 37
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "IVA",
+            "start_pos": 22
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Application",
+            "value": "Голосовые ассистенты",
+            "start_pos": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "text": "Голосовые ассистенты (ГА, IVA) определяют интенты пользователей и исполняют команды.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Голосовые ассистенты",
+          "start_pos": 0
+        },
+        {
+          "class": "Application",
+          "value": "ГА",
+          "start_pos": 22
+        },
+        {
+          "class": "Application",
+          "value": "IVA",
+          "start_pos": 26
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Application",
+            "value": "ГА",
+            "start_pos": 22
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Application",
+            "value": "Голосовые ассистенты",
+            "start_pos": 0
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "IVA",
+            "start_pos": 26
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Application",
+            "value": "Голосовые ассистенты",
+            "start_pos": 0
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "IVA",
+            "start_pos": 26
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Application",
+            "value": "ГА",
+            "start_pos": 22
+          }
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "text": "В качестве каналов могут выступать умные устройства, ассистенты, встроенные в устройства или мобильные телефоны, привычный звонок на номер телефона, мессенджеры или вебчаты, подобные популярным в России Livetex, Jivosite или Webim.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Livetex",
+          "start_pos": 203
+        },
+        {
+          "class": "Application",
+          "value": "Jivosite",
+          "start_pos": 212
+        },
+        {
+          "class": "Application",
+          "value": "Webim",
+          "start_pos": 225
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 67,
+      "text": "За эту конвертацию отвечают платформы ASR (распознавание речи), TTS (синтез речи), системы интеграции с телефонией.",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "ASR",
+          "start_pos": 38
+        },
+        {
+          "class": "Task",
+          "value": "распознавание речи",
+          "start_pos": 43
+        },
+        {
+          "class": "Method",
+          "value": "TTS",
+          "start_pos": 64
+        },
+        {
+          "class": "Method",
+          "value": "синтез речи",
+          "start_pos": 69
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Task",
+            "value": "распознавание речи",
+            "start_pos": 43
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Task",
+            "value": "ASR",
+            "start_pos": 38
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "синтез речи",
+            "start_pos": 69
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Method",
+            "value": "TTS",
+            "start_pos": 64
+          }
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "text": "Наличие развитого rule-based синтаксиса может ускорить разработку чатботов в разы.",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "rule-based",
+          "start_pos": 18
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 69,
+      "text": "Анализ эмоций, богатая и глубокая аналитика, специальные фильтры (например, на использование ненормативной лексики), языковая поддержка, хранение контекста, как и собственно, точность работы используемых нейросетевых алгоритмов, а также производительность, масштабируемость и стабильность – все это также важные, хотя и не всегда очевидные со стороны, особенности диалоговых платформ.",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "Анализ эмоций",
+          "start_pos": 0
+        },
+        {
+          "class": "Task",
+          "value": "глубокая аналитика",
+          "start_pos": 25
+        },
+        {
+          "class": "Application",
+          "value": "диалоговых платформ",
+          "start_pos": 364
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 70,
+      "text": "Алгоритм понимания естественного языка (Natural Language Understanding, NLU) Microsoft DeBERTa превзошел человеческие возможности в одном из самых сложных тестов для подобных алгоритмов SuperGLUE.",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "понимания естественного языка",
+          "start_pos": 9
+        },
+        {
+          "class": "Task",
+          "value": "Natural Language Understanding",
+          "start_pos": 40
+        },
+        {
+          "class": "Task",
+          "value": "NLU",
+          "start_pos": 72
+        },
+        {
+          "class": "Organization",
+          "value": "Microsoft",
+          "start_pos": 77
+        },
+        {
+          "class": "Application",
+          "value": "DeBERTa",
+          "start_pos": 87
+        },
+        {
+          "class": "Method",
+          "value": "SuperGLUE",
+          "start_pos": 186
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Application",
+            "value": "DeBERTa",
+            "start_pos": 87
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "понимания естественного языка",
+            "start_pos": 9
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "DeBERTa",
+            "start_pos": 87
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "Natural Language Understanding",
+            "start_pos": 40
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "DeBERTa",
+            "start_pos": 87
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "NLU",
+            "start_pos": 72
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "DeBERTa",
+            "start_pos": 87
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Microsoft",
+            "start_pos": 77
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "NLU",
+            "start_pos": 72
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Task",
+            "value": "Natural Language Understanding",
+            "start_pos": 40
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "NLU",
+            "start_pos": 72
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Task",
+            "value": "понимания естественного языка",
+            "start_pos": 9
+          }
+        },
+        {
+          "term1": {
+            "class": "Task",
+            "value": "Natural Language Understanding",
+            "start_pos": 40
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Task",
+            "value": "понимания естественного языка",
+            "start_pos": 9
+          }
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "text": "На данный момент модель занимает первое место в рейтинге с показателем в 90,3, в то время как среднее значение человеческих возможностей составляет 89,8 баллов.",
+      "terms": [
+        {
+          "class": "Value",
+          "value": "90,3",
+          "start_pos": 73
+        },
+        {
+          "class": "Value",
+          "value": "89,8",
+          "start_pos": 148
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 72,
+      "text": "Тест SuperGLUE включает в себя ряд задач, которые разработаны для оценки способности ИИ-моделей распознавать и понимать естественный язык, например, дать правильный ответ на вопрос на базе прочитанного абзаца, определить, правильно ли используется многозначное слово в определенном контексте и т.д.",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "SuperGLUE",
+          "start_pos": 5
+        },
+        {
+          "class": "Task",
+          "value": "дать правильный ответ на вопрос на базе прочитанного абзаца",
+          "start_pos": 149
+        },
+        {
+          "class": "Object",
+          "value": "многозначное слово",
+          "start_pos": 248
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Method",
+            "value": "SuperGLUE",
+            "start_pos": 5
+          },
+          "predicate": "solves",
+          "term2": {
+            "class": "Task",
+            "value": "дать правильный ответ на вопрос на базе прочитанного абзаца",
+            "start_pos": 149
+          }
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "text": "Тест был разработан группой исследователей в 2019 году.",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "Тест",
+          "start_pos": 0
+        },
+        {
+          "class": "Date",
+          "value": "2019 году",
+          "start_pos": 45
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Date",
+            "value": "2019 году",
+            "start_pos": 45
+          },
+          "predicate": "isDateOf",
+          "term2": {
+            "class": "Method",
+            "value": "Тест",
+            "start_pos": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "text": "Исследовательская группа разработала тест в 2019 году.",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "тест",
+          "start_pos": 37
+        },
+        {
+          "class": "Date",
+          "value": "2019 году",
+          "start_pos": 44
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Date",
+            "value": "2019 году",
+            "start_pos": 44
+          },
+          "predicate": "isDateOf",
+          "term2": {
+            "class": "Method",
+            "value": "тест",
+            "start_pos": 37
+          }
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "text": "Для того чтобы добиться текущего результата в 90,3 балла, DeBERTa получила масштабное обновление архитектуры: теперь она состоит из 48 слоев и имеет 1,5 млрд параметров.",
+      "terms": [
+        {
+          "class": "Value",
+          "value": "90,3",
+          "start_pos": 46
+        },
+        {
+          "class": "Application",
+          "value": "DeBERTa",
+          "start_pos": 58
+        },
+        {
+          "class": "Value",
+          "value": "48",
+          "start_pos": 132
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 76,
+      "text": "Кроме того, DeBERTa будет интегрирована в следующую версию Тьюринговой модели Microsoft Turing (Turing NLRv4).",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "DeBERTa",
+          "start_pos": 12
+        },
+        {
+          "class": "Model",
+          "value": "Тьюринговой модели Microsoft Turing",
+          "start_pos": 59
+        },
+        {
+          "class": "Model",
+          "value": "Turing NLRv4",
+          "start_pos": 96
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Turing NLRv4",
+            "start_pos": 96
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Model",
+            "value": "Тьюринговой модели Microsoft Turing",
+            "start_pos": 59
+          }
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "text": "Дополнительно, DeBERTa будет включена в следующую версию модели Microsoft Turing (Turing NLRv4) от Microsoft.",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "DeBERTa",
+          "start_pos": 15
+        },
+        {
+          "class": "Model",
+          "value": "Microsoft Turing",
+          "start_pos": 64
+        },
+        {
+          "class": "Model",
+          "value": "Turing NLRv4",
+          "start_pos": 82
+        },
+        {
+          "class": "Organization",
+          "value": "Microsoft",
+          "start_pos": 99
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Model",
+            "value": "DeBERTa",
+            "start_pos": 15
+          },
+          "predicate": "isPartOf",
+          "term2": {
+            "class": "Model",
+            "value": "Microsoft Turing",
+            "start_pos": 64
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Turing NLRv4",
+            "start_pos": 82
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Model",
+            "value": "Microsoft Turing",
+            "start_pos": 64
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Microsoft Turing",
+            "start_pos": 64
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Microsoft",
+            "start_pos": 99
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "DeBERTa",
+            "start_pos": 15
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Microsoft",
+            "start_pos": 99
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Turing NLRv4",
+            "start_pos": 82
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Microsoft",
+            "start_pos": 99
+          }
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "text": "Тьюринговые модели используются в таких продуктах Microsoft, как Bing, Office, Dynamics и Azure Cognitive Services, чтобы совершенствовать, к примеру, взаимодействие с чат-ботами, предоставление рекомендаций и ответов на вопросы, поиск, автоматизацию поддержки клиентов, создание контента и решение многих других задач на пользу сотен миллионов пользователей.",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "Тьюринговые модели",
+          "start_pos": 0
+        },
+        {
+          "class": "Organization",
+          "value": "Microsoft",
+          "start_pos": 50
+        },
+        {
+          "class": "Application",
+          "value": "Bing",
+          "start_pos": 65
+        },
+        {
+          "class": "Application",
+          "value": "Office",
+          "start_pos": 71
+        },
+        {
+          "class": "Application",
+          "value": "Dynamics",
+          "start_pos": 79
+        },
+        {
+          "class": "Application",
+          "value": "Azure Cognitive Services",
+          "start_pos": 90
+        },
+        {
+          "class": "Application",
+          "value": "чат-ботами",
+          "start_pos": 168
+        },
+        {
+          "class": "Task",
+          "value": "создание контента",
+          "start_pos": 271
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Тьюринговые модели",
+            "start_pos": 0
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "создание контента",
+            "start_pos": 271
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Тьюринговые модели",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Bing",
+            "start_pos": 65
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Тьюринговые модели",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Office",
+            "start_pos": 71
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Тьюринговые модели",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Dynamics",
+            "start_pos": 79
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Тьюринговые модели",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Azure Cognitive Services",
+            "start_pos": 90
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Bing",
+            "start_pos": 65
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Microsoft",
+            "start_pos": 50
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Office",
+            "start_pos": 71
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Microsoft",
+            "start_pos": 50
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Dynamics",
+            "start_pos": 79
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Microsoft",
+            "start_pos": 50
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Azure Cognitive Services",
+            "start_pos": 90
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Microsoft",
+            "start_pos": 50
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Bing",
+            "start_pos": 65
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "создание контента",
+            "start_pos": 271
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Office",
+            "start_pos": 71
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "создание контента",
+            "start_pos": 271
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Dynamics",
+            "start_pos": 79
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "создание контента",
+            "start_pos": 271
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Azure Cognitive Services",
+            "start_pos": 90
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "создание контента",
+            "start_pos": 271
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "чат-ботами",
+            "start_pos": 168
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "создание контента",
+            "start_pos": 271
+          }
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "text": "Тьюринговые модели применяются в продуктах, таких как Bing, Office, Dynamics и Azure Cognitive Services.",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "Тьюринговые модели",
+          "start_pos": 0
+        },
+        {
+          "class": "Application",
+          "value": "Bing",
+          "start_pos": 54
+        },
+        {
+          "class": "Application",
+          "value": "Office",
+          "start_pos": 60
+        },
+        {
+          "class": "Application",
+          "value": "Dynamics",
+          "start_pos": 68
+        },
+        {
+          "class": "Application",
+          "value": "Azure Cognitive Services",
+          "start_pos": 79
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Тьюринговые модели",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Bing",
+            "start_pos": 54
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Тьюринговые модели",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Office",
+            "start_pos": 60
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Тьюринговые модели",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Dynamics",
+            "start_pos": 68
+          }
+        },
+        {
+          "term1": {
+            "class": "Model",
+            "value": "Тьюринговые модели",
+            "start_pos": 0
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Azure Cognitive Services",
+            "start_pos": 79
+          }
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "text": "В отличии от машин, люди хорошо умеют использовать знания, ранее полученные при выполнении различных задач, для решения новых – это называется композиционным обобщением (англ. compositional generalization).",
+      "terms": [
+        {
+          "class": "Method",
+          "value": "композиционным обобщением",
+          "start_pos": 143
+        },
+        {
+          "class": "Method",
+          "value": "compositional generalization",
+          "start_pos": 176
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Method",
+            "value": "compositional generalization",
+            "start_pos": 176
+          },
+          "predicate": "isAlternativeNameFor",
+          "term2": {
+            "class": "Method",
+            "value": "композиционным обобщением",
+            "start_pos": 143
+          }
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "text": "МТИ Technology Review протестировали два инструмента — MyInterview и Curious Thing.",
+      "terms": [
+        {
+          "class": "Organization",
+          "value": "МТИ Technology Review",
+          "start_pos": 0
+        },
+        {
+          "class": "Application",
+          "value": "MyInterview",
+          "start_pos": 55
+        },
+        {
+          "class": "Application",
+          "value": "Curious Thing",
+          "start_pos": 69
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 82,
+      "text": "Как отличить хороший ремонт от плохого, или как мы в SRG сделали из Томита-парсера многопоточную Java-библиотеку.",
+      "terms": [
+        {
+          "class": "Organization",
+          "value": "SRG",
+          "start_pos": 53
+        },
+        {
+          "class": "Application",
+          "value": "Томита-парсера",
+          "start_pos": 68
+        },
+        {
+          "class": "Library",
+          "value": "Java-библиотеку",
+          "start_pos": 97
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Томита-парсера",
+            "start_pos": 68
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "SRG",
+            "start_pos": 53
+          }
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "text": "В этой статье речь пойдет о том, как мы интегрировали разработанный Яндексом Томита-парсер в нашу систему, превратили его в динамическую библиотеку, подружили с Java, сделали многопоточной и решили с её помощью задачу классификации текста для оценки недвижимости.",
+      "terms": [
+        {
+          "class": "Organization",
+          "value": "Яндексом",
+          "start_pos": 68
+        },
+        {
+          "class": "Application",
+          "value": "Томита-парсер",
+          "start_pos": 77
+        },
+        {
+          "class": "Environment",
+          "value": "Java",
+          "start_pos": 161
+        },
+        {
+          "class": "Task",
+          "value": "классификации",
+          "start_pos": 218
+        },
+        {
+          "class": "Task",
+          "value": "оценки недвижимости",
+          "start_pos": 243
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Томита-парсер",
+            "start_pos": 77
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Organization",
+            "value": "Яндексом",
+            "start_pos": 68
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Томита-парсер",
+            "start_pos": 77
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "классификации",
+            "start_pos": 218
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Томита-парсер",
+            "start_pos": 77
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "оценки недвижимости",
+            "start_pos": 243
+          }
+        },
+        {
+          "term1": {
+            "class": "Environment",
+            "value": "Java",
+            "start_pos": 161
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Томита-парсер",
+            "start_pos": 77
+          }
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "text": "Итак, у нас есть текст объявления, который необходимо классифицировать в одну из категорий согласно состоянию ремонта в квартире (без отделки, чистовой, средний, хороший, отличный, эксклюзивный).",
+      "terms": [
+        {
+          "class": "Object",
+          "value": "текст объявления",
+          "start_pos": 17
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 85,
+      "text": "Таким образом, по мере решения сформировалась вторая большая и интересная задача — научиться извлекать всю достаточную и необходимую информацию о ремонте из объявления, а именно обеспечить быстрый синтаксический и морфологический анализ текста, который сможет работать параллельно под нагрузкой в режиме библиотеки.",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "извлекать всю достаточную и необходимую информацию",
+          "start_pos": 93
+        },
+        {
+          "class": "Method",
+          "value": "морфологический анализ текста",
+          "start_pos": 214
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 86,
+      "text": "Из доступных средств для извлечения фактов из текста на основе контекстно-свободных грамматик, способных работать с русским языком, наше внимание привлекли Томита-парсер и библиотека Yagry на питоне.",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "извлечения фактов",
+          "start_pos": 25
+        },
+        {
+          "class": "Object",
+          "value": "текста",
+          "start_pos": 46
+        },
+        {
+          "class": "Method",
+          "value": "контекстно-свободных грамматик",
+          "start_pos": 63
+        },
+        {
+          "class": "Application",
+          "value": "Томита-парсер",
+          "start_pos": 156
+        },
+        {
+          "class": "Library",
+          "value": "Yagry",
+          "start_pos": 183
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Library",
+            "value": "Yagry",
+            "start_pos": 183
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "извлечения фактов",
+            "start_pos": 25
+          }
+        },
+        {
+          "term1": {
+            "class": "Library",
+            "value": "Yagry",
+            "start_pos": 183
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "текста",
+            "start_pos": 46
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "контекстно-свободных грамматик",
+            "start_pos": 63
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Library",
+            "value": "Yagry",
+            "start_pos": 183
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Томита-парсер",
+            "start_pos": 156
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "текста",
+            "start_pos": 46
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "контекстно-свободных грамматик",
+            "start_pos": 63
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Application",
+            "value": "Томита-парсер",
+            "start_pos": 156
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "контекстно-свободных грамматик",
+            "start_pos": 63
+          },
+          "predicate": "solves",
+          "term2": {
+            "class": "Task",
+            "value": "извлечения фактов",
+            "start_pos": 25
+          }
+        },
+        {
+          "term1": {
+            "class": "Object",
+            "value": "текста",
+            "start_pos": 46
+          },
+          "predicate": "isUsedInSolving",
+          "term2": {
+            "class": "Task",
+            "value": "извлечения фактов",
+            "start_pos": 25
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Томита-парсер",
+            "start_pos": 156
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "извлечения фактов",
+            "start_pos": 25
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "контекстно-свободных грамматик",
+            "start_pos": 63
+          },
+          "predicate": "isAppliedTo",
+          "term2": {
+            "class": "Object",
+            "value": "текста",
+            "start_pos": 46
+          }
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "text": "Многопоточный вариант Томиты — TomitaPooledParser использует для парсинга пул объектов TomitaParser, одинаковым образом сконфигурированных.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Томиты",
+          "start_pos": 22
+        },
+        {
+          "class": "Application",
+          "value": "TomitaPooledParser",
+          "start_pos": 31
+        },
+        {
+          "class": "Task",
+          "value": "парсинга",
+          "start_pos": 65
+        },
+        {
+          "class": "Application",
+          "value": "TomitaParser",
+          "start_pos": 87
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Application",
+            "value": "TomitaPooledParser",
+            "start_pos": 31
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "парсинга",
+            "start_pos": 65
+          }
+        },
+        {
+          "term1": {
+            "class": "Application",
+            "value": "Томиты",
+            "start_pos": 22
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "парсинга",
+            "start_pos": 65
+          }
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "text": "Приведу только показатели качества классификации, которые были нами получены на тестах: Accuracy = 95% F1 score = 93%",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "классификации",
+          "start_pos": 35
+        },
+        {
+          "class": "Metric",
+          "value": "Accuracy",
+          "start_pos": 88
+        },
+        {
+          "class": "Value",
+          "value": "95%",
+          "start_pos": 99
+        },
+        {
+          "class": "Metric",
+          "value": "F1 score",
+          "start_pos": 103
+        },
+        {
+          "class": "Value",
+          "value": "93%",
+          "start_pos": 114
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "Accuracy",
+            "start_pos": 88
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Task",
+            "value": "классификации",
+            "start_pos": 35
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "F1 score",
+            "start_pos": 103
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Task",
+            "value": "классификации",
+            "start_pos": 35
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "Accuracy",
+            "start_pos": 88
+          },
+          "predicate": "hasValue",
+          "term2": {
+            "class": "Value",
+            "value": "95%",
+            "start_pos": 99
+          }
+        },
+        {
+          "term1": {
+            "class": "Metric",
+            "value": "F1 score",
+            "start_pos": 103
+          },
+          "predicate": "hasValue",
+          "term2": {
+            "class": "Value",
+            "value": "93%",
+            "start_pos": 114
+          }
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "text": "JavaScript-библиотека для обработки текстов на русском языке",
+      "terms": [
+        {
+          "class": "Library",
+          "value": "JavaScript-библиотека",
+          "start_pos": 0
+        },
+        {
+          "class": "Task",
+          "value": "обработки текстов",
+          "start_pos": 26
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Library",
+            "value": "JavaScript-библиотека",
+            "start_pos": 0
+          },
+          "predicate": "isUsedForSolving",
+          "term2": {
+            "class": "Task",
+            "value": "обработки текстов",
+            "start_pos": 26
+          }
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "text": "Бессвязность текстов в нынешней версии «Генератора» вызвана тем, что на самом деле никакого анализа он производить не умеет.",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Генератора",
+          "start_pos": 40
+        },
+        {
+          "class": "Method",
+          "value": "анализа",
+          "start_pos": 92
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 91,
+      "text": "На данный момент библиотека умеет две вещи: токенизацию и анализ морфологии.",
+      "terms": [
+        {
+          "class": "Library",
+          "value": "библиотека",
+          "start_pos": 17
+        },
+        {
+          "class": "Method",
+          "value": "токенизацию",
+          "start_pos": 44
+        },
+        {
+          "class": "Method",
+          "value": "анализ морфологии",
+          "start_pos": 58
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Method",
+            "value": "анализ морфологии",
+            "start_pos": 58
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Library",
+            "value": "библиотека",
+            "start_pos": 17
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "токенизацию",
+            "start_pos": 44
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Library",
+            "value": "библиотека",
+            "start_pos": 17
+          }
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "text": "В настоящее время библиотека обладает двумя функциональностями: выполнением токенизации и проведением анализа морфологии.",
+      "terms": [
+        {
+          "class": "Library",
+          "value": "библиотека",
+          "start_pos": 18
+        },
+        {
+          "class": "Method",
+          "value": "токенизации",
+          "start_pos": 76
+        },
+        {
+          "class": "Method",
+          "value": "анализа морфологии",
+          "start_pos": 102
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Method",
+            "value": "анализа морфологии",
+            "start_pos": 102
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Library",
+            "value": "библиотека",
+            "start_pos": 18
+          }
+        },
+        {
+          "term1": {
+            "class": "Method",
+            "value": "токенизации",
+            "start_pos": 76
+          },
+          "predicate": "isUsedIn",
+          "term2": {
+            "class": "Library",
+            "value": "библиотека",
+            "start_pos": 18
+          }
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "text": "Полный список граммем можно найти на странице проекта OpenCorpora.",
+      "terms": [
+        {
+          "class": "InfoResource",
+          "value": "OpenCorpora",
+          "start_pos": 54
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 94,
+      "text": "Кроме того, для анализа используется словарь OpenCorpora, упакованный в специальном формате, но об этом ниже.",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "анализа",
+          "start_pos": 16
+        },
+        {
+          "class": "Corpus",
+          "value": "OpenCorpora",
+          "start_pos": 45
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 95,
+      "text": "Вообще создатели проекта OpenCorpora большие молодцы и я вам рекомендую не только ознакомиться с ним, но и принять участие в коллаборативной разметке корпуса — это также поможет и другим опенсорсным проектам.",
+      "terms": [
+        {
+          "class": "Activity",
+          "value": "OpenCorpora",
+          "start_pos": 25
+        },
+        {
+          "class": "Task",
+          "value": "разметке корпуса",
+          "start_pos": 141
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 96,
+      "text": "По сути эта часть библиотеки — порт замечательного морфологического анализатора pymorphy2 за авторством kmike (на Хабре была пара статей об этой библиотеке).",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "морфологического анализатора",
+          "start_pos": 51
+        },
+        {
+          "class": "Library",
+          "value": "pymorphy2",
+          "start_pos": 80
+        },
+        {
+          "class": "Person",
+          "value": "kmike",
+          "start_pos": 104
+        },
+        {
+          "class": "InfoResource",
+          "value": "Хабре",
+          "start_pos": 114
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Library",
+            "value": "pymorphy2",
+            "start_pos": 80
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Person",
+            "value": "kmike",
+            "start_pos": 104
+          }
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "text": "Эта часть библиотеки по сути является переносом выдающегося морфологического анализатора pymorphy2, созданного kmike (о котором было написано несколько статей на Хабре).",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "морфологического анализатора",
+          "start_pos": 60
+        },
+        {
+          "class": "Library",
+          "value": "pymorphy2",
+          "start_pos": 89
+        },
+        {
+          "class": "Person",
+          "value": "kmike",
+          "start_pos": 111
+        },
+        {
+          "class": "InfoResource",
+          "value": "Хабре",
+          "start_pos": 162
+        }
+      ],
+      "relations": [
+        {
+          "term1": {
+            "class": "Library",
+            "value": "pymorphy2",
+            "start_pos": 89
+          },
+          "predicate": "hasAuthor",
+          "term2": {
+            "class": "Person",
+            "value": "kmike",
+            "start_pos": 111
+          }
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "text": "Потом появилась нейросеть GPT-2, которая была как минимум в 10 раз мощнее и была способна обрабатывать 1,5 миллиарда параметров (переменных, определяющих возможности машинного обучения).",
+      "terms": [
+        {
+          "class": "Model",
+          "value": "GPT-2",
+          "start_pos": 26
+        },
+        {
+          "class": "Science",
+          "value": "машинного обучения",
+          "start_pos": 166
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 99,
+      "text": "Анализируем тональность текстов с помощью Fast.ai",
+      "terms": [
+        {
+          "class": "Application",
+          "value": "Fast.ai",
+          "start_pos": 42
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": 100,
+      "text": "В статье пойдет речь о классификации тональности текстовых сообщений на русском языке (а по сути любой классификации текстов, используя те же технологии).",
+      "terms": [
+        {
+          "class": "Task",
+          "value": "классификации тональности текстовых сообщений",
+          "start_pos": 23
+        },
+        {
+          "class": "Lang",
+          "value": "русском",
+          "start_pos": 72
+        }
+      ],
+      "relations": []
+    }
+  ]
+}

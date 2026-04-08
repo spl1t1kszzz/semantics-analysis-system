@@ -19,7 +19,7 @@ ru_by_en_predicate = {
 class LLMRelationExtractor(RelationExtractor):
 
     def __init__(self,
-                 model: str = 'mistralai/Mixtral-8x7B-Instruct-v0.1',
+                 model: str = 'gpt-4o-mini',
                  show_explanation: bool = False,
                  log_prompts: bool = False,
                  log_llm_responses: bool = False,
@@ -141,7 +141,7 @@ class LLMRelationExtractor(RelationExtractor):
 
         response = self.llm_agent(
             prompt,
-            max_new_tokens=1,
+            max_new_tokens=8,
             stop_sequences=['.', '\n']
         )
 
@@ -163,7 +163,7 @@ class LLMRelationExtractor(RelationExtractor):
         if term1.class_ == term2.class_ and not self.show_explanation:
             stop_tokens.append(',')
 
-        max_new_tokens = 100 if self.show_explanation else 40
+        max_new_tokens = 512 if self.show_explanation else 256
 
         response = self.llm_agent(
             prompt,

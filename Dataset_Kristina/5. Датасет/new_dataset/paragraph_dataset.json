@@ -1,0 +1,1435 @@
+
+{
+    "examples": [
+      {
+        "text": "В этой статье я расскажу все, что вам нужно знать про ALBERT, RoBERTa, и DistilBERT. Если непонятно по названию, эти модели — модифицированные версии оригинального современного трансформера BERT. Эти три модели из библиотеки Hugging Face — самые популярные на сегодняшний день. Я рассмотрю их сходства и различия по сравнению друг с другом и добавлю фрагменты кода. Они покажут, как вы можете их использовать.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ALBERT"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "RoBERTa"
+          }
+          ,
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "DistilBERT"
+          }
+          ,
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "BERT"
+          }
+          ,
+          {
+            "index": 0,
+            "class": "Library",
+            "value": "Hugging Face"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "ALBERT",
+              "index": 0
+            },
+            "predicate": "isIncludedIn",
+            "term2": {
+              "class": "Library",
+              "value": "Hugging Face",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "BERT",
+              "index": 0
+            },
+            "predicate": "isIncludedIn",
+            "term2": {
+              "class": "Library",
+              "value": "Hugging Face",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "RoBERTa",
+              "index": 0
+            },
+            "predicate": "isIncludedIn",
+            "term2": {
+              "class": "Library",
+              "value": "Hugging Face",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "DistilBERT",
+              "index": 0
+            },
+            "predicate": "isIncludedIn",
+            "term2": {
+              "class": "Library",
+              "value": "Hugging Face",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "DistilBERT",
+              "index": 0
+            },
+            "predicate": "isModificationOf",
+            "term2": {
+              "class": "Model",
+              "value": "BERT",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "RoBERTa",
+              "index": 0
+            },
+            "predicate": "isModificationOf",
+            "term2": {
+              "class": "Model",
+              "value": "BERT",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "ALBERT",
+              "index": 0
+            },
+            "predicate": "isModificationOf",
+            "term2": {
+              "class": "Model",
+              "value": "BERT",
+              "index": 0
+            }
+          }          
+        ]
+      },
+      {
+        "text": "А теперь давайте еще вспомним, что обкатанная на GPT-1 технология Трансформеров оказалась на редкость удачной в плане масштабирования: она умеет работать с большими объемами данных и «массивными» моделями (состоящими из огромного числа параметров) гораздо эффективнее своих предшественников. Вы думаете о том же, о чем и я? Ну вот и ученые из OpenAI в 2019 году сделали такой же вывод: «Пришло время пилить здоровенные языковые модели!». В общем, было решено радикально прокачать GPT-2 по двум ключевым направлениям: набор тренировочных данных (датасет) и размер модели (количество параметров).На тот момент не было каких‑то специальных, больших и качественных, публичных наборов текстовых данных для тренировки языковых моделей — так что каждой команде специалистов по ИИ приходилось извращаться согласно их собственной степени испорченности. Вот ребята из OpenAI и решили поступить остроумно: они пошли на самый популярный англоязычный онлайн‑форум Reddit и тупо выкачали все гиперссылки из всех сообщений, имевших более трех лайков (я сейчас не шучу — научный подход, ну!).",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT-1"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "технология Трансформеров"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "OpenAI"
+          },
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "2019"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT-2"
+          },
+          {
+            "index": 0,
+            "class": "Dataset",
+            "value": "набор тренировочных данных"
+          },
+          {
+            "index": 0,
+            "class": "Dataset",
+            "value": "датасет"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "OpenAI"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Reddit"
+          }          
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-2",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Date",
+              "value": "2019",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Model",
+              "value": "GPT-2",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "технология Трансформеров",
+              "index": 0
+            },
+            "predicate": "isUsedForTraining",
+            "term2": {
+              "class": "Model",
+              "value": "GPT-1",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Dataset",
+              "value": "набор тренировочных данных",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Dataset",
+              "value": "датасет",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-2",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "У классических transition-based parser возможны три операции, перечисленные выше: стрелка в одну сторону, стрелка в другую сторону и шифт. Есть еще операция Swap, в базовых архитектурах transition-based парсеров она не используется, но в UDPipe включена. Swap возвращает второй элемент стека в буфер, чтобы взять потом из буфера следующий (в случае если они разнесены). Это помогает пропустить некоторое количество слов и восстановить правильную связь.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "transition-based parser"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "transition-based парсеров"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "Swap"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "UDPipe"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Method",
+              "value": "Swap",
+              "index": 0
+            },
+            "predicate": "isUsedIn",
+            "term2": {
+              "class": "Application",
+              "value": "UDPipe",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "transition-based parser",
+              "index": 0
+            },
+            "predicate": "includes",
+            "term2": {
+              "class": "Application",
+              "value": "UDPipe",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "transition-based парсеров",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Application",
+              "value": "transition-based parser",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Для разработчиков среднего и высокого уровня нейросети становятся полноценными помощниками. Есть возможность прокачать и оптимизировать процессы, то есть сильно повысить свою продуктивность. Например, у компании GitHub есть Copilot, у Amazon — CodeWhisperer. Это системы, которые поддерживают написание кода и облегчают работу программиста.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "нейросети"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Copilot"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "GitHub"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "CodeWhisperer"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "Amazon"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "написание кода"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Application",
+              "value": "CodeWhisperer",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "Amazon",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "Copilot",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "GitHub",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "CodeWhisperer",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "написание кода",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "Copilot",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "написание кода",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Davinchi –самая крупная модель OpenAI (для понимания: при обучении модели использовалось более 150 миллиардов обучающих блоков, тогда как GPT-3,5 и GPT-4 обучались всего на 6 миллиардах блоков данных). Модель успешно решает задачи, связанные с поиском причинно-следственных связей, и генерирует более качественный текст, когда речь идет о сложных задачах. При этом Davinchi потребляет больше ресурсов и времени.   Интерактивное взаимодействие с моделью происходит за счет «Промтов», то есть запросов, которые мы отсылаем в нейросеть. Поэтому эффективность применения ChatGPT напрямую зависит от такого, каким образом вы конструируете запрос.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "Davinchi"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "OpenAI"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT-3,5"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "GPT-4"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "поиском причинно-следственных связей"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "генерирует более качественный текст"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "моделью"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "нейросеть"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ChatGPT"
+          },
+          {
+            "index": 0,
+            "class": "Object",
+            "value": "«Промтов»"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Davinchi",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-3,5",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-4",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Davinchi",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "поиском причинно-следственных связей",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Davinchi",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "генерирует более качественный текст",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Object",
+              "value": "«Промтов»",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "поиском причинно-следственных связей",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Модели OpenAI, доступные к взаимодействию:GPT-3,5 и GPT-4 – это основные модели, с которыми мы работаем через Telegram или по API в базовых настройках. Это немодифицированные типовые модели, которые максимально оптимизированы для универсальных запросов под обычного пользователя. Они обучены на ограниченном количестве данных, но зато выдают самый быстрый результат из всех моделей.   Ada - самая быстрая из всех моделей, способна выполнять такие задачи, как синтаксический анализ текста, исправление адреса и менее сложные задачи классификации.   Babage - лучше всего подходит для простых задач классификации и выполняет SEO-анализ текста.   Curie - подходит для задач классификация и анализа настроений. Модель также выдает результаты на запросы, отвечает на вопросы и может использоваться в качестве чат-бота общего назначения. Сравнение показывает, что она может выполнять многие задачи Davinci, но за 10% стоимости.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "Модели"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "OpenAI"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT-3,5"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "GPT-4"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Telegram"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "Ada"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "синтаксический анализ текста"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "исправление адреса"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "Babage"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "классификации"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "SEO-анализ текста"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "Curie"
+          },
+          {
+            "index": 1,
+            "class": "Task",
+            "value": "классификация"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "анализа настроений"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "выдает результаты на запросы"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "отвечает на вопросы"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "использоваться в качестве чат-бота"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "Davinci"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-3,5",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-4",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Ada",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "синтаксический анализ текста",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Ada",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "исправление адреса",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Babage",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "классификации",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Babage",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "SEO-анализ текста",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Curie",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "классификации",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Curie",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "анализа настроений",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Curie",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "выдает результаты на запросы",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Curie",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "отвечает на вопросы",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "Curie",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "использоваться в качестве чат-бота",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "В целом мы видим похожую картину, хотя точность предсказаний CatBoost получилась выше, чем нейронной сети. В CatBoost есть функция для отрисовки деревьев, воспользуемся ей, чтобы нарисовать первое дерево:model.plot_tree(0). Каждое звено дерева содержит разделяющее правило, в котором проверяется, что значение указанного признака больше указанного порога. Каждый лист дерева выдает 2 числа: само значение  и уверенность. Оба эти числа суммируются по всем деревьям.5.2. Регрессия с константной оценкой дисперсии*Вспомним вероятностную модель регрессии, которую мы рассматривали во второй части (2). В ней   является константой. Для любого значения  локальные и глобальные минимумы функции потерь одни и те же, и изменение  эквивалентно масштабированию функции потерь, что равносильно изменению learning rate. Отсюда получается, что какое бы  мы не брали - ничего не изменится (поскольку learning rate выбирается совсем по другим соображениям).",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Library",
+            "value": "CatBoost"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "нейронной сети"
+          },
+          {
+            "index": 0,
+            "class": "Metric",
+            "value": "точность"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "функция для отрисовки деревьев"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "Регрессия"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "вероятностную модель регрессии"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Method",
+              "value": "функция для отрисовки деревьев",
+              "index": 0
+            },
+            "predicate": "isUsedIn",
+            "term2": {
+              "class": "Library",
+              "value": "CatBoost",
+              "index": 0
+            }
+          }          
+        ]
+      },
+      {
+        "text": "AI Text Classifier запустили 31 января 2023 года. Как и остальные инструменты OpenAI, он бесплатный. Работает так: анализирует образцы текста, сравнивает их с образцами баз данных, написанными как нейросетью, так и людьми, анализирует множество разных стилей написания, даже такие, как новостные статьи, научные документы, посты в соцсетях, рекламные тексты. Хоть и нельзя со стопроцентной уверенностью сказать, что тот или иной текст написан нейросетью, потенциал у AI Text Classifier есть: через него можно обеспечивать высокое качество текстов в сети. В компании OpenAI утверждают, что новый инструмент пресечёт такие попытки обмана, как запуск автоматических кампаний по дезинформации, мошенничество с задействованием ИИ в научной сфере, имитацию переписки с живым человеком с помощью чат-ботов. Чтобы знать, как работает программа, нужно понимать особенности текстов, которые генерирует ИИ. Такой текст чаще всего несогласованный и несвязный: модели ИИ в большинстве случаев не способны создать текст, основные мысли которого логично и естественно перетекают из одной в другую.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "AI Text Classifier"
+          },
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "31 января 2023 года"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "OpenAI"
+          },
+          {
+            "index": 0,
+            "class": "Object",
+            "value": "новостные статьи"
+          },
+          {
+            "index": 0,
+            "class": "Object",
+            "value": "научные документы"
+          },
+          {
+            "index": 0,
+            "class": "Object",
+            "value": "посты в соцсетях"
+          },
+          {
+            "index": 0,
+            "class": "Object",
+            "value": "рекламные тексты"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "анализирует образцы текста"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "пресечёт такие попытки обмана"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "мошенничество с задействованием ИИ в научной сфере"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "имитацию переписки с живым человеком с помощью чат-ботов"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI Text Classifier",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI Text Classifier",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Date",
+              "value": "31 января 2023 года",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI Text Classifier",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "анализирует образцы текста",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI Text Classifier",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "пресечёт такие попытки обмана",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI Text Classifier",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "мошенничество с задействованием ИИ в научной сфере",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI Text Classifier",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "имитацию переписки с живым человеком с помощью чат-ботов",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI Text Classifier",
+              "index": 0
+            },
+            "predicate": "isAppliedTo",
+            "term2": {
+              "class": "Object",
+              "value": "новостные статьи",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI Text Classifier",
+              "index": 0
+            },
+            "predicate": "isAppliedTo",
+            "term2": {
+              "class": "Object",
+              "value": "научные документы",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI Text Classifier",
+              "index": 0
+            },
+            "predicate": "isAppliedTo",
+            "term2": {
+              "class": "Object",
+              "value": "посты в соцсетях",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI Text Classifier",
+              "index": 0
+            },
+            "predicate": "isAppliedTo",
+            "term2": {
+              "class": "Object",
+              "value": "рекламные тексты",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "GPT внедряют в большое количество проектов. Чаще всего это, конечно, анализ данных, кластеризация, группировка, выявление закономерностей. То есть то, для чего искусственные нейронные сети использовались и раньше. В новых задачах генеративного плана пока что на практике GPT используется не так много, как хотелось бы, но есть замечательные примеры. Первый и самый активно используемый — это AI помощник, встроенный в Notion, — он может как помочь улучшить уже написанный текст, так и сгенерировать план или даже целиком статью под ваш запрос. Главное — не нужно взаимодействовать с каким-то отдельным сервисом, все удобно интегрировано в процесс работы над контентом. Сейчас такой подход с интеллектуальными помощниками, понимающими ваш запрос, — самый используемый вариант применения в большинстве проектов. Получается, что ChatGPT переводит запрос пользователя в понятный для системы вызов функции в определённом формате и с указанными пользователем параметрами, на этом чаще всего магия и заканчивается. При этом даже так удобство использования значительно улучшается.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "анализ данных"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "кластеризация"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "группировка"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "выявление закономерностей"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "искусственные нейронные"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "AI помощник"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Notion"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "улучшить уже написанный текст"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "сгенерировать план"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ChatGPT"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "переводит запрос пользователя в понятный для системы вызов функции"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "выявление закономерностей",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "группировка",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "кластеризация",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "анализ данных",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI помощник",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "улучшить уже написанный текст",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "AI помощник",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "сгенерировать план",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "ChatGPT",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "переводит запрос пользователя в понятный для системы вызов функции",
+              "index": 0
+            }
+          }          
+        ]
+      },
+      {
+        "text": "Что мы имеем из ванильных моделей:GPT-1 (2018) (Context: 512) - Работала не очень хорошо (длинные тексты генерировались плохо), но при файнтюнинге на отдельных задачах эта модель могла выполнять несложные задания. GPT-2 (2019) (Context: 1024) - стала лучше, научилась писать длинные связные тексты и даже решать задачи при помощи prompt engineering без обучения.  GPT-3 (2020) (Context: 2048) - Стала в 10 (!) раз больше, и настолько крутой, что даже научилась писать рабочий программный код. RuGPT3, RuDialoGPT3, (Context: 512!) - и множество других дообученных версий GPT3 под русский язык было обучено и выложено Сбером в открытый доступ (В свое время я даже эссе по истории, общаге и паре спецов написал исключительно ими). Но был у них один небольшой нюанс. Небольшой он настолько же, как их контекст, длиной 512 токенов. (это как у самой первой GPT, да). Просто выяснилось, что если тренировать модель, рассчитанную на 2048 контекст кусками текста по 512, то она немного отупеет. Свято место пусто не бывает, кто-то должен был начать это монетизировать. Этим занялись сами создатели архитектуры - OpenAI, которые решили пойти против своего названия и запустить сайт, с чат интерфейсом своей новой версии GPT3, дообученной на контексте разметки чата - ChatGPT. В первый день её выхода в открытый тест я зарегал temp phone number и был разочарован. Он работал ничуть не лучше ванильной GPT3 на английском, а русский язык был вообще машинным переводом на входе и выходе. После выхода ChatGPT3.5 с закрытыми исходниками долгое время была видимость того, что развитие отечественной индустрии энтузиастами умрёт вместе с рождением ChatGPT4.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT-1"
+          },
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "2018"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT-2"
+          },
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "2019"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "писать длинные связные тексты"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "prompt engineering"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT-3"
+          },
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "2020"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "писать рабочий программный код"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "RuGPT3"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "RuDialoGPT3"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT3"
+          },
+          {
+            "index": 0,
+            "class": "Lang",
+            "value": "русский язык"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "Сбером"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "OpenAI"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ChatGPT"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ChatGPT3.5"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ChatGPT4"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-1",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Date",
+              "value": "2018",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-2",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Date",
+              "value": "2019",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-2",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "писать длинные связные тексты",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "prompt engineering",
+              "index": 0
+            },
+            "predicate": "isUsedForTraining",
+            "term2": {
+              "class": "Model",
+              "value": "GPT-2",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-3",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Date",
+              "value": "2020",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-3",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "писать рабочий программный код",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "RuGPT3",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "Сбером",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "RuDialoGPT3",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "Сбером",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT3",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "Сбером",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "ChatGPT",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "ChatGPT3.5",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "ChatGPT4",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+
+
+
+  

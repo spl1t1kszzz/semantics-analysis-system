@@ -1,0 +1,805 @@
+# text =   Однажды нам понадобилось выбрать синтаксический парсер для работы с русским языком.
+# relations = ""
+Однажды O
+нам O
+понадобилось O
+выбрать O
+синтаксический B-Application
+парсер I-Application
+для O
+работы O
+с O
+русским O
+языком O
+. O
+
+# text =   Для этого мы углубились в дебри морфологии и токенизации, протестировали разные варианты и оценили их применение.
+# relations = ""
+Для O
+этого O
+мы O
+углубились O
+в O
+дебри O
+морфологии B-Science
+и O
+токенизации B-Method
+, O
+протестировали O
+разные O
+варианты O
+и O
+оценили O
+их O
+применение O
+. O
+
+# text =   В первой строке предложение разобрано в рамках грамматики зависимостей.
+# relations = ""
+В O
+первой O
+строке O
+предложение O
+разобрано O
+в O
+рамках O
+грамматики B-Method
+зависимостей I-Method
+. O
+
+# text =   Во второй строке разбор идет в соответствии с грамматикой непосредственно составляющих.
+# relations = ""
+Во O
+второй O
+строке O
+разбор O
+идет O
+в O
+соответствии O
+с O
+грамматикой B-Method
+непосредственно I-Method
+составляющих I-Method
+. O
+
+# text =   Поэтому в автоматическом парсинге русского языка принято работать исходя из грамматики зависимостей.
+# relations = "Method_solves_Task 0 0"
+Поэтому O
+в O
+автоматическом B-Task
+парсинге I-Task
+русского B-Lang
+языка O
+принято O
+работать O
+исходя O
+из O
+грамматики B-Method
+зависимостей I-Method
+. O
+
+# text =   Чтобы облегчить себе выбор парсера, мы обратили свой взгляд на проект Universal Dependencies и недавно прошедшее в его рамках соревнование CoNLL Shared Task.
+# relations = ""
+Чтобы O
+облегчить O
+себе O
+выбор O
+парсера O
+, O
+мы O
+обратили O
+свой O
+взгляд O
+на O
+проект O
+Universal B-Activity
+Dependencies I-Activity
+и O
+недавно O
+прошедшее O
+в O
+его O
+рамках O
+соревнование O
+CoNLL O
+Shared O
+Task O
+. O
+
+# text =   Universal Dependencies — это проект по унификации разметки синтаксических корпусов (трибанков) в рамках грамматики зависимостей.
+# relations = "Method_solves_Task 0 0, Object_isUsedInSolving_Task 0 0, Object_isUsedInSolving_Task 1 0"
+Universal B-Activity
+Dependencies I-Activity
+— O
+это O
+проект O
+по O
+унификации B-Task
+разметки I-Task
+синтаксических B-Object
+корпусов I-Object
+( O
+трибанков B-Object
+) O
+в O
+рамках O
+грамматики B-Method
+зависимостей I-Method
+. O
+
+# text =   Мы можем оценивать, правильно ли нашли вершину слова — метрика UAS (Unlabeled attachment score).
+# relations = "Metric_IsAlternativeNameFor_Metric 1 0"
+Мы O
+можем O
+оценивать O
+, O
+правильно O
+ли O
+нашли O
+вершину O
+слова O
+— O
+метрика O
+UAS B-Metric
+( O
+Unlabeled B-Metric
+attachment I-Metric
+score I-Metric
+) O
+. O
+
+# text =   Мы можем оценивать, корректно ли обнаружены вершины слова, используя метрику UAS (Unlabeled Attachment Score).
+# relations = "Metric_IsAlternativeNameFor_Metric 1 0"
+Мы O
+можем O
+оценивать O
+, O
+корректно O
+ли O
+обнаружены O
+вершины O
+слова O
+, O
+используя O
+метрику O
+UAS B-Metric
+( O
+Unlabeled B-Metric
+Attachment I-Metric
+Score I-Metric
+) O
+. O
+
+# text =   Или оценивать, правильно ли найдена как вершина, так и тип зависимости — метрика LAS (Labeled attachment score).
+# relations = "Metric_IsAlternativeNameFor_Metric 1 0"
+Или O
+оценивать O
+, O
+правильно O
+ли O
+найдена O
+как O
+вершина O
+, O
+так O
+и O
+тип O
+зависимости O
+— O
+метрика O
+LAS B-Metric
+( O
+Labeled B-Metric
+attachment I-Metric
+score I-Metric
+) O
+. O
+
+# text =   Либо проверять, были ли правильно определены и вершина, и тип зависимости, используя метрику LAS (Labeled Attachment Score).
+# relations = "Metric_IsAlternativeNameFor_Metric 1 0"
+Либо O
+проверять O
+, O
+были O
+ли O
+правильно O
+определены O
+и O
+вершина O
+, O
+и O
+тип O
+зависимости O
+, O
+используя O
+метрику O
+LAS B-Metric
+( O
+Labeled B-Metric
+Attachment I-Metric
+Score I-Metric
+) O
+. O
+
+# text =   Казалось бы, здесь напрашивается оценка точности (accuracy) — считаем, сколько раз мы попали из общего количества случаев.
+# relations = "Metric_IsAlternativeNameFor_Metric 1 0"
+Казалось O
+бы O
+, O
+здесь O
+напрашивается O
+оценка O
+точности B-Metric
+( O
+accuracy B-Metric
+) O
+— O
+считаем O
+, O
+сколько O
+раз O
+мы O
+попали O
+из O
+общего O
+количества O
+случаев O
+. O
+
+# text =   Разработчики, решающие задачи автоматического парсинга, часто берут на вход сырой текст, который в соответствии с пирамидой анализа проходит этапы токенизации и морфологического анализа.
+# relations = "Method_solves_Task 0 0, Method_solves_Task 1 0"
+Разработчики O
+, O
+решающие O
+задачи O
+автоматического B-Task
+парсинга I-Task
+, O
+часто O
+берут O
+на O
+вход O
+сырой O
+текст O
+, O
+который O
+в O
+соответствии O
+с O
+пирамидой O
+анализа O
+проходит O
+этапы O
+токенизации B-Method
+и O
+морфологического B-Method
+анализа I-Method
+. O
+
+# text =   Поэтому формулой оценки в данном случае является ф-мера, где точность (precision) — доля точных попаданий относительно общего числа предсказаний, а полнота — доля точных попаданий относительно числа связей в размеченных данных.
+# relations = "Metric_IsAlternativeNameFor_Metric 2 1" 
+Поэтому O
+формулой O
+оценки O
+в O
+данном O
+случае O
+является O
+ф B-Metric
+- I-Metric
+мера I-Metric
+, O
+где O
+точность B-Metric
+( O
+precision B-Metric
+) O
+— O
+доля O
+точных O
+попаданий O
+относительно O
+общего O
+числа O
+предсказаний O
+, O
+а O
+полнота B-Metric
+— O
+доля O
+точных O
+попаданий O
+относительно O
+числа O
+связей O
+в O
+размеченных O
+данных O
+. O
+
+# text =   Очевидно, что все эксперименты проводятся на SynTagRus (разработка ИППИ РАН), в котором более миллиона токенов.
+# relations = ""
+Очевидно O
+, O
+что O
+все O
+эксперименты B-Activity
+проводятся O
+на O
+SynTagRus B-Dataset
+( O
+разработка O
+ИППИ B-Organization
+РАН I-Organization
+) O
+, O
+в O
+котором O
+более O
+миллиона O
+токенов B-Subject
+. O
+
+# text =   По итогам соревнования прошлого года модели, которые обучались на одном и том же SynTagRus, достигли следующих показателей LAS:
+# relations = ""
+По O
+итогам O
+соревнования O
+прошлого O
+года O
+модели O
+, O
+которые O
+обучались O
+на O
+одном O
+и O
+том O
+же O
+SynTagRus B-Dataset
+, O
+достигли O
+следующих O
+показателей O
+LAS B-Metric
+: O
+
+# text =   Забегая вперед, заметим, что новая версия UDPipe (Future) оказалась еще выше в этом году.
+# relations = "Application_hasAuthor_Organization 0 0"
+Забегая O
+вперед O
+, O
+заметим O
+, O
+что O
+новая O
+версия O
+UDPipe B-Application
+( O
+Future B-Organization
+) O
+оказалась O
+еще O
+выше O
+в O
+этом O
+году O
+. O
+
+# text =   В список не вошел Syntaxnet — парсер Google.
+# relations = "Application_hasAuthor_Organization 0 0"
+В O
+список O
+не O
+вошел O
+Syntaxnet B-Application
+— O
+парсер O
+Google B-Organization
+. O
+
+# text =   Ответ прост: Syntaxnet начинался лишь с этапа морфологического анализа.
+# relations = "Method_isUsedIn_Application 0 0"
+Ответ O
+прост O
+: O
+Syntaxnet B-Application
+начинался O
+лишь O
+с O
+этапа O
+морфологического B-Method
+анализа I-Method
+. O
+
+# text =   В качестве начальных данных у нас есть табличка выше с лидирующим Syntaxnet и с UDPipe 2.0 где-то на 7 месте.
+# relations = ""
+В O
+качестве O
+начальных O
+данных O
+у O
+нас O
+есть O
+табличка O
+выше O
+с O
+лидирующим O
+Syntaxnet B-Application
+и O
+с O
+UDPipe B-Application
+2.0 I-Application
+где O
+- O
+то O
+на O
+7 O
+месте O
+. O
+
+# text =   Синтаксис, разумеется, далеко не единственный модуль «под капотом» real-time системы, поэтому тратить на него больше десятка миллисекунд не стоит.
+# relations = "Application_isUsedIn_Science 0 0"
+Синтаксис B-Science
+, O
+разумеется O
+, O
+далеко O
+не O
+единственный O
+модуль O
+« O
+под O
+капотом O
+» O
+real B-Application
+- I-Application
+time I-Application
+системы O
+, O
+поэтому O
+тратить O
+на O
+него O
+больше O
+десятка O
+миллисекунд O
+не O
+стоит O
+. O
+
+# text =   Разумеется, синтаксис - не единственный модуль real-time системы, поэтому нецелесообразно затрачивать на него более десятка миллисекунд.
+# relations = "Application_isUsedIn_Science 0 0"
+Разумеется O
+, O
+синтаксис B-Science
+- O
+не O
+единственный O
+модуль O
+real B-Application
+- I-Application
+time I-Application
+системы O
+, O
+поэтому O
+нецелесообразно O
+затрачивать O
+на O
+него O
+более O
+десятка O
+миллисекунд O
+. O
+
+# text =   Для русского языка у нас есть достаточно хорошие морфологические анализаторы, которые могут встроиться в нашу пирамиду.
+# relations = ""
+Для O
+русского B-Lang
+языка O
+у O
+нас O
+есть O
+достаточно O
+хорошие O
+морфологические B-Application
+анализаторы I-Application
+, O
+которые O
+могут O
+встроиться O
+в O
+нашу O
+пирамиду O
+. O
+
+# text =   Затем начинает работу теггер — штука, которая предсказывает морфологические свойства токена: в каком падеже слово стоит, в каком числе.
+# relations = ""
+Затем O
+начинает O
+работу O
+теггер B-Application
+— O
+штука O
+, O
+которая O
+предсказывает O
+морфологические B-Subject
+свойства I-Subject
+токена I-Subject
+: O
+в O
+каком O
+падеже O
+слово O
+стоит O
+, O
+в O
+каком O
+числе O
+. O
+
+# text =   В UDPipe есть еще лемматизатор, который подбирает для слов начальную форму.
+# relations = ""
+В O
+UDPipe B-App_system
+есть O
+еще O
+лемматизатор B-Application
+, O
+который O
+подбирает O
+для O
+слов O
+начальную B-Subject
+форму I-Subject
+. O
+
+# text =   UDPipe — это transition-based архитектура: она работает быстро, за линейное время проходя по всем токенам один раз.
+# relations = "Model_includes_Model 1 0"
+UDPipe B-Model
+— O
+это O
+transition B-Model
+- I-Model
+based I-Model
+архитектура O
+: O
+она O
+работает O
+быстро O
+, O
+за O
+линейное O
+время O
+проходя O
+по O
+всем O
+токенам B-Subject
+один O
+раз O
+. O
+
+# text =   RightArc — то же самое, но зависимость строится в другую сторону, и отбрасывается верхушка.
+# relations = ""
+RightArc B-Model
+— O
+то O
+же O
+самое O
+, O
+но O
+зависимость O
+строится O
+в O
+другую O
+сторону O
+, O
+и O
+отбрасывается O
+верхушка O
+. O
+
+# text =   У классических transition-based parser возможны три операции, перечисленные выше: стрелка в одну сторону, стрелка в другую сторону и шифт.
+# relations = ""
+У O
+классических O
+transition B-Application
+- I-Application
+based I-Application
+parser I-Application
+возможны O
+три O
+операции O
+, O
+перечисленные O
+выше O
+: O
+стрелка O
+в O
+одну O
+сторону O
+, O
+стрелка O
+в O
+другую O
+сторону O
+и O
+шифт O
+. O
+
+# text =   Анализатор Mystem (разработка яндекса) в определении частей речи достигает лучших результатов, чем UDPipe.
+# relations = "Application_hasAuthor_Organization 0 0"
+Анализатор O
+Mystem B-Application
+( O
+разработка O
+яндекса B-Organization
+) O
+в O
+определении O
+частей O
+речи O
+достигает O
+лучших O
+результатов O
+, O
+чем O
+UDPipe B-App_system
+. O
+
+# text =   Многие знают, что Mystem не полностью понимает морфологическую омонимию.
+# relations = "Application_is_applied_to_Object 0 0"
+Многие O
+знают O
+, O
+что O
+Mystem B-Application
+не O
+полностью O
+понимает O
+морфологическую B-Object
+омонимию I-Object
+. O
+
+# text =   При помощи анализатора RNNMorph.
+# relations = ""
+При O
+помощи O
+анализатора O
+RNNMorph B-Application
+. O
+
+# text =   Про него мало кто слышал, но в прошлом году он выиграл соревнование среди морфологических анализаторов, проводившееся в рамках конференции «Диалог».
+# relations = ""
+Про O
+него O
+мало O
+кто O
+слышал O
+, O
+но O
+в O
+прошлом O
+году O
+он O
+выиграл O
+соревнование O
+среди O
+морфологических B-Subject
+анализаторов I-Subject
+, O
+проводившееся O
+в O
+рамках O
+конференции O
+« O
+Диалог O
+» O
+. O
+
+# text =   Хотя если сравнивать их чисто на уровне качества морфологической разметки (данные с MorphoRuEval-2017), то проигрыш получается значительный — порядка 15%, если считать accuracy по словам.
+# relations = ""
+Хотя O
+если O
+сравнивать O
+их O
+чисто O
+на O
+уровне O
+качества O
+морфологической B-Method
+разметки I-Method
+( O
+данные O
+с O
+MorphoRuEval-2017 O
+) O
+, O
+то O
+проигрыш O
+получается O
+значительный O
+— O
+порядка O
+15 O
+% O
+, O
+если O
+считать O
+accuracy B-Metric
+по O
+словам O
+. O
+
+# text =   Дальше буду сравнивать нас с Syntaxnet и остальными алгоритмами.
+# relations = ""
+Дальше O
+буду O
+сравнивать O
+нас O
+с O
+Syntaxnet B-App_system
+и O
+остальными O
+алгоритмами O
+. O
+
+# text =   Интересно, что мы почти дотянулись по метрике LAS до версии Syntaxnet.
+# relations = ""
+Интересно O
+, O
+что O
+мы O
+почти O
+дотянулись O
+по O
+метрике O
+LAS B-Metric
+до O
+версии O
+Syntaxnet B-App_system
+. O
+
+# text =   В архитектуре стенфордского парсера и Syntaxnet заложена другая концепия: сначала они генерируют полный ориентированный граф, и дальше работа алгоритма состоит в том, чтобы оставить тот скелет (минимальное остовное дерево), который будет наиболее вероятным.
+# relations = "Application_is_applied_to_Object 0 0, Application_is_applied_to_Object 0 1"
+В O
+архитектуре O
+стенфордского O
+парсера O
+и O
+Syntaxnet B-App_system
+заложена O
+другая O
+концепия O
+: O
+сначала O
+они O
+генерируют O
+полный O
+ориентированный B-Object
+граф I-Object
+, O
+и O
+дальше O
+работа O
+алгоритма O
+состоит O
+в O
+том O
+, O
+чтобы O
+оставить O
+тот O
+скелет O
+( O
+минимальное B-Object
+остовное I-Object
+дерево I-Object
+) O
+, O
+который O
+будет O
+наиболее O
+вероятным O
+. O

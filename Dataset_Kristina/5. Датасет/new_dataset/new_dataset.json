@@ -1,0 +1,1730 @@
+{
+    "examples": [
+      {
+        "text": "В задаче классификации использовался logloss, вычисляемый как среднее значение метрики sklearn.metrics.log_loss по классам болезней.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Metric",
+            "value": "logloss"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "классификации"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Metric",
+              "value": "logloss",
+              "index": 0
+            },
+            "predicate": "isUsedIn",
+            "term2": {
+              "class": "Task",
+              "value": "классификации",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Также на описанном материале строятся более сложные темы, такие как вариационные автокодировщики (Kingma and Welling, 2013), нейробайесовские методы (Müller et al., 2021) и даже некоторые теории сознания (Friston et al., 2022).",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "вариационные автокодировщики"
+          },
+          {
+            "index": 0,
+            "class": "Person",
+            "value": "Kingma"
+          },
+          {
+            "index": 0,
+            "class": "Person",
+            "value": "Welling"
+          },
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "2013"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "нейробайесовские методы"
+          },
+          {
+            "index": 0,
+            "class": "Person",
+            "value": "Müller"
+          },
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "2021"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "теории сознания"
+          },
+          {
+            "index": 0,
+            "class": "Person",
+            "value": "Friston"
+          },
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "2022"
+          }
+
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "вариационные автокодировщики",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Person",
+              "value": "Kingma",
+              "index": 0
+            }            
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "вариационные автокодировщики",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Person",
+              "value": "Welling",
+              "index": 0
+            }            
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "вариационные автокодировщики",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Date",
+              "value": "2013",
+              "index": 0
+            }            
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "нейробайесовские методы",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Person",
+              "value": "Müller",
+              "index": 0
+            }            
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "нейробайесовские методы",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Date",
+              "value": "2021",
+              "index": 0
+            }            
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "теории сознания",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Person",
+              "value": "Friston",
+              "index": 0
+            }            
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "теории сознания",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Date",
+              "value": "2022",
+              "index": 0
+            }            
+          }
+        ]
+      },
+      {
+        "text": "В этой статье я расскажу все, что вам нужно знать про ALBERT, RoBERTa, и DistilBERT. Если непонятно по названию, эти модели — модифицированные версии оригинального современного трансформера BERT. Эти три модели из библиотеки Hugging Face — самые популярные на сегодняшний день. Я рассмотрю их сходства и различия по сравнению друг с другом и добавлю фрагменты кода. Они покажут, как вы можете их использовать.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ALBERT"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "RoBERTa"
+          }
+          ,
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "DistilBERT"
+          }
+          ,
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "BERT"
+          }
+          ,
+          {
+            "index": 0,
+            "class": "Library",
+            "value": "Hugging Face"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "ALBERT",
+              "index": 0
+            },
+            "predicate": "isIncludedIn",
+            "term2": {
+              "class": "Library",
+              "value": "Hugging Face",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "BERT",
+              "index": 0
+            },
+            "predicate": "isIncludedIn",
+            "term2": {
+              "class": "Library",
+              "value": "Hugging Face",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "RoBERTa",
+              "index": 0
+            },
+            "predicate": "isIncludedIn",
+            "term2": {
+              "class": "Library",
+              "value": "Hugging Face",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "DistilBERT",
+              "index": 0
+            },
+            "predicate": "isIncludedIn",
+            "term2": {
+              "class": "Library",
+              "value": "Hugging Face",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "DistilBERT",
+              "index": 0
+            },
+            "predicate": "isModificationOf",
+            "term2": {
+              "class": "Model",
+              "value": "BERT",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "RoBERTa",
+              "index": 0
+            },
+            "predicate": "isModificationOf",
+            "term2": {
+              "class": "Model",
+              "value": "BERT",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "ALBERT",
+              "index": 0
+            },
+            "predicate": "isModificationOf",
+            "term2": {
+              "class": "Model",
+              "value": "BERT",
+              "index": 0
+            }
+          }          
+        ]
+      },
+      {
+        "text": "Поэтому MSE, в сравнении с MAE, не так сильно штрафует несущественные ошибки, но сильнее штрафует большие ошибки.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Metric",
+            "value": "MSE"
+          },
+          {
+            "index": 0,
+            "class": "Metric",
+            "value": "MAE"
+          }
+        ],
+        "relations": []
+      },
+      {
+        "text": "Это и есть тот самый переход количества в качество, про который нам когда‑то твердил старина Карл Маркс.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Person",
+            "value": "Карл Маркс"
+          }
+        ],
+        "relations": []
+      },
+      {
+        "text": "Python служит главным инструментом в руках data scientists, не имеет строгой типизации и предназначен для быстрой разработки прототипов или написания коротких сценариев или скриптов.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Environment",
+            "value": "Python"
+          }
+        ],
+        "relations": []
+      },
+      {
+        "text": "Крупные компании также принимают участие в разработке библиотек для NLP, как например NLP Architect от Intel или PyTorch от исследователей из Facebook и Uber.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Science",
+            "value": "NLP"
+          },
+          {
+            "index": 0,
+            "class": "Library",
+            "value": "NLP Architect"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "Intel"
+          },
+          {
+            "index": 0,
+            "class": "Library",
+            "value": "PyTorch"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "Uber"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "Facebook"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Library",
+              "value": "NLP Architect",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "Intel",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Library",
+              "value": "PyTorch",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "Facebook",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Library",
+              "value": "PyTorch",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "Uber",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Казалось бы, здесь напрашивается оценка точности (accuracy) — считаем, сколько раз мы попали из общего количества случаев. Если у нас есть 5 слов и для 4 мы правильно определили вершину, то получаем 80%.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Metric",
+            "value": "accuracy"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "оценка точности"
+          },
+          {
+            "index": 0,
+            "class": "Value",
+            "value": "80%"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Metric",
+              "value": "accuracy",
+              "index": 0
+            },
+            "predicate": "isUsedIn",
+            "term2": {
+              "class": "Task",
+              "value": "оценка точности",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Metric",
+              "value": "accuracy",
+              "index": 0
+            },
+            "predicate": "hasValue",
+            "term2": {
+              "class": "Value",
+              "value": "80%",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Январь 2022: InstructGPT, или как научить робота быть политкорректым. На самом деле, увеличение размеров языковых моделей само по себе еще не означает, что они будут отвечать на запросы именно так, как хочет их пользователь. Ведь часто мы, когда формулируем какой‑то запрос, подразумеваем очень много скрытых условий — которые в коммуникации между людьми считаются сами собой разумеющимися, что ли.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "Январь 2022"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "InstructGPT"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Date",
+              "value": "Январь 2022",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Model",
+              "value": "InstructGPT",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "А вот GPT-2 никто специально таким трюкам не учил; но она взяла, и сама неожиданно и уверенно превзошла своих «специализированных» предшественников — научилась определять голодных рыбов правильно в 70% случаев.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT-2"
+          }
+        ],
+        "relations": []
+      },
+      {
+        "text": "Итак, нам нужно выбрать парсер для русского языка. В качестве начальных данных у нас есть табличка выше с лидирующим Syntaxnet и с UDPipe 2.0 где-то на 7 месте.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Lang",
+            "value": "русского языка"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "UDPipe 2.0"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Syntaxnet"
+          }          
+        ],
+        "relations": []
+      },
+      {
+        "text": "GNMT есть система машинного перевода (NMT) компании Google, которая использует нейросеть (ANN) для повышения точности и скорости перевода, и в частности для создания лучших, более естественных вариантов перевода текста в Google Translate.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "Google"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "повышения точности и скорости перевода"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Google Translate"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ANN"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "GNMT"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "система машинного перевода"
+          }
+          ,
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "NMT"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Method",
+              "value": "GNMT",
+              "index": 0
+            },
+            "predicate": "includes",
+            "term2": {
+              "class": "Method",
+              "value": "система машинного перевода",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "NMT",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Method",
+              "value": "система машинного перевода",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "GNMT",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "Google",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "GNMT",
+              "index": 0
+            },
+            "predicate": "uses",
+            "term2": {
+              "class": "Model",
+              "value": "ANN",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "GNMT",
+              "index": 0
+            },
+            "predicate": "solves",
+            "term2": {
+              "class": "Task",
+              "value": "повышения точности и скорости перевода",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "GNMT",
+              "index": 0
+            },
+            "predicate": "isUsedIn",
+            "term2": {
+              "class": "Application",
+              "value": "Google Translate",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Недавно рассказывал о том, как делать иерархически датасет из Wikipedia (Википедии).",
+        "terms": [
+          {
+            "index": 0,
+            "class": "InfoResource",
+            "value": "Wikipedia"
+          },
+          {
+            "index": 0,
+            "class": "InfoResource",
+            "value": "Википедии"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "InfoResource",
+              "value": "Википедии",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "InfoResource",
+              "value": "Wikipedia",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Мы использовали деревья решений для этой задачи классификации.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "деревья решений"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "классификации"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Method",
+              "value": "деревья решений",
+              "index": 0
+            },
+            "predicate": "solves",
+            "term2": {
+              "class": "Task",
+              "value": "классификации",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Сегодня мы расскажем, как помогли НПО Энергомаш создать корпоративную интеллектуальную информационно-поисковую систему (КИИПС) на базе ABBYY Intelligent Search – такую же удобную и быструю, как популярные поисковики.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "НПО Энергомаш"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "корпоративную интеллектуальную информационно-поисковую систему"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "КИИПС"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "ABBYY Intelligent Search"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Application",
+              "value": "корпоративную интеллектуальную информационно-поисковую систему",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "НПО Энергомаш",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "КИИПС",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "НПО Энергомаш",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "КИИПС",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Application",
+              "value": "корпоративную интеллектуальную информационно-поисковую систему",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "корпоративную интеллектуальную информационно-поисковую систему",
+              "index": 0
+            },
+            "predicate": "includes",
+            "term2": {
+              "class": "Application",
+              "value": "ABBYY Intelligent Search",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "КИИПС",
+              "index": 0
+            },
+            "predicate": "includes",
+            "term2": {
+              "class": "Application",
+              "value": "ABBYY Intelligent Search",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Краткое резюме: Модель ChatGPT вышла в ноябре 2022-го и с технической точки зрения там не было никаких особых нововведений. Но зато у нее был удобный интерфейс взаимодействия и открытый публичный доступ — что немедленно породило огромную волну хайпа. А в нынешнем мире это главнее всего — так что языковыми моделями одномоментно начали заниматься вообще все вокруг!",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ChatGPT"
+          },
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "2022"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Date",
+              "value": "2022",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Model",
+              "value": "ChatGPT",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Кстати, у Игоря Котенкова (одного из авторов этой статьи) есть еще один лонгрид на Хабре под названием «ChatGPT как инструмент для поиска: решаем основную проблему», в котором нюансы машинного обучения разбираются еще более подробно.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Person",
+            "value": "Игоря Котенкова"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Хабре"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ChatGPT"
+          },
+          {
+            "index": 0,
+            "class": "Science",
+            "value": "машинного обучения"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "ChatGPT",
+              "index": 0
+            },
+            "predicate": "isUsedIn",
+            "term2": {
+              "class": "Science",
+              "value": "машинного обучения",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Чтобы размер скрытых слоев и размерность эмбеддинга были разными, ALBERTa деконструирует матрицу эмбеддинга на 2 части. Это увеличивает размер скрытого слоя, не меняя фактического размера эмбеддинга. После разложения матрицы, ALBERT добавляет линейный или полносвязный слой после завершения фазы эмбеддинга. Это гарантирует, что размерность размерности эмбеддинга будет такой же правильной. Здесь об этом рассказано подробнее.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ALBERTa"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "ALBERT"
+          },
+          {
+            "index": 0,
+            "class": "Object",
+            "value": "эмбеддинга"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "ALBERTa",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Model",
+              "value": "ALBERT",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Важным аспектом здесь является то, что Nearby Share опирается на Google Mobile Services (GMS), а это означает, что разработчик системы заменил доступную в AOSP функцию проприетарной службой, которая не является частью проекта AOSP.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Nearby Share"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Google Mobile Services"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "GMS"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "AOSP"
+          },
+          {
+            "index": 1,
+            "class": "Activity",
+            "value": "AOSP"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Application",
+              "value": "GMS",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Application",
+              "value": "Google Mobile Services",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "В полку LLM прибыло: недавно специалисты из Французского национального центра научных исследований (French National Center for Scientific Research) объявили о релизе новой большой языковой модели под названием BLOOM (расшифровывается как BigScience Large Open-science Open-access Multilingual Language Model).",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "LLM"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "Французского национального центра научных исследований"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "French National Center for Scientific Research"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "BLOOM"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "BigScience Large Open-science Open-access Multilingual Language Model"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "LLM",
+              "index": 0
+            },
+            "predicate": "includes",
+            "term2": {
+              "class": "Model",
+              "value": "BLOOM",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "LLM",
+              "index": 0
+            },
+            "predicate": "includes",
+            "term2": {
+              "class": "Model",
+              "value": "BigScience Large Open-science Open-access Multilingual Language Model",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "BigScience Large Open-science Open-access Multilingual Language Model",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Model",
+              "value": "BLOOM",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Organization",
+              "value": "Французского национального центра научных исследований",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Organization",
+              "value": "French National Center for Scientific Research",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "BigScience Large Open-science Open-access Multilingual Language Model",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "French National Center for Scientific Research",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "BLOOM",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "French National Center for Scientific Research",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "BigScience Large Open-science Open-access Multilingual Language Model",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "Французского национального центра научных исследований",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "BLOOM",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "Французского национального центра научных исследований",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "У классических transition-based parser возможны три операции, перечисленные выше: стрелка в одну сторону, стрелка в другую сторону и шифт. Есть еще операция Swap, в базовых архитектурах transition-based парсеров она не используется, но в UDPipe включена. Swap возвращает второй элемент стека в буфер, чтобы взять потом из буфера следующий (в случае если они разнесены). Это помогает пропустить некоторое количество слов и восстановить правильную связь.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "transition-based parser"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "transition-based парсеров"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "Swap"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "UDPipe"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Method",
+              "value": "Swap",
+              "index": 0
+            },
+            "predicate": "isUsedIn",
+            "term2": {
+              "class": "Application",
+              "value": "UDPipe",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "transition-based parser",
+              "index": 0
+            },
+            "predicate": "includes",
+            "term2": {
+              "class": "Application",
+              "value": "UDPipe",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "transition-based парсеров",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Application",
+              "value": "transition-based parser",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Так родился статистический метод анализа текста word2vec (англ. Word to vector).",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "word2vec"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "Word to vector"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Method",
+              "value": "Word to vector",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Method",
+              "value": "word2vec",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Весь Шекспир – 13 увесистых томов, которые занимают целую полку.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Person",
+            "value": "Шекспир"
+          }
+        ],
+        "relations": []
+      },
+      {
+        "text": "Заметки об NLP (Natural Language Processing).",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Science",
+            "value": "NLP"
+          },
+          {
+            "index": 0,
+            "class": "Science",
+            "value": "Natural Language Processing"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Science",
+              "value": "NLP",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Science",
+              "value": "Natural Language Processing",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "НКРЯ – это совокупность русскоязычных текстов, Национальный Корпус Русского Языка в полном объёме.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Corpus",
+            "value": "НКРЯ"
+          },
+          {
+            "index": 0,
+            "class": "Corpus",
+            "value": "Национальный Корпус Русского Языка"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Corpus",
+              "value": "Национальный Корпус Русского Языка",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Corpus",
+              "value": "НКРЯ",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Давайте прикинем: собрание сочинений Уильяма Шекспира (всех его пьес, сонетов и стихов) состоит из 850'000 слов.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Dataset",
+            "value": "собрание сочинений Уильяма Шекспира"
+          },
+          {
+            "index": 0,
+            "class": "Object",
+            "value": "пьес"
+          },
+          {
+            "index": 0,
+            "class": "Object",
+            "value": "сонетов"
+          },
+          {
+            "index": 0,
+            "class": "Object",
+            "value": "стихов"
+          }
+        ],
+        "relations": []
+      },
+      {
+        "text": "Во-первых, конкретно для этого соревнования наиболее эффективный подход - это доразметка спанов тренировочных данных для задачи NER.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "доразметка спанов тренировочных данных"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "NER"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Method",
+              "value": "доразметка спанов тренировочных данных",
+              "index": 0
+            },
+            "predicate": "solves",
+            "term2": {
+              "class": "Task",
+              "value": "NER",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Например, в TensorFlow используется умножение справа, и матрица весов имеет размер (in, out), в PyTorch - умножение слева, и матрица весов имеет размер (out, in).",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Library",
+            "value": "TensorFlow"
+          },
+          {
+            "index": 0,
+            "class": "Library",
+            "value": "PyTorch"
+          }
+        ],
+        "relations": []
+      },
+      {
+        "text": "В третьей части (статья планируется) перейдем от метода максимизации правдоподобия к байесовскому выводу и его различным приближениям, таким как метод апостериорного максимума, методы Монте-Карло и вариационный вывод.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "метода максимизации правдоподобия"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "байесовскому выводу"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "метод апостериорного максимума"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "методы Монте-Карло"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "вариационный вывод"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Method",
+              "value": "байесовскому выводу",
+              "index": 0
+            },
+            "predicate": "includes",
+            "term2": {
+              "class": "Method",
+              "value": "метод апостериорного максимума",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "байесовскому выводу",
+              "index": 0
+            },
+            "predicate": "includes",
+            "term2": {
+              "class": "Method",
+              "value": "методы Монте-Карло",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "байесовскому выводу",
+              "index": 0
+            },
+            "predicate": "includes",
+            "term2": {
+              "class": "Method",
+              "value": "вариационный вывод",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Они отличаются хорошей сбалансированностью: достаточно высокий уровень чувствительности одновременно с хорошим соотношением сигнал/шум и уровнем AOP (Acoustic Overload Point — это такой аналог максимального звукового давления для цифровых микрофонов).",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Metric",
+            "value": "AOP"
+          },
+          {
+            "index": 0,
+            "class": "Metric",
+            "value": "Acoustic Overload Point"
+          }
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Metric",
+              "value": "Acoustic Overload Point",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Metric",
+              "value": "AOP",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "Ответ очень прост, Docker compose нужен для быстрого развертывания приложения, например, перенос приложения на другой сервер займет несколько минут, также в сочетании с kubernetes - дает превосходные результаты по автоматизации развертывания, масштабирования и координации работы нашего приложения в условиях кластера.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Docker compose"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "kubernetes"
+          }
+        ],
+        "relations": []
+      },
+      {
+        "text": "Привет! Меня зовут Денис Кирьянов, я работаю в Сбербанке и занимаюсь проблемами обработки естественного языка (NLP). Однажды нам понадобилось выбрать синтаксический парсер для работы с русским языком. Для этого мы углубились в дебри морфологии и токенизации, протестировали разные варианты и оценили их применение. Делимся опытом в этом посте.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Person",
+            "value": "Денис Кирьянов"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "Сбербанке"
+          },
+          {
+            "index": 0,
+            "class": "Science",
+            "value": "обработки естественного языка"
+          },
+          {
+            "index": 0,
+            "class": "Science",
+            "value": "NLP"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "синтаксический парсер"
+          },
+          {
+            "index": 0,
+            "class": "Lang",
+            "value": "русским языком"
+          },
+          {
+            "index": 0,
+            "class": "Science",
+            "value": "морфологии"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "токенизации"
+          }          
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Science",
+              "value": "обработки естественного языка",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Science",
+              "value": "NLP",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "токенизации",
+              "index": 0
+            },
+            "predicate": "isUsedIn",
+            "term2": {
+              "class": "Science",
+              "value": "NLP",
+              "index": 0
+            }
+          }
+        ]
+      },
+      {
+        "text": "У RNNMorph возникает своя проблема: у него нет токенизации. Если Mystem умеет токенизировать сырой текст, то RNNMorph требует на входе список токенов. Чтобы доехать до синтаксиса, придется сначала применить какой-то внешний токенизатор, потом отдать результат RNNMorph и только потом полученную морфологию скормить синтаксическому парсеру.",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "RNNMorph"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "токенизации"
+          },
+          {
+            "index": 0,
+            "class": "Task",
+            "value": "токенизировать"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Mystem"
+          },
+          {
+            "index": 0,
+            "class": "Object",
+            "value": "токенов"
+          },
+          {
+            "index": 0,
+            "class": "Science",
+            "value": "синтаксиса"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "токенизатор"
+          },
+          {
+            "index": 0,
+            "class": "Science",
+            "value": "морфологию"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "синтаксическому парсеру"
+          }          
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Application",
+              "value": "Mystem",
+              "index": 0
+            },
+            "predicate": "isUsedForSolving",
+            "term2": {
+              "class": "Task",
+              "value": "токенизировать",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "токенизации",
+              "index": 0
+            },
+            "predicate": "isUsedIn",
+            "term2": {
+              "class": "Application",
+              "value": "Mystem",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Application",
+              "value": "RNNMorph",
+              "index": 1
+            },
+            "predicate": "isAppliedTo",
+            "term2": {
+              "class": "Object",
+              "value": "токенов",
+              "index": 0
+            }
+          },
+
+        ]
+      },
+      {
+        "text": "А теперь давайте еще вспомним, что обкатанная на GPT-1 технология Трансформеров оказалась на редкость удачной в плане масштабирования: она умеет работать с большими объемами данных и «массивными» моделями (состоящими из огромного числа параметров) гораздо эффективнее своих предшественников. Вы думаете о том же, о чем и я? Ну вот и ученые из OpenAI в 2019 году сделали такой же вывод: «Пришло время пилить здоровенные языковые модели!». В общем, было решено радикально прокачать GPT-2 по двум ключевым направлениям: набор тренировочных данных (датасет) и размер модели (количество параметров).На тот момент не было каких‑то специальных, больших и качественных, публичных наборов текстовых данных для тренировки языковых моделей — так что каждой команде специалистов по ИИ приходилось извращаться согласно их собственной степени испорченности. Вот ребята из OpenAI и решили поступить остроумно: они пошли на самый популярный англоязычный онлайн‑форум Reddit и тупо выкачали все гиперссылки из всех сообщений, имевших более трех лайков (я сейчас не шучу — научный подход, ну!).",
+        "terms": [
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT-1"
+          },
+          {
+            "index": 0,
+            "class": "Method",
+            "value": "технология Трансформеров"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "OpenAI"
+          },
+          {
+            "index": 0,
+            "class": "Date",
+            "value": "2019"
+          },
+          {
+            "index": 0,
+            "class": "Model",
+            "value": "GPT-2"
+          },
+          {
+            "index": 0,
+            "class": "Dataset",
+            "value": "набор тренировочных данных"
+          },
+          {
+            "index": 0,
+            "class": "Dataset",
+            "value": "датасет"
+          },
+          {
+            "index": 0,
+            "class": "Organization",
+            "value": "OpenAI"
+          },
+          {
+            "index": 0,
+            "class": "Application",
+            "value": "Reddit"
+          }          
+        ],
+        "relations": [
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-2",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Date",
+              "value": "2019",
+              "index": 0
+            },
+            "predicate": "isDateOf",
+            "term2": {
+              "class": "Model",
+              "value": "GPT-2",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Method",
+              "value": "технология Трансформеров",
+              "index": 0
+            },
+            "predicate": "isUsedForTraining",
+            "term2": {
+              "class": "Model",
+              "value": "GPT-1",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Dataset",
+              "value": "набор тренировочных данных",
+              "index": 0
+            },
+            "predicate": "isAlternativeNameFor",
+            "term2": {
+              "class": "Dataset",
+              "value": "датасет",
+              "index": 0
+            }
+          },
+          {
+            "term1": {
+              "class": "Model",
+              "value": "GPT-2",
+              "index": 0
+            },
+            "predicate": "hasAuthor",
+            "term2": {
+              "class": "Organization",
+              "value": "OpenAI",
+              "index": 0
+            }
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,594 @@
+# text =   1 January 2010 at 07:59 Заметки об NLP (часть 2) Artificial Intelligence Natural Language Processing.
+# relations = "Science_IsAlternativeNameFor_Science 0 2"
+1 O
+January O
+2010 O
+at O
+07:59 O
+Заметки O
+об O
+NLP B-Science
+( O
+часть O
+2 O
+) O
+Artificial B-Science
+Intelligence I-Science
+Natural B-Science
+Language I-Science
+Processing I-Science
+. O
+
+# text =   Заметки об NLP (Natural Language Processing).
+# relations = "Science_IsAlternativeNameFor_Science 0 1"
+Заметки O
+об O
+NLP B-Science
+( O
+Natural B-Science
+Language I-Science
+Processing I-Science
+) O
+. O
+
+# text =   Хотя в первой части я и говорил, что не собираюсь останавливаться на морфологии, видимо, совсем без неё не получится
+# relations = ""
+Хотя O
+в O
+первой O
+части O
+я O
+и O
+говорил O
+, O
+что O
+не O
+собираюсь O
+останавливаться O
+на O
+морфологии B-Science
+, O
+видимо O
+, O
+совсем O
+без O
+неё O
+не O
+получится O
+. O
+
+# text =   Всё-таки обработка предложений сильно завязана на предшествующий морфологический анализ.
+# relations = "Method_solves_Task 0 0"
+Всё O
+- O
+таки O
+обработка B-Task
+предложений I-Task
+сильно O
+завязана B-Method_solves_Task
+на O
+предшествующий O
+морфологический B-Method
+анализ I-Method
+. O
+
+# text =   Наш с вами родной русский язык очень хорош (для нас) и труден (для иностранцев) богатой фонетикой и разнообразием грамматических средств.
+# relations = ""
+Наш O
+с O
+вами O
+родной O
+русский B-Lang
+язык I-Lang
+очень O
+хорош O
+( O
+для O
+нас O
+) O
+и O
+труден O
+( O
+для O
+иностранцев O
+) O
+богатой O
+фонетикой B-Science
+и O
+разнообразием O
+грамматических B-Object
+средств I-Object
+. O
+
+# text =   Во-первых, в них не так много незнакомых нам фонем.
+# relations = ""
+Во O
+- O
+первых O
+, O
+в O
+них O
+не O
+так O
+много O
+незнакомых O
+нам O
+фонем B-Subject
+. O
+
+# text =   Во-вторых, обилие грамматических явлений редко сталкивает нас с чем-либо непонятным.
+# relations = ""
+Во O
+- O
+вторых O
+, O
+обилие O
+грамматических B-Object
+явлений I-Object
+редко O
+сталкивает O
+нас O
+с O
+чем O
+- O
+либо O
+непонятным O
+. O
+
+# text =   А для американца, например, само понятие рода или падежа совершенно неочевидно.
+# relations = ""
+А O
+для O
+американца O
+, O
+например O
+, O
+само O
+понятие O
+рода B-Subject
+или O
+падежа B-Subject
+совершенно O
+неочевидно O
+. O
+
+# text =   Теперь о морфологии.
+# relations = ""
+Теперь O
+о O
+морфологии B-Science
+. O
+
+# text =   Автоматические морфологические анализаторы работают хорошо.
+# relations = ""
+Автоматические B-Subject
+морфологические I-Subject
+анализаторы I-Subject
+работают O
+хорошо O
+. O
+
+# text =   Если кому интересно посмотреть, как работает автоматический анализатор — можно поэкспериментировать на сайте С.А. Старостина.
+# relations = ""
+Если O
+кому O
+интересно O
+посмотреть O
+, O
+как O
+работает O
+автоматический B-Application
+анализатор I-Application
+— O
+можно O
+поэкспериментировать O
+на O
+сайте B-InfoResource
+С.А. B-Person
+Старостина I-Person
+. O
+
+# text =   Смею предположить, что едва ли не все морфологические анализаторы русского так или иначе опираются на Грамматический словарь Зализняка.
+# relations = ""
+Смею O
+предположить O
+, O
+что O
+едва O
+ли O
+не O
+все O
+морфологические B-Application
+анализаторы I-Application
+русского O
+так O
+или O
+иначе O
+опираются O
+на O
+Грамматический B-InfoResource
+словарь I-InfoResource
+Зализняка I-InfoResource
+. O
+
+# text =   Сам я пользуюсь разработками Алексея Сокирко, «обёрнутыми» в удобный интерфейс на сайте Lemmatizer.
+# relations = ""
+Сам O
+я O
+пользуюсь O
+разработками O
+Алексея B-Person
+Сокирко I-Person
+, O
+« O
+обёрнутыми O
+» O
+в O
+удобный O
+интерфейс O
+на O
+сайте O
+Lemmatizer B-InfoResource
+. O
+
+# text =   Судите сами: упомянутый русский морфологический анализатор Алексея Сокирко оперирует базой данных в 18,5 мегабайт.
+# relations = ""
+Судите O
+сами O
+: O
+упомянутый O
+русский B-Application
+морфологический I-Application
+анализатор I-Application
+Алексея I-Application
+Сокирко I-Application
+оперирует B-Application_uses_InfoResource
+базой B-InfoResource
+данных I-InfoResource
+в O
+18,5 O
+мегабайт O
+. O
+
+# text =   На Грамоте предлагают относить их к «предикативам», но общепринятого подхода нет.
+# relations = ""
+На O
+Грамоте B-InfoResource
+предлагают O
+относить O
+их O
+к O
+« O
+предикативам O
+» O
+, O
+но O
+общепринятого O
+подхода O
+нет O
+. O
+
+# text =   Например, ещё одна «фича» анализатора Сокирко: он называет глаголы в личной форме («бегаю») глаголами, а в начальной форме («бегать») — инфинитивами.
+# relations = ""
+Например O
+, O
+ещё O
+одна O
+« O
+фича O
+» O
+анализатора B-InfoResource
+Сокирко I-InfoResource
+: O
+он O
+называет O
+глаголы O
+в O
+личной O
+форме O
+( O
+« O
+бегаю O
+» O
+) O
+глаголами O
+, O
+а O
+в O
+начальной O
+форме O
+( O
+« O
+бегать O
+» O
+) O
+— O
+инфинитивами O
+. O
+
+# text =   Tags: NLP, обработка текстовб, компьютерная лингвистика.
+# relations = ""
+Tags O
+: O
+NLP B-Science
+, O
+обработка B-Task
+текстов I-Task
+, O
+компьютерная B-Science
+лингвистика I-Science
+
+# text =   Туториал по фреймворку для программирования датасетов MTS AI corporate blog.
+# relations = ""
+Туториал O
+по O
+фреймворку O
+для O
+программирования B-Science
+датасетов O
+MTS B-Organization
+AI I-Organization
+corporate B-InfoResource
+blog I-InfoResource
+
+# text =   Я Игорь Буянов, старший разработчик группы разметки данных MTS AI.
+# relations = ""
+Я O
+Игорь B-Person
+Буянов I-Person
+, O
+старший O
+разработчик O
+группы O
+разметки B-Method
+данных O
+MTS B-Organization
+AI I-Organization
+. O
+
+# text =   Недавно рассказывал о том, как делать иерархически датасет из Википедии.
+# relations = ""
+Недавно O
+рассказывал O
+о O
+том O
+, O
+как O
+делать O
+иерархически O
+датасет O
+из O
+Википедии B-InfoResource
+. O
+
+# text =   В этом посте хочу рассказать вам о Сноркеле - фреймворке для программирования данных (data programming).
+# relations = ""
+В O
+этом O
+посте O
+хочу O
+рассказать O
+вам O
+о O
+Сноркеле B-Technology
+- O
+фреймворке B-Environment
+для I-Environment
+программирования I-Environment
+данных I-Environment
+( O
+data B-Task
+programming I-Task
+) O
+. O
+
+# text =   Проект стартовал в Стэнфорде как инструмент для помощи в разметке датасетов для задачи information extraction, а сейчас разработчики делают платформу для пользования внешними заказчиками. 
+# relations = "Activity_hasAuthor_Organization 0 0, Object_isUsedInSolving_Task 0 0, Object_isUsedInSolving_Task 0 1"
+Проект B-Activity
+стартовал O
+в O
+Стэнфорде B-Organization
+как O
+инструмент B-Object
+для O
+помощи O
+в O
+разметке B-Task
+датасетов I-Task
+для O
+задачи O
+information B-Task
+extraction I-Task
+, O
+а O
+сейчас O
+разработчики O
+делают O
+платформу O
+для O
+пользования O
+внешними O
+заказчиками O
+. O
+
+# text =   В разметочные функции (labeling functions) закодированы все возможные правила, по которым можно поставить какую-либо метку каждому примеру из набора данных.
+# relations = "Method_includes_Method 0 2, Method_includes_Method 1 2, Method_IsAlternativeNameFor_Method 1 0"
+В O
+разметочные B-Method
+функции I-Method
+( O
+labeling B-Method
+functions I-Method
+) O
+закодированы B-Method_includes_Method
+все O
+возможные O
+правила B-Method
+, O
+по O
+которым O
+можно O
+поставить O
+какую O
+- O
+либо O
+метку O
+каждому O
+примеру O
+из O
+набора B-Dataset
+данных I-Dataset
+. O
+
+# text =   В качестве основы для таких функций используются:внешние базы данных, такие как WordNet или WikiBase.
+# relations = ""
+В O
+качестве O
+основы O
+для O
+таких O
+функций O
+используются O
+: O
+внешние O
+базы B-InfoResource
+данных I-InfoResource
+, O
+такие O
+как O
+WordNet B-InfoResource
+или O
+WikiBase B-InfoResource
+. O
+
+# text =   Генеративная модель, являющаяся сердцем Сноркеля, попытается учесть недостатки отдельных функций.
+# relations = "Model_isUsedIn_Application 0 0"
+Генеративная B-Model
+модель I-Model
+, O
+являющаяся B-Model_isUsedIn_Application
+сердцем O
+Сноркеля B-Application
+, O
+попытается O
+учесть O
+недостатки O
+отдельных O
+функций O
+. O
+
+# text =   Для наглядности оставляю здесь иллюстрацию с последовательностью работы со Снокрелем для задачи information extraction из оригинальной статьи.
+# relations = "Application_isUsedForSolving_Task 0 0"
+Для O
+наглядности O
+оставляю O
+здесь O
+иллюстрацию O
+с O
+последовательностью O
+работы O
+со O
+Снокрелем B-Application
+для O
+задачи O
+information B-Task
+extraction I-Task
+из O
+оригинальной O
+статьи O
+. O
+
+# text =   Авторы оригинальной статьи представляют ее как факторный граф, или графическую вероятностную модель.
+# relations = ""
+Авторы O
+оригинальной O
+статьи O
+представляют O
+ее O
+как O
+факторный B-Object
+граф I-Object
+, O
+или O
+графическую B-Model
+вероятностную I-Model
+модель I-Model
+. O
+
+# text =  Тогда модель определяется так, чтобы обучить эту модель без доступа к истинным меткам, это нужно обучаться с помощью логарифмического негативного маргинализированного правдоподобия, зная матрицу.
+# relations = "Method_is_applied_to_Object 0 0"
+Тогда O
+модель O
+определяется O
+так O
+, O
+чтобы O
+обучить O
+эту O
+модель O
+без O
+доступа O
+к O
+истинным O
+меткам O
+, O
+это O
+нужно O
+обучаться O
+с O
+помощью O
+логарифмического B-Method
+негативного I-Method
+маргинализированного I-Method
+правдоподобия I-Method
+, O
+зная O
+матрицу B-Object
+. O
+
+# text =  Оптимизацию авторы проводили с помощью SGD с семплированием Гиббса.
+# relations = ""
+Оптимизацию B-Activity
+авторы O
+проводили B-Method_isUsedIn_Activity
+с I-Method_isUsedIn_Activity
+помощью I-Method_isUsedIn_Activity
+SGD B-Method
+с O
+семплированием B-Method
+Гиббса I-Method
+. O
+
+# text =   Загрузим заранее обученную модель fastText, чей выбор объясняется наличием огромного количества опечаток в текстах.
+# relations = ""
+Загрузим O
+заранее O
+обученную O
+модель O
+fastText B-Model
+, O
+чей O
+выбор O
+объясняется O
+наличием O
+огромного O
+количества O
+опечаток O
+в O
+текстах B-Object
+. O
+
+# text =   Таким образом мы получили опорный вектор для класса "диарея".
+# relations = ""
+Таким O
+образом O
+мы O
+получили B-Method_is_applied_to_Object
+опорный B-Object
+вектор I-Object
+для O
+класса O
+" O
+диарея O
+" O
+. O

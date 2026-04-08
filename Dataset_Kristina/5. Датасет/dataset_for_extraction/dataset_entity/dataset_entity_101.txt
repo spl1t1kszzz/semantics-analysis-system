@@ -1,0 +1,202 @@
+# text =   Veridical Data Science — программная статья о методологии верификации моделей.
+# relations = ""
+Veridical B-InfoResource
+Data I-InfoResource
+Science I-InfoResource
+— O
+программная O
+статья O
+о O
+методологии O
+верификации B-Task
+моделей I-Task
+. O
+
+# text =  Чтобы обеспечить надежную проверку и разработать механизмы проверки и пополнения знаний, нужны специалисты смежных областей, одновременно обладающие компетенциями в ML и в предметной области (медицине, лингвистике, нейробиологии, образовании и т.д.).
+# relations = ""
+Чтобы O
+обеспечить O
+надежную O
+проверку O
+и O
+разработать O
+механизмы O
+проверки O
+и O
+пополнения O
+знаний O
+, O
+нужны O
+специалисты O
+смежных O
+областей O
+, O
+одновременно O
+обладающие O
+компетенциями O
+в O
+ML O
+и O
+в O
+предметной O
+области O
+( O
+медицине B-Science
+, O
+лингвистике B-Science
+, O
+нейробиологии B-Science
+, O
+образовании B-Science
+и O
+т.д. O
+) O
+. O
+
+# text =   В частности, развивается causal inference и commonsense reasoning.
+# relations = ""
+В O
+частности O
+, O
+развивается O
+causal B-Method
+inference I-Method
+и O
+commonsense B-Method
+reasoning I-Method
+. O
+
+# text =   Часть докладов посвящена мета-обучению (о том, как учиться учиться) и соединению DL-технологий с логикой 1 и 2 порядка — термин Artificial General Intelligence (AGI) становится обычным термином в выступлениях спикеров.
+# relations = ""
+Часть O
+докладов O
+посвящена O
+мета O
+- O
+обучению O
+( O
+о O
+том O
+, O
+как O
+учиться O
+учиться O
+) O
+и O
+соединению O
+DL B-Technology
+- I-Technology
+технологий I-Technology
+с O
+логикой O
+1 O
+и O
+2 O
+порядка O
+— O
+термин O
+Artificial B-Application
+General I-Application
+Intelligence I-Application
+( O
+AGI B-Application
+) O
+становится O
+обычным O
+термином O
+в O
+выступлениях O
+спикеров O
+. O
+
+# text =   Google запускает Coral ai – аналог raspberry pi, мини-компьютер для внедрения нейросетей в экспериментальные установки.
+# relations = "Application_hasAuthor_Organization 0 0"
+Google B-Organization
+запускает B-Application_hasAuthor_Organization
+Coral B-Technology
+ai I-Technology
+– O
+аналог O
+raspberry B-Technology
+pi I-Technology
+, O
+мини O
+- O
+компьютер O
+для O
+внедрения O
+нейросетей B-Method_ML
+в O
+экспериментальные O
+установки O
+. O
+
+# text =   Federated learning – направление ML, в котором отдельные модели учатся независимо друг от друга, а затем объединяются в единую модель (без централизации исходных данных), с поправками на редкие события, аномалии, персонализацию и т.д.
+# relations = "Method_includes_Method 1 0"
+Federated B-Method_ML
+learning I-Method_ML
+– O
+направление O
+ML B-Method_ML
+, O
+в O
+котором O
+отдельные O
+модели O
+учатся O
+независимо O
+друг O
+от O
+друга O
+, O
+а O
+затем O
+объединяются O
+в O
+единую O
+модель O
+( O
+без O
+централизации O
+исходных O
+данных O
+) O
+, O
+с O
+поправками O
+на O
+редкие O
+события O
+, O
+аномалии O
+, O
+персонализацию O
+и O
+т.д. O
+
+# text =   Генеративные модели на основании federated learning – будущее перспективное направление по мнению Google, которое находится “в ранних стадиях экспоненциального роста”.
+# relations = ""
+Генеративные B-Model
+модели I-Model
+на O
+основании O
+federated B-Method_ML
+learning I-Method_ML
+– O
+будущее O
+перспективное O
+направление O
+по O
+мнению O
+Google B-Organization
+, O
+которое O
+находится O
+“ O
+в O
+ранних O
+стадиях O
+экспоненциального O
+роста O
+” O
+. O

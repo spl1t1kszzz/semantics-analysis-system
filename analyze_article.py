@@ -105,6 +105,22 @@ def analyze_article(article_id: int, app_config: Config) -> AnalysisResult:
         result.terms = union_term_mentions(result.terms)
         result.relations = list(set(result.relations))
 
+        if app_config.use_multi_agent:
+            from semantics_analysis.multi_agent.conflict_resolution import (
+                RelationConflictResolver,
+            )
+            reverify = llm_relation_predictor.verify_relation if app_config.use_reverify_after_resolve else None
+            resolver = RelationConflictResolver(
+                log_prompts=app_config.log_prompts,
+                log_responses=app_config.log_llm_responses,
+                use_dialogue=app_config.use_conflict_dialogue,
+                reverify_callback=reverify,
+            )
+            full_text = '\n\n'.join(doc.paragraphs)
+            result.relations, _, _ = resolver.resolve_all(
+                full_text, result.relations
+            )
+
     return result
 
 
@@ -119,12 +135,19 @@ def main():
 
     result = analyze_article(article_id, app_config)
 
-    objects, ont_relations = convert_to_ont_entities(result.terms, result.relations)
-
-    ont_entities_json = {
-        'objects': [o.to_json() for o in objects],
-        'relations': [r.to_json() for r in ont_relations]
-    }
+    if app_config.use_multi_agent:
+        from semantics_analysis.knowledge_graph import build_knowledge_graph
+        ont_entities_json = build_knowledge_graph(
+            result.terms, result.relations, deduplicate=True
+        )
+    else:
+        objects, ont_relations = convert_to_ont_entities(
+            result.terms, result.relations
+        )
+        ont_entities_json = {
+            'objects': [o.to_json() for o in objects],
+            'relations': [r.to_json() for r in ont_relations]
+        }
 
     with open('ont_entities.json', 'w', encoding='utf-8') as wf:
         json.dump(ont_entities_json, wf, ensure_ascii=False, indent=2)

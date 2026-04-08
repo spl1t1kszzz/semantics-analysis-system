@@ -4,8 +4,13 @@ app-config:
   display-graph: true
   show-term-predictions: false
   show-class-predictions: false
-  llm: 'mistralai/Mixtral-8x7B-Instruct-v0.1'
+  llm: 'gpt-5.2'
   show-explanation: false
   split-on-sentences: false
   log-prompts: false
   log-llm-responses: false
+  use-multi-agent: true
+  # Двухшаговый диалог при разрешении конфликтов (сначала обоснование, потом выбор)
+  use-conflict-dialogue: true
+  # Повторная верификация выбранного отношения через LLM после разрешения конфликта
+  use-reverify-after-resolve: true

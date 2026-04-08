@@ -1,0 +1,44 @@
+# text =   Зайдя на несколько из них я увидел что большая половина типа Wix используют технологию Искусственного Интеллекта, чтобы создать шаблон разметки страницы и далее её уже заполнить.
+# relations = "Application_isUsedForSolving_Task 0 0"
+Зайдя O
+на O
+несколько O
+из O
+них O
+я O
+увидел O
+что O
+большая O
+половина O
+типа O
+Wix B-Organization
+используют O
+технологию B-Application
+Искусственного I-Application
+Интеллекта I-Application
+, O
+чтобы O
+создать B-Task
+шаблон I-Task
+разметки I-Task
+страницы I-Task
+и O
+далее O
+её O
+уже O
+заполнить O
+. O
+
+# text =   В финале я могу его редактировать путем Drag & Drop.
+# relations = ""
+В O
+финале O
+я O
+могу O
+его O
+редактировать O
+путем O
+Drag B-Method
+& I-Method
+Drop I-Method
+. O

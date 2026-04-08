@@ -1,0 +1,72 @@
+# text = Как поясняет сам Томас Димсон, This Word Does Not Exist является вариацией нейросети GPT-2.
+Как O
+поясняет O
+сам O
+Томас B-TERM
+Димсон I-TERM
+, O
+This B-TERM
+Word I-TERM
+Does I-TERM
+Not I-TERM
+Exist I-TERM
+является O
+вариацией O
+нейросети O
+GPT-2 B-TERM
+. O
+
+# text =  Существует также твиттер-бот проекта.
+Существует O
+также O
+твиттер B-TERM
+- I-TERM
+бот I-TERM
+проекта O
+. O
+
+# text =  Чтобы натренировать свою нейросеть на основе загруженных файлов, Димсон рекомендует воспользоваться контентом Apple Dictionary или Urban Dictionary.
+Чтобы O
+натренировать O
+свою O
+нейросеть O
+на O
+основе O
+загруженных O
+файлов O
+, O
+Димсон B-TERM
+рекомендует O
+воспользоваться O
+контентом O
+Apple B-TERM
+Dictionary I-TERM
+или O
+Urban B-TERM
+Dictionary I-TERM
+. O
+
+# text = Правда, пользователи YCombinator уже заметили, что This Word Does Not Exist иногда предлагает уже существующие слова — например, refactoring.
+Правда O
+, O
+пользователи O
+YCombinator B-TERM
+уже O
+заметили O
+, O
+что O
+This B-TERM
+Word I-TERM
+Does I-TERM
+Not I-TERM
+Exist I-TERM
+иногда O
+предлагает O
+уже O
+существующие O
+слова O
+— O
+например O
+, O
+refactoring O
+. O

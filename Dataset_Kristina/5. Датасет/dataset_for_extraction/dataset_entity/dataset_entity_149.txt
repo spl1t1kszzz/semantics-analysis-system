@@ -1,0 +1,411 @@
+# text =  Автоматическое определение эмоций в текстовых беседах с использованием нейронных сетей
+# relations = "Method_is_applied_to_Object 0 0, Method_solves_Task 0 0, Object_isUsedInSolving_Task 0 0"
+Автоматическое B-Task
+определение I-Task
+эмоций I-Task
+в O
+текстовых B-Object
+беседах I-Object
+с O
+использованием O
+нейронных B-Method_ML
+сетей I-Method_ML
+
+# text = Одна из основных задач диалоговых систем состоит не только в предоставлении нужной пользователю информации, но и в генерации как можно более человеческих ответов.
+# relations = "Application_isUsedForSolving_Task 0 1, Application_isUsedForSolving_Task 0 0"
+Одна O
+из O
+основных O
+задач O
+диалоговых B-Application
+систем I-Application
+состоит O
+не O
+только O
+в O
+предоставлении B-Task
+нужной I-Task
+пользователю I-Task
+информации I-Task
+, O
+но O
+и O
+в O
+генерации B-Task
+как O
+можно O
+более O
+человеческих O
+ответов O
+. O
+
+# text =   В этой статье мы рассмотрим архитектуру рекуррентной нейросети для определения эмоций в текстовых беседах, которая принимала участие в SemEval-2019 Task 3 “EmoContext”, ежегодном соревновании по компьютерной лингвистике.
+# relations = "Task_isSolvedIn_Science 0 0, Method_isUsedIn_Science 0 0, Object_isUsedInSolving_Task 0 0, Method_is_applied_to_Object 0 0, Method_solves_Task 0 0"
+В O
+этой O
+статье O
+мы O
+рассмотрим O
+архитектуру O
+рекуррентной B-Method_ML
+нейросети I-Method_ML
+для O
+определения B-Task
+эмоций I-Task
+в O
+текстовых B-Object
+беседах I-Object
+, O
+которая O
+принимала O
+участие O
+в O
+SemEval-2019 O
+Task O
+3 O
+“ O
+EmoContext O
+” O
+, O
+ежегодном O
+соревновании O
+по O
+компьютерной B-Science
+лингвистике I-Science
+. O
+
+# text =   Задача состояла в классификации эмоций (“happy”, “sad”, “angry” и “others”) в беседе из трех реплик, в которой участвовали чат-бот и человек.
+# relations = ""
+Задача O
+состояла O
+в O
+классификации B-Task
+эмоций I-Task
+( O
+“ O
+happy O
+” O
+, O
+“ O
+sad O
+” O
+, O
+“ O
+angry O
+” O
+и O
+“ O
+others O
+” O
+) O
+в O
+беседе O
+из O
+трех O
+реплик O
+, O
+в O
+которой O
+участвовали O
+чат O
+- O
+бот O
+и O
+человек O
+. O
+
+# text =   В четвёртой части мы опишем архитектуру LSTM, которую мы использовали в соревновании.
+# relations = ""
+В O
+четвёртой O
+части O
+мы O
+опишем O
+архитектуру O
+LSTM B-Method_ML
+, O
+которую O
+мы O
+использовали O
+в O
+соревновании O
+. O
+
+# text =   Код написан на языке Python с использованием библиотеки Keras.
+# relations = "Environment_isUsedIn_Application 0 0"
+Код O
+написан O
+на O
+языке O
+Python B-Environment
+с O
+использованием O
+библиотеки O
+Keras B-Library
+. O
+
+# text =   Подробное описание представлено здесь: (Chatterjee et al., 2019).
+# relations = ""
+Подробное O
+описание O
+представлено O
+здесь O
+: O
+( O
+Chatterjee B-InfoResource
+et I-InfoResource
+al I-InfoResource
+. I-InfoResource
+, I-InfoResource
+2019 I-InfoResource
+) O
+. O
+
+# text =   Примеры из датасета EmoContext (Chatterjee et al., 2019)
+# relations = ""
+Примеры O
+из O
+датасета O
+EmoContext B-Dataset
+( O
+Chatterjee B-InfoResource
+et I-InfoResource
+al I-InfoResource
+. I-InfoResource
+, I-InfoResource
+2019 I-InfoResource
+) O
+
+# text =   Данные предоставлены Microsoft, скачать их можно в официальной группе в LinkedIn.
+# relations = "Application_hasAuthor_Organization 0 0"
+Данные O
+предоставлены O
+Microsoft B-Organization
+, O
+скачать O
+их O
+можно O
+в O
+официальной O
+группе O
+в O
+LinkedIn B-Application
+. O
+
+# text =   В дополнение к этим данным мы собрали 900 тыс. англоязычных сообщений из Twitter, чтобы создать Distant-датасет (300 тыс. твитов на каждую эмоцию).
+# relations = ""
+В O
+дополнение O
+к O
+этим O
+данным O
+мы O
+собрали O
+900 O
+тыс. O
+англоязычных O
+сообщений O
+из O
+Twitter B-Organization
+, O
+чтобы O
+создать O
+Distant B-Dataset
+- O
+датасет O
+( O
+300 O
+тыс. O
+твитов O
+на O
+каждую O
+эмоцию O
+) O
+. O
+
+# text =   При его создании мы придерживались стратегии Go et al. (2009), в рамках которой просто ассоциировали сообщения с наличием относящихся к эмоциям слов, таких как #angry, #annoyed, #happy, #sad, #surprised и так далее.
+# relations = ""
+При O
+его O
+создании O
+мы O
+придерживались O
+стратегии O
+Go B-InfoResource
+et I-InfoResource
+al I-InfoResource
+. I-InfoResource
+( I-InfoResource
+2009 I-InfoResource
+) I-InfoResource
+, O
+в O
+рамках O
+которой O
+просто O
+ассоциировали B-Task
+сообщения I-Task
+с I-Task
+наличием I-Task
+относящихся I-Task
+к I-Task
+эмоциям I-Task
+слов I-Task
+, O
+таких O
+как O
+# O
+angry O
+, O
+# O
+annoyed O
+, O
+# O
+happy O
+, O
+# O
+sad O
+, O
+# O
+surprised O
+и O
+так O
+далее O
+. O
+
+# text =   Список терминов основан на терминах из SemEval-2018 AIT DISC (Duppada et al., 2018).
+# relations = ""
+Список O
+терминов B-Subject
+основан O
+на O
+терминах B-Subject
+из O
+SemEval-2018 B-Dataset
+AIT I-Dataset
+DISC I-Dataset
+( O
+Duppada B-InfoResource
+et I-InfoResource
+al I-InfoResource
+. I-InfoResource
+, I-InfoResource
+2018 I-InfoResource
+) O
+. O
+
+# text =   Главной метрикой качества в соревновании EmoContext является усредненная F1-мера для трёх классов эмоций, то есть для классов «happy», «sad» и «angry».
+# relations = ""
+Главной O
+метрикой O
+качества O
+в O
+соревновании O
+EmoContext O
+является O
+усредненная O
+F1-мера B-Metric
+для O
+трёх O
+классов O
+эмоций O
+, O
+то O
+есть O
+для O
+классов O
+« O
+happy O
+» O
+, O
+« O
+sad O
+» O
+и O
+« O
+angry O
+» O
+. O
+
+# text =   Перед обучением мы предварительно обработали тексты с помощью инструмента Ekphrasis (Baziotis et al., 2017).
+# relations = ""
+Перед O
+обучением O
+мы O
+предварительно O
+обработали O
+тексты B-Object
+с O
+помощью O
+инструмента O
+Ekphrasis B-Application
+( O
+Baziotis B-InfoResource
+et I-InfoResource
+al I-InfoResource
+. I-InfoResource
+, I-InfoResource
+2017 I-InfoResource
+) O
+. O
+
+# text =   Он помогает исправить орфографию, нормализовать слова, сегментировать, а также определить, какие токены следует отбросить, нормализовать или аннотировать с помощью специальных тегов.
+# relations = "Object_isUsedInSolving_Task 0 1, Object_isUsedInSolving_Task 0 2, Object_isUsedInSolving_Task 0 0"
+Он O
+помогает O
+исправить B-Task
+орфографию I-Task
+, O
+нормализовать B-Task
+слова I-Task
+, O
+сегментировать B-Task
+, O
+а O
+также O
+определить O
+, O
+какие O
+токены B-Subject
+следует O
+отбросить O
+, O
+нормализовать O
+или O
+аннотировать O
+с O
+помощью O
+специальных O
+тегов B-Subject
+. O
+
+# text =   Кроме того, Emphasis содержит токенизатор, который может идентифицировать большинство эмодзи, эмотиконов и сложных выражений, а также даты, время, валюты и акронимы.
+# relations = "Method_is_applied_to_Object 0 0, Object_isUsedInSolving_Task 0 0, Method_is_applied_to_Object 0 1, Object_isUsedInSolving_Task 1 0, Method_is_applied_to_Object 0 2, Object_isUsedInSolving_Task 2 0, Method_is_applied_to_Object 0 3, Object_isUsedInSolving_Task 3 0, Method_is_applied_to_Object 0 4, Object_isUsedInSolving_Task 4 0, Method_is_applied_to_Object 0 5, Object_isUsedInSolving_Task 5 0, Method_is_applied_to_Object 0 6, Object_isUsedInSolving_Task 6 0, Method_isUsedIn_Application 0 0"
+Кроме O
+того O
+, O
+Emphasis B-Application
+содержит O
+токенизатор B-Method
+, O
+который O
+может O
+идентифицировать B-Task
+большинство O
+эмодзи B-Object
+, O
+эмотиконов B-Object
+и O
+сложных B-Object
+выражений I-Object
+, O
+а O
+также O
+даты B-Object
+, O
+время B-Object
+, O
+валюты B-Object
+и O
+акронимы B-Object
+. O

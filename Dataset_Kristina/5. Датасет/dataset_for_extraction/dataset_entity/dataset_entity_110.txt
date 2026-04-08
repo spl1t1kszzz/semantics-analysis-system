@@ -1,0 +1,202 @@
+# text =   Анализируем тональность текстов с помощью Fast.ai
+# relations = ""
+Анализируем O
+тональность O
+текстов O
+с O
+помощью O
+Fast.ai B-Technology
+
+# text =  В статье пойдет речь о классификации тональности текстовых сообщений на русском языке (а по сути любой классификации текстов, используя те же технологии).
+# relations = ""
+В O
+статье O
+пойдет O
+речь O
+о O
+классификации B-Task
+тональности I-Task
+текстовых I-Task
+сообщений I-Task
+на O
+русском B-Lang
+языке O
+( O
+а O
+по O
+сути O
+любой O
+классификации O
+текстов O
+, O
+используя O
+те O
+же O
+технологии O
+) O
+. O
+
+# text =   За основу возьмем данную статью, в которой была рассмотрена классификация тональности на архитектуре CNN с использованием Word2vec модели.
+# relations = "Method_solves_Task 0 0"
+За O
+основу O
+возьмем O
+данную O
+статью O
+, O
+в O
+которой O
+была O
+рассмотрена O
+классификация B-Task
+тональности I-Task
+на O
+архитектуре O
+CNN B-Method_ML
+с O
+использованием O
+Word2vec B-Model
+модели O
+. O
+
+# text =   В нашем примере будем решать ту же самую задачу разделения твитов на позитивные и негативные на том же самом датасете с использованием модели ULMFit.
+# relations = "Model_isUsedForSolving_Task 0 0, Object_isUsedInSolving_Task 0 0, Object_isUsedInSolving_Task 1 0"
+В O
+нашем O
+примере O
+будем O
+решать O
+ту O
+же O
+самую O
+задачу O
+разделения B-Task
+твитов I-Task
+на O
+позитивные B-Object
+и O
+негативные B-Object
+на O
+том O
+же O
+самом O
+датасете O
+с O
+использованием O
+модели O
+ULMFit B-Model
+. O
+
+# text =   Результат из статьи (average F1-score = 0.78142) примем в качестве baseline.
+# relations = "Metric_hasValue_Value 0 0"
+Результат O
+из O
+статьи O
+( O
+average O
+F1-score B-Metric
+= O
+0.78142 B-Value
+) O
+примем O
+в O
+качестве O
+baseline O
+. O
+
+# text =   Модель ULMFIT была представлена разработчиками fast.ai (Jeremy Howard, Sebastian Ruder) в 2018 году.
+# relations = "Date_isDateOf_Model 0 0, Model_hasAuthor_Person 0 0, Model_hasAuthor_Person 0 1, Model_hasAuthor_Organization 0 0"
+Модель O
+ULMFIT B-Model
+была O
+представлена O
+разработчиками O
+fast.ai B-Organization
+( O
+Jeremy B-Person
+Howard I-Person
+, O
+Sebastian B-Person
+Ruder I-Person
+) O
+в O
+2018 B-Date
+году O
+. O
+
+# text =   Суть подхода состоит в использовании transfer learning в задачах NLP, когда вы используете предобученные модели, сокращая время на обучение своих моделей и снижая требования к размерам размеченной тестовой выборки.
+# relations = "Method_solves_Task 0 0"
+Суть O
+подхода O
+состоит O
+в O
+использовании B-Method_solves_Task
+transfer B-Method_ML
+learning I-Method_ML
+в O
+задачах B-Task
+NLP I-Task
+, O
+когда O
+вы O
+используете O
+предобученные O
+модели O
+, O
+сокращая O
+время O
+на O
+обучение O
+своих O
+моделей O
+и O
+снижая O
+требования O
+к O
+размерам O
+размеченной O
+тестовой O
+выборки O
+. O
+
+# text =   Для задачи моделирования языка ULMFit использует архитектуру AWD-LSTM, которая предполагает активное использование dropout везде, где только можно и имеет смысл.
+# relations = "Method_solves_Task 0 0, Model_isUsedForSolving_Task 0 0"
+Для O
+задачи O
+моделирования B-Task
+языка O
+ULMFit B-Model
+использует O
+архитектуру O
+AWD B-Method_ML
+- I-Method_ML
+LSTM I-Method_ML
+, O
+которая O
+предполагает O
+активное O
+использование O
+dropout O
+везде O
+, O
+где O
+только O
+можно O
+и O
+имеет O
+смысл O
+. O
+
+# text =   Результат, показанный на тестовой выборке average F1-score = 0,80064.
+# relations = "Metric_hasValue_Value 0 0"
+Результат O
+, O
+показанный O
+на O
+тестовой O
+выборке O
+average O
+F1-score B-Metric
+= O
+0,80064 B-Value
+. O

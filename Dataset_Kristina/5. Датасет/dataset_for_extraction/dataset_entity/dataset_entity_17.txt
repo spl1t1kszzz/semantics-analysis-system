@@ -1,0 +1,297 @@
+# text =   Сбер создал и опубликовал в открытом доступе программную библиотеку PyTorch-LifeStream, содержащую несколько алгоритмов построения эмбеддингов событийных данных.
+# relations = "Application_hasAuthor_Organization 0 0"
+Сбер B-Organization
+создал B-Application_hasAuthor_Organization
+и O
+опубликовал O
+в O
+открытом O
+доступе O
+программную O
+библиотеку O
+PyTorch B-Application
+- I-Application
+LifeStream I-Application
+, O
+содержащую O
+несколько O
+алгоритмов O
+построения O
+эмбеддингов O
+событийных O
+данных O
+. O
+
+# text =  Эмбеддинг (Embedding) – преобразования сложноструктурированных данных,  например слов, текстов, атрибутов событий, событий и их последовательностей, в машинно-читаемый набор чисел – числовой вектор.
+# relations = "Object_includes_Object 2 3, Object_includes_Object 2 4, Object_includes_Object 2 5, Object_includes_Object 2 6"
+Эмбеддинг B-Object
+( O
+Embedding B-Object
+) O
+– O
+преобразования O
+сложноструктурированных B-Object
+данных I-Object
+, O
+например O
+слов B-Object
+, O
+текстов B-Object
+, O
+атрибутов B-Object
+событий I-Object
+, O
+событий B-Object
+и O
+их O
+последовательностей O
+, O
+в O
+машинно B-Object
+- I-Object
+читаемый I-Object
+набор I-Object
+чисел I-Object
+– O
+числовой B-Object
+вектор I-Object
+. O
+
+# text =   Самой популярной из трёх задач соревнования стала главная – Matching.
+# relations = ""
+Самой O
+популярной O
+из O
+трёх O
+задач O
+соревнования O
+стала O
+главная O
+– O
+Matching B-Task
+. O
+
+# text =   Стоит отметить, что и для них всё было непросто – конкурсная задача матчинга позволила удачно применить разработанный в Лаборатории ИИ метод генерации эмбеддингов транзакционных данных одновременно для двух разных доменов событийных данных (транзакции и кликстрим – атрибуты посещения веб-страниц). 
+# relations = "Method_hasAuthor_Organization 0 0, Method_is_applied_to_Object 0 0"
+Стоит O
+отметить O
+, O
+что O
+и O
+для O
+них O
+всё O
+было O
+непросто O
+– O
+конкурсная O
+задача O
+матчинга O
+позволила O
+удачно O
+применить O
+разработанный B-Method_hasAuthor_Organization
+в I-Method_hasAuthor_Organization
+Лаборатории B-Organization
+ИИ I-Organization
+метод B-Method
+генерации I-Method
+эмбеддингов I-Method
+транзакционных I-Method
+данных I-Method
+одновременно O
+для B-Method_is_applied_to_Object
+двух O
+разных O
+доменов O
+событийных O
+данных O
+( O
+транзакции B-Object
+и O
+кликстрим B-Object
+– O
+атрибуты O
+посещения O
+веб O
+- O
+страниц O
+) O
+. O
+
+# text = Однако использование разработанного в Лаборатории ИИ метода генерации эмбеддингов транзакционных данных позволило успешно применить его одновременно к двум различным доменам событийных данных – транзакциям и кликстриму (атрибутам посещения веб-страниц).
+# relations = "Method_hasAuthor_Organization 0 0, Method_is_applied_to_Object 0 0, Method_is_applied_to_Object 0 1"
+Однако O
+использование O
+разработанного B-Method_hasAuthor_Organization
+в I-Method_hasAuthor_Organization
+Лаборатории B-Organization
+ИИ I-Organization
+метода B-Method
+генерации I-Method
+эмбеддингов I-Method
+транзакционных I-Method
+данных I-Method
+позволило O
+успешно O
+применить B-Method_is_applied_to_Object
+его O
+одновременно O
+к O
+двум O
+различным O
+доменам O
+событийных O
+данных O
+– O
+транзакциям B-Object
+и O
+кликстриму B-Object
+( O
+атрибутам O
+посещения O
+веб-страниц O
+) O
+. O
+
+# text =   Победители создали лучшее решение благодаря применению собственной библиотеки PyTorch-LifeStream, которая позволила ускорить разработку решения, так как содержит много готовых инструментов для работы с событийными данными, и дала возможность стать фаворитом престижного конкурса. 
+# relations = ""
+Победители O
+создали O
+лучшее O
+решение O
+благодаря O
+применению O
+собственной O
+библиотеки O
+PyTorch B-Application
+- I-Application
+LifeStream I-Application
+, O
+которая O
+позволила O
+ускорить O
+разработку O
+решения O
+, O
+так O
+как O
+содержит O
+много O
+готовых O
+инструментов O
+для O
+работы O
+с O
+событийными O
+данными O
+, O
+и O
+дала O
+возможность O
+стать O
+фаворитом O
+престижного O
+конкурса O
+
+# text =   Фичи для транзакций и кликов объединялись и подавались в алгоритм бустинга.
+# relations = "Method_is_applied_to_Object 0 0"
+Фичи B-Object
+для O
+транзакций O
+и O
+кликов O
+объединялись O
+и O
+подавались B-Method_is_applied_to_Object
+в I-Method_is_applied_to_Object
+алгоритм O
+бустинга B-Method_ML
+. O
+
+# text =   Алгоритм обучался как задача бинарной классификации.
+# relations = ""
+Алгоритм O
+обучался O
+как O
+задача B-Task
+бинарной I-Task
+классификации I-Task
+. O
+
+# text =   Команда решила использовать схему обучения, похожую на сиамскую сеть.
+# relations = ""
+Команда O
+решила O
+использовать O
+схему O
+обучения O
+, O
+похожую O
+на O
+сиамскую B-Method_ML
+сеть I-Method_ML
+. O
+
+# text =   Метки использованы для выборки положительных и отрицательных образцов для функции потерь Softmax Loss.
+# relations = ""
+Метки O
+использованы O
+для O
+выборки O
+положительных O
+и O
+отрицательных O
+образцов O
+для O
+функции O
+потерь O
+Softmax B-Method
+Loss I-Method
+. O
+
+# text =  SequenceEncoder – рекурентно-нейронная сеть (RNN), совместно используемая для транзакций и кликов.
+# relations = "Method_is_applied_to_Object 0 0, Method_IsAlternativeNameFor_Method 2 1, Method_includes_Method 1 0"
+SequenceEncoder B-Method_ML
+– O
+рекурентно B-Method_ML
+- I-Method_ML
+нейронная I-Method_ML
+сеть I-Method_ML
+( O
+RNN B-Method_ML
+) O
+, O
+совместно O
+используемая B-Method_is_applied_to_Object
+для I-Method_is_applied_to_Object
+транзакций B-Object
+и O
+кликов B-Object
+. O
+
+# text =   В итоге это дало самый большой прирост качества: для ансамбля из пяти моделей метрика качества R1 выросла с 0.2819 до 0.2949.
+# relations = "Metric_hasValue_Value 0 0"
+В O
+итоге O
+это O
+дало O
+самый O
+большой O
+прирост O
+качества O
+: O
+для O
+ансамбля O
+из O
+пяти O
+моделей O
+метрика O
+качества O
+R1 B-Metric
+выросла O
+с O
+0.2819 B-Value
+до O
+0.2949 B-Value
+. O

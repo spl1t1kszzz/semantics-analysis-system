@@ -1,0 +1,263 @@
+# text =   С моделью от OpenAI связано сразу несколько новостей — хорошая и не очень.
+# relations = "Model_hasAuthor_Organization 0 0"
+С O
+моделью B-Model
+от O
+OpenAI B-Organization
+связано O
+сразу O
+несколько O
+новостей O
+— O
+хорошая O
+и O
+не O
+очень O
+. O
+
+# text =  Сделка OpenAI и Microsoft.
+# relations = ""
+Сделка O
+OpenAI B-Organization
+и O
+Microsoft B-Organization
+. O
+
+# text =  Начать придется с менее приятной — компания Майкрософт завладела эксклюзивными правами на GPT-3.
+# relations = ""
+Начать O
+придется O
+с O
+менее O
+приятной O
+— O
+компания O
+Майкрософт B-Organization
+завладела O
+эксклюзивными O
+правами O
+на O
+GPT-3 B-Model
+. O
+
+# text =   Сделка предсказуемо вызвала негодование — Элон Маск, основатель OpenAI, а ныне бывший член совета директоров компании, заявил, что Майкрософт по сути захватили OpenAI.
+# relations = ""
+Сделка O
+предсказуемо O
+вызвала O
+негодование O
+— O
+Элон B-Person
+Маск I-Person
+, O
+основатель O
+OpenAI B-Organization
+, O
+а O
+ныне O
+бывший O
+член O
+совета O
+директоров O
+компании O
+, O
+заявил O
+, O
+что O
+Майкрософт B-Organization
+по O
+сути O
+захватили O
+OpenAI B-Organization
+. O
+
+# text =   Дело в том, что OpenAI изначально создавалась как некоммерческая организация с высокой миссией — не позволить искусственному интеллекту оказаться в руках отдельного государства или корпорации.
+# relations = ""
+Дело O
+в O
+том O
+, O
+что O
+OpenAI B-Organization
+изначально O
+создавалась O
+как O
+некоммерческая O
+организация O
+с O
+высокой O
+миссией O
+— O
+не O
+позволить O
+искусственному B-Object
+интеллекту I-Object
+оказаться O
+в O
+руках O
+отдельного O
+государства O
+или O
+корпорации O
+. O
+
+# text =   ruGPT3 от Сбера.
+# relations = "Model_hasAuthor_Organization 0 0"
+ruGPT3 B-Model
+от B-Model_hasAuthor_Organization
+Сбера B-Organization
+. O
+
+# text =  Теперь к более приятной новости — исследователи из Сбера выложили в открытый доступ модель, которая повторяет архитектуру GPT-3 и основана на коде GPT-2 и, самое главное, обучена на русскоязычном корпусе.
+# relations = "Model_isTrainedOn_Dataset 0 0"
+Теперь O
+к O
+более O
+приятной O
+новости O
+— O
+исследователи O
+из O
+Сбера B-Organization
+выложили O
+в O
+открытый O
+доступ O
+модель B-Model
+, O
+которая O
+повторяет O
+архитектуру O
+GPT-3 B-Model
+и O
+основана O
+на O
+коде O
+GPT-2 B-Model
+и O
+, O
+самое O
+главное O
+, O
+обучена B-Model_isTrainedOn_Dataset
+на B-Model_isTrainedOn_Dataset
+русскоязычном B-Lang
+корпусе B-Corpus
+. O
+
+# text =   Если коммерческие организации можно оправдать тем, что код часто вплетен в инфраструктуру проектов, то что говорить про исследовательские институты и некоммерческие компании вроде DeepMind и OpenAI?
+# relations = ""
+Если O
+коммерческие O
+организации O
+можно O
+оправдать O
+тем O
+, O
+что O
+код O
+часто O
+вплетен O
+в O
+инфраструктуру O
+проектов O
+, O
+то O
+что O
+говорить O
+про O
+исследовательские O
+институты O
+и O
+некоммерческие O
+компании O
+вроде O
+DeepMind B-Organization
+и O
+OpenAI B-Organization
+? O
+
+# text =   Платформа для видеозвонков Maxine объединяет в себе целый зоопарк ML-алгоритмов.
+# relations = "Method_isUsedIn_Application 0 0"
+Платформа O
+для O
+видеозвонков O
+Maxine B-Technology
+объединяет B-Method_isUsedIn_Application
+в I-Method_isUsedIn_Application
+себе I-Method_isUsedIn_Application
+целый O
+зоопарк O
+ML B-Method_ML
+- I-Method_ML
+алгоритмов I-Method_ML
+. O
+
+# text = Maxine, платформа для видеозвонков, включает в себя разнообразные алгоритмы машинного обучения.
+# relations = "Method_isUsedIn_Application 0 0"
+Maxine B-Technology
+, O
+платформа 
+для 
+видеозвонков
+, O
+включает B-Method_isUsedIn_Application
+в I-Method_isUsedIn_Application
+себя I-Method_isUsedIn_Application
+разнообразные 
+алгоритмы B-Method_ML
+машинного I-Method_ML
+обучения I-Method_ML
+. O
+
+# text =   Google Meet поделились кейсом создания своего алгоритма для качественного удаления фона на основе фреймворка от Mediapipe (который умеет отслеживание движение глаз, головы и рук).
+# relations = "Model_hasAuthor_Organization 0 0, Application_hasAuthor_Organization 0, 1"
+Google B-Organization
+Meet I-Organization
+поделились O
+кейсом O
+создания B-Model_hasAuthor_Organization
+своего O
+алгоритма B-Method
+для I-Method
+качественного I-Method
+удаления I-Method
+фона B-Subject
+на O
+основе O
+фреймворка B-Library
+от O
+Mediapipe B-Organization
+( O
+который O
+умеет O
+отслеживание O
+движение O
+глаз O
+, O
+головы O
+и O
+рук O
+) O
+. O
+
+# text =   Google также запустил новую функцию для сервиса YouTube Stories на iOS, который позволяет улучшать качество речи.
+# relations = "Environment_isUsedIn_Application 0 0"
+Google B-Organization
+также O
+запустил O
+новую O
+функцию O
+для O
+сервиса O
+YouTube B-Technology
+Stories I-Technology
+на B-Environment_isUsedIn_Application
+iOS B-Environment
+, O
+который O
+позволяет O
+улучшать O
+качество O
+речи B-Subject
+. O

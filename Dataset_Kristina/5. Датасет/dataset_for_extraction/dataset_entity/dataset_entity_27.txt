@@ -1,0 +1,103 @@
+# text =   Facebook представила систему распознавания речи wav2vec-U.
+# relations = "Application_hasAuthor_Organization 0 0, Application_isUsedForSolving_Task 0 0"
+Facebook B-Organization
+представила B-Application_hasAuthor_Organization
+систему O
+распознавания B-Task
+речи I-Task
+wav2vec B-App_system
+- I-App_system
+U I-App_system
+
+# text =   Система разбивает запись на речевые единицы, которые приблизительно соответствуют отдельным звукам.
+# relations = "Application_is_applied_to_Object 0 0"
+Система B-Application
+разбивает B-Application_is_applied_to_Object
+запись O
+на O
+речевые B-Object
+единицы I-Object
+, O
+которые O
+приблизительно O
+соответствуют O
+отдельным O
+звукам O
+. O
+
+# text =   Чтобы научиться распознавать слова в аудиозаписи, Facebook обучила генеративную состязательную сеть (GAN).
+# relations = "Model_hasAuthor_Organization 0 0, Model_IsShortNameFor_Model 1 0"
+Чтобы O
+научиться O
+распознавать O
+слова O
+в O
+аудиозаписи O
+, O
+Facebook B-Organization
+обучила O
+генеративную B-Model
+состязательную I-Model
+сеть I-Model
+( O
+GAN B-Model
+) O
+. O
+
+# text =   Генератор берет каждый аудиосегмент и предсказывает фонему, соответствующую звуку на языке.
+# relations = "Method_is_applied_to_Object 0 0, Method_is_applied_to_Object 0 1"
+Генератор B-Method
+берет B-Method_is_applied_to_Object
+каждый O
+аудиосегмент B-Object
+и O
+предсказывает B-Method_is_applied_to_Object
+фонему B-Subject
+, O
+соответствующую O
+звуку O
+на O
+языке O
+. O
+
+# text =   Новая модель распознавания речи Facebook AI — это последняя разработка за несколько лет работы над моделями распознавания речи.
+# relations = "Model_hasAuthor_Organization 0 0, Model_isUsedForSolving_Task 0 0"
+Новая O
+модель B-Model
+распознавания I-Model
+речи I-Model
+Facebook B-Organization
+AI I-Organization
+— O
+это O
+последняя O
+разработка O
+за O
+несколько O
+лет O
+работы O
+над O
+моделями O
+распознавания B-Task
+речи I-Task
+. O
+
+# text =   Ее предшественниками стали wav2letter, wav2vec, Librilight, wav2vec 2.0, XLSR и wav2vec 2.0.
+# relations = ""
+ее O
+предшественниками O
+стали O
+wav2letter B-Model
+, O
+wav2vec B-Model
+, O
+Librilight B-Model
+, O
+wav2vec B-Model
+2.0 I-Model
+, O
+XLSR B-Model
+и O
+wav2vec B-Model
+2.0 I-Model
+. O

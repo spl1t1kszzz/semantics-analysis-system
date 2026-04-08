@@ -1,0 +1,33 @@
+# text =   N-грамм это просто последовательности букв из слова.
+# relations = ""
+N B-Object
+- I-Object
+грамм I-Object
+это O
+просто O
+последовательности O
+букв O
+из O
+слова O
+. O
+
+# text =   Создаются лексические и синтаксические признаки токенов текста.
+# relations = ""
+Создаются O
+лексические B-Object
+и O
+синтаксические B-Object
+признаки I-Object
+токенов B-Subject
+текста B-Object
+. O
+
+# text =   В качестве классификатора намерений применяем Transformer.
+# relations = "Method_includes_Method 0 1"
+В 
+качестве O
+классификатора B-Method_ML
+намерений O
+применяем O
+Transformer B-Method_ML
+. O

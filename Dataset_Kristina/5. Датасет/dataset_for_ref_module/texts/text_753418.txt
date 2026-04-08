@@ -1,0 +1,408 @@
+
+
+«Диалектик», независимое социалистическое медиа, рассказывает о своих NLP проектах, публикует датасеты и делится кодом / Habr
+
+
+               «Диалектик», независимое социалистическое медиа, рассказывает о своих NLP проектах, публикует датасеты и делится кодом Level of difficulty  
+    Easy
+   Reading time  
+    15 min
+   Views  4.1K Open Data Science corporate blog Machine learning *DIY IT-companies Natural Language Processing * 
+    Reportage
+        
+Почти сразу после публикации поста про систему поиска новостей о трудовых конфликтах в СНГ я познакомился с коллективом проекта «Диалектик». Ребята отмечали важность отслеживания зарубежных забастовок и анализа опыта мирового рабочего движения в отстаивании трудовых прав. Поэтому я начал помогать «Диалектику» своими навыками работы с алгоритмами машинного обучения.
+Было решено разработать систему, которая бы автоматически находила новости о зарубежных трудовых конфликтах. Во время разработки этой системы я познакомился с другими техническими проектами «Диалектика», о которых хочу рассказать в этом посте. Почти каждый проект включает в себя анализ данных, поэтому публикуемые в открытый доступ данные и код могут быть полезными Data Science сообществу.
+
+Диалектик — это независимое социалистическое медиа, коллектив которого работает в области социальной журналистики. Редакторы находят закономерности и освещают противоречия в устройстве современного общества. Коллектив волнуют процессы, происходящие как в экономическом базисе, так и в его надстройке – в обществе, культуре, политике. Ребята публикуют свои репортажи в Telegram и VK, стараются развивать портал. «Диалектик» освещает события с точки зрения простых людей, выражает переживания и интересы трудящихся масс. Этим он отличается от других ресурсов, которые лоббируют интересы спонсоров и преподносят информацию с точки зрения их бизнеса.
+Весь коллектив, от редакторов до технических специалистов, состоит из волонтеров-активистов. «Диалектик» не получает грантов от международных или российских организаций, финансирование по-настоящему народное. Основная часть финансовых средств тратится на продвижение и аренду вычислительных серверов (пример ежемесячных отчетов).
+
+Почему «Диалектик»?
+Название медиа отсылает читателей к диалектическому методу познания окружающего мира.
+
+Диалектический метод считает, что ни одно событие не может быть понято, если его рассматривать отдельно, без связи с непрерывно происходящими процессами. Диалектика рассматривает природу, экономику или общество не как состояние покоя и неподвижности, а как совокупность множества процессов движения, закономерных изменений, накопления и скачкообразного разрешения внутренних противоречий. Если немного погрузиться в историю философии, то основные черты диалектики сформулировал Г. Гегель. А уже после, К. Маркс (да-да, тот самый!) исключит идеализм из рассуждений Гегеля, сформирует диалектический материализм. Этот метод познания помогал всем классикам марксизма анализировать сложные ситуации в экономике и обществе, этим он ценен и для коллектива «Диалектика».
+
+Технические проекты «Диалектика»
+
+Коллектив «Диалектика» понимает важность применения современных технологий, которые позволяют увеличить продуктивность работы и автоматизировать выполнение рутинных ресурсоемких задач. Поэтому внутри коллектива ведется разработка ИТ-инструментов для внутреннего (только для редакторов) и для внешнего (для всех пользователей) использования. Основная часть работы редакторов лежит в информационно-текстовом поле — поэтому большинство проектов содержит анализ текстовых данных (NLP, natural language processing). Для непрерывного функционирования своих инструментов ребята арендуют отдельный вычислительный сервер.
+
+К внутренним проектам относятся:
+• автоматический поиск новостей о зарубежных забастовках
+
+• автоматический поиск новостей с классовой повесткой
+
+• автоматический агрегатор нескольких telegram-каналов
+
+
+К внешним проектам относятся:
+• telegram-агрегатор других социалистических каналов
+
+• telegram-бот для поиска фрагментов рассуждений классиков марксизма
+
+• telegram-бот с поиском фактов для разоблачения буржуазных мифов
+
+Поиск новостей о зарубежных забастовках
+
+Как я написал во вступлении, этот проект помогает мониторить состояние мирового рабочего движения и быть в курсе происходящих зарубежных трудовых конфликтов. Схема решения включает в себя 3 блока:
+
+Блок парсеров, которые собирают поля свежеопубликованных новостей на разных языках: английском, французском, немецком и испанском. Блок включает в себя краулеры, считывающие RSS-фиды, и API-запросы к иностранным порталам. Собранные новости передаются в следующий блок.
+Блок анализа состоит из модели машинного обучения (логистическая регрессия), которая классифицирует новости на 2 группы: новости о забастовках и остальные новости (более подробно про модель написал в предыдущем посте). Особенность этой модели в том, что она обучена работать только с текстами на русском языке. Поэтому на этапе продакшена перед классификацией тексты автоматически переводятcя на русский язык с помощью семейства быстрых NMT (Neural Machine Translation) моделей “Helsinki”. Такой подход позволил не тратить время на поиск мультиязычных эмбеддингов, на сбор нового обучающего датасета для 4-5 иностранных языков. Он позволил сократить время разработки всего проекта.
+Блок отправки результатов, который пересылает редакторам отобранные классификатором новости с помощью функционала telegram бота.
+
+Диалектик делится кодом, который позволит другим специалистам собирать новости с порталов Bloomberg, Forbes, Reuters. Код был разработан несколькими техническими волонтерами: 
+
+код
+#python code
+#!pip install requests
+import requests
+#!pip install beautifulsoup4
+from bs4 import BeautifulSoup
+import datetime
+import random
+import pandas as pd
+class Article:
+    def __init__(self, url, title, date, lang):
+        self.url = url
+        self.title = title
+        self.date = date
+        self.lang = lang
+        self.abstract = ""
+        self.text = ""
+        self.topics = []
+    def __str__(self):
+        return f"url:{self.url}, title:\"{self.title}\", date:{self.date.date()}"
+    __repr__ = __str__
+def get_list_news_from_sitemap(sitemap_url):
+    articles = []
+    r = requests.get(sitemap_url)
+    soup = BeautifulSoup(r.text, "xml")
+    url_tags = soup.find_all("url")
+    for url_tag in url_tags:
+        link = url_tag.loc.get_text()
+        news_tag = url_tag.news
+        lang = news_tag.language.get_text()
+        title = news_tag.title.get_text()
+        date_str = news_tag.publication_date.get_text()
+        date = datetime.datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S.%fZ")
+        article = Article(link, title, date, lang)
+        articles.append(article)
+    return articles
+def Parser3_f(url_rss):
+    articles = get_list_news_from_sitemap(url_rss)
+    base_url = ['https://www.bloomberg.com']*len(articles)
+    url = []
+    title = []
+    abstract = ['']*len(articles)
+    date = []
+    for x in articles:
+        url.append(x.url)
+        title.append(x.title)
+        date.append(x.date)
+    df = pd.DataFrame({'base_url':base_url,
+                       'url':url,
+                       'title':title,
+                       'abstract':abstract,
+                       'date':date})
+    return df
+#============================================================
+import csv
+import pandas as pd
+import datetime
+import json
+import os
+import sys
+import time
+from typing import Any, TextIO
+import requests
+#!pip install lxml
+from lxml import etree
+ROOT = './'
+PROXY_SERVERS = {}
+def config_for_forbes():
+    return {
+        "ROOT_URL": "https://www.forbes.com",
+        "API_PATH": "/simple-data/chansec/stream/",
+        "QUERY_PARAMS": {
+            "date": "{date}",
+            "start": "{offset}",
+            "limit": "{size}",
+            "ids": "",  # id of last item in previous search result
+            "sourceValue": "channel_1",  # channel_NUMBER is synonim for section (business, finanse, etc.) on forbes
+            "streamSourceType": "channelsection",
+        },
+        "END_OFFSET": 60,
+        "OUTPUT_FILENAME": "forbes.csv",
+        "FIELDNAMES": [
+            "url",
+            "title",
+            "description",
+            "published_time",
+        ],
+        "SLEEP": 1.5,
+    }
+def config_for_reuters():
+    return {
+        "ROOT_URL": "https://www.reuters.com",
+        "API_PATH": "/pf/api/v3/content/fetch/articles-by-section-alias-or-id-v1",
+        "SECTION_ID": "business",
+        "QUERY_PARAMS": {
+            "arc-site": "reuters",
+            "called_from_a_component": True,
+            "fetch_type": "sophi",
+            "offset": "{offset}",
+            "section_id": "/{section}/",
+            "size": "{size}",
+            "sophi_page": "*",
+            "sophi_widget": "topic",
+            "uri": "/{uri}/",
+            "website": "reuters",
+        },
+        "END_OFFSET": 60,
+        "OUTPUT_FILENAME": "reuters.csv",
+        "FIELDNAMES": [
+            "url",
+            "title",
+            "description",
+            "published_time",
+        ],
+        "SLEEP": 0.5,
+    }
+def get_config_for(url: str) -> dict[str, Any]:
+    return {
+        "reuters": config_for_reuters,
+        "forbes": config_for_forbes,
+    }.get(url)()
+def get_writer(fd: TextIO, fieldnames: list[str]) -> csv.DictWriter:
+    writer = csv.DictWriter(fd, fieldnames=fieldnames, delimiter="\t")
+    if not fd.tell():
+        writer.writeheader()
+    return writer
+def query_for_reuters(options: dict[str, str]) -> dict[str, Any]:
+    query = options.get("QUERY_PARAMS").copy()
+    query["offset"] = 0
+    query["size"] = 50
+    query['section_id'] = query["section_id"].format(section=options.get("SECTION_ID"))
+    query["uri"] = query["uri"].format(uri=options.get("SECTION_ID"))
+    return query
+def query_for_forbes(options: dict[str, str]) -> dict[str, Any]:
+    query = options.get("QUERY_PARAMS").copy()
+    query["start"] = 1  # start from 1 to prevent results intersection
+    query["limit"] = 10  # always return results by chunk with 10 items, don't know how to change
+    query["date"] = int(datetime.datetime.now().timestamp() * 1000)
+    return query
+def get_query_for(url: str, options: dict[str, Any]) -> dict[str, Any]:
+    return {"reuters": query_for_reuters,"forbes": query_for_forbes,}.get(url)(options)
+def can_proceed_reuters(query: dict[str, Any], options: dict[str, Any]) -> bool:
+    return query["offset"] <= options.get("END_OFFSET")
+def can_proceed_forbes(query: dict[str, Any], options: dict[str, Any]) -> bool:
+    return query["start"] <= options.get("END_OFFSET")
+def can_proceed(url: str, query: dict[str, Any], options: dict[str, Any]):
+    return {"reuters": can_proceed_reuters,"forbes": can_proceed_forbes,}.get(url)(query, options)
+def has_items_reuters(response: requests.Response) -> bool:
+    return response.json()["result"]["pagination"]["size"]
+def has_items_forbes(response: requests.Response) -> bool:
+    return response.json()["hasMore"]
+def has_items(url: str, response: requests.Response):
+    return {"reuters": has_items_reuters,"forbes": has_items_forbes,}.get(url)(response)
+def parse_reuters(response: requests.Response, options: dict[str, Any]) -> list[dict[str, Any]]:
+    items = []
+    for article in response.json()["result"]["articles"]:
+        items.append({"base_url": 'https://www.reuters.com', 
+                      "url": 'https://www.reuters.com'+article.get("canonical_url", ""),
+                      "title": article.get("title", "").strip(),
+                      "abstract": article.get("description", "").strip(),
+                      "date": article.get("published_time", ""),
+                     })
+        time.sleep(options.get("SLEEP"))
+    return items
+def parse_forbes(response: requests.Response, options: dict[str, Any]) -> list[dict[str, Any]]:
+    items = []
+    for article in response.json()["blocks"]["items"]:
+        items.append({"base_url": 'https://www.forbes.com',
+                      "url": article.get("url", ""),
+                      "title": article.get("title", "").strip(),
+                      "abstract": article.get("description", "").strip(),
+                      "date": datetime.datetime.fromtimestamp(article.get("date",0)/1000,
+                                                                        datetime.timezone.utc),
+                     })
+        time.sleep(options.get("SLEEP"))
+    return items
+def parse(url: str, response: requests.Response, options: dict[str, Any]):
+    return {
+        "reuters": parse_reuters,
+        "forbes": parse_forbes,
+    }.get(url)(response, options)
+def next_page_reuters(query: dict[str, Any], item: dict[str, Any]):
+    query["offset"] += query["size"]
+def next_page_forbes(query: dict[str, Any], item: dict[str, Any]):
+    query["start"] += query["limit"]
+    query["date"] = int(datetime.datetime.now().timestamp() * 1000)
+    query["ids"] = item.get("id")
+def next_page(url: str, query: dict[str, Any], item: dict[str, Any]):
+    return {
+        "reuters": next_page_reuters,
+        "forbes": next_page_forbes,
+    }.get(url)(query, item)
+def params_reuters(query: dict[str, Any]):
+    return {'query': json.dumps(query)}
+def params_forbes(query: dict[str, Any]):
+    return query
+def get_params(url: str, query: dict[str, Any]):
+    return {
+        "reuters": params_reuters,
+        "forbes": params_forbes,
+    }.get(url)(query)
+def Parser4_f(url: str):
+    items = []
+    options = get_config_for(url)
+    query = get_query_for(url, options)
+    while can_proceed(url, query, options):
+        page = requests.get(f"{options['ROOT_URL']}{options['API_PATH']}",
+                            params=get_params(url, query),
+                            proxies=PROXY_SERVERS)
+        if page.ok and has_items(url, page):
+            items.extend(parse(url, page, options))
+            next_page(url, query, items[-1])
+        elif not has_items(url, page):
+            break
+        else:
+            pass
+    df = pd.DataFrame(items)
+    return df
+df4 = Parser3_f('https://www.bloomberg.com/feeds/sitemap_news.xml')
+df5 = Parser4_f('reuters')
+df6 = Parser4_f('forbes')
+df = pd.concat([df4,df5,df6], axis=0).reset_index(drop=True)
+print(df.shape)
+print(df.base_url.unique())
+df.tail()
+
+Поиск новостей с классовой повесткой
+
+Решение было создано, чтобы помочь редакторам автоматически находить определенный вид зарубежных новостей. В этих новостях отражаются следующие инфоповоды: столкновение интересов социальных классов; экономическое неравенство; возникающие противоречия; действия организаций для решения проблем; влияние решений на каждый из социальных классов; заявлениях деятелей (ведь за каждым заявлением деятеля нужно уметь видеть интересы того социального класса, который он представляет) и т.д. Чтобы читателем был понятен домен данных и тематика таких новостей, мне необходимо дополнительно объяснить, как коллектив «Диалектика» понимает термин —
+
+Социальный класс
+В научном понимании, класс – это группа некоторых объектов, объединенных каким-либо общим свойством. Если перекладывать это определение на социум, то общество людей можно делить с помощью разных критериев. Можно разделить людей по половому признаку. Можно разделить людей по национальности или религии. Можно разделить людей на классы по уровню их дохода.
+Но К. Маркс и Ф. Энгельс развернуто предложили альтернативный критерий разделения людей на 2 социальных класса. Этот критерий основывается на роли человека в системе общественного производства. Это достаточно закономерный критерий, так как Человечество на протяжении всей истории занято тем, что производит различные блага для жизни: кто-то строит дома, кто-то добывает ресурсы для производства арматуры, стекла и бетона, кто-то создает предметы общего пользования, кто-то выращивает сельскохозяйственные продукты, кто-то разрабатывает софт и т.д. Критерий разделения для капиталистического общества:
+
+Если человек владеет некоторыми средствами производства (большой участок сельскохозяйственных или лесных угодий, рудник полезных ископаемых, фабрика по обработке материалов, завод по производству продуктов, вычислительный кластер, юридическая/ИТ компания и т.д.) и вынужден нанимать работников для ведения бизнеса и получения своего заработка — то он принадлежит к социальному классу буржуазии.
+Если человек не владеет средствами производства и вынужден работать на другого человека (или на некоторую компанию), чтобы заработать на себе на жизнь — то он принадлежит к социальному классу пролетариата.
+
+Именно в таком понимании коллектив «Диалектика» использует термин “социальный класс”. Т.е. это относительно большая группа людей, объединенных одним и тем же типом отношения к средствам производства.
+
+Техническая схема этого решения, как и предыдущий проект про зарубежные забастовки, тоже состоит из 3 блоков: парсеры, классификатор, отправка результатов.
+
+Первый и последний блок – одинаковы для этого и предыдущего проекта.
+А второй блок содержит другую классификационную модель. Для ее обучения техническими волонтерами «Диалектика» был подготовлен GDDR news датасет. Датасет состоит из вышеописанных инфоповодов, которые были освещены несколькими русскоязычными социалистическими коллективами. Так как цель – находить подобные инфоповоды зарубежом, то перед обучением все тексты инфоповодов были переведены с русского на английский язык.
+Особенность этой классификационной модели в том, что она обучена работать только с текстами на английском языке. Поэтому на этапе продакшена перед классификацией тексты на французском, немецком, испанском языках автоматически переводятcя на английский язык с помощью семейства быстрых NMT (Neural Machine Translation) моделей “Helsinki”.
+В качестве модели снова была выбрана логистическая регрессия, которая очень хорошо показала себя в других проектах (по балансу качество-быстродействие).
+Возможно, подход к предобработке текстов на английском языке будет интересен другим NLP специалистам, поэтому Диалектик делится этим кодом. Во время предобработки происходит удаление неинформативных слов, лемматизация, автоматическая замена различных группы слов на один и тот же токен (персоны, организации, страны, локации, национальности, числа, даты): 
+
+
+код предобработки
+#python code
+import re
+#!pip install spacy
+import spacy
+#!python -m spacy download en_core_web_sm
+nlp = spacy.load('en_core_web_sm')
+rename_dict = {'PERSON':'_per',
+               'ORG':'_org',
+               'GPE':'_gpe',
+               'LOC':'_loc',
+               'CARDINAL': '_num', 'ORDINAL': '_num',
+               'DATE':'_date', 'TIME':'_date',
+               'NORP': '_norp'}
+pers = ['rogozin','patrushev','pashinyan','surkov','pompeo','volodin',
+        'bastrykin','potanin','sobyanin','abramovich','molotov',
+        'bolsonaro','zhirinovsky','milonov','salvini','trass',
+        'manturov','fedor','balsonaro','matvienko','shoigu',
+        'nabiulina','ilya','medinsky','solovyov','dmitry',
+        'gref','pinochet','chubais','macron','peskov','borrel','igor']
+orgs = ['roscosmos','rospotrebnadzor','roskomnadzor','yandex','vtsiom','rosatom','soyuzmultfilm',
+        'sber','ldpr','rostec','vkontakte','rosneft','ria','vedomosti','rosprirodnadzor','ciom',
+        'avtovaz','wagner','rostourism','gazprom','runet','tinkoff','rusal','izvestia','nornickel',
+        'lukoil','rosrybolovstvo']
+gpes = ['kursk','irkutsk','kaliningrad','rostov','belarus','crimean','penza','donetsk','sheremetyevo',
+        'tomsk','kharkiv','helsinki','ufa','buryatia','ural','kazan','novosibirsk','riga','murmansk',
+        'armenia','saratov','norilsk']
+norps = ['georgians','azerbaijani']
+def clean_text(text):
+    lemm_tokens = []
+    doc = nlp(text)
+    for sent in doc.sents:
+        for x in sent:
+            flag1 = False
+            for span in doc.ents:
+                if span.start_char<=x.idx<=span.end_char and span.label_ in rename_dict.keys():
+                    flag1 = True
+                    y = rename_dict[span.label_]
+                    lemm_tokens.append(y)
+                    break
+            if flag1==False and not x.is_stop:
+                y = x.lemma_
+                lemm_tokens.append(y.lower())
+    text = ' '.join(lemm_tokens)
+    text = re.sub(r'\d+',r' _num ',text)
+    text = re.sub(r'[^a-z_ ]',r' ',text)
+    text = re.sub(r' _ ',r' ', text)
+    text = ' '.join([w for w in text.split() if len(w)>2])
+    for x in pers:
+        text = text.replace(x,'_per')
+    for x in orgs:
+        text = text.replace(x,'_org')
+    for x in gpes:
+        text = text.replace(x,'_gpe')
+    for x in norps:
+        text = text.replace(x,'_norp') 
+    text = re.sub(r'(_org )+',r'_org ',text+' ')
+    text = re.sub(r'(_per )+',r'_per ',text+' ')
+    text = re.sub(r'(_gpe )+',r'_gpe ',text+' ')
+    text = re.sub(r'(_loc )+',r'_loc ',text+' ')
+    text = re.sub(r'(_norp )+',r'_norp ',text+' ')
+    text = re.sub(r'(_num )+',r'_num ',text+' ')
+    text = re.sub(r'(_date )+',r'_date ',text+' ')
+    text = text.strip()
+    return text
+text = '''
+A proposal in the emerging spending bill that almost nobody
+is talking about could lift millions of America’s neediest
+people out of poverty, according to a new report.
+'''
+clean_text(text)
+
+Теперь стоит подробно описать GDDR датасет инфоповодов, который Диалектик собрал и публикует в открытый доступ. Он состоит из 4 частей:
+
+[G, galopom_news.csv] Инфоповоды, которые осветил коллектив проекта “АгитПроп” в своей новостной рубрике. Эта часть интересна тем, что коллектив делал упор на ежедневные новости с 2018 года. Эти данные содержат ряд ключевых экономических, социальных событий, которые произошли в России и Мире за этот промежуток времени. Столбец 'speech_text ' был автоматически получен с помощью STT (Speech To Text) модели.
+[D, daily_economics_news.csv] Инфоповоды, которые осветил коллектив проекта “ПростыеЧисла” в своей новостной рубрике. Эта часть интересна тем, что коллектив делал упор на ежедневные выпуски экономические новости на протяжении целого года.
+[D, dialectic_news.csv] Инфоповоды, которые осветил коллектив проекта “Диалектик” в своем telegram канале.
+[R, remi_news.csv] Инфоповоды, которые разобрал коллектив с уютной кухни на ютуб-канале “РемиМайснер” в своей новостной рубрике.
+
+Агрегатор нескольких telegram-каналов
+
+Во время какого-либо громкого события редакторы вынуждены одновременно следить за несколькими десятками telegram-каналов, которые освещают происходящее событие. Мониторить множество потоков информации из разных каналов довольно тяжело. Поэтому было предложено решение, которое перенаправляло бы все сообщения из выбранных каналов в один общий канал. На нем было бы сконцентрировано всё внимание редакторов. Дополнительно производится фильтрация дубликатов сообщений.
+Этот инструмент оказался настолько удобным, что было предложено сделать еще один агрегатор: открытый для всех пользователей. Он пересылает все посты из других социалистических каналов в один, формируя удобную ленту. Этот публичный агрегатор находится на этапе тестирования и уже представлен общественности.
+Telegram-бот для поиска фрагментов рассуждений классиков марксизма
+
+Редакторы Диалектика в своей работе опираются на опыт классиков, которые успешно применяли диалектический метод в своих рассуждениях. Поэтому была запущена работа по созданию датасета, в который вошли бы все работы классиков марксизма.
+Для DS специалистов публикуемый MELS works датасет будет интересен из-за его большого объема (113 томов, 42 тыс. страниц, 230 тыс. абзацев, 680 тыс. предложений, 13 млн слов) и последовательности рассуждений (одинаковый домен данных, один классик не противоречит другому). Тексты полных собраний сочинений были взяты с 3 ресурсов: ПСС Маркса и Энгельса, ПСС Ленина, ПСС Сталина. Каждая строчка – отдельный абзац с его атрибутами: какой классик, какой том, какая страница, ссылка на электронный ресурс, название работы, текст абзаца, ключевые слова абзаца.
+Этот датасет используется в проекте Марксизм в цитатах. Техническими волонтерами был разработан алгоритм поиска, который помогает найти нужный фрагмент текста по смыслу пользовательского запроса. Благодаря этому открытому инструменту пользователь может:
+
+найти точное расположение абзаца с цитатой в сборнике
+найти полную цитату по ее части
+найти правильную формулировку цитаты по общему смыслу
+понять ход мысли классика с учетом полного контекста
+
+Telegram-бот с поиском фактов для разоблачения буржуазных мифов
+Различные буржуазные силы в прошлом и настоящем распространяют мифы об альтернативном подходе к распределению произведенных обществом благ. Такие силы вводят обывателей в заблуждение, подменяют смыслы идей, называют белое черным, приводят цитаты без понимания контекста и т.д. Многие коллективы историков и энтузиастов уже разобрали множество подобных мифов. Диалектик работает над сбором единого датасета мифов и разоблачений, чтобы после прикрутить к нему поиск (возможно, с помощью LLM).
+Заключение
+
+Благодаря техническим активистам, Диалектик успешно реализовывает интересные, полезные и объемные проекты. Коллектив Диалектика очень рад, что среди аудитории читателей есть много ИТ специалистов и хотел бы выразить огромную благодарность всем, кто откликнулся на призыв. В работе находятся и другие проекты, к которым можно присоединиться. Коллектив Диалектика будет рад новым инициативам. Если вы знаете, как сделать что-то круто, правильно, красиво с помощью вашей экспертизы — свяжитесь с проектом через telegram бот обратной связи. Например, существует потребность в специалистах с навыками разработки telegram ботов со сложной логикой. Также коллектив Диалектика будет рад посотрудничать с другими социалистическими коллективами в технической или другой плоскости.
+Подписывайтесь на Диалектик, следите за новыми репортажами, изучайте и применяйте диалектический метод познания.
+
+Датасет GDDR news
+Датасет MELS works
+код сбора свежих новостей с Bloomberg, Forbes, Reuters
+код предобработки новостей для английского языка
+      Tags: nlpnlp (natural language processing)нкоit в нкообщество и itновостная интернет-журналистикасоциальная журналистикажурналистикасоциальные медиаэкономикаобществодиалектика  Hubs: Open Data Science corporate blog Machine learning DIYIT-companies Natural Language Processing          
+
+

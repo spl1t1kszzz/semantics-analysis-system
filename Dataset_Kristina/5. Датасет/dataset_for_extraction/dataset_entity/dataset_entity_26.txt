@@ -1,0 +1,72 @@
+# text =   Строго говоря, нам нужно получить параллельный корпус из двух текстов.
+# relations = ""
+Строго O
+говоря O
+, O
+нам O
+нужно O
+получить O
+параллельный B-Object
+корпус I-Object
+из O
+двух O
+текстов O
+. O
+
+# text =   Для выравнивания воспользуемся библиотекой lingtrain-aligner, над которой я работаю около года и которая родилась из кучи скриптов на python, часть из которых еще ждет своего часа.
+# relations = "Application_isUsedForSolving_Task 0 0"
+Для B-Application_isUsedForSolving_Task
+выравнивания B-Task
+воспользуемся I-Application_isUsedForSolving_Task
+библиотекой O
+lingtrain B-Library
+- I-Library
+aligner I-Library
+, O
+над O
+которой O
+я O
+работаю O
+около O
+года O
+и O
+которая O
+родилась O
+из O
+кучи O
+скриптов O
+на O
+python B-Environment
+, O
+часть O
+из O
+которых O
+еще O
+ждет O
+своего O
+часа O
+. O
+
+# text =   Хорошим решением мне видится регрессия на координаты строк при выравнивании батча и сдвиг окна на конец потока при выравнивании следующего.
+# relations = "Method_is_applied_to_Object 0 0"
+Хорошим O
+решением O
+мне O
+видится O
+регрессия B-Method_ML
+на B-Method_is_applied_to_Object
+координаты B-Object
+строк I-Object
+при O
+выравнивании O
+батча O
+и O
+сдвиг O
+окна O
+на O
+конец O
+потока O
+при O
+выравнивании O
+следующего O
+. O

@@ -1,0 +1,320 @@
+# text =   Алгоритм понимания естественного языка (Natural Language Understanding, NLU) Microsoft DeBERTa превзошел человеческие возможности в одном из самых сложных тестов для подобных алгоритмов SuperGLUE.
+# relations = "Application_isUsedForSolving_Task 0 0, Application_hasAuthor_Organization 0 0, Task_IsAlternativeNameFor_Task 1 0"
+Алгоритм O
+понимания O
+естественного O
+языка O
+( O
+Natural B-Task
+Language I-Task
+Understanding I-Task
+, O
+NLU B-Task
+) O
+Microsoft B-Organization
+DeBERTa B-Application
+превзошел O
+человеческие O
+возможности O
+в O
+одном O
+из O
+самых O
+сложных O
+тестов O
+для O
+подобных O
+алгоритмов O
+SuperGLUE B-Method
+. O
+
+# text =   На данный момент модель занимает первое место в рейтинге с показателем в 90,3, в то время как среднее значение человеческих возможностей составляет 89,8 баллов.
+# relations = ""
+На O
+данный O
+момент O
+модель O
+занимает O
+первое O
+место O
+в O
+рейтинге O
+с O
+показателем O
+в O
+90,3 B-Value
+, O
+в O
+то O
+время O
+как O
+среднее O
+значение O
+человеческих O
+возможностей O
+составляет O
+89,8 B-Value
+баллов O
+. O
+
+# text =  Тест SuperGLUE включает в себя ряд задач, которые разработаны для оценки способности ИИ-моделей распознавать и понимать естественный язык, например, дать правильный ответ на вопрос на базе прочитанного абзаца, определить, правильно ли используется многозначное слово в определенном контексте и т.д.
+# relations = "Method_solves_Task 0 0, Method_is_applied_to_Object 0 0"
+Тест O
+SuperGLUE B-Method
+включает O
+в O
+себя O
+ряд O
+задач O
+, O
+которые O
+разработаны O
+для O
+оценки O
+способности O
+ИИ O
+- O
+моделей O
+распознавать O
+и O
+понимать O
+естественный O
+язык O
+, O
+например O
+, O
+дать B-Task
+правильный I-Task
+ответ I-Task
+на I-Task
+вопрос I-Task
+на I-Task
+базе I-Task
+прочитанного I-Task
+абзаца I-Task
+, O
+определить O
+, O
+правильно O
+ли O
+используется O
+многозначное B-Subject
+слово I-Subject
+в O
+определенном O
+контексте O
+и O
+т.д. O
+
+# text =   Тест был разработан группой исследователей в 2019 году.
+# relations = "Date_isDateOf_Method 0 0"
+Тест B-Method
+был O
+разработан O
+группой O
+исследователей O
+в O
+2019 B-Date
+году I-Date
+. O
+
+# text =  Исследовательская группа разработала тест в 2019 году.
+# relations = "Date_isDateOf_Method 0 0"
+Исследовательская O
+группа O
+разработала O
+тест B-Method
+в O
+2019 B-Date
+году I-Date
+. O
+
+# text =  Для того чтобы добиться текущего результата в 90,3 балла, DeBERTa получила масштабное обновление архитектуры: теперь она состоит из 48 слоев и имеет 1,5 млрд параметров.
+# relations = ""
+Для O
+того O
+чтобы O
+добиться O
+текущего O
+результата O
+в O
+90,3 B-Value
+балла O
+, O
+DeBERTa B-Application
+получила O
+масштабное O
+обновление O
+архитектуры O
+: O
+теперь O
+она O
+состоит O
+из O
+48 B-Value
+слоев O
+и O
+имеет O
+1,5 O
+млрд O
+параметров O
+. O
+
+# text =   Кроме того, DeBERTa будет интегрирована в следующую версию Тьюринговой модели Microsoft Turing (Turing NLRv4).
+# relations = "Model_IsShortNameFor_Model 2 1"
+Кроме O
+того O
+, O
+DeBERTa B-Model
+будет O
+интегрирована O
+в O
+следующую O
+версию O
+Тьюринговой B-Model
+модели I-Model
+Microsoft I-Model
+Turing I-Model
+( O
+Turing B-Model
+NLRv4 I-Model
+) O
+. O
+
+# text =   Дополнительно, DeBERTa будет включена в следующую версию модели Microsoft Turing (Turing NLRv4) от Microsoft.
+# relations = "Model_IsShortNameFor_Model 2 1, Model_hasAuthor_Organization 1 0"
+Дополнительно O
+, O
+DeBERTa B-Model
+будет O
+включена O
+в O
+следующую O
+версию O
+модели O
+Microsoft B-Model
+Turing I-Model
+( O
+Turing B-Model
+NLRv4 I-Model
+) O
+от B-Model_hasAuthor_Organization
+Microsoft B-Organization
+. O
+
+# text =   Тьюринговые модели используются в таких продуктах Microsoft, как Bing, Office, Dynamics и Azure Cognitive Services, чтобы совершенствовать, к примеру, взаимодействие с чат-ботами, предоставление рекомендаций и ответов на вопросы, поиск, автоматизацию поддержки клиентов, создание контента и решение многих других задач на пользу сотен миллионов пользователей.
+# relations = "Model_isUsedForSolving_Task 0 0, Model_isUsedIn_Application 0 0, Model_isUsedIn_Application 0 1, Model_isUsedIn_Application 0 2, Model_isUsedIn_Application 0 3, Application_hasAuthor_Organization 0 0, Application_hasAuthor_Organization 1 0, Application_hasAuthor_Organization 2 0, Application_hasAuthor_Organization 3 0"
+Тьюринговые B-Model
+модели I-Model
+используются O
+в O
+таких O
+продуктах O
+Microsoft B-Organization
+, O
+как O
+Bing B-Application
+, O
+Office B-Application
+, O
+Dynamics B-Application
+и O
+Azure B-Application
+Cognitive I-Application
+Services I-Application
+, O
+чтобы O
+совершенствовать O
+, O
+к O
+примеру O
+, O
+взаимодействие O
+с O
+чат B-Application
+- I-Application
+ботами I-Application
+, O
+предоставление O
+рекомендаций O
+и O
+ответов O
+на O
+вопросы O
+, O
+поиск O
+, O
+автоматизацию 
+поддержки O
+клиентов O
+, O
+создание B-Task
+контента I-Task
+и O
+решение O
+многих O
+других O
+задач O
+на O
+пользу O
+сотен O
+миллионов O
+пользователей O
+. O
+
+# text = Тьюринговые модели применяются в продуктах, таких как Bing, Office, Dynamics и Azure Cognitive Services.
+# relations = "Model_isUsedIn_Application 0 0, Model_isUsedIn_Application 0 1, Model_isUsedIn_Application 0 2, Model_isUsedIn_Application 0 3"
+Тьюринговые B-Model
+модели I-Model
+применяются O
+в O
+продуктах O
+, O
+таких O
+как O
+Bing B-Application
+, O
+Office B-Application
+, O
+Dynamics B-Application
+и O
+Azure B-Application
+Cognitive I-Application
+Services I-Application
+. O
+
+# text =   В отличии от машин, люди хорошо умеют использовать знания, ранее полученные при выполнении различных задач, для решения новых – это называется композиционным обобщением (англ. compositional generalization).
+# relations = "Method_IsAlternativeNameFor_Method 1 0"
+В O
+отличии O
+от O
+машин O
+, O
+люди O
+хорошо O
+умеют O
+использовать O
+знания O
+, O
+ранее O
+полученные O
+при O
+выполнении O
+различных O
+задач O
+, O
+для O
+решения O
+новых O
+– O
+это O
+называется O
+композиционным B-Method
+обобщением I-Method
+( O
+англ O
+. O
+compositional B-Method
+generalization I-Method
+) O
+. O

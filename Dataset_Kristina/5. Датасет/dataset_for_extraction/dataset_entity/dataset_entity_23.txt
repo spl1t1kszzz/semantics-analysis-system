@@ -1,0 +1,51 @@
+# text =   Речь шла о морфологической разметке (part of speech tagging) современных текстов на русском языке.
+# relations = "Method_IsAlternativeNameFor_Method 1 0"
+Речь O
+шла O
+о O
+морфологической B-Method
+разметке I-Method
+( O
+part B-Method
+of I-Method
+speech I-Method
+tagging I-Method
+) O
+современных O
+текстов B-Object
+на O
+русском B-Lang
+языке I-Lang
+. O
+
+# text =   Как обычно, результат разметки будет опубликован на условиях лицензии Creative Commons.
+# relations = ""
+Как O
+обычно O
+, O
+результат O
+разметки B-Method
+будет O
+опубликован O
+на O
+условиях O
+лицензии O
+Creative B-Environment
+Commons I-Environment
+. O
+
+# text =   Извлечение именованных сущностей из текста — одна из востребованных функций текстовой аналитики.
+# relations = "Task_isSolvedIn_Science 0 0"
+Извлечение B-Task
+именованных I-Task
+сущностей I-Task
+из O
+текста O
+— O
+одна O
+из O
+востребованных O
+функций O
+текстовой B-Science
+аналитики I-Science
+. O

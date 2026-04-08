@@ -1,0 +1,63 @@
+# text =   Это генеративная нейронная сеть, способная решать множество задач по обработке естествнного языка (NLP).
+# relations = "Method_solves_Task 0 0, Task_IsAlternativeNameFor_Task 1 0"
+Это O
+генеративная B-Method_ML
+нейронная I-Method_ML
+сеть I-Method_ML
+, O
+способная O
+решать O
+множество O
+задач B-Task
+по I-Task
+обработке I-Task
+естествнного I-Task
+языка I-Task
+( O
+NLP B-Task
+) O
+. O
+
+# text =   Это такие задачи как суммаризация (сделать из большого текста его резюме), понимание текста (NLU), вопросно-ответные системы, генерация (например, стихов, — на Хабре была хорошая статья) и другие.
+# relations = "Task_IsAlternativeNameFor_Task 2 1"
+Это O
+такие O
+задачи O
+как O
+суммаризация B-Task
+( O
+сделать O
+из O
+большого O
+текста O
+его O
+резюме O
+) O
+, O
+понимание B-Task
+текста I-Task
+( O
+NLU B-Task
+) O
+, O
+вопросно B-App_system
+- I-App_system
+ответные I-App_system
+системы I-App_system
+, O
+генерация B-Task
+( O
+например O
+, O
+стихов O
+, O
+— O
+на O
+Хабре B-Organization
+была O
+хорошая O
+статья O
+) O
+и O
+другие O
+. O

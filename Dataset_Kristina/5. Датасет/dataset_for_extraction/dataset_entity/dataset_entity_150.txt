@@ -1,0 +1,5981 @@
+# text =  Они отличаются хорошей сбалансированностью: достаточно высокий уровень чувствительности одновременно с хорошим соотношением сигнал/шум и уровнем AOP (Acoustic Overload Point — это такой аналог максимального звукового давления для цифровых микрофонов). 
+# relations = "Metric_IsAlternativeNameFor_Metric 1 0, "
+Они O
+отличаются O
+хорошей O
+сбалансированностью O
+: O
+достаточно O
+высокий O
+уровень O
+чувствительности O
+одновременно O
+с O
+хорошим O
+соотношением O
+сигнал O
+/ O
+шум O
+и O
+уровнем O
+AOP B-Metric
+( O
+Acoustic B-Metric
+Overload I-Metric
+Point I-Metric
+— O
+это O
+такой O
+аналог O
+максимального O
+звукового O
+давления O
+для O
+цифровых O
+микрофонов O
+) O
+. O
+
+# text =  Пожалуй, самое важное: мы отказались от моделей на базе DNN-HMM и перешли на архитектуру e2e-распознавания с использованием тяжёлых нейросетей-трансформеров. 
+# relations = ""
+Пожалуй O
+, O
+самое O
+важное O
+: O
+мы O
+отказались O
+от O
+моделей O
+на O
+базе O
+DNN B-Method_ML
+- I-Method_ML
+HMM I-Method_ML
+и O
+перешли O
+на O
+архитектуру O
+e2e B-Method
+- O
+распознавания O
+с O
+использованием O
+тяжёлых O
+нейросетей O
+- O
+трансформеров O
+. O
+
+# text =  В обоих случаях они от Texas Instruments, но в Станции Макс используется более свежая и мощная модель TAS5825M. 
+# relations = "Model_isUsedIn_Application 0 0"
+В O
+обоих O
+случаях O
+они O
+от O
+Texas B-Organization
+Instruments I-Organization
+, O
+но O
+в O
+Станции B-Technology
+Макс I-Technology
+используется O
+более O
+свежая O
+и O
+мощная O
+модель O
+TAS5825M B-Model
+. O
+
+# text =  В конкурсе приняли участие представители ведущих команд рынка компьютерной обработки текстов, в том числе «Антиплагиат», «Наносемантика», DeepPavlov. 
+# relations = ""
+В O
+конкурсе O
+приняли O
+участие O
+представители O
+ведущих O
+команд O
+рынка O
+компьютерной O
+обработки O
+текстов O
+, O
+в O
+том O
+числе O
+« O
+Антиплагиат B-App_system
+» O
+, O
+« O
+Наносемантика B-App_system
+» O
+, O
+DeepPavlov B-Library
+. O
+
+# text =  Руководитель проекта FirstTry Артём Щеголев пришел на конкурс в команде со своей супругой. 
+# relations = ""
+Руководитель O
+проекта O
+FirstTry B-Activity
+Артём B-Person
+Щеголев I-Person
+пришел O
+на O
+конкурс O
+в O
+команде O
+со O
+своей O
+супругой O
+. O
+
+# text =  TextIT API включает в себя функции проверки орфографии и исправления ошибок, формирования текстовой формы числительных (например, преобразовать “102 рубль” в “сто два рубля”), подсказки следующего слова по ранее введенному тексту, постановки слова в нужную словоформу (число, род, падеж, лицо и время) и другие полезные функции обработки и формирования текста. 
+# relations = "Application_isUsedForSolving_Task 0 0, Application_isUsedForSolving_Task 0 1, Application_isUsedForSolving_Task 0 2, Application_isUsedForSolving_Task 0 3, Application_isUsedForSolving_Task 0 4"
+TextIT B-Application
+API I-Application
+включает O
+в O
+себя O
+функции O
+проверки B-Task
+орфографии I-Task
+и O
+исправления B-Task
+ошибок I-Task
+, O
+формирования B-Task
+текстовой I-Task
+формы I-Task
+числительных I-Task
+( O
+например O
+, O
+преобразовать O
+“ O
+102 O
+рубль O
+” O
+в O
+“ O
+сто O
+два O
+рубля O
+” O
+) O
+, O
+подсказки B-Task
+следующего I-Task
+слова I-Task
+по O
+ранее O
+введенному O
+тексту O
+, O
+постановки B-Task
+слова I-Task
+в I-Task
+нужную I-Task
+словоформу I-Task
+( O
+число O
+, O
+род O
+, O
+падеж O
+, O
+лицо O
+и O
+время O
+) O
+и O
+другие O
+полезные O
+функции O
+обработки O
+и O
+формирования O
+текста O
+. 
+
+# text = В данной статье я бы хотел познакомить читателей с одним из проектов Apache Software Foundation сообщества — NlpCraft. 
+# relations = "Activity_hasAuthor_Organization 0 0"
+В O
+данной O
+статье O
+я O
+бы O
+хотел O
+познакомить O
+читателей O
+с O
+одним O
+из O
+проектов O
+Apache B-Organization
+Software I-Organization
+Foundation I-Organization
+сообщества O
+— O
+NlpCraft B-Activity
+. O
+
+# text = В этой статье я планирую представить читателям один из проектов сообщества Apache Software Foundation — NlpCraft.
+# relations = "Activity_hasAuthor_Organization 0 0"
+В O
+этой O
+статье O
+я O
+планирую O
+представить O
+читателям O
+один O
+из O
+проектов O
+сообщества O
+Apache B-Organization
+Software I-Organization
+Foundation I-Organization
+— O
+NlpCraft B-Activity
+. O
+
+# text =  NlpCraft — библиотека с открытым исходным кодом, предназначенная для интеграции языкового интерфейса в пользовательские приложения. 
+# relations = ""
+NlpCraft B-Library
+— O
+библиотека O
+с O
+открытым O
+исходным O
+кодом O
+, O
+предназначенная O
+для O
+интеграции B-Task
+языкового I-Task
+интерфейса I-Task
+в O
+пользовательские O
+приложения O
+. O
+
+# text =  Подход Model-as-a-Code, позволяющий создавать и редактировать модели с помощью привычных разработчикам инструментов. 
+# relations = ""
+Подход O
+Model B-Method
+- I-Method
+as I-Method
+- I-Method
+a I-Method
+- I-Method
+Code I-Method
+, O
+позволяющий O
+создавать O
+и O
+редактировать O
+модели O
+с O
+помощью O
+привычных O
+разработчикам O
+инструментов O
+. O
+
+# text =  Интеграция со множеством провайдеров NER компонентов (Apache OpenNlp, Stanford NLP, Google Natural Language API, Spacy) 
+# relations = ""
+Интеграция O
+со O
+множеством O
+провайдеров O
+NER B-Task
+компонентов O
+( O
+Apache B-Library
+OpenNlp I-Library
+, O
+Stanford B-Library
+NLP I-Library
+, O
+Google B-Library
+Natural I-Library
+Language I-Library
+API I-Library
+, O
+Spacy B-Library
+) O
+
+# text = Named Entity — именованная сущность. 
+# relations = ""
+Named B-Object
+Entity I-Object
+— O
+именованная B-Object
+сущность I-Object
+. O
+
+# text =  В большинстве случаев процесс конфигурации сводится к созданию и поддержке простого Json или Yaml файла. 
+# relations = ""
+В O
+большинстве O
+случаев O
+процесс O
+конфигурации O
+сводится O
+к O
+созданию O
+и O
+поддержке O
+простого O
+Json B-Environment
+или O
+Yaml B-Environment
+файла O
+. O
+
+# text =  Ближайшие и наиболее известные “аналоги“ Amazon Alexa и Google DialogFlow имеют целый ряд существенных отличий от данной системы. 
+# relations = ""
+Ближайшие O
+и O
+наиболее O
+известные O
+“ O
+аналоги O
+“ O
+Amazon B-Technology
+Alexa I-Technology
+и O
+Google B-Technology
+DialogFlow I-Technology
+имеют O
+целый O
+ряд O
+существенных O
+отличий O
+от O
+данной O
+системы O
+. O
+
+# text = Онлайн-энциклопедия Wikipedia получила новый инструмент — сервис с элементами ИИ, который поможет автоматически определять некорректные правки материалов ресурса. 
+# relations = ""
+Онлайн O
+- O
+энциклопедия O
+Wikipedia B-InfoResource
+получила O
+новый O
+инструмент O
+— O
+сервис O
+с O
+элементами O
+ИИ O
+, O
+который O
+поможет O
+автоматически O
+определять B-Task
+некорректные I-Task
+правки I-Task
+материалов I-Task
+ресурса O
+. O
+
+# text =  Сервис ORES (Objective Revision Evaluation Service) будет проверять все правки на наличие спама или троллинга. 
+# relations = "Application_IsAlternativeNameFor_Application 1 0"
+Сервис O
+ORES B-Application
+( O
+Objective B-Application
+Revision I-Application
+Evaluation I-Application
+Service I-Application
+) O
+будет O
+проверять O
+все O
+правки O
+на O
+наличие O
+спама O
+или O
+троллинга O
+. O
+
+# text =  Сервис ORES (Objective Revision Evaluation Service) будет осуществлять проверку всех изменений на предмет наличия спама или троллинга.
+# relations = "Application_IsAlternativeNameFor_Application 1 0"
+Сервис O
+ORES B-Application
+( O
+Objective B-Application
+Revision I-Application
+Evaluation I-Application
+Service I-Application
+) O
+будет O
+осуществлять O
+проверку O
+всех O
+изменений O
+на O
+предмет O
+наличия O
+спама O
+или O
+троллинга O
+. O
+
+# text =  Создателем ORES является Wikimedia Foundation. 
+# relations = "Application_hasAuthor_Organization 0 0"
+Создателем O
+ORES B-Application
+является O
+Wikimedia B-Organization
+Foundation I-Organization
+. O
+
+# text = ORES (Objective Revision Evaluation Service) был разработан Wikimedia Foundation.
+# relations = "Application_IsAlternativeNameFor_Application 1 0, Application_hasAuthor_Organization 0 0"
+ORES B-Application
+( O
+Objective B-Application
+Revision I-Application
+Evaluation I-Application
+Service I-Application
+) O
+был O
+разработан B-Application_hasAuthor_Organization
+Wikimedia B-Organization
+Foundation I-Organization
+. O
+
+# text =  Вероятность того, что текст нормальный, составляет 0,0837. 
+# relations = ""
+# relations = ""
+Вероятность O
+того O
+, O
+что O
+текст O
+нормальный O
+, O
+составляет O
+0,0837 B-Value
+. O
+
+# text =  Вероятность умышленной порчи текста — 0,9163. 
+# relations = ""
+Вероятность O
+умышленной O
+порчи O
+текста O
+— O
+0,9163 B-Value
+. O
+
+# text =  Точность распознавания естественного языка сейчас у лидеров когнитивных систем (IBM Watson, Google, ABBYY, Microsoft, Наносемантика) позволяет в общем понять смысл и ответить на письменный вопрос при заранее определенной предметной базы знаний, но разговор даже с 90% точностью распознавания фраз на самом деле очень утомителен. 
+# relations = "Metric_hasValue_Value 0 0"
+Точность O
+распознавания O
+естественного O
+языка O
+сейчас O
+у O
+лидеров O
+когнитивных O
+систем O
+( O
+IBM B-Technology
+Watson I-Technology
+, O
+Google B-Technology
+, O
+ABBYY B-Technology
+, O
+Microsoft B-Technology
+, O
+Наносемантика B-Technology
+) O
+позволяет O
+в O
+общем O
+понять O
+смысл O
+и O
+ответить O
+на O
+письменный O
+вопрос O
+при O
+заранее O
+определенной O
+предметной O
+базы O
+знаний O
+, O
+но O
+разговор O
+даже O
+с O
+90 B-Value
+% I-Value
+точностью B-Metric
+распознавания O
+фраз O
+на O
+самом O
+деле O
+очень O
+утомителен O
+. O
+
+# text =  Кластерный анализ корпуса текстов 
+# relations = ""
+Кластерный B-Method
+анализ I-Method
+корпуса O
+текстов O
+
+# text =  В качестве тестовых данных был взят фрагмент новостного датасета от РИА, из которого в обработке участвовали только заголовки новостей. 
+# relations = ""
+В O
+качестве O
+тестовых O
+данных O
+был O
+взят O
+фрагмент O
+новостного O
+датасета B-Dataset
+от I-Dataset
+РИА I-Dataset
+, O
+из O
+которого O
+в O
+обработке O
+участвовали O
+только O
+заголовки O
+новостей O
+. O
+
+# text =  Для векторизации текста использовалась модель LaBSE от @cointegrated. 
+# relations = "Model_hasAuthor_Person 0 0"
+Для O
+векторизации O
+текста O
+использовалась O
+модель O
+LaBSE B-Model
+от O
+@cointegrated B-Person
+. O
+
+# text =  Я использовал для этого модель ruT5 за авторством @cointegrated. 
+# relations = "Model_hasAuthor_Person 0 0"
+Я O
+использовал O
+для O
+этого O
+модель O
+ruT5 B-Model
+за O
+авторством O
+@cointegrated B-Person
+. O
+
+# text =  После изучения мы поняли, что Дана (так мы называем нашего чат-бота) — это кнопочный и сценарный чат-бот. 
+# relations = ""
+После O
+изучения O
+мы O
+поняли O
+, O
+что O
+Дана B-Technology
+( O
+так O
+мы O
+называем O
+нашего O
+чат O
+- O
+бота O
+) O
+— O
+это O
+кнопочный O
+и O
+сценарный O
+чат O
+- O
+бот O
+. O
+
+# text =  Среднее количество слов в запросе — четыре, поэтому мы собрали n-grams (словосочетания из 3-5 слов) и решили кластеризовать их разными методами типа тематического моделирования – agglomerative clustering поверх sentence embedding. 
+# relations = "Method_is_applied_to_Object 0 0, Method_is_applied_to_Object 1 0"
+Среднее O
+количество O
+слов O
+в O
+запросе O
+— O
+четыре O
+, O
+поэтому O
+мы O
+собрали O
+n B-Object
+- I-Object
+grams I-Object
+( O
+словосочетания O
+из O
+3 O
+- O
+5 O
+слов O
+) O
+и O
+решили O
+кластеризовать O
+их O
+разными O
+методами O
+типа O
+тематического O
+моделирования O
+– O
+agglomerative B-Method_ML
+clustering I-Method_ML
+поверх O
+sentence B-Method
+embedding I-Method
+. O
+
+# text =  Решили использовать стандартные метрики: precision, recall, f1 score, accuracy. 
+# relations = ""
+Решили O
+использовать O
+стандартные O
+метрики O
+: O
+precision B-Metric
+, O
+recall B-Metric
+, O
+f1 B-Metric
+score I-Metric
+, O
+accuracy B-Metric
+. O
+
+# text =  На всех классах accuracy = 0.65. 
+# relations = "Metric_hasValue_Value 0 0"
+На O
+всех O
+классах O
+accuracy B-Metric
+= O
+0.65 B-Value
+. O
+
+# text =  Рассчитаем macro f1 score (0.72 + 0.28 + 0.66 + 0.66)/4 ~ 0.6, weighted f1 score (0.720.85+0.280.05+0.660.05+0.660.05) ~ 0.69. 
+# relations = "Metric_hasValue_Value 0 0, Metric_hasValue_Value 1 1"
+Рассчитаем O
+macro B-Metric
+f1 I-Metric
+score I-Metric
+( O
+0.72 O
++ O
+0.28 O
++ O
+0.66 O
++ O
+0.66)/4 O
+~ O
+0.6 B-Value
+, O
+weighted B-Metric
+f1 I-Metric
+score I-Metric
+( O
+0.720.85 O
++ O
+0.280.05 O
++ O
+0.660.05 O
++ O
+0.660.05 O
+) O
+~ O
+0.69 B-Value
+. O
+
+# text =  Только на одном классе accuracy = 0.85. 
+# relations = "Metric_hasValue_Value 0 0"
+Только O
+на O
+одном O
+классе O
+accuracy B-Metric
+= O
+0.85 B-Value
+. O
+
+# text =  Рассчитаем macro f1 score (0.92 + 0 + 0 + 0)/4 ~ 0.23, weighted f1 score (0.920.85+00.05+00.05+00.05) ~ 0.78. 
+# relations = "Metric_hasValue_Value 0 0, Metric_hasValue_Value 1 1"
+Рассчитаем O
+macro B-Metric
+f1 I-Metric
+score I-Metric
+( O
+0.92 O
++ O
+0 O
++ O
+0 O
++ O
+0)/4 O
+~ O
+0.23 B-Value
+, O
+weighted B-Metric
+f1 I-Metric
+score I-Metric
+( O
+0.920.85 O
++ O
+00.05 O
++ O
+00.05 O
++ O
+00.05 O
+) O
+~ O
+0.78 B-Value
+. O
+
+
+# text =  TCR (Task completed rate) — процент диалогов, в которых частично или полностью решили проблему абонента. 
+# relations = "Metric_IsAlternativeNameFor_Metric 1 0"
+TCR B-Metric
+( O
+Task B-Metric
+completed I-Metric
+rate I-Metric
+) O
+— O
+процент O
+диалогов O
+, O
+в O
+которых O
+частично O
+или O
+полностью O
+решили O
+проблему O
+абонента O
+. O
+
+# text =  CSI (Customer Satisfaction Index) — средняя оценка, которую поставили клиенты боту. 
+# relations = "Metric_IsAlternativeNameFor_Metric 1 0"
+CSI B-Metric
+( O
+Customer B-Metric
+Satisfaction I-Metric
+Index I-Metric
+) I-Metric
+— O
+средняя O
+оценка O
+, O
+которую O
+поставили O
+клиенты O
+боту O
+. O
+
+# text =  AR (Automation rate) — процент диалогов, в которых клиент не перешел на оператора. 
+# relations = "Metric_IsAlternativeNameFor_Metric 1 0"
+AR B-Metric
+( O
+Automation B-Metric
+rate I-Metric
+) O
+— O
+процент O
+диалогов O
+, O
+в O
+которых O
+клиент O
+не O
+перешел O
+на O
+оператора O
+. O
+
+# text =  Мы попробовали разные предобученные модели с ресурса Hugging Face. 
+# relations = ""
+Мы O
+попробовали O
+разные O
+предобученные O
+модели B-Model
+с O
+ресурса O
+Hugging B-InfoResource
+Face I-InfoResource
+. O
+
+# text =  Лучший результат показала модель DeepPavlov/rubert-base-cased. 
+# relations = ""
+Лучший O
+результат O
+показала O
+модель O
+DeepPavlov B-Model
+/ I-Model
+rubert I-Model
+- I-Model
+base I-Model
+- I-Model
+cased I-Model
+. O
+
+# text =  Методы, реализованные с помощью библиотеки nlpaugMask insert. 
+# relations = ""
+Методы O
+, O
+реализованные O
+с O
+помощью O
+библиотеки O
+nlpaugMask B-Library
+insert I-Library
+. O
+
+# text =  Популярный способ аугментации через NMT-модели. 
+# relations = ""
+Популярный O
+способ O
+аугментации O
+через O
+NMT B-Model
+- I-Model
+модели I-Model
+. O
+
+# text =  В результате переразметки и разделение моделей качество получилось следующее:Chain-model, sentiment, spamТак как в нашей задаче пространство всех интетов неопределенное (мы не знаем, сколько их), нужно было отделять имеющийся список интентов в чат-боте и остальную лексику, в которой могут содержаться и остальные интенты. 
+# relations = ""
+В O
+результате O
+переразметки O
+и O
+разделение O
+моделей O
+качество O
+получилось O
+следующее O
+: O
+Chain B-Model
+- I-Model
+model I-Model
+, O
+sentiment B-Model
+, O
+spamТак B-Model
+как O
+в O
+нашей O
+задаче O
+пространство O
+всех O
+интетов O
+неопределенное O
+( O
+мы O
+не O
+знаем O
+, O
+сколько O
+их O
+) O
+, O
+нужно O
+было O
+отделять O
+имеющийся O
+список O
+интентов O
+в O
+чат O
+- O
+боте O
+и O
+остальную O
+лексику O
+, O
+в O
+которой O
+могут O
+содержаться O
+и O
+остальные O
+интенты O
+. O
+
+# text = Новая версия GPT-3, InstructGPT, лучше выполняет инструкции и выдает меньше оскорбительных выражений, дезинформации и ошибок в целом. 
+# relations = ""
+Новая O
+версия O
+GPT-3 B-Model
+, O
+InstructGPT B-Model
+, O
+лучше O
+выполняет O
+инструкции O
+и O
+выдает O
+меньше O
+оскорбительных O
+выражений O
+, O
+дезинформации O
+и O
+ошибок O
+в O
+целом O
+. O
+
+# text =  В ходе тестирования модель китайских ученых показала улучшение на 2,74% по шкале F1 (оценка классификатора) сравнению с HFM (Hierarchical Fusion Model), представленной в прошлом году: новая нейросеть достигла 86% точности по сравнению с 83% у HFM. 
+# relations = "Metric_hasValue_Value 3 0, Metric_hasValue_Value 4 1, Metric_IsAlternativeNameFor_Metric 2 1"
+В O
+ходе O
+тестирования O
+модель O
+китайских O
+ученых O
+показала O
+улучшение O
+на O
+2,74 O
+% O
+по O
+шкале O
+F1 B-Metric
+( O
+оценка O
+классификатора O
+) O
+сравнению O
+с O
+HFM B-Metric
+( O
+Hierarchical B-Metric
+Fusion I-Metric
+Model I-Metric
+) O
+, O
+представленной O
+в O
+прошлом O
+году O
+: O
+новая O
+нейросеть O
+достигла O
+86 B-Value
+% I-Value
+точности B-Metric
+по O
+сравнению O
+с O
+83 B-Value
+% I-Value
+у O
+HFM B-Metric
+. O
+
+# text =  Тем не менее, в Facebook признали, что алгоритмы пока не готовы к широкому развертыванию — точность их работы составляет около 65-70%. 
+# relations = "Metric_hasValue_Value 0 0"
+Тем O
+не O
+менее O
+, O
+в O
+Facebook B-Organization
+признали O
+, O
+что O
+алгоритмы O
+пока O
+не O
+готовы O
+к O
+широкому O
+развертыванию O
+— O
+точность B-Metric
+их O
+работы O
+составляет O
+около O
+65 B-Value
+- I-Value
+70 I-Value
+% I-Value
+. O
+
+# text =  Несмотря на все свои недостатки, библиотека (неожиданно) оказалась довольно востребованной — например, нагуглил, что pymorphy был слегка использован при разработке системы Speech-to-Text для русского языка в рамках французского проекта Quaero, и рекомендуется в качестве учебного материала в некоторых ВУЗах. 
+# relations = ""
+Несмотря O
+на O
+все O
+свои O
+недостатки O
+, O
+библиотека B-Library
+( O
+неожиданно O
+) O
+оказалась O
+довольно O
+востребованной O
+— O
+например O
+, O
+нагуглил O
+, O
+что O
+pymorphy B-Library
+был O
+слегка O
+использован O
+при O
+разработке O
+системы O
+Speech B-App_system
+- I-App_system
+to I-App_system
+- I-App_system
+Text I-App_system
+для O
+русского B-Lang
+языка I-Lang
+в O
+рамках O
+французского O
+проекта O
+Quaero B-Activity
+, O
+и O
+рекомендуется O
+в O
+качестве O
+учебного O
+материала O
+в O
+некоторых O
+ВУЗах O
+. O
+
+# text =  Решающим толчком к написанию pymorphy2 послужил проект OpenCorpora — ребята оттуда, кроме всего прочего (а там много «всего прочего»), взяли словарь из aot.ru, полностью переделали его структуру и занялись пополнением и прочими улучшениями. 
+# relations = ""
+Решающим O
+толчком O
+к O
+написанию O
+pymorphy2 B-Library
+послужил O
+проект O
+OpenCorpora B-Activity
+— O
+ребята O
+оттуда O
+, O
+кроме O
+всего O
+прочего O
+( O
+а O
+там O
+много O
+« O
+всего O
+прочего O
+» O
+) O
+, O
+взяли O
+словарь O
+из O
+aot.ru B-InfoResource
+, O
+полностью O
+переделали O
+его O
+структуру O
+и O
+занялись O
+пополнением O
+и O
+прочими O
+улучшениями O
+. O
+
+# text =  Что меня тут смутило: а) в статье ипользовалась C++ библиотека OpenFST (вроде самый популярный способ реализации конечных автоматов), но заставлять пользователей ставить ее вручную — не вариант; б) даже с использованием C++ библиотеки результаты, судя по статье, были достаточно скромные (2 тыс слов/сек против 100+ тыс слов/сек у mystem или lemmatizer); понятное дело, что эту цифру можно было бы, скорее всего, значительно улучшить (да и lightcaster пишет, что ничего не оптимизировал) — но все же; в) это один из тех подходов, который (по моему мнению) повышает порог вхождения — я считаю, что это скорее минус. 
+# relations = ""
+Что O
+меня O
+тут O
+смутило O
+: O
+а O
+) O
+в O
+статье O
+ипользовалась O
+C++ B-Environment
+библиотека O
+OpenFST B-Library
+( O
+вроде O
+самый O
+популярный O
+способ O
+реализации O
+конечных O
+автоматов O
+) O
+, O
+но O
+заставлять O
+пользователей O
+ставить O
+ее O
+вручную O
+— O
+не O
+вариант O
+; O
+б O
+) O
+даже O
+с O
+использованием O
+C++ B-Environment
+библиотеки O
+результаты O
+, O
+судя O
+по O
+статье O
+, O
+были O
+достаточно O
+скромные O
+( O
+2 O
+тыс O
+слов O
+/ O
+сек O
+против O
+100 O
++ O
+тыс O
+слов O
+/ O
+сек O
+у O
+mystem O
+или O
+lemmatizer O
+) O
+; O
+понятное O
+дело O
+, O
+что O
+эту O
+цифру O
+можно O
+было O
+бы O
+, O
+скорее O
+всего O
+, O
+значительно O
+улучшить O
+( O
+да O
+и O
+lightcaster O
+пишет O
+, O
+что O
+ничего O
+не O
+оптимизировал O
+) O
+— O
+но O
+все O
+же O
+; O
+в O
+) O
+это O
+один O
+из O
+тех O
+подходов O
+, O
+который O
+( O
+по O
+моему O
+мнению O
+) O
+повышает O
+порог O
+вхождения O
+— O
+я O
+считаю O
+, O
+что O
+это O
+скорее O
+минус O
+. O
+
+# text =  В итоге получалось, что мне нужно было бы: разобраться, как оптимизировать код и почему даже с C++ библиотекой получается так медленно; написать более простую в установке обертку для OpenFST (или использовать другую реализацию FST — например, сделать свою) + сделать реализацию небольшой части OpenFST (или просто реализацию FST) на Python (чтоб pymorphy можно было использовать без компилятора), ну и формулировать все алгоритмы в терминах конечных автоматов. 
+# relations = "Environment_isUsedIn_Application 0 2"
+В O
+итоге O
+получалось O
+, O
+что O
+мне O
+нужно O
+было O
+бы O
+: O
+разобраться O
+, O
+как O
+оптимизировать O
+код O
+и O
+почему O
+даже O
+с O
+C++ B-Environment
+библиотекой O
+получается O
+так O
+медленно O
+; O
+написать O
+более O
+простую O
+в O
+установке O
+обертку O
+для O
+OpenFST B-Library
+( O
+или O
+использовать O
+другую O
+реализацию O
+FST B-Library
+— O
+например O
+, O
+сделать O
+свою O
+) O
++ O
+сделать O
+реализацию O
+небольшой O
+части O
+OpenFST B-Library
+( O
+или O
+просто O
+реализацию O
+FST B-Library
+) O
+на O
+Python B-Environment
+( O
+чтоб O
+pymorphy O
+можно O
+было O
+использовать O
+без O
+компилятора O
+) O
+, O
+ну O
+и O
+формулировать O
+все O
+алгоритмы O
+в O
+терминах O
+конечных O
+автоматов O
+. O
+
+# text =  Сперва мне приглянулась библиотека libdatrie, про обертку для нее писал тут: habrahabr.ru/post/147963. 
+# relations = ""
+Сперва O
+мне O
+приглянулась O
+библиотека O
+libdatrie B-Library
+, O
+про O
+обертку O
+для O
+нее O
+писал O
+тут O
+: O
+habrahabr.ru/post/147963 O
+. O
+
+# text =  Но и этот второй вариант оставался узким местом, даже переписанный на Cython — что с ним делать, я не знал. 
+# relations = ""
+Но O
+и O
+этот O
+второй O
+вариант O
+оставался O
+узким O
+местом O
+, O
+даже O
+переписанный O
+на O
+Cython B-Environment
+— O
+что O
+с O
+ним O
+делать O
+, O
+я O
+не O
+знал O
+. O
+
+# text =  Выбор пал на C++ библиотеку marisa-trie, которую написал гуру структур данных Susumu Yata. 
+# relations = "Application_hasAuthor_Person 0 0, Environment_isUsedIn_Application 0 0"
+Выбор O
+пал O
+на O
+C++ B-Environment
+библиотеку O
+marisa B-Library
+- I-Library
+trie I-Library
+, O
+которую O
+написал O
+гуру O
+структур O
+данных O
+Susumu B-Person
+Yata I-Person
+. O
+
+# text = Было решено использовать библиотеку marisa-trie на C++, созданную экспертом в области структур данных Сусуму Ята.
+# relations = "Application_hasAuthor_Person 0 0, Environment_isUsedIn_Application 0 0"
+Было O
+решено O
+использовать O
+библиотеку O
+marisa B-Library
+- I-Library
+trie I-Library
+на O
+C++ B-Environment
+, O
+созданную O
+экспертом O
+в O
+области O
+структур O
+данных O
+Сусуму B-Person
+Ята I-Person
+. O
+
+# text =  С другой стороны, ускорить версию под CPython понятно как — переписать еще что-нибудь на Cython (к слову: делать я этого не планирую); с PyPy это не так очевидно. 
+# relations = ""
+С O
+другой O
+стороны O
+, O
+ускорить O
+версию O
+под O
+CPython B-Environment
+понятно O
+как O
+— O
+переписать O
+еще O
+что O
+- O
+нибудь O
+на O
+Cython B-Environment
+( O
+к O
+слову O
+: O
+делать O
+я O
+этого O
+не O
+планирую O
+) O
+; O
+с O
+PyPy B-Environment
+это O
+не O
+так O
+очевидно O
+. O
+
+# text =  Если не использовать ни PyPy, ни C++ реализацию DAWG, pymorphy2 все равно будет работать во много раз быстрее (по прикидкам — в пару десятков раз), чем pymorphy1 cо всеми включенными ускорениями — ну и разбирать лучше. 
+# relations = "Environment_isUsedIn_Application 1 0"
+Если O
+не O
+использовать O
+ни O
+PyPy B-Environment
+, O
+ни O
+C++ B-Environment
+реализацию O
+DAWG B-Library
+, O
+pymorphy2 B-Library
+все O
+равно O
+будет O
+работать O
+во O
+много O
+раз O
+быстрее O
+( O
+по O
+прикидкам O
+— O
+в O
+пару O
+десятков O
+раз O
+) O
+, O
+чем O
+pymorphy1 B-Library
+cо O
+всеми O
+включенными O
+ускорениями O
+— O
+ну O
+и O
+разбирать O
+лучше O
+. O
+
+# text =  Там сейчас есть фичи, которых нет в pymorphy2 (например, интеграция с django, согласование слов с цифрами и склонение фамилий), но в версии на битбакете я поломал обратную совместимость. 
+# relations = ""
+Там O
+сейчас O
+есть O
+фичи O
+, O
+которых O
+нет O
+в O
+pymorphy2 B-Library
+( O
+например O
+, O
+интеграция O
+с O
+django B-Library
+, O
+согласование O
+слов O
+с O
+цифрами O
+и O
+склонение O
+фамилий O
+) O
+, O
+но O
+в O
+версии O
+на O
+битбакете O
+я O
+поломал O
+обратную O
+совместимость O
+. O
+
+# text =  К примеру, одна из наиболее известных систем такого типа Grammarly выступает против использования пассивного залога. 
+# relations = ""
+К O
+примеру O
+, O
+одна O
+из O
+наиболее O
+известных O
+систем O
+такого O
+типа O
+Grammarly B-App_system
+выступает O
+против O
+использования O
+пассивного O
+залога O
+. O
+
+# text =  Например, сервис Textly.AI разрешает использовать свои плагины для Chrome и Firefox без создания аккаунта, а в их веб-приложении есть режим, похожий на секретный чат в браузере – после выхода из него, весь откорректированный алгоритмом контент удаляется. 
+# relations = ""
+Например O
+, O
+сервис O
+Textly B-App_system
+. I-App_system
+AI I-App_system
+разрешает O
+использовать O
+свои O
+плагины O
+для O
+Chrome B-Technology
+и O
+Firefox B-Technology
+без O
+создания O
+аккаунта O
+, O
+а O
+в O
+их O
+веб O
+- O
+приложении O
+есть O
+режим O
+, O
+похожий O
+на O
+секретный O
+чат O
+в O
+браузере O
+– O
+после O
+выхода O
+из O
+него O
+, O
+весь O
+откорректированный O
+алгоритмом O
+контент O
+удаляется O
+. O
+
+# text =  Еще пример: сервис Ginger предлагает инструмент для перефразирования предложений – пользователь может написать совсем простое, а ему дадут чуть более сложный вариант (не совсем то, что нужно, но хоть что-то). 
+# relations = ""
+Еще O
+пример O
+: O
+сервис O
+Ginger B-App_system
+предлагает O
+инструмент O
+для O
+перефразирования O
+предложений O
+– O
+пользователь O
+может O
+написать O
+совсем O
+простое O
+, O
+а O
+ему O
+дадут O
+чуть O
+более O
+сложный O
+вариант O
+( O
+не O
+совсем O
+то O
+, O
+что O
+нужно O
+, O
+но O
+хоть O
+что O
+- O
+то O
+) O
+. O
+
+# text =  Например, на NLP-progress публикуются последние достижения в области commonsense reasoning. 
+# relations = ""
+Например O
+, O
+на O
+NLP B-InfoResource
+- O
+progress O
+публикуются O
+последние O
+достижения O
+в O
+области O
+commonsense B-Science
+reasoning I-Science
+. O
+
+# text =  В этом посте мы расскажем, как мы создали датасет для задачи Common Sense Reasoning в одной из ее возможных формулировок, предложенной в статье event2mind, а также адаптировали английскую модель event2mind от AllenNLP для русского языка. 
+# relations = "Model_isUsedForSolving_Task 0 0, Model_Language_Lang 0 0, Model_hasAuthor_Organization 0 0"
+В O
+этом O
+посте O
+мы O
+расскажем O
+, O
+как O
+мы O
+создали O
+датасет O
+для O
+задачи O
+Common B-Task
+Sense I-Task
+Reasoning I-Task
+в O
+одной O
+из O
+ее O
+возможных O
+формулировок O
+, O
+предложенной O
+в O
+статье O
+event2mind O
+, O
+а O
+также O
+адаптировали O
+английскую O
+модель O
+event2mind B-Model
+от O
+AllenNLP B-Organization
+для O
+русского B-Lang
+языка I-Lang
+. O
+
+# text =  Тексты из SynTagRus, который является частью Русского Национального корпуса и содержит художественные тексты вместе с новостями. 
+# relations = ""
+Тексты O
+из O
+SynTagRus B-Corpus
+, O
+который O
+является O
+частью O
+Русского B-Corpus
+Национального I-Corpus
+корпуса I-Corpus
+и O
+содержит O
+художественные O
+тексты O
+вместе O
+с O
+новостями O
+. O
+
+# text =  Для поиска подобных паттернов был использован синтаксический парсер UdPipe, с помощью которого мы выделяли в текстах паттерны вида глагол + зависимые слова в синтаксическом дереве, как например на рисунке 2, которые удовлетворяли одному из следующих правил: 
+# relations = ""
+Для O
+поиска O
+подобных O
+паттернов O
+был O
+использован O
+синтаксический O
+парсер O
+UdPipe B-Technology
+, O
+с O
+помощью O
+которого O
+мы O
+выделяли O
+в O
+текстах O
+паттерны O
+вида O
+глагол O
++ O
+зависимые O
+слова O
+в O
+синтаксическом O
+дереве O
+, O
+как O
+например O
+на O
+рисунке O
+2 O
+, O
+которые O
+удовлетворяли O
+одному O
+из O
+следующих O
+правил O
+
+# text =  Однако уже при 30000 примеров, loss и recall практически не отличаются от результатов на полном объеме данных. 
+# relations = ""
+Однако O
+уже O
+при O
+30000 O
+примеров O
+, O
+loss B-Metric
+и O
+recall B-Metric
+практически O
+не O
+отличаются O
+от O
+результатов O
+на O
+полном O
+объеме O
+данных O
+. O
+
+# text =  Изначально английский корпус собран из нескольких источников: ROC Story training set, the GoogleSyntactic N-grams, the Spinn3r corpus и idioms. 
+# relations = ""
+Изначально O
+английский O
+корпус O
+собран O
+из O
+нескольких O
+источников O
+: O
+ROC B-Corpus
+Story I-Corpus
+training I-Corpus
+set I-Corpus
+, O
+the B-Corpus
+GoogleSyntactic I-Corpus
+N I-Corpus
+- I-Corpus
+grams I-Corpus
+, O
+the B-Corpus
+Spinn3r I-Corpus
+corpus I-Corpus
+и O
+idioms B-Corpus
+. O
+
+# text =  Поэтому мы взяли только примеры из ROC-story. 
+# relations = ""
+Поэтому O
+мы O
+взяли O
+только O
+примеры O
+из O
+ROC B-Corpus
+- I-Corpus
+Story I-Corpus
+. O
+
+# text =  таблицу 2), у этого источника коэффициент согласованности аннотаторов (Cohen's kappa coefficient), равный 0.57. 
+# relations = "Metric_hasValue_Value 0 0, Metric_IsAlternativeNameFor_Metric 1 0"
+таблицу O
+2 O
+) O
+, O
+у O
+этого O
+источника O
+коэффициент B-Metric
+согласованности I-Metric
+аннотаторов I-Metric
+( O
+Cohen B-Metric
+'s I-Metric
+kappa I-Metric
+coefficient I-Metric
+) O
+, O
+равный O
+0.57 B-Value
+. O
+
+# text =  При этом fasttext embeddings, обученные на ruscorpora показали себя лучше обученных на araneum. 
+# relations = ""
+При O
+этом O
+fasttext B-Model
+embeddings I-Model
+, O
+обученные O
+на O
+ruscorpora B-Corpus
+показали O
+себя O
+лучше O
+обученных O
+на O
+araneum B-Corpus
+. O
+
+# text =  Сегодня мы расскажем, как помогли НПО Энергомаш создать корпоративную интеллектуальную информационно-поисковую систему (КИИПС) на базе ABBYY Intelligent Search – такую же удобную и быструю, как популярные поисковики. 
+# relations = "Application_IsAlternativeNameFor_Application 1 0"
+Сегодня O
+мы O
+расскажем O
+, O
+как O
+помогли O
+НПО B-Organization
+Энергомаш I-Organization
+создать O
+корпоративную B-App_system
+интеллектуальную I-App_system
+информационно I-App_system
+- I-App_system
+поисковую I-App_system
+систему I-App_system
+( O
+КИИПС B-App_system
+) O
+на O
+базе O
+ABBYY B-App_system
+Intelligent I-App_system
+Search I-App_system
+– O
+такую O
+же O
+удобную O
+и O
+быструю O
+, O
+как O
+популярные O
+поисковики O
+. O
+
+# text =  Сегодня мы расскажем о том, как мы содействовали НПО "Энергомаш" в разработке и внедрении их корпоративной интеллектуальной информационно-поисковой системы (КИИПС).
+# relations = "Application_IsAlternativeNameFor_Application 1 0"
+Сегодня O
+мы O
+расскажем O
+о O
+том O
+, O
+как O
+мы O
+содействовали O
+НПО B-Organization
+" I-Organization
+Энергомаш I-Organization
+" I-Organization
+в O
+разработке O
+и O
+внедрении O
+их O
+корпоративной B-App_system
+интеллектуальной I-App_system
+информационно I-App_system
+- I-App_system
+поисковой I-App_system
+системы I-App_system
+( O
+КИИПС B-App_system
+) O
+. O
+
+# text =  Энергомаш рассматривал несколько поисковых систем, но в итоге решил попробовать ABBYY Intelligent Search. 
+# relations = ""
+Энергомаш B-Organization
+рассматривал O
+несколько O
+поисковых O
+систем O
+, O
+но O
+в O
+итоге O
+решил O
+попробовать O
+ABBYY B-App_system
+Intelligent I-App_system
+Search I-App_system
+. O
+
+# text =  Энергомаш подключил к поиску 7 корпоративных источников: систему электронного документооборота LanDocs, файловое хранилище, ИБД, систему поддержки жизненного цикла изделия TeamCenter, систему управления ресурсами Галактика ERP и AMM, информационную систему управления проектами. 
+# relations = ""
+Энергомаш B-Organization
+подключил O
+к O
+поиску O
+7 O
+корпоративных O
+источников O
+: O
+систему B-App_system
+электронного I-App_system
+документооборота I-App_system
+LanDocs I-App_system
+, O
+файловое O
+хранилище O
+, O
+ИБД B-Dataset
+, O
+систему O
+поддержки O
+жизненного O
+цикла O
+изделия O
+TeamCenter B-App_system
+, O
+систему O
+управления O
+ресурсами O
+Галактика B-App_system
+ERP I-App_system
+и O
+AMM B-App_system
+, O
+информационную O
+систему O
+управления O
+проектами O
+. O
+
+# text =  Доступ в Систему корпоративного поиска организован через внутренний портал предприятия на главной странице. 
+# relations = ""
+Доступ O
+в O
+Систему B-App_system
+корпоративного I-App_system
+поиска I-App_system
+организован O
+через O
+внутренний O
+портал O
+предприятия O
+на O
+главной O
+странице O
+. O
+
+# text =  По данным Google Books Ngram Viewer — поискового онлайн-сервиса Google, который строит графики частоты упоминания языковых единиц на основе огромного количества печатных источников, популярность и интерес к NLP стремительно растет последние 20 лет. 
+# relations = "Application_isUsedIn_Science 0 0, Application_hasAuthor_Organization 0 0"
+По O
+данным O
+Google B-App_system
+Books I-App_system
+Ngram I-App_system
+Viewer I-App_system
+— O
+поискового O
+онлайн O
+- O
+сервиса O
+Google B-Organization
+, O
+который O
+строит O
+графики O
+частоты O
+упоминания O
+языковых O
+единиц O
+на O
+основе O
+огромного O
+количества O
+печатных O
+источников O
+, O
+популярность O
+и O
+интерес O
+к O
+NLP B-Science
+стремительно O
+растет O
+последние O
+20 O
+лет O
+. O
+
+# text =  Heliograf способен генерировать новостные, финансовые и подобные им отчеты, и даже посты для социальных медиа. 
+# relations = ""
+Heliograf B-Technology
+способен O
+генерировать O
+новостные O
+, O
+финансовые O
+и O
+подобные O
+им O
+отчеты O
+, O
+и O
+даже O
+посты O
+для O
+социальных O
+медиа O
+. O
+
+# text =  Так же, как Wordsmith, эта система используется репортерами при подготовке тысяч корпоративных финансовых отчетов, помогая Bloomberg News в нелегкой конкурентной борьбе с агентством Reuters, а также с новыми участниками информационной гонки – продвинутыми хедж-фондами, которые также используют системы на базе ИИ для поставки свежих новостей и аналитики своим клиентам. 
+# relations = ""
+Так O
+же O
+, O
+как O
+Wordsmith B-App_system
+, O
+эта O
+система O
+используется O
+репортерами O
+при O
+подготовке O
+тысяч O
+корпоративных O
+финансовых O
+отчетов O
+, O
+помогая O
+Bloomberg B-Organization
+News I-Organization
+в O
+нелегкой O
+конкурентной O
+борьбе O
+с O
+агентством O
+Reuters B-Organization
+, O
+а O
+также O
+с O
+новыми O
+участниками O
+информационной O
+гонки O
+– O
+продвинутыми O
+хедж O
+- O
+фондами O
+, O
+которые O
+также O
+используют O
+системы O
+на O
+базе O
+ИИ O
+для O
+поставки O
+свежих O
+новостей O
+и O
+аналитики O
+своим O
+клиентам O
+. O
+
+# text = Наконец, компания Forbes недавно сообщила, что тестирует собственную систему Bertie, которая помогает журналистам с написанием черновых вариантов и шаблонов статей. 
+# relations = "Application_hasAuthor_Organization 0 0"
+Наконец O
+, O
+компания O
+Forbes B-Organization
+недавно O
+сообщила O
+, O
+что O
+тестирует O
+собственную O
+систему O
+Bertie B-App_system
+, O
+которая O
+помогает O
+журналистам O
+с O
+написанием O
+черновых O
+вариантов O
+и O
+шаблонов O
+статей O
+. O
+
+# text =  Так как например модель «wiki_ru», содержит в своем корпусе 1,88 млн слов в словаре, и 2 млн n-грамм токенов, (300 мерных) векторов. 
+# relations = ""
+Так O
+как O
+например O
+модель O
+« O
+wiki_ru B-Model
+» O
+, O
+содержит O
+в O
+своем O
+корпусе O
+1,88 O
+млн O
+слов O
+в O
+словаре O
+, O
+и O
+2 O
+млн O
+n O
+- O
+грамм O
+токенов O
+, O
+( O
+300 O
+мерных O
+) O
+векторов O
+. O
+
+# text =  Мы в Badoo и Bumble стараемся оградить пользователей от неприятных ситуаций, поэтому внедрили инструмент Rude Message Detector. 
+# relations = ""
+Мы O
+в O
+Badoo B-Organization
+и O
+Bumble B-Organization
+стараемся O
+оградить O
+пользователей O
+от O
+неприятных O
+ситуаций O
+, O
+поэтому O
+внедрили O
+инструмент O
+Rude B-App_system
+Message I-App_system
+Detector I-App_system
+. O
+
+# text =  Она очень похожа на SentencePiece, но выполняет чуть больше действий над некоторыми токенами 
+# relations = ""
+Она O
+очень O
+похожа O
+на O
+SentencePiece B-Library
+, O
+но O
+выполняет O
+чуть O
+больше O
+действий O
+над O
+некоторыми O
+токенами
+
+# text = Нативная TensorFlow-реализация токенизатора требуется для XLM-RoBERTa. 
+# relations = ""
+Нативная O
+TensorFlow B-Library
+- O
+реализация O
+токенизатора O
+требуется O
+для O
+XLM B-Model
+- I-Model
+RoBERTa I-Model
+. O
+
+# text =  Данные: 30 GB русского текста, в котором была Википедия, новости, часть корпуса Taiga и немного книг. 
+# relations = ""
+Данные O
+: O
+30 O
+GB O
+русского O
+текста O
+, O
+в O
+котором O
+была O
+Википедия B-InfoResource
+, O
+новости O
+, O
+часть O
+корпуса O
+Taiga B-Corpus
+и O
+немного O
+книг O
+. O
+
+# text =  Основным из них был SberSQUAD. 
+# relations = ""
+Основным O
+из O
+них O
+был O
+SberSQUAD B-Model
+. O
+
+# text =  Позднее, на RussianSuperGLUE, она показала себя чуть лучше. 
+# relations = ""
+Позднее O
+, O
+на O
+RussianSuperGLUE B-Library
+, O
+она O
+показала O
+себя O
+чуть O
+лучше O
+. O
+
+# text =  В последствии эта модель легла в основу модели SBERT наших коллег из смежной команды SberDevices, которую они выложили в открытый доступ. 
+# relations = "Model_hasAuthor_Organization 0 0"
+В O
+последствии O
+эта O
+модель O
+легла O
+в O
+основу O
+модели O
+SBERT B-Model
+наших O
+коллег O
+из O
+смежной O
+команды O
+SberDevices B-Organization
+, O
+которую O
+они O
+выложили O
+в O
+открытый O
+доступ O
+. O
+
+# text =  Детали: немного переделали код для обучения из библиотеки Transformers. 
+# relations = ""
+Детали O
+: O
+немного O
+переделали O
+код O
+для O
+обучения O
+из O
+библиотеки O
+Transformers B-Library
+. O
+
+# text =  Обучали на всём русском корпусе, что у нас был для ruGPT-3 (Википедия, книги, новости, русский Common Crawl и т.д.). 
+# relations = ""
+Обучали O
+на O
+всём O
+русском O
+корпусе O
+, O
+что O
+у O
+нас O
+был O
+для O
+ruGPT-3 B-Model
+( O
+Википедия B-InfoResource
+, O
+книги O
+, O
+новости O
+, O
+русский O
+Common B-Corpus
+Crawl I-Corpus
+и O
+т O
+. O
+д. O
+) O
+. O
+
+# text =  На разных заданиях топовые метрики далеко не только у ruT5-large: лучшие single-model решения также есть у ruRoBERTa-large (задача TERRa и DaNetQA). 
+# relations = ""
+На O
+разных O
+заданиях O
+топовые O
+метрики O
+далеко O
+не O
+только O
+у O
+ruT5-large B-Model
+: O
+лучшие O
+single O
+- O
+model O
+решения O
+также O
+есть O
+у O
+ruRoBERTa B-Model
+- I-Model
+large I-Model
+( O
+задача O
+TERRa B-Task
+и O
+DaNetQA B-Task
+) O
+. O
+
+# text =  А на некоторых заданиях лучших результатов удалось достичь на few-shot, т. е. без дообучения модели (задача RCB и RuCoS, YaLM от Яндекса). 
+# relations = "Model_hasAuthor_Organization 0 0"
+А O
+на O
+некоторых O
+заданиях O
+лучших O
+результатов O
+удалось O
+достичь O
+на O
+few B-Method_ML
+- I-Method_ML
+shot I-Method_ML
+, O
+т O
+. O
+е O
+. O
+без O
+дообучения O
+модели O
+( O
+задача O
+RCB B-Model
+и O
+RuCoS B-Model
+, O
+YaLM B-Model
+от O
+Яндекса B-Organization
+) O
+. O
+
+# text =  Эти три модели из библиотеки Hugging Face — самые популярные на сегодняшний день. 
+# relations = ""
+Эти O
+три O
+модели O
+из O
+библиотеки O
+Hugging B-Library
+Face I-Library
+— O
+самые O
+популярные O
+на O
+сегодняшний O
+день O
+. O
+
+# text =  Есть стандартная задача извлечения именованных сущностей из текста (NER). 
+# relations = ""
+Есть O
+стандартная O
+задача O
+извлечения O
+именованных O
+сущностей O
+из O
+текста O
+( O
+NER B-Task
+) O
+. O
+
+# text =  Задача старая и хорошо изученная, для английского языка существует масса коммерческих и открытых решений: Spacy, Stanford NER, OpenNLP, NLTK, MITIE, Google Natural Language API, ParallelDots, Aylien, Rosette, TextRazor. 
+# relations = ""
+Задача O
+старая O
+и O
+хорошо O
+изученная O
+, O
+для O
+английского B-Lang
+языка I-Lang
+существует O
+масса O
+коммерческих O
+и O
+открытых O
+решений O
+: O
+Spacy B-Library
+, O
+Stanford B-Library
+NER I-Library
+, O
+OpenNLP B-Library
+, O
+NLTK B-Library
+, O
+MITIE B-Library
+, O
+Google B-Library
+Natural I-Library
+Language I-Library
+API I-Library
+, O
+ParallelDots B-Library
+, O
+Aylien B-Library
+, O
+Rosette B-Library
+, O
+TextRazor B-Library
+. O
+
+# text =  Для русского тоже есть хорошие решения, но они в основном закрытые: DaData, Pullenti, Abbyy Infoextractor, Dictum, Eureka, Promt, RCO, AOT, Ahunter. 
+# relations = ""
+Для O
+русского O
+тоже O
+есть O
+хорошие O
+решения O
+, O
+но O
+они O
+в O
+основном O
+закрытые O
+: O
+DaData B-App_system
+, O
+Pullenti B-Library
+, O
+Abbyy B-Technology
+Infoextractor I-Technology
+, O
+Dictum B-Library
+, O
+Eureka B-Library
+, O
+Promt B-Library
+, O
+RCO B-Library
+, O
+AOT B-App_system
+, O
+Ahunter B-Library
+. O
+
+# text =  Из открытого мне известен только Томита-парсер и свежий Deepmipt NER. 
+# relations = ""
+Из O
+открытого O
+мне O
+известен O
+только O
+Томита B-Technology
+- I-Technology
+парсер I-Technology
+и O
+свежий O
+Deepmipt B-Library
+NER I-Library
+. O
+
+# text =  Год назад Дима Веселов начал проект Natasha. 
+# relations = ""
+Год O
+назад O
+Дима B-Person
+Веселов I-Person
+начал O
+проект O
+Natasha B-Activity
+. O
+
+# text =  Natasha — это аналог Томита-парсера для Python (Yargy-парсер) плюс набор готовых правил для извлечения имён, адресов, дат, сумм денег и других сущностей. 
+# relations = "Environment_isUsedIn_Application 0 1"
+Natasha B-Library
+— O
+это O
+аналог O
+Томита B-Technology
+- I-Technology
+парсера I-Technology
+для O
+Python B-Environment
+( O
+Yargy B-Technology
+- I-Technology
+парсер I-Technology
+) O
+плюс O
+набор O
+готовых O
+правил O
+для O
+извлечения O
+имён O
+, O
+адресов O
+, O
+дат O
+, O
+сумм O
+денег O
+и O
+других O
+сущностей O
+. O
+
+# text =  У топовых решений F1-мера для имён была 0.9+. 
+# relations = "Metric_hasValue_Value 0 0"
+У O
+топовых O
+решений O
+F1-мера B-Metric
+для O
+имён O
+была O
+0.9 B-Value
++ O
+. O
+
+# text =  У Natasha результат хуже — 0.78. 
+# relations = ""
+У O
+Natasha B-Model
+результат O
+хуже O
+— O
+0.78 B-Value
+. O
+
+# text =  Yargy — сложная и интересная библиотека, в этой статье мы рассмотрим только простые примеры использования. 
+# relations = ""
+Yargy B-Library
+— O
+сложная O
+и O
+интересная O
+библиотека O
+, O
+в O
+этой O
+статье O
+мы O
+рассмотрим O
+только O
+простые O
+примеры O
+использования O
+. O
+
+# text =  В словаре Opencorpora, который использует pymorphy2, для имён ставится метка Name, для фамилий — метка Surn. 
+# relations = ""
+В O
+словаре O
+Opencorpora B-Corpus
+, O
+который O
+использует O
+pymorphy2 B-Library
+, O
+для O
+имён O
+ставится O
+метка O
+Name O
+, O
+для O
+фамилий O
+— O
+метка O
+Surn O
+. O
+
+# text =  Например, качество извлечения имён у Natasha очень далеко от SOTA. 
+# relations = ""
+Например O
+, O
+качество O
+извлечения O
+имён O
+у O
+Natasha B-Library
+очень O
+далеко O
+от O
+SOTA B-Library
+. O
+
+# text =  В начале 2018 года исследователи из OpenAI, университета Сан-Франциско, Алленовского института искусственного интеллекта и Вашингтонского университета одновременно вывели хитроумный способ приблизиться к этому. 
+# relations = ""
+В O
+начале O
+2018 B-Date
+года O
+исследователи O
+из O
+OpenAI B-Organization
+, O
+университета O
+Сан O
+- O
+Франциско O
+, O
+Алленовского B-Organization
+института I-Organization
+искусственного I-Organization
+интеллекта I-Organization
+и O
+Вашингтонского B-Organization
+университета I-Organization
+одновременно O
+вывели O
+хитроумный O
+способ O
+приблизиться O
+к O
+этому O
+. O
+
+# text =  Набор данных назвали Гансом (Heuristic Analysis for Natural-Language-Inference Systems, HANS) [эвристический анализ систем, делающих заключения на основе естественного языка]. 
+# relations = "InfoResource_IsAlternativeNameFor_InfoResource 0 1, InfoResource_IsAlternativeNameFor_InfoResource 2 1"
+Набор O
+данных O
+назвали O
+Гансом B-Dataset
+( O
+Heuristic B-Dataset
+Analysis I-Dataset
+for I-Dataset
+Natural I-Dataset
+- I-Dataset
+Language I-Dataset
+- I-Dataset
+Inference I-Dataset
+Systems I-Dataset
+, O
+HANS B-Dataset
+) O
+[ O
+эвристический O
+анализ O
+систем O
+, O
+делающих O
+заключения O
+на O
+основе O
+естественного O
+языка O
+] O
+. O
+
+# text =  В нашей задаче мы использовали набор данных Ганс (Heuristic Analysis for Natural-Language-Inference Systems, HANS). 
+# relations = "InfoResource_IsAlternativeNameFor_InfoResource 0 1, InfoResource_IsAlternativeNameFor_InfoResource 2 1"
+В O
+нашей O
+задаче O
+мы O
+использовали O
+набор O
+данных O
+Ганс B-Dataset
+( O
+Heuristic B-Dataset
+Analysis I-Dataset
+for I-Dataset
+Natural I-Dataset
+- I-Dataset
+Language I-Dataset
+- I-Dataset
+Inference I-Dataset
+Systems I-Dataset
+, O
+HANS B-Dataset
+) O
+. O
+
+# text =  Рады представить вам PyCaret – библиотеку машинного обучения с открытым исходным кодом на Python для обучения и развертывания моделей с учителем и без учителя в low-code среде. 
+# relations = "Environment_isUsedIn_Application 0 0"
+Рады O
+представить O
+вам O
+PyCaret B-Library
+– O
+библиотеку O
+машинного O
+обучения O
+с O
+открытым O
+исходным O
+кодом O
+на O
+Python B-Environment
+для O
+обучения O
+и O
+развертывания O
+моделей O
+с O
+учителем O
+и O
+без O
+учителя O
+в O
+low O
+- O
+code O
+среде O
+. O
+
+# text =  PyCaret позволит вам пройти путь от подготовки данных до развертывания модели за несколько секунд в той notebook-среде, которую вы выберете. 
+# relations = ""
+PyCaret B-Library
+позволит O
+вам O
+пройти O
+путь O
+от O
+подготовки O
+данных O
+до O
+развертывания O
+модели O
+за O
+несколько O
+секунд O
+в O
+той O
+notebook B-App_system
+- O
+среде O
+, O
+которую O
+вы O
+выберете O
+. O
+
+# text =  PyCaret – это, по сути, оболочка Python над несколькими библиотеками машинного обучения, такими как scikit-learn, XGBoost, Microsoft LightGBM, spaCy и многими другими. 
+# relations = "Environment_isUsedIn_Application 0 0"
+PyCaret B-Library
+– O
+это O
+, O
+по O
+сути O
+, O
+оболочка O
+Python B-Environment
+над O
+несколькими O
+библиотеками O
+машинного O
+обучения O
+, O
+такими O
+как O
+scikit B-Library
+- I-Library
+learn I-Library
+, O
+XGBoost B-Library
+, O
+Microsoft B-Library
+LightGBM I-Library
+, O
+spaCy O
+и O
+многими O
+другими O
+. O
+
+# text =  Первый стабильный релиз PyCaret версии 1.0.0 можно установить с помощью pip. 
+# relations = ""
+Первый O
+стабильный O
+релиз O
+PyCaret B-Library
+версии O
+1.0.0 O
+можно O
+установить O
+с O
+помощью O
+pip B-Environment
+. O
+
+# text =  Этот датасет доступен на GitHub-репозитории PyCaret. 
+# relations = ""
+Этот O
+датасет O
+доступен O
+на O
+GitHub B-InfoResource
+- O
+репозитории O
+PyCaret B-Library
+. O
+
+# text =  Для классификации: Accuracy, AUC, Recall, Precision, F1, Kappa. 
+# relations = ""
+Для O
+классификации B-Task
+: O
+Accuracy B-Metric
+, O
+AUC B-Metric
+, O
+Recall B-Metric
+, O
+Precision B-Metric
+, O
+F1 B-Metric
+, O
+Kappa B-Metric
+. O
+
+# text =  Для регрессии: MAE, MSE, RMSE, R2, RMSLE, MAPE 
+Для O
+регрессии B-Task
+: O
+MAE B-Metric
+, O
+MSE B-Metric
+, O
+RMSE B-Metric
+, O
+R2 B-Metric
+, O
+RMSLE B-Metric
+, O
+MAPE B-Metric
+. O
+
+# text =  Стэнфордская нейросеть определяет тональность текста с точностью 85% 
+# relations = "Metric_hasValue_Value 0 0, Metric_isUsedFor_Model 0 0"
+Стэнфордская B-Model
+нейросеть I-Model
+определяет O
+тональность O
+текста O
+с O
+точностью B-Metric
+85 B-Value
+% I-Value
+
+# text =  Нейросеть от Стэнфорда демонстрирует точность в 85% при определении тональности текста. 
+# relations = "Metric_isUsedFor_Model 0 0, Model_hasAuthor_Organization 0 0, Metric_hasValue_Value 0 0"
+Нейросеть B-Model
+от O
+Стэнфорда B-Organization
+демонстрирует O
+точность B-Metric
+в O
+85 B-Value
+% I-Value
+при O
+определении O
+тональности O
+текста O
+. O
+
+# text =  Для англоязычного nlp-сообщества задача поиска сложного слова в тексте называется так: CWI – complex word identification. 
+# relations = "Task_IsAlternativeNameFor_Task 1 0"
+Для O
+англоязычного O
+nlp O
+- O
+сообщества O
+задача O
+поиска O
+сложного O
+слова O
+в O
+тексте O
+называется O
+так O
+: O
+CWI B-Task
+– O
+complex B-Task
+word I-Task
+identification I-Task
+. O
+
+# text =  Примеры обучения LDA часто демонстрируются на "образцовых" датасетах, например "20 newsgroups dataset", который есть в sklearn. 
+# relations = ""
+Примеры O
+обучения O
+LDA B-Method
+часто O
+демонстрируются O
+на O
+" O
+образцовых O
+" O
+датасетах O
+, O
+например O
+" O
+20 B-Dataset
+newsgroups I-Dataset
+dataset I-Dataset
+" O
+, O
+который O
+есть O
+в O
+sklearn B-Library
+. O
+
+# text =  Для стемминга использовался pymystem3. 
+# relations = ""
+Для O
+стемминга O
+использовался O
+pymystem3 B-Library
+. O
+
+# text = Объединенная команда специалистов Пенсильванского и Шеффилдского университетов создала слабую форму искусственного интеллекта, которая способна предсказывать решения Европейского суда по правам человека (European Court of Human Rights, ECtHR, ЕСПЧ) с точностью в 79%. 
+# relations = "Metric_hasValue_Value 0 0"
+Объединенная O
+команда O
+специалистов O
+Пенсильванского B-Organization
+и O
+Шеффилдского B-Organization
+университетов I-Organization
+создала O
+слабую O
+форму O
+искусственного O
+интеллекта O
+, O
+которая O
+способна O
+предсказывать O
+решения O
+Европейского O
+суда O
+по O
+правам O
+человека O
+( O
+European O
+Court O
+of O
+Human O
+Rights O
+, O
+ECtHR O
+, O
+ЕСПЧ O
+) O
+с O
+точностью B-Metric
+в O
+79 B-Value
+% I-Value
+. O
+
+# text =  Он демонстрирует точность 95%. 
+# relations = "Metric_hasValue_Value 0 0"
+Он O
+демонстрирует O
+точность B-Metric
+95 B-Value
+% I-Value
+. O
+
+# text =  На данный момент подход дает прогноз с accuracy 0,64, что выше случайного предсказания. 
+# relations = "Metric_isAppliedTo_Method 0 0, Metric_hasValue_Value 0 0"
+На O
+данный O
+момент O
+подход B-Method
+дает O
+прогноз O
+с O
+accuracy B-Metric
+0,64 B-Value
+, O
+что O
+выше O
+случайного O
+предсказания O
+. O
+
+# text =  Таким образом, хоть и удается достигнуть высокой точности, но результат не всегда стабилен и в моем случае колеблется в промежутке 75-80%. 
+# relations = "Metric_hasValue_Value 0 0"
+Таким O
+образом O
+, O
+хоть O
+и O
+удается O
+достигнуть O
+высокой O
+точности B-Metric
+, O
+но O
+результат O
+не O
+всегда O
+стабилен O
+и O
+в O
+моем O
+случае O
+колеблется O
+в O
+промежутке O
+75 B-Value
+- I-Value
+80 I-Value
+% I-Value
+. O
+
+# text =  Видно, что при перестановках качество падает, но это падение не критично и точность остается в диапазоне 69-80%. 
+# relations = "Metric_hasValue_Value 0 0"
+Видно O
+, O
+что O
+при O
+перестановках O
+качество O
+падает O
+, O
+но O
+это O
+падение O
+не O
+критично O
+и O
+точность B-Metric
+остается O
+в O
+диапазоне O
+69 B-Value
+- I-Value
+80 I-Value
+% I-Value
+. O
+
+# text =  ЗаключениеВ итоге, моделью RuBioRoBERTa в задаче RuMedDaNet мне удалось добиться качества 73.24% на закрытой тестовой части данных (хотя на dev метрика Accuracy вообще была 81.64%). 
+# relations = "Metric_hasValue_Value 0 0, Metric_isUsedIn_Task 0 0, Metric_isUsedFor_Model 0 0, Model_isUsedForSolving_Task 0 0"
+ЗаключениеВ O
+итоге O
+, O
+моделью O
+RuBioRoBERTa B-Model
+в O
+задаче O
+RuMedDaNet B-Task
+мне O
+удалось O
+добиться O
+качества O
+73.24 O
+% O
+на O
+закрытой O
+тестовой O
+части O
+данных O
+( O
+хотя O
+на O
+dev O
+метрика O
+Accuracy B-Metric
+вообще O
+была O
+81.64 B-Value
+% I-Value
+) O
+. O
+
+# text =  Точность модели составила 58%, если учитывать все слот. 
+# relations = "Metric_hasValue_Value 0 0"
+Точность B-Metric
+модели O
+составила O
+58 B-Value
+% I-Value
+, O
+если O
+учитывать O
+все O
+слот O
+. O
+
+# text =  После тонкой настройки модель показала примерно 63%-ю точность как на учебном, так и на контрольном наборах данных. 
+# relations = "Metric_hasValue_Value 0 0"
+После O
+тонкой O
+настройки O
+модель O
+показала O
+примерно O
+63%-ю B-Value
+точность B-Metric
+как O
+на O
+учебном O
+, O
+так O
+и O
+на O
+контрольном O
+наборах O
+данных O
+. O
+
+# text =  Самые интересные для нас сущности – судья и прокурор – быстро идентифицируются из более чем 200 миллионов документов с точностью выше 92 %». 
+# relations = "Metric_hasValue_Value 0 0"
+Самые O
+интересные O
+для O
+нас O
+сущности O
+– O
+судья O
+и O
+прокурор O
+– O
+быстро O
+идентифицируются O
+из O
+более O
+чем O
+200 O
+миллионов O
+документов O
+с O
+точностью B-Metric
+выше O
+92 B-Value
+%  I-Value
+» O
+. O
+
+# text =  В сравнении показываются FriendBERT и ChatBERT, которые по итогу исследования представили точность (MacroAVG F-меру), равную 73% для первой и 69,5% для второй модели соответственно. 
+# relations = "Metric_isUsedFor_Model 0 0, Metric_isUsedFor_Model 0 1, Metric_IsAlternativeNameFor_Metric 1 0, Metric_hasValue_Value 0 0, Metric_hasValue_Value 0 1"
+В O
+сравнении O
+показываются O
+FriendBERT B-Model
+и O
+ChatBERT B-Model
+, O
+которые O
+по O
+итогу O
+исследования O
+представили O
+точность B-Metric
+( O
+MacroAVG B-Metric
+F I-Metric
+- I-Metric
+меру I-Metric
+) O
+, O
+равную O
+73 B-Value
+% I-Value
+для O
+первой O
+и O
+69,5 B-Value
+% I-Value
+для O
+второй O
+модели O
+соответственно O
+. O
+
+# text =  Разработал систему компьютерной алгебры Mathematica и систему извлечения знаний WolframAlpha. 
+# relations = ""
+Разработал O
+систему O
+компьютерной O
+алгебры O
+Mathematica B-App_system
+и O
+систему O
+извлечения O
+знаний O
+WolframAlpha B-App_system
+. O
+
+# text =  В чем проблема Пролога, да и любой системы / языка программирования, назначение которых анализировать факты и искать ответы на вопросы? 
+# relations = ""
+В O
+чем O
+проблема O
+Пролога B-App_system
+, O
+да O
+и O
+любой O
+системы O
+/ O
+языка O
+программирования O
+, O
+назначение O
+которых O
+анализировать O
+факты O
+и O
+искать O
+ответы O
+на O
+вопросы O
+? O
+
+# text =  Интерес представляют и системы DeepMind, которые в дополнение к нейросети имеют внешнюю память фактов (или опыта), что позволяет им обучаться без учителя «правилам игры», просто проявляя активность в среде и записывая ее результат. 
+# relations = ""
+Интерес O
+представляют O
+и O
+системы O
+DeepMind B-App_system
+, O
+которые O
+в O
+дополнение O
+к O
+нейросети O
+имеют O
+внешнюю O
+память O
+фактов O
+( O
+или O
+опыта O
+) O
+, O
+что O
+позволяет O
+им O
+обучаться O
+без O
+учителя O
+« O
+правилам O
+игры O
+» O
+, O
+просто O
+проявляя O
+активность O
+в O
+среде O
+и O
+записывая O
+ее O
+результат O
+. O
+
+# text =  В заглавии упомянута и на картинке представлена ELIZA — диалоговая система-психоаналитик (сейчас, ее назвали бы чат-бот), родом из 60-ых годов. 
+# relations = ""
+В O
+заглавии O
+упомянута O
+и O
+на O
+картинке O
+представлена O
+ELIZA B-App_system
+— O
+диалоговая O
+система O
+- O
+психоаналитик O
+( O
+сейчас O
+, O
+ее O
+назвали O
+бы O
+чат O
+- O
+бот O
+) O
+, O
+родом O
+из O
+60-ых O
+годов O
+. O
+
+# text = GNMT есть система нейронного машинного перевода (NMT) компании Google, которая использует нейросеть (ANN) для повышения точности и скорости перевода, и в частности для создания лучших, более естественных вариантов перевода текста в Google Translate. 
+# relations = "Application_hasAuthor_Organization 2 0, Model_isUsedIn_Application 0 0, Application_hasAuthor_Organization 0 0"
+GNMT B-App_system
+есть O
+система O
+нейронного O
+машинного O
+перевода O
+( O
+NMT B-App_system
+) O
+компании O
+Google B-Organization
+, O
+которая O
+использует O
+нейросеть O
+( O
+ANN B-Model
+) O
+для O
+повышения O
+точности O
+и O
+скорости O
+перевода O
+, O
+и O
+в O
+частности O
+для O
+создания O
+лучших O
+, O
+более O
+естественных O
+вариантов O
+перевода O
+текста O
+в O
+Google B-App_system
+Translate I-App_system
+. O
+
+# text =  Его обучали с помощью большого количества текстов из Интернета и системы Reinforcement Learning from Human Feedback. 
+# relations = ""
+Его O
+обучали O
+с O
+помощью O
+большого O
+количества O
+текстов O
+из O
+Интернета O
+и O
+системы O
+Reinforcement B-App_system
+Learning I-App_system
+from I-App_system
+Human I-App_system
+Feedback I-App_system
+. O
+
+# text =  Во-вторых, даже перевод между русским и эрзянским ещё расти и расти: у SOTA систем для высокоресурсных языков BLEU обычно где-то между 40 и 80. 
+# relations = "Environment_isUsedIn_Application 0 0"
+Во O
+- O
+вторых O
+, O
+даже O
+перевод O
+между O
+русским O
+и O
+эрзянским O
+ещё O
+расти O
+и O
+расти O
+: O
+у O
+SOTA B-App_system
+систем O
+для O
+высокоресурсных O
+языков O
+BLEU B-Environment
+обычно O
+где O
+- O
+то O
+между O
+40 O
+и O
+80 O
+. O
+
+# text =  Insertions – вставки слов, которых нет в исходной аудиозаписи Substitutions – замены слов на некорректные  Deletions – система слово не распознала и сделала пропуск  
+# relations = ""
+Insertions O
+– O
+вставки O
+слов O
+, O
+которых O
+нет O
+в O
+исходной O
+аудиозаписи O
+Substitutions O
+– O
+замены O
+слов O
+на O
+некорректные O
+  O
+Deletions B-App_system
+– O
+система O
+слово O
+не O
+распознала O
+и O
+сделала O
+пропуск O
+
+# text = “Вам курицу или рыбу?” – Рекомендательная система на “Своем Родном” знает ответ / Habr 
+# relations = ""
+“ O
+Вам O
+курицу O
+или O
+рыбу O
+? O
+” O
+– O
+Рекомендательная O
+система O
+на O
+“ O
+Своем B-App_system
+Родном I-App_system
+” O
+знает O
+ответ O
+
+# text =  Его обучали с помощью большого количества текстов из Интернета и системы Reinforcement Learning from Human Feedback. 
+# relations = ""
+Его O
+обучали O
+с O
+помощью O
+большого O
+количества O
+текстов O
+из O
+Интернета O
+и O
+системы O
+Reinforcement B-App_system
+Learning I-App_system
+from I-App_system
+Human I-App_system
+Feedback I-App_system
+. O
+
+# text =  Система Kaldi, разработанная британским специалистом по нейросетям Даниэлем Повеем, предоставляет пользователю наиболее широкий выбор алгоритмов для разных задач и удобна в использовании. 
+# relations = "Application_hasAuthor_Person 0 0"
+Система O
+Kaldi B-App_system
+, O
+разработанная O
+британским O
+специалистом O
+по O
+нейросетям O
+Даниэлем B-Person
+Повеем I-Person
+, O
+предоставляет O
+пользователю O
+наиболее O
+широкий O
+выбор O
+алгоритмов O
+для O
+разных O
+задач O
+и O
+удобна O
+в O
+использовании O
+. O
+
+# text =  Британский специалист по нейросетям Даниэль Пове создал систему Kaldi, которая предоставляет пользователю разнообразные алгоритмы для решения различных задач и отличается удобством в использовании.
+# relations = "Application_hasAuthor_Person 0 0"
+Британский O
+специалист O
+по O
+нейросетям O
+Даниэль B-Person
+Пове I-Person
+создал O
+систему O
+Kaldi B-App_system
+, O
+которая O
+предоставляет O
+пользователю O
+разнообразные O
+алгоритмы O
+для O
+решения O
+различных O
+задач O
+и O
+отличается O
+удобством O
+в O
+использовании O
+. O
+
+# text =  А AI позволяет извлекать из данных нужную информацию, что делает системы IoT намного более интеллектуальными. 
+# relations = ""
+А O
+AI O
+позволяет O
+извлекать O
+из O
+данных O
+нужную O
+информацию O
+, O
+что O
+делает O
+системы O
+IoT B-App_system
+намного O
+более O
+интеллектуальными O
+. O
+
+# text =  После того, как данные загружены в систему, CLI позволяет осуществить её тонкую настройку, в том числе — воспользоваться специальной опцией для двоичной классификации. 
+# relations = ""
+После O
+того O
+, O
+как O
+данные O
+загружены O
+в O
+систему O
+, O
+CLI B-App_system
+позволяет O
+осуществить O
+её O
+тонкую O
+настройку O
+, O
+в O
+том O
+числе O
+— O
+воспользоваться O
+специальной O
+опцией O
+для O
+двоичной O
+классификации O
+. O
+
+# text = Google представила систему искусственного интеллекта MusicLM, которая способна генерировать музыку в любом жанре по текстовому описанию. 
+# relations = "Application_hasAuthor_Organization 0 0"
+Google B-Organization
+представила O
+систему O
+искусственного O
+интеллекта O
+MusicLM B-App_system
+, O
+которая O
+способна O
+генерировать O
+музыку O
+в O
+любом O
+жанре O
+по O
+текстовому O
+описанию O
+. O
+
+# text =  Ниже показаны примеры генерации кода с использованием сервиса CodeWhisperer на всех трёх перечисленных выше языках программирования. 
+# relations = ""
+Ниже O
+показаны O
+примеры O
+генерации O
+кода O
+с O
+использованием O
+сервиса O
+CodeWhisperer B-App_system
+на O
+всех O
+трёх O
+перечисленных O
+выше O
+языках O
+программирования O
+. O
+
+# text = Аналогичный описанному выше сервис был запущен Microsoft в прошлом, 2021 году, и получил название Copilot. 
+# relations = "Date_isDateOf_Application 0 0, Application_hasAuthor_Organization 0 0"
+Аналогичный O
+описанному O
+выше O
+сервис O
+был O
+запущен O
+Microsoft B-Organization
+в O
+прошлом O
+, O
+2021 B-Date
+году O
+, O
+и O
+получил O
+название O
+Copilot B-App_system
+. O
+
+# text =  Система может быть подключена в виде расширения для сред разработки: Visual Studio Code, Visual Studio, Neovim, набора IDE от JetBrains. 
+# relations = "Application_hasAuthor_Organization 0 0"
+Система O
+может O
+быть O
+подключена O
+в O
+виде O
+расширения O
+для O
+сред O
+разработки O
+: O
+Visual B-App_system
+Studio I-App_system
+Code I-App_system
+, O
+Visual B-App_system
+Studio I-App_system
+, O
+Neovim B-App_system
+, O
+набора O
+IDE B-App_system
+от O
+JetBrains B-Organization
+. O
+
+# text =  Процент роботов среди трафика относительно низок, при этом самый высокий показатель приходится на трафик поисковых систем (Baidu) и составляет 1,0%. 
+# relations = ""
+Процент O
+роботов O
+среди O
+трафика O
+относительно O
+низок O
+, O
+при O
+этом O
+самый O
+высокий O
+показатель O
+приходится O
+на O
+трафик O
+поисковых O
+систем O
+( O
+Baidu B-App_system
+) O
+и O
+составляет O
+1,0%.
+
+# text =  Поддерживается система рекомендаций для разработки приложений на языках Java, Javascript и Python. 
+# relations = ""
+Поддерживается O
+система O
+рекомендаций O
+для O
+разработки O
+приложений O
+на O
+языках O
+Java B-Environment
+, O
+Javascript B-Environment
+и O
+Python B-Environment
+. O
+
+# text =  Ниже показаны примеры генерации кода с использованием сервиса CodeWhisperer на всех трёх перечисленных выше языках программирования. 
+# relations = ""
+Ниже O
+показаны O
+примеры O
+генерации O
+кода O
+с O
+использованием O
+сервиса O
+CodeWhisperer B-App_system
+на O
+всех O
+трёх O
+перечисленных O
+выше O
+языках O
+программирования O
+. O
+
+# text = Одним из самых известных датасетов по задаче модерации является датасет с соревнования на Kaggle Toxic Comment Classification Challenge. 
+# relations = ""
+Одним O
+из O
+самых O
+известных O
+датасетов O
+по O
+задаче O
+модерации O
+является O
+датасет B-Dataset
+с O
+соревнования O
+на O
+Kaggle B-Activity
+Toxic I-Activity
+Comment I-Activity
+Classification I-Activity
+Challenge I-Activity
+. O
+
+# text =  Для её обучения был использован гигантский датасет mC4, включающий в себя 6,6 млрд веб-страниц на 101 языке. 
+# relations = ""
+Для O
+её O
+обучения B-Model_isTrainedOn_Dataset
+был O
+использован O
+гигантский O
+датасет O
+mC4 B-Dataset
+, O
+включающий O
+в O
+себя O
+6,6 O
+млрд O
+веб O
+- O
+страниц O
+на O
+101 O
+языке O
+. O
+
+# text =  Есть множество датасетов, таких как:Paraphraser Plus; корпус парафраз, собранных Давидом Дале;корпус парафраз из новостных заголовков, собранный Екатериной Пронозой;корпус парафраз-заголовков, собранный командой Вадима Гудкова. 
+# relations = ""
+Есть O
+множество O
+датасетов O
+, O
+таких O
+как O
+: O
+Paraphraser B-Dataset
+Plus I-Dataset
+; O
+корпус B-Corpus
+парафраз I-Corpus
+, O
+собранных O
+Давидом B-Person
+Дале I-Person
+; O
+корпус B-Corpus
+парафраз I-Corpus
+из I-Corpus
+новостных I-Corpus
+заголовков I-Corpus
+, O
+собранный O
+Екатериной B-Person
+Пронозой I-Person
+; O
+корпус B-Corpus
+парафраз I-Corpus
+- I-Corpus
+заголовков I-Corpus
+, O
+собранный O
+командой O
+Вадима B-Person
+Гудкова I-Person
+. O
+
+# text =  На базе этих корпусов есть также обученные модели в том числе на основе ruT5 и ruGPT3 (например, несколько моделей находятся в библиотеке russian_paraphrases, или например мультитасковая модель). 
+# relations = ""
+На O
+базе O
+этих O
+корпусов B-Corpus
+есть O
+также O
+обученные O
+модели O
+в O
+том O
+числе O
+на O
+основе O
+ruT5 B-Model
+и O
+ruGPT3 B-Model
+( O
+например O
+, O
+несколько O
+моделей O
+находятся O
+в O
+библиотеке O
+russian_paraphrases B-Library
+, O
+или O
+например O
+мультитасковая O
+модель O
+) O
+. O
+
+# text =  Прежде всего, стоит выделить Dialog State Tracking Challenge, в этом году он, кстати, будет проводиться уже в шестой раз. 
+# relations = ""
+Прежде O
+всего O
+, O
+стоит O
+выделить O
+Dialog B-Activity
+State I-Activity
+Tracking I-Activity
+Challenge I-Activity
+, O
+в O
+этом O
+году O
+он O
+, O
+кстати O
+, O
+будет O
+проводиться O
+уже O
+в O
+шестой O
+раз O
+. O
+
+# text = Текстах аудиокниг, будем использовать датасет caito, в котором как раз есть тексты на всех языках, на которых обучалась модель (20,000 случайных предложений на каждый язык); 
+# relations = ""
+Текстах O
+аудиокниг O
+, O
+будем O
+использовать O
+датасет O
+caito B-Dataset
+, O
+в O
+котором O
+как O
+раз O
+есть O
+тексты O
+на O
+всех O
+языках O
+, O
+на O
+которых O
+обучалась O
+модель O
+( O
+20,000 O
+случайных O
+предложений O
+на O
+каждый O
+язык O
+) O
+; O
+
+# text =  Это не упоминалось ранее, однако исходные вопросы для сбора демонстраций и генерации пар на сравнение (в RL/RM частях) были выбраны из датасета ELI5. 
+# relations = ""
+Это O
+не O
+упоминалось O
+ранее O
+, O
+однако O
+исходные O
+вопросы O
+для O
+сбора O
+демонстраций O
+и O
+генерации O
+пар O
+на O
+сравнение O
+( O
+в O
+RL O
+/ O
+RM O
+частях O
+) O
+были O
+выбраны O
+из O
+датасета O
+ELI5 B-Dataset
+. O
+
+# text =  Пары предложений новых языков с русским я взял из датасета CCMatrix, и по ходу дообучения дополнял их эрзянскими переводами из своей русско-эрзянской модели, чтобы потом учить другую модель переводить эти эрзянские тексты на иностранный. 
+# relations = ""
+Пары O
+предложений O
+новых O
+языков O
+с O
+русским O
+я O
+взял O
+из O
+датасета O
+CCMatrix B-Dataset
+, O
+и O
+по O
+ходу O
+дообучения O
+дополнял O
+их O
+эрзянскими O
+переводами O
+из O
+своей O
+русско O
+- O
+эрзянской O
+модели O
+, O
+чтобы O
+потом O
+учить O
+другую O
+модель O
+переводить O
+эти O
+эрзянские O
+тексты O
+на O
+иностранный O
+. O
+
+# text =  Вот несколько примеров из тренировочного датасета:ContextQuestionAnswer 
+# relations = ""
+Вот O
+несколько O
+примеров O
+из O
+тренировочного O
+датасета O
+: O
+ContextQuestionAnswer B-Dataset
+
+# text =  Например, в наборе данных CRD3 использовались стенограммы шоу Critical Role.
+# relations = ""
+Например O
+, O
+в O
+наборе O
+данных O
+CRD3 B-Dataset
+использовались O
+стенограммы O
+шоу O
+Critical O
+Role O
+. O
+
+# text =  Проверим этот метод на практике, обучив модель на табличном датасете California Housing, в котором нужно предсказывать цену недвижимости в разных районах Калифорнии, имея 8 исходных признаков. 
+# relations = "Model_isTrainedOn_Dataset 0 0"
+Проверим O
+этот O
+метод O
+на O
+практике O
+, O
+обучив B-Model_isTrainedOn_Dataset
+модель B-Model
+на O
+табличном O
+датасете O
+California B-Dataset
+Housing I-Dataset
+, O
+в O
+котором O
+нужно O
+предсказывать O
+цену O
+недвижимости O
+в O
+разных O
+районах O
+Калифорнии O
+, O
+имея O
+8 O
+исходных O
+признаков O
+. O
+
+# text =  Давайте протестируем данную методику, обучив модель на датасете California Housing.
+# relations = "Model_isTrainedOn_Dataset 0 0"
+Давайте O
+протестируем O
+данную O
+методику O
+, O
+обучив B-Model_isTrainedOn_Dataset
+модель B-Model
+на O
+датасете O
+California B-Dataset
+Housing I-Dataset
+. O
+
+# text = Чтобы оценить точность регрессора, мы будем использовать наборы данных Medical Cost Personal Datasets | Kaggle. 
+# relations = "Dataset_isTrainedForSolving_Task 0 0"
+Чтобы O
+оценить B-Task
+точность I-Task
+регрессора I-Task
+, O
+мы O
+будем O
+использовать O
+наборы O
+данных O
+Medical B-Dataset
+Cost I-Dataset
+Personal I-Dataset
+Datasets I-Dataset
+Kaggle I-Dataset
+. O
+
+# text = В задаче классификации на 10%, 20%, 30%, 40%, 50% от общего датасета тестовой выборки DatRet показал лучшие результаты. 
+# relations = ""
+В O
+задаче O
+классификации O
+на O
+10 O
+% O
+, O
+20 O
+% O
+, O
+30 O
+% O
+, O
+40 O
+% O
+, O
+50 O
+% O
+от O
+общего O
+датасета O
+тестовой O
+выборки O
+DatRet B-Dataset
+показал O
+лучшие O
+результаты O
+. O
+
+# text =  И речь здесь даже не о том, что метрики качества оцениваются в первую очередь на общих датасетах вроде COCO, а в том, что сами метрики заточены под исследовательские цели. 
+# relations = ""
+И O
+речь O
+здесь O
+даже O
+не O
+о O
+том O
+, O
+что O
+метрики O
+качества O
+оцениваются O
+в O
+первую O
+очередь O
+на O
+общих O
+датасетах O
+вроде O
+COCO B-Dataset
+, O
+а O
+в O
+том O
+, O
+что O
+сами O
+метрики O
+заточены O
+под O
+исследовательские O
+цели O
+. O
+
+# text =  TAPE является логичным развитием проекта Russian SuperGLUE, где на вопросно-ответных датасетах RuCoS, MuSeRC и DaNetQA решения участников уже достигли уровня человека. 
+# relations = ""
+TAPE B-Technology
+является O
+логичным O
+развитием O
+проекта O
+Russian B-Activity
+SuperGLUE I-Activity
+, O
+где O
+на O
+вопросно O
+- O
+ответных O
+датасетах O
+RuCoS B-Dataset
+, O
+MuSeRC B-Dataset
+и O
+DaNetQA B-Dataset
+решения O
+участников O
+уже O
+достигли O
+уровня O
+человека O
+. O
+
+# text =  Датасет Ethics состоит из двух частей. 
+# relations = ""
+Датасет O
+Ethics B-Dataset
+состоит O
+из O
+двух O
+частей O
+. O
+
+# text =  Для тестирования были отобраны два класса по две тысячи примеров из датасета интентов нашего чат-бота Смарти, которые показывали высокую и среднюю оценку разнообразия по self-bleu по 3-граммам. 
+# relations = ""
+Для O
+тестирования O
+были O
+отобраны O
+два O
+класса O
+по O
+две O
+тысячи O
+примеров O
+из O
+датасета B-Dataset
+интентов I-Dataset
+нашего O
+чат O
+- O
+бота O
+Смарти B-Technology
+, O
+которые O
+показывали O
+высокую O
+и O
+среднюю O
+оценку O
+разнообразия O
+по O
+self O
+- O
+bleu O
+по O
+3-граммам O
+. O
+
+# text =  В рамках этой статьи давайте предположим, что у нас есть датасет для обучения обычного многоклассового классификатора интентов. 
+# relations = ""
+В O
+рамках O
+этой O
+статьи O
+давайте O
+предположим O
+, O
+что O
+у O
+нас O
+есть O
+датасет B-Dataset
+для I-Dataset
+обучения I-Dataset
+обычного I-Dataset
+многоклассового I-Dataset
+классификатора I-Dataset
+интентов I-Dataset
+. O
+
+# text =  Обучались на датасете открытого кода с Гитхаба, больше всего в выборке было питона.
+# relations = ""
+Обучались O
+на O
+датасете B-Dataset
+открытого I-Dataset
+кода I-Dataset
+с I-Dataset
+Гитхаба I-Dataset
+, O
+больше O
+всего O
+в O
+выборке O
+было O
+питона O
+. O
+
+# text =  Данные для обучения включали в себя отфильтрованный датасет CommonCrawl (составляет большую пропорцию всех текстов, которые присутствовали в обучении), а также корпус книжных текстов и текстов Википедии. 
+# relations = ""
+Данные O
+для O
+обучения O
+включали O
+в O
+себя O
+отфильтрованный O
+датасет O
+CommonCrawl B-Dataset
+( O
+составляет O
+большую O
+пропорцию O
+всех O
+текстов O
+, O
+которые O
+присутствовали O
+в O
+обучении O
+) O
+, O
+а O
+также O
+корпус O
+книжных O
+текстов O
+и O
+текстов O
+Википедии B-InfoResource
+. O
+
+# text =  Dusha: самый большой открытый датасет для распознавания эмоций в устной речи на русском языке. 
+# relations = "Dataset_isTrainedForSolving_Task 0 0, InfoResource_Language_Lang 0 0"
+Dusha B-Dataset
+: O
+самый O
+большой O
+открытый O
+датасет B-Dataset
+для O
+распознавания B-Task
+эмоций I-Task
+в O
+устной O
+речи O
+на O
+русском B-Lang
+языке I-Lang
+. O
+
+# text =  Dusha - это крупнейший открытый набор данных на русском языке для распознавания эмоций в речи.
+# relations = "Dataset_isTrainedForSolving_Task 0 0, InfoResource_Language_Lang 0 0"
+Dusha B-Dataset
+- O
+это O
+крупнейший O
+открытый O
+набор B-Dataset
+данных I-Dataset
+на O
+русском B-Lang
+языке I-Lang
+для O
+распознавания B-Task
+эмоций I-Task
+в I-Task
+речи I-Task
+. O
+
+# text =  Де-факто, в подавляющем большинстве случаев, бенчмарком для новых моделей распознавания эмоций является англоязычный датасет IEMOCAP с игрой профессиональных актёров. 
+# relations = "Dataset_isTrainedForSolving_Task 0 0, InfoResource_Language_Lang 0 0"
+Де O
+- O
+факто O
+, O
+в O
+подавляющем O
+большинстве O
+случаев O
+, O
+бенчмарком O
+для O
+новых O
+моделей O
+распознавания B-Task
+эмоций I-Task
+является O
+англоязычный B-Lang
+датасет O
+IEMOCAP B-Dataset
+с O
+игрой O
+профессиональных O
+актёров O
+. O
+
+# text =  IEMOCAP, англоязычный набор данных, служит стандартом для распознавания эмоций.
+# relations = "Dataset_isTrainedForSolving_Task 0 0, InfoResource_Language_Lang 0 0"
+IEMOCAP B-Dataset
+, O
+англоязычный B-Lang
+набор O
+данных O
+, O
+служит O
+стандартом O
+для O
+распознавания B-Task
+эмоций I-Task
+. O
+
+# text =  Если датасеты с большим количеством семплов и находятся (к примеру, CMU-MOSEI, MURCO), то у них очень ярко проявляется проблема из п1. 
+# relations = ""
+Если O
+датасеты O
+с O
+большим O
+количеством O
+семплов O
+и O
+находятся O
+( O
+к O
+примеру O
+, O
+CMU B-Dataset
+- I-Dataset
+MOSEI I-Dataset
+, O
+MURCO B-Dataset
+) O
+, O
+то O
+у O
+них O
+очень O
+ярко O
+проявляется O
+проблема O
+из O
+п1.
+
+# text =  Столкнувшись с описанными выше проблемами, мы решили собрать свой датасет для распознавания эмоций и назвали его Dusha, по аналогии с датасетом для распознавания речи — Golos. 
+# relations = "Dataset_isTrainedForSolving_Task 0 0, Dataset_isTrainedForSolving_Task 1 1"
+Столкнувшись O
+с O
+описанными O
+выше O
+проблемами O
+, O
+мы O
+решили O
+собрать O
+свой O
+датасет O
+для O
+распознавания B-Task
+эмоций I-Task
+и O
+назвали O
+его O
+Dusha B-Dataset
+, O
+по O
+аналогии O
+с O
+датасетом O
+для O
+распознавания B-Task
+речи I-Task
+— O
+Golos B-Dataset
+. O
+
+# text =  Эту часть датасета мы назвали Crowd. 
+# relations = ""
+Эту O
+часть O
+датасета O
+мы O
+назвали O
+Crowd B-Dataset
+. O
+
+# text =  Мы обучали движок Amazon Translate, используя «Active Custom Translation», который позволяет выполнять перевод на лету с использованием двуязычного корпуса. 
+# relations = "Application_isUsedForSolving_Task 0 0, Dataset_isTrainedForSolving_Task 0 0"
+Мы O
+обучали O
+движок O
+Amazon B-Technology
+Translate I-Technology
+, O
+используя O
+« O
+Active B-Technology
+Custom I-Technology
+Translation I-Technology
+» O
+, O
+который O
+позволяет O
+выполнять O
+перевод B-Task
+на O
+лету O
+с O
+использованием O
+двуязычного B-Corpus
+корпуса I-Corpus
+. O
+
+# text = Та статья была написана совместно с Ильей Гусевым, у которого есть библиотека для анализа и генерации стихов на русском языке и поэтический корпус русского языка. 
+# relations = "InfoResource_Language_Lang 0 1, Application_hasAuthor_Person 0 0"
+Та O
+статья O
+была O
+написана O
+совместно O
+с O
+Ильей B-Person
+Гусевым I-Person
+, O
+у O
+которого O
+есть O
+библиотека B-Library
+для I-Library
+анализа I-Library
+и I-Library
+генерации I-Library
+стихов I-Library
+на O
+русском B-Lang
+языке I-Lang
+и O
+поэтический B-Corpus
+корпус I-Corpus
+русского B-Lang
+языка I-Lang
+. O
+
+# text = Этот материал был создан совместно с Ильей Гусевым, у которого имеется библиотека для анализа и генерации стихов на русском языке, а также поэтический корпус русского языка.
+# relations = "InfoResource_Language_Lang 0 1, Application_hasAuthor_Person 0 0"
+Этот O
+материал O
+был O
+создан O
+совместно O
+с O
+Ильей B-Person
+Гусевым I-Person
+, O
+у O
+которого O
+имеется O
+библиотека B-Library
+для I-Library
+анализа I-Library
+и I-Library
+генерации I-Library
+стихов I-Library
+на O
+русском B-Lang 
+языке I-Lang 
+, O
+а O
+также O
+поэтический B-Corpus
+корпус I-Corpus
+русского B-Lang
+языка I-Lang
+. O
+
+# text =  Обученный на большом корпусе русской литературы «Порфирьевич» порадовал публику множеством забавных творений. 
+# relations = ""
+Обученный O
+на O
+большом O
+корпусе B-Corpus
+русской I-Corpus
+литературы I-Corpus
+« O
+Порфирьевич B-Technology
+» O
+порадовал O
+публику O
+множеством O
+забавных O
+творений O
+. O
+
+# text =  Для обучения использовался корпус объёмом около 750 Гб, получивший название C4 (Colossal Clean Crawled Corpus, Колоссальный очищенный собранный в интернете корпус), являющийся отфильтрованной версией корпуса Common Crawl. 
+# relations = "InfoResource_IsAlternativeNameFor_InfoResource 1 0, InfoResource_IsAlternativeNameFor_InfoResource 2 0"
+Для O
+обучения O
+использовался O
+корпус O
+объёмом O
+около O
+750 O
+Гб O
+, O
+получивший O
+название O
+C4 B-Corpus
+( O
+Colossal B-Corpus
+Clean I-Corpus
+Crawled I-Corpus
+Corpus I-Corpus
+, O
+Колоссальный B-Corpus
+очищенный I-Corpus
+собранный I-Corpus
+в I-Corpus
+интернете I-Corpus
+корпус I-Corpus
+) O
+, O
+являющийся O
+отфильтрованной O
+версией O
+корпуса O
+Common B-Corpus
+Crawl I-Corpus
+. O
+
+# text =  Для обучения использовался корпус C4 (Colossal Clean Crawled Corpus, Колоссальный очищенный собранный в интернете корпус). 
+# relations = "InfoResource_IsAlternativeNameFor_InfoResource 1 0, InfoResource_IsAlternativeNameFor_InfoResource 2 0"
+Для O
+обучения O
+использовался O
+корпус O
+C4 B-Corpus
+( O
+Colossal B-Corpus
+Clean I-Corpus
+Crawled I-Corpus
+Corpus I-Corpus
+, O
+Колоссальный B-Corpus
+очищенный I-Corpus
+собранный I-Corpus
+в I-Corpus
+интернете I-Corpus
+корпус I-Corpus
+) O
+. O
+
+# text =  Для ещё двух языков, английского и финского, несколько сотен параллельных предложений нашлось в эрзянском корпусе Universal Dependencies, собранном всё тем же Jack'ом Rueter'ом. 
+# relations = "InfoResource_Language_Lang 0 2, InfoResource_Language_Lang 0 0, InfoResource_Language_Lang 0 1"
+Для O
+ещё O
+двух O
+языков O
+, O
+английского B-Lang
+и O
+финского B-Lang
+, O
+несколько O
+сотен O
+параллельных O
+предложений O
+нашлось O
+в O
+эрзянском B-Lang
+корпусе O
+Universal B-Corpus
+Dependencies I-Corpus
+, O
+собранном O
+всё O
+тем O
+же O
+Jack'ом B-Person
+Rueter'ом I-Person
+. O
+
+# text =  В качестве данных используется корпус журналов из области астрономии. 
+# relations = ""
+В O
+качестве O
+данных O
+используется O
+корпус B-Corpus
+журналов I-Corpus
+из O
+области O
+астрономии B-Science
+. O
+
+# text =  Они обнаружили, что логистическая регрессия с содержательными признаками (content-based features), полученными на основе близости тем и слов в корпусе ACL (корпусе научных публикаций на английском языке), даёт наилучший результат. 
+# relations = "InfoResource_Language_Lang 0 0"
+Они O
+обнаружили O
+, O
+что O
+логистическая B-Method_ML
+регрессия I-Method_ML
+с O
+содержательными O
+признаками O
+( O
+content O
+- O
+based O
+features O
+) O
+, O
+полученными O
+на O
+основе O
+близости O
+тем O
+и O
+слов O
+в O
+корпусе O
+ACL B-Corpus
+( O
+корпусе B-Corpus
+научных I-Corpus
+публикаций I-Corpus
+на O
+английском B-Lang
+языке I-Lang
+) O
+, O
+даёт O
+наилучший O
+результат O
+. O
+
+# text =  Использование логистической регрессии на корпусе ACL (корпусе научных публикаций на английском языке) даёт наилучший результат. 
+# relations = "InfoResource_Language_Lang 0 0"
+Использование O
+логистической B-Method_ML
+регрессии I-Method_ML
+на O
+корпусе O
+ACL B-Corpus
+( O
+корпусе B-Corpus
+научных I-Corpus
+публикаций I-Corpus
+на O
+английском B-Lang
+языке I-Lang
+) O
+даёт O
+наилучший O
+результат O
+. O
+
+# text =  Например, при изучении развёрнутой модели на 16 итераций на примере корпуса книг о Шерлоке Холмсе после 60 000 итераций (обучение на примерно 1 Мб текста) она выдаёт довольно бессмысленный текст. 
+# relations = ""
+Например O
+, O
+при O
+изучении O
+развёрнутой O
+модели O
+на O
+16 O
+итераций O
+на O
+примере O
+корпуса B-Corpus
+книг I-Corpus
+о I-Corpus
+Шерлоке I-Corpus
+Холмсе I-Corpus
+после O
+60 O
+000 O
+итераций O
+( O
+обучение O
+на O
+примерно O
+1 O
+Мб O
+текста O
+) O
+она O
+выдаёт O
+довольно O
+бессмысленный O
+текст O
+. O
+
+# text =  В нашем случае это был корпус текстов из социальных сетей с 48 млн. 
+# relations = ""
+В O
+нашем O
+случае O
+это O
+был O
+корпус B-Corpus
+текстов I-Corpus
+из I-Corpus
+социальных I-Corpus
+сетей I-Corpus
+с O
+48 O
+млн O
+. O
+
+# text =  Первое подобное исследование решает задачу автоматической оценки приемлемости в русском языке на основе корпуса предложений из лингвистических статей, что вызывает две проблемы. 
+# relations = "Dataset_isTrainedForSolving_Task 0 0"
+Первое O
+подобное O
+исследование O
+решает O
+задачу O
+автоматической B-Task
+оценки I-Task
+приемлемости I-Task
+в O
+русском B-Lang
+языке I-Lang
+на O
+основе O
+корпуса B-Corpus
+предложений I-Corpus
+из I-Corpus
+лингвистических I-Corpus
+статей I-Corpus
+, O
+что O
+вызывает O
+две O
+проблемы O
+. O
+
+# text =  В качестве данных был выбран открытый корпус русскоязычных твитов. 
+# relations = ""
+В O
+качестве O
+данных O
+был O
+выбран O
+открытый B-Corpus
+корпус I-Corpus
+русскоязычных I-Corpus
+твитов I-Corpus
+. O
+
+# text =  Отличием self-bleu от оригинала заключается в том, что вместо референтного корпуса используются все сгенерированные тексты, кроме тестируемого. 
+# relations = ""
+Отличием O
+self O
+- O
+bleu O
+от O
+оригинала O
+заключается O
+в O
+том O
+, O
+что O
+вместо O
+референтного B-Corpus
+корпуса I-Corpus
+используются O
+все O
+сгенерированные O
+тексты O
+, O
+кроме O
+тестируемого O
+. O
+
+# text =  Таким образом, чем больше совпадений н-грамм между референтным корпусом и проверяемым текстом, тем выше значение этой метрики. 
+# relations = ""
+Таким O
+образом O
+, O
+чем O
+больше O
+совпадений O
+н B-Object
+- I-Object
+грамм I-Object
+между O
+референтным B-Corpus
+корпусом I-Corpus
+и O
+проверяемым O
+текстом O
+, O
+тем O
+выше O
+значение O
+этой O
+метрики O
+. O
+
+# text = Хочу показать, как создать мультиязычный параллельный корпус и книги при помощи пет-проекта, которым я занимаюсь несколько лет. 
+# relations = ""
+Хочу O
+показать O
+, O
+как O
+создать O
+мультиязычный B-Corpus
+параллельный I-Corpus
+корпус I-Corpus
+и O
+книги O
+при O
+помощи O
+пет O
+- O
+проекта O
+, O
+которым O
+я O
+занимаюсь O
+несколько O
+лет O
+. O
+
+# text =  Получим параллельный корпус на 10 языках и много красивых книг. 
+# relations = ""
+Получим O
+параллельный B-Corpus
+корпус I-Corpus
+на O
+10 O
+языках O
+и O
+много O
+красивых O
+книг O
+. O
+
+# text =  Я использовал модель, обученную на Национальном Корпусе Русского Языка (НКРЯ), ее название — ruscorpora_upos_cbow_300_20_2019. 
+# relations = "Model_isTrainedOn_Dataset 1 0, InfoResource_IsAlternativeNameFor_InfoResource 1 0"
+Я O
+использовал O
+модель B-Model
+, O
+обученную B-Model_isTrainedOn_Dataset
+на O
+Национальном B-Corpus
+Корпусе I-Corpus
+Русского I-Corpus
+Языка I-Corpus
+( O
+НКРЯ B-Corpus
+) O
+, O
+ее O
+название O
+— O
+ruscorpora_upos_cbow_300_20_2019 B-Model
+. O
+
+# text =  Для наших целей прекрасно подошла модель ruscorpora_upos_cbow_300_20_2019, обученная на Национальном Корпусе Русского Языка (НКРЯ). 
+# relations = "Model_isTrainedOn_Dataset 1 0, InfoResource_IsAlternativeNameFor_InfoResource 1 0"
+Для O
+наших O
+целей O
+прекрасно O
+подошла O
+модель O
+ruscorpora_upos_cbow_300_20_2019 B-Model
+, O
+обученная B-Model_isTrainedOn_Dataset
+на O
+Национальном B-Corpus
+Корпусе I-Corpus
+Русского I-Corpus
+Языка I-Corpus
+( O
+НКРЯ B-Corpus
+) O
+. O
+
+# text =  Для своих целей я применил модель, обученную на Национальном Корпусе Русского Языка (НКРЯ) под названием ruscorpora_upos_cbow_300_20_2019.
+# relations = "Model_isTrainedOn_Dataset 1 0, InfoResource_IsAlternativeNameFor_InfoResource 1 0"
+Для O
+своих O
+целей O
+я O
+применил O
+модель O
+, O
+обученную O
+на O
+Национальном B-Corpus
+Корпусе I-Corpus
+Русского I-Corpus
+Языка I-Corpus
+( O
+НКРЯ B-Corpus
+) O
+под O
+названием O
+ruscorpora_upos_cbow_300_20_2019 B-Model
+. O
+
+# text =  Основной тип данных для обучения переводчика — это bitext-корпусы, состоящие из пар текстов «оригинал — перевод». 
+# relations = ""
+Основной O
+тип O
+данных O
+для O
+обучения O
+переводчика O
+— O
+это O
+bitext B-Corpus
+- I-Corpus
+корпусы I-Corpus
+, O
+состоящие O
+из O
+пар O
+текстов O
+« O
+оригинал O
+— O
+перевод O
+» O
+. O
+
+# text =  Например, один из крупнейших корпусов UNPC состоит из официальных и юридических текстов. 
+# relations = ""
+Например O
+, O
+один O
+из O
+крупнейших O
+корпусов O
+UNPC B-Corpus
+состоит O
+из O
+официальных O
+и O
+юридических O
+текстов O
+. O
+
+# text =  Другой полезный источник — это mono-корпусы, состоящие из большого объёма обычных текстов. 
+# relations = ""
+Другой O
+полезный O
+источник O
+— O
+это O
+mono B-Corpus
+- I-Corpus
+корпусы I-Corpus
+, O
+состоящие O
+из O
+большого O
+объёма O
+обычных O
+текстов O
+. O
+
+# text =  На основе mono-корпусов мы предобучаем разные вспомогательные модели, начиная с токенизаторов и заканчивая большими языковыми претрейнами типа BART и T5. 
+# relations = "Model_isTrainedOn_Dataset 0 0"
+На O
+основе O
+mono B-Corpus
+- I-Corpus
+корпусов I-Corpus
+мы O
+предобучаем B-Model_isTrainedOn_Dataset
+разные O
+вспомогательные O
+модели O
+, O
+начиная O
+с O
+токенизаторов O
+и O
+заканчивая O
+большими O
+языковыми O
+претрейнами O
+типа O
+BART B-Model
+и O
+T5 B-Model
+. O
+
+# text =  Исходя из моно-корпусов, мы проводим предварительное обучение различных вспомогательных моделей, начиная с токенизаторов и заканчивая обширными языковыми предварительными тренировками, такими как BART и T5.
+# relations = "Model_isTrainedOn_Dataset 0 0"
+Исходя O
+из O
+моно B-Corpus
+- I-Corpus
+корпусов I-Corpus
+, O
+мы O
+проводим O
+предварительное O
+обучение B-Model_isTrainedOn_Dataset
+различных O
+вспомогательных O
+моделей O
+, O
+начиная O
+с O
+токенизаторов O
+и O
+заканчивая O
+обширными O
+языковыми O
+предварительными O
+тренировками O
+, O
+такими O
+как O
+BART B-Model
+и O
+T5 B-Model
+. O
+
+# text =  Авторы, предложившие такой подход, делали свой поиск внутри огромного корпуса Common Crawl и снапшотов Википедии, и поделились с нами новыми крупными датасетами CCMatrix и WikiMatrix. 
+# relations = ""
+Авторы O
+, O
+предложившие O
+такой O
+подход O
+, O
+делали O
+свой O
+поиск O
+внутри O
+огромного O
+корпуса O
+Common B-Corpus
+Crawl I-Corpus
+и O
+снапшотов O
+Википедии B-InfoResource
+, O
+и O
+поделились O
+с O
+нами O
+новыми O
+крупными O
+датасетами O
+CCMatrix B-Dataset
+и O
+WikiMatrix B-Dataset
+. O
+
+# text =  Для сравнения, размер хорошего английского корпуса The Pile составляет более 800Гб. 
+# relations = ""
+Для O
+сравнения O
+, O
+размер O
+хорошего O
+английского B-Lang
+корпуса O
+The B-Corpus
+Pile I-Corpus
+составляет O
+более O
+800 O
+Гб O
+. O
+
+# text =  В конце концов, основным в обучении GPT был корпус англоязычной литературы. 
+# relations = "Dataset_isTrainedForSolving_Task 0 0"
+В O
+конце O
+концов O
+, O
+основным O
+в O
+обучении O
+GPT B-Model
+был O
+корпус B-Corpus
+англоязычной I-Corpus
+литературы I-Corpus
+. O
+
+# text =  Я решил велосипед не изобретать и собрать свой датасет из готовых дампов Википедии, новостей, выгрузки постов с Habr и корпуса русских книг, отсекая тексты короче 10000 токенов. 
+# relations = ""
+Я O
+решил O
+велосипед O
+не O
+изобретать O
+и O
+собрать O
+свой O
+датасет O
+из O
+готовых O
+дампов O
+Википедии B-InfoResource
+, O
+новостей O
+, O
+выгрузки O
+постов O
+с O
+Habr B-InfoResource
+и O
+корпуса B-Corpus
+русских I-Corpus
+книг I-Corpus
+, O
+отсекая O
+тексты O
+короче O
+10000 O
+токенов O
+. O
+
+# text = После преобразования сообщений в векторы можно использовать любой классический метод для классификации: логистическую регрессию, SVM, случайный лес, бустинг. 
+# relations = "Method_solves_Task 0 0, Method_solves_Task 1 0, Method_solves_Task 2 0, Method_solves_Task 3 0"
+После O
+преобразования O
+сообщений O
+в O
+векторы O
+можно O
+использовать O
+любой O
+классический O
+метод O
+для O
+классификации B-Task
+: O
+логистическую B-Method_ML
+регрессию B-Method_ML
+, O
+SVM B-Method_ML
+, O
+случайный B-Method_ML
+лес I-Method_ML
+, O
+бустинг B-Method_ML
+. O
+
+# text =  Для сверточных нейросетей хорошо настроенный метод стохастического градиента (SGD) почти всегда немного превосходит Adam, но область оптимальной скорости обучения гораздо более узкая и зависит от задачи. 
+# relations = "Method_IsAlternativeNameFor_Method 1 0"
+Для O
+сверточных O
+нейросетей O
+хорошо O
+настроенный O
+метод B-Method_ML
+стохастического I-Method_ML
+градиента I-Method_ML
+( O
+SGD B-Method_ML
+) O
+почти O
+всегда O
+немного O
+превосходит O
+Adam B-Method
+, O
+но O
+область O
+оптимальной O
+скорости O
+обучения O
+гораздо O
+более O
+узкая O
+и O
+зависит O
+от O
+задачи O
+. O
+
+# text =  После работы Эдсгера Дейкстры «О вреде оператора goto», давшей отправную точку парадигмы "структурного программирования", было немало работ, посвященных "структуре алгоритма": методология ООП, функциональное программирование, паттерны проектирования, принципы SOLID…
+# relations = ""
+После O
+работы O
+Эдсгера B-Person
+Дейкстры I-Person
+« O
+О O
+вреде O
+оператора O
+goto O
+» O
+, O
+давшей O
+отправную O
+точку O
+парадигмы O
+" O
+структурного O
+программирования O
+" O
+, O
+было O
+немало O
+работ O
+, O
+посвященных O
+" O
+структуре O
+алгоритма O
+" O
+: O
+методология O
+ООП B-Method
+, O
+функциональное B-Science
+программирование I-Science
+, O
+паттерны B-Method
+проектирования I-Method
+, O
+принципы B-Method
+SOLID I-Method
+… O
+
+# text =  В случае GNMT речь идет о так называемом методе перевода на основе примеров (EBMT), т.е. 
+# relations = "Method_IsAlternativeNameFor_Method 2 1"
+В O
+случае O
+GNMT B-Method
+речь O
+идет O
+о O
+так O
+называемом O
+методе B-Method
+перевода I-Method
+на I-Method
+основе I-Method
+примеров I-Method
+( O
+EBMT B-Method
+) O
+, O
+т.е. O
+
+# text =  Мы обучаем методологии CRISP-DM, учим постановке гипотез, выбору и аргументации методов исследования, интерпретации и представлению результатов. 
+# relations = ""
+Мы O
+обучаем O
+методологии O
+CRISP B-Method
+- I-Method
+DM I-Method
+, O
+учим O
+постановке O
+гипотез O
+, O
+выбору O
+и O
+аргументации O
+методов O
+исследования O
+, O
+интерпретации O
+и O
+представлению O
+результатов O
+. O
+
+# text =  На момент создания в 2020 году такая модель была наикрупнейшей. 
+# relations = "Date_isDateOf_Model 0 0"
+На O
+момент O
+создания O
+в O
+2020 B-Date
+году O
+такая O
+модель B-Model
+была O
+наикрупнейшей O
+. O
+
+# text =  В 2020 году появился GPT-3. 
+# relations = "Date_isDateOf_Model 0 0"
+В O
+2020 B-Date
+году O
+появился O
+GPT-3 B-Model
+. O
+
+# text =  О своём партнёрстве с Microsoft OpenAI объявила в конце 2019 года. 
+# relations = ""
+О O
+своём O
+партнёрстве O
+с O
+Microsoft B-Organization
+OpenAI B-Organization
+объявила O
+в O
+конце O
+2019 B-Date
+года O
+. O
+
+# text = С появлением в 2020 году нейронной сети GPT3 и других архитектур – трансформеров, генерируемые тексты стали невероятно правдоподобными. 
+# relations = "Date_isDateOf_Model 0 0, Date_isDateOf_Model 0 1"
+С O
+появлением O
+в O
+2020 B-Date
+году O
+нейронной O
+сети O
+GPT3 B-Model
+и O
+других O
+архитектур B-Model
+– I-Model
+трансформеров I-Model
+, O
+генерируемые O
+тексты O
+стали O
+невероятно O
+правдоподобными O
+. O
+
+# text =  В 2020 компания приобрела эксклюзивную лицензию на базовую технологию, лежащую в основе GPT-3. 
+# relations = ""
+В O
+2020 B-Date
+компания O
+приобрела O
+эксклюзивную O
+лицензию O
+на O
+базовую O
+технологию O
+, O
+лежащую O
+в O
+основе O
+GPT-3 B-Model
+. O
+
+# text =  6 февраля 2023 года Google представил свой аналог ChatGPT — экспериментальный диалоговый ИИ-сервис под названием Bard. 
+# relations = "Application_hasAuthor_Organization 1 0, Date_isDateOf_Application 0 1, "
+6 O
+февраля O
+2023 B-Date
+года O
+Google B-Organization
+представил O
+свой O
+аналог O
+ChatGPT B-Technology
+— O
+экспериментальный O
+диалоговый O
+ИИ O
+- O
+сервис O
+под O
+названием O
+Bard B-Technology
+. O
+
+# text =  Однако, по мере углубления в тему, автор связался с разработчиками и в январе 2023 года получил первую версию ScoreCloud Songwriter на тестирование под Windows 10. 
+# relations = "Date_isDateOf_Application 0 0, Environment_isUsedIn_Application 0 0"
+Однако O
+, O
+по O
+мере O
+углубления O
+в O
+тему O
+, O
+автор O
+связался O
+с O
+разработчиками O
+и O
+в O
+январе O
+2023 B-Date
+года O
+получил O
+первую O
+версию O
+ScoreCloud B-Technology
+Songwriter I-Technology
+на O
+тестирование O
+под O
+Windows B-Environment
+10 I-Environment
+. O
+
+# text =  В 2020 нашими коллегами из команды AGI NLP Сбербанка, лаборатории Noah’s Ark Huawei и факультета компьютерных наук ВШЭ был представлен Russian SuperGLUE — набор задач на понимание текста по аналогии с его английской версией SuperGLUE. 
+# relations = "Method_hasAuthor_Organization 1 0, Method_hasAuthor_Organization 1 1, Method_hasAuthor_Organization 1 2, Method_hasAuthor_Organization 0 0, Method_hasAuthor_Organization 0 1, Method_hasAuthor_Organization 0 2, Date_isDateOf_Method 0 0, Date_isDateOf_Method 0 1"
+В O
+2020 B-Date
+нашими O
+коллегами O
+из O
+команды O
+AGI B-Organization
+NLP I-Organization
+Сбербанка B-Organization
+, O
+лаборатории O
+Noah B-Organization
+’s I-Organization
+Ark I-Organization
+Huawei I-Organization
+и O
+факультета O
+компьютерных O
+наук O
+ВШЭ B-Organization
+был O
+представлен O
+Russian B-Method
+SuperGLUE I-Method
+— O
+набор O
+задач O
+на O
+понимание O
+текста O
+по O
+аналогии O
+с O
+его O
+английской O
+версией O
+SuperGLUE B-Method
+. O
+
+# text =  Описание технологии появилось в общем доступе в 2020 году. 
+# relations = ""
+Описание O
+технологии O
+появилось O
+в O
+общем O
+доступе O
+  O
+в O
+2020 B-Date
+году O
+. O
+
+# text =  Обучение языковой модели происходило в 2021 году. 
+# relations = ""
+Обучение O
+языковой O
+модели O
+происходило O
+в O
+2021 B-Date
+году O
+. O
+
+# text =  Первые нейронные сети были внедрены в кредитный скоринг в 2020-м году. 
+# relations = ""
+Первые O
+нейронные O
+сети O
+были O
+внедрены O
+в O
+кредитный O
+скоринг O
+в O
+2020-м B-Date
+году O
+. O
+
+# text =  В 2021 году Amazon запустила SageMaker Studio — первый IDE для машинного обучения. 
+# relations = "Date_isDateOf_Application 0 0, Application_hasAuthor_Organization 0 0"
+В O
+2021 B-Date
+году O
+Amazon B-Organization
+запустила O
+SageMaker B-Technology
+Studio I-Technology
+— O
+первый O
+IDE B-App_system
+для O
+машинного O
+обучения O
+. O
+
+# text =  Создана в 2021 году. 
+# relations = ""
+Создана O
+в O
+2021 B-Date
+году O
+. O
+
+# text =  ChatGPT был запущен 30 ноября 2022 года и привлек внимание своими широкими возможностями: написание кода, создание текстов, возможности перевода, получения точных ответов и использование контекста диалога для ответов, хотя его фактическая точность подверглась критике (источник — Википедия). 
+# relations = "Date_isDateOf_Application 0 0"
+ChatGPT B-Technology
+был O
+запущен O
+30 B-Date
+ноября I-Date
+2022 I-Date
+года O
+и O
+привлек O
+внимание O
+своими O
+широкими O
+возможностями O
+: O
+написание B-Task
+кода I-Task
+, O
+создание B-Task
+текстов I-Task
+, O
+возможности O
+перевода B-Task
+, O
+получения B-Task
+точных I-Task
+ответов I-Task
+и O
+использование O
+контекста O
+диалога O
+для O
+ответов O
+, O
+хотя O
+его O
+фактическая O
+точность O
+подверглась O
+критике O
+( O
+источник O
+— O
+Википедия B-InfoResource
+) O
+. O
+
+# text =  Компания уже давно работает над сложным поисковым ИИ под названием LaMDA: о нем впервые объявили еще в мае 2021 года. 
+# relations = "Date_isDateOf_Application 0 0"
+Компания O
+уже O
+давно O
+работает O
+над O
+сложным O
+поисковым O
+ИИ O
+под O
+названием O
+LaMDA B-Technology
+: O
+о O
+нем O
+впервые O
+объявили O
+еще O
+в O
+мае O
+2021 B-Date
+года O
+. O
+
+# text =  И уже в 2020-2021 годах компании начали запускать альтернативные платформы, а стартапы — внедрять Feature Store в свои проекты. 
+# relations = ""
+И O
+уже O
+в O
+2020 B-Date
+- O
+2021 B-Date
+годах O
+компании O
+начали O
+запускать O
+альтернативные O
+платформы O
+, O
+а O
+стартапы O
+— O
+внедрять O
+Feature B-Technology
+Store I-Technology
+в O
+свои O
+проекты O
+. O
+
+# text =  На этапе обучения text-davinci-003 используются датасеты текстов и программного кода, собранные OpenAI на момент конца 2021 года. 
+# relations = "Model_isTrainedOn_Dataset 0 0"
+На O
+этапе O
+обучения O
+text B-Model
+- I-Model
+davinci-003 I-Model
+используются O
+датасеты B-Dataset
+текстов I-Dataset
+и O
+программного O
+кода O
+, O
+собранные O
+OpenAI B-Organization
+на O
+момент O
+конца O
+2021 B-Date
+года O
+. O
+
+# text =  На этапе обучения ChatGPT используются дополнительные текстовые данные и программный код, собранные на момент конца 2021 года.Reinforcement Learning with Human Feedback (RLHF)В основе лежит сильная предобученная языковая модель (в случае ChatGPT это InstructGPT, но могут быть и другие, например, Gopher от DeepMind). 
+# relations = ""
+На O
+этапе O
+обучения O
+ChatGPT B-Technology
+используются O
+дополнительные O
+текстовые O
+данные O
+и O
+программный O
+код O
+, O
+собранные O
+на O
+момент O
+конца O
+2021 B-Date
+года O
+. O
+
+# text =  Так и появился AIDungeon — уникальная для своего времени (2019 год) вещь, которая не сильно потеряла в популярности и по сей день. 
+# relations = "Date_isDateOf_Application 0 0"
+Так O
+и O
+появился O
+AIDungeon B-Technology
+— O
+уникальная O
+для O
+своего O
+времени O
+( O
+2019 B-Date
+год O
+) O
+вещь O
+, O
+которая O
+не O
+сильно O
+потеряла O
+в O
+популярности O
+и O
+по O
+сей O
+день O
+. O
+
+# text =  Окончательная версия TACL c достаточно хорошим внешним видом содержит около 150 цитат, связанных с BERT, и нет никаких иллюзий завершённости: в августе 2020 года у нас закончились отведённые для журнала страницы. 
+# relations = ""
+Окончательная O
+версия O
+TACL B-Environment
+c O
+достаточно O
+хорошим O
+внешним O
+видом O
+содержит O
+около O
+150 O
+цитат O
+, O
+связанных O
+с O
+BERT B-Model
+, O
+и O
+нет O
+никаких O
+иллюзий O
+завершённости O
+: O
+в O
+августе O
+2020 B-Date
+года O
+у O
+нас O
+закончились O
+отведённые O
+для O
+журнала O
+страницы O
+. O
+
+# text =  Чтобы определить, какие проходы и MLP нужно обрезать, мы используем аппроксимацию, основанную на потерях: оценки важности, предложенные Michel, Levy and Neubig (2019) для проходов самонаблюдения, которые мы распространяем на MLP. 
+# relations = ""
+Чтобы O
+определить O
+, O
+какие O
+проходы O
+и O
+MLP B-Method_ML
+нужно O
+обрезать O
+, O
+мы O
+используем O
+аппроксимацию O
+, O
+основанную O
+на O
+потерях O
+: O
+оценки O
+важности O
+, O
+предложенные O
+Michel B-Person
+, O
+Levy B-Person
+and O
+Neubig B-Person
+( O
+2019 B-Date
+) O
+для O
+проходов O
+самонаблюдения O
+, O
+которые O
+мы O
+распространяем O
+на O
+MLP B-Method_ML
+. O
+
+# text =  Например, в 2022 году, помимо ABBYY, это будут МТС, SberDevices, Яндекс и другие. 
+# relations = ""
+Например O
+, O
+в O
+2022 B-Date
+году O
+, O
+помимо O
+ABBYY B-Organization
+, O
+это O
+будут O
+МТС B-Organization
+, O
+SberDevices B-Organization
+, O
+Яндекс B-Organization
+и O
+другие O
+. O
+
+# text =  Первая была в 2019 году, называлась AGRR: Automatic Gapping Resolution for Russian. 
+# relations = "Task_IsAlternativeNameFor_Task 1 0"
+Первая O
+была O
+в O
+2019 B-Date
+году O
+, O
+называлась O
+AGRR B-Task
+: O
+Automatic B-Task
+Gapping I-Task
+Resolution I-Task
+for I-Task
+Russian I-Task
+. O

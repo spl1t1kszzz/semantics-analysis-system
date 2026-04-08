@@ -64,6 +64,37 @@ def parse_scores(
 
     return result
 
+def save_scores_to_md(
+        md_path: str,
+        rel_cnt_scores: List[Tuple[str, int, Dict[str, float]]],
+        storage: Dict[str, float]
+):
+    lines = []
+
+    lines.append("# Relation Extraction Metrics\n")
+    lines.append("| Relation | Occurrences | Precision | Recall |")
+    lines.append("|----------|-------------|-----------|--------|")
+
+    for relation, occ_cnt, scores in rel_cnt_scores:
+        precision = scores["Precision"]
+        recall = scores["Recall"]
+
+        lines.append(
+            f"| {relation} | {occ_cnt} | {precision:.2f} | {recall:.2f} |"
+        )
+
+    # --- AVERAGE ---
+    count = storage["count"]
+    avg_precision = storage["avg_precision"] / count if count > 0 else 0.0
+    avg_recall = storage["avg_recall"] / count if count > 0 else 0.0
+
+    lines.append("| **AVERAGE** | — | "
+                 f"**{avg_precision:.2f}** | **{avg_recall:.2f}** |")
+
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+
 
 def main():
     color_by_metric = {
@@ -89,13 +120,18 @@ def main():
 
         scores_path = f'tests/{total_id}/scores.json'
     else:
-        scores_path = 'tests/scores.json'
+        scores_path = 'results/shot_rel_new_prompts.json'
 
     storage = {}
 
     rel_cnt_scores = parse_scores(scores_path, relations_to_consider, storage)
 
     rel_cnt_scores = sorted(rel_cnt_scores, key=lambda x: x[2]['Precision'], reverse=True)
+
+    md_path = "results/shot_rel_new_prompts_metrics.md"
+    save_scores_to_md(md_path, rel_cnt_scores, storage)
+
+    print(f"\nMarkdown report saved to {md_path}")
 
     for relation, occurrences_count, scores in rel_cnt_scores:
         print()

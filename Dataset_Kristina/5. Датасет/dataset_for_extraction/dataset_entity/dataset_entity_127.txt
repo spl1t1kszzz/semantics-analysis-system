@@ -1,0 +1,141 @@
+# text =   Анализ тональности текстов с помощью сверточных нейронных сетей 
+# relations = "Method_solves_Task 0 0"
+Анализ B-Task
+тональности I-Task
+текстов I-Task
+с O
+помощью O
+сверточных B-Method_ML
+нейронных I-Method_ML
+сетей I-Method_ML
+
+# text =   Есть много способов решать такую задачу, и один из них — свёрточные нейронные сети (Convolutional Neural Networks).
+# relations = "Method_IsAlternativeNameFor_Method 1 0"
+Есть O
+много O
+способов O
+решать O
+такую O
+задачу O
+, O
+и O
+один O
+из O
+них O
+— O
+свёрточные B-Method_ML
+нейронные I-Method_ML
+сети I-Method_ML
+( O
+Convolutional B-Method_ML
+Neural I-Method_ML
+Networks I-Method_ML
+) O
+. O
+
+# text =   CNN изначально были разработаны для обработки изображений, однако они успешно справляются с решением задач в сфере автоматической обработки текстов.
+# relations = "Task_isSolvedIn_Science 0 0, Method_solves_Task 0 0"
+CNN B-Method_ML
+изначально O
+были O
+разработаны O
+для O
+обработки B-Task
+изображений I-Task
+, O
+однако O
+они O
+успешно O
+справляются O
+с O
+решением O
+задач O
+в O
+сфере O
+автоматической B-Science
+обработки I-Science
+текстов I-Science
+. O
+
+# text =   Я познакомлю вас с бинарным анализом тональности русскоязычных текстов с помощью свёрточной нейронной сети, для которой векторные представления слов были сформированы на основе обученной Word2Vec модели.
+# relations = "Method_is_applied_to_Object 0 0"
+Я O
+познакомлю O
+вас O
+с O
+бинарным B-Method
+анализом I-Method
+тональности I-Method
+русскоязычных I-Method
+текстов I-Method
+с O
+помощью O
+свёрточной B-Method_ML
+нейронной I-Method_ML
+сети I-Method_ML
+, O
+для O
+которой O
+векторные B-Object
+представления I-Object
+слов I-Object
+были O
+сформированы O
+на O
+основе O
+обученной O
+Word2Vec B-Model
+модели O
+. O
+
+# text =   Для обучения я выбрал корпус коротких текстов Юлии Рубцовой, сформированный на основе русскоязычных сообщений из Twitter [4].
+# relations = ""
+Для O
+обучения O
+я O
+выбрал O
+корпус B-Corpus
+коротких I-Corpus
+текстов I-Corpus
+Юлии I-Corpus
+Рубцовой I-Corpus
+, O
+сформированный O
+на O
+основе O
+русскоязычных B-Lang
+сообщений B-Object
+из O
+Twitter B-Technology
+[ O
+4 O
+] O
+. O
+
+# text =   Визуализация кластеров похожих слов с использование t-SNE.
+# relations = "Method_is_applied_to_Object 0 0"
+Визуализация O
+кластеров B-Object
+похожих O
+слов O
+с O
+использование O
+t B-Method_ML
+- I-Method_ML
+SNE I-Method_ML
+. O
+
+# text =   На следующем этапе каждый текст был отображен в массив идентификаторов токенов.
+# relations = ""
+На O
+следующем O
+этапе O
+каждый O
+текст B-Object
+был O
+отображен O
+в O
+массив O
+идентификаторов O
+токенов B-Subject
+. O

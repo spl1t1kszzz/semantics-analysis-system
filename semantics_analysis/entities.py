@@ -55,7 +55,7 @@ class Term:
         prev_mentions = set()
 
         for mention in mentions:
-            lower = mention.norm_value.lower()
+            lower = mention.value.lower()
 
             if lower in prev_mentions:
                 continue

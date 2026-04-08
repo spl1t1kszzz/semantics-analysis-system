@@ -1,0 +1,263 @@
+# text =   В нашем случае цель была сформулирована как повышение эффективности поиска кандидатов.
+# relations = ""
+В O
+нашем O
+случае O
+цель O
+была O
+сформулирована O
+как O
+повышение B-Task
+эффективности I-Task
+поиска I-Task
+кандидатов I-Task
+. O
+
+# text =   Основная задача здесь — найти эффективный способ отображения соответствия кандидатов и навыков.
+# relations = ""
+Основная O
+задача O
+здесь O
+— O
+найти B-Task
+эффективный I-Task
+способ I-Task
+отображения I-Task
+соответствия I-Task
+кандидатов I-Task
+и I-Task
+навыков I-Task
+. O
+
+# text =   Кодирование в переменные — One-Hot Encoding (OHE) 
+# relations = "Method_IsAlternativeNameFor_Method 1 0"
+Кодирование O
+в O
+переменные O
+— O
+One B-Method
+- I-Method
+Hot I-Method
+Encoding I-Method
+( O
+OHE B-Method
+) O
+
+# text =   Для этого используют метод TF-IDF.
+# relations = ""
+Для O
+этого O
+используют O
+метод O
+TF B-Metric
+- I-Metric
+IDF I-Metric
+. O
+
+# text =   Соответственно, можно схлопнуть похожие навыки в некоторые факторы/компоненты/латентные признаки.
+# relations = ""
+Соответственно O
+, O
+можно O
+схлопнуть O
+похожие O
+навыки O
+в O
+некоторые O
+факторы B-Object
+/ O
+компоненты B-Object
+/ O
+латентные B-Object
+признаки I-Object
+. O
+
+# text =   Одним из подходов, позволяющих находить такие компоненты, является группа методов матричной факторизации.
+# relations = "Method_is_applied_to_Object 0 0"
+Одним O
+из O
+подходов O
+, O
+позволяющих O
+находить O
+такие O
+компоненты B-Object
+, O
+является O
+группа O
+методов B-Method
+матричной I-Method
+факторизации I-Method
+. O
+
+# text =   Полученные представления кандидатов и навыков называют эмбедингами.
+# relations = ""
+Полученные O
+представления O
+кандидатов O
+и O
+навыков O
+называют O
+эмбедингами B-Object
+. O
+
+# text =   При создании нашей системы рекомендации кандидатов на позиции мы использовали нейронную сеть — StarSpace.
+# relations = ""
+При O
+создании O
+нашей O
+системы O
+рекомендации O
+кандидатов O
+на O
+позиции O
+мы O
+использовали O
+нейронную B-Method_ML
+сеть I-Method_ML
+— O
+StarSpace B-Model
+. O
+
+# text =  Другая группа методов, позволяющая решать задачи репрезентации сущностей — репрезентация графов.
+# relations = ""
+Другая O
+группа O
+методов O
+, O
+позволяющая O
+решать O
+задачи B-Task
+репрезентации I-Task
+сущностей I-Task
+— O
+репрезентация B-Task
+графов I-Task
+. O
+
+# text =   Но большинство методов графовой репрезентации работает с одномодальными графами, поэтому обычно двухмодальные графы следует трансформировать в граф, где узлы представлены одним видом сущностей.
+# relations = "Method_is_applied_to_Object 0 0"
+Но O
+большинство O
+методов B-Method
+графовой I-Method
+репрезентации I-Method
+работает B-Method_is_applied_to_Object
+с I-Method_is_applied_to_Object
+одномодальными B-Object
+графами I-Object
+, O
+поэтому O
+обычно O
+двухмодальные B-Object
+графы I-Object
+следует O
+трансформировать O
+в O
+граф O
+, O
+где O
+узлы O
+представлены O
+одним O
+видом O
+сущностей O
+. O
+
+# text =   В первую очередь рассмотрим метод, основанный на графовой факторизации.
+# relations = ""
+В O
+первую O
+очередь O
+рассмотрим O
+метод O
+, O
+основанный O
+на O
+графовой B-Method
+факторизации I-Method
+. O
+
+# text =   Это группа методов очень похожа на методы, применяемые для репрезентации текстов — w2v (skip-gram), doc2vec.
+# relations = "Method_IsAlternativeNameFor_Method 1 0, Method_solves_Task 0 0, Method_solves_Task 2 0"
+Это O
+группа O
+методов O
+очень O
+похожа O
+на O
+методы O
+, O
+применяемые O
+для O
+репрезентации B-Task
+текстов I-Task
+— O
+w2v B-Method 
+( O
+skip B-Method
+- I-Method
+gram I-Method
+) O
+, O
+doc2vec B-Method
+. O
+
+# text =   Почитать подробнее про подобные методы графовой репрезентации можно, например, тут — DeepWalk, Node2vec, Graph2vec.
+# relations = "Method_includes_Method 0 1, Method_includes_Method 0 2, Method_includes_Method 0 3"
+Почитать O
+подробнее O
+про O
+подобные O
+методы B-Method
+графовой I-Method
+репрезентации I-Method
+можно O
+, O
+например O
+, O
+тут O
+— O
+DeepWalk B-Method
+, O
+Node2vec B-Method
+, O
+Graph2vec B-Method
+. O
+
+# text =   Сверточные сети на графах (Graph Convolutional Networks).
+# relations = "Method_IsAlternativeNameFor_Method 1 0"
+Сверточные B-Method_ML
+сети I-Method_ML
+на I-Method_ML
+графах I-Method_ML
+( O
+Graph B-Method_ML
+Convolutional I-Method_ML
+Networks I-Method_ML
+) O
+. O
+
+# text =   Для задачи репрезентации графов связей между сущностями мы использовали фреймворк PyTorch BigGraph — это ещё один фреймворк от Facebook Research.
+# relations = "Application_hasAuthor_Organization 0 0, Application_isUsedForSolving_Task 0 0"
+Для O
+задачи O
+репрезентации B-Task
+графов I-Task
+связей I-Task
+между I-Task
+сущностями I-Task
+мы O
+использовали O
+фреймворк O
+PyTorch B-Library
+BigGraph I-Library
+— O
+это O
+ещё O
+один O
+фреймворк B-Application_hasAuthor_Organization
+от I-Application_hasAuthor_Organization
+Facebook B-Organization
+Research I-Organization
+. O

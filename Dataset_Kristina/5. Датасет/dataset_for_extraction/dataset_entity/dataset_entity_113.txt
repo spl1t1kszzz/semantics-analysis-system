@@ -1,0 +1,71 @@
+# text =   HuggingArtists | Генерируем текст песен с трансформером за 5 минут 
+# relations = "Application_is_applied_to_Object 0 0"
+HuggingArtists B-Technology
+| O
+Генерируем O
+текст B-Object
+песен I-Object
+с O
+трансформером O
+за O
+5 O
+минут O
+
+# text =   В HuggingArtists, мы можем создавать тексты песен на основе конкретного исполнителя.
+# relations = "Application_isUsedForSolving_Task 0 0"
+В O
+HuggingArtists B-Technology
+, O
+мы O
+можем O
+создавать B-Task
+тексты I-Task
+песен O
+на O
+основе O
+конкретного O
+исполнителя O
+. O
+
+# text =   Это было сделано путем fine-tune (точной настройки) предварительно обученного трансформера HuggingFace  на собранных данных Genius.
+# relations = "Method_IsAlternativeNameFor_Method 1 0"
+Это O
+было O
+сделано O
+путем O
+fine B-Method_ML
+- I-Method_ML
+tune I-Method_ML
+( O
+точной B-Method_ML
+настройки I-Method_ML
+) O
+предварительно O
+обученного O
+трансформера O
+HuggingFace B-Model
+на O
+собранных O
+данных O
+Genius B-Technology
+. O
+
+# text =   Кроме того, мы используем интеграцию Weights & Biases для автоматического учета производительности и прогнозов модели.
+# relations = ""
+Кроме O
+того O
+, O
+мы O
+используем O
+интеграцию O
+Weights B-Library
+& I-Library
+Biases I-Library
+для O
+автоматического O
+учета O
+производительности O
+и O
+прогнозов O
+модели O
+. O

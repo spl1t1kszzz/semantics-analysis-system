@@ -23,6 +23,8 @@ ru_core_news_sm = {url = "https://github.com/explosion/spacy-models/releases/dow
 pyvis = "^0.3.2"
 bs4 = "^0.0.2"
 alphabet-detector = "^0.0.7"
+python-dotenv = "^1.0.0"
+openai = "^1.0.0"
 
 [build-system]
 requires = ["poetry-core"]

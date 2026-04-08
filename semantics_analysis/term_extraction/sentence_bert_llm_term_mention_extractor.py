@@ -232,7 +232,7 @@ class SentenceBERTLLMTermExtractor:
 
         response = self.llm_agent(
             prompt,
-            max_new_tokens=6,
+            max_new_tokens=24,
             stop_sequences=['.', '(', 'не', '\n']
         ).replace('(', '').strip()
 

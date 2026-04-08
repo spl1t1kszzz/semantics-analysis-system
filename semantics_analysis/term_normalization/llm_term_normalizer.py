@@ -31,7 +31,7 @@ class LLMTermNormalizer(TermNormalizer):
         normalized = self.llm_agent(
             prompt,
             stop_sequences=['\n', '(', '.'],
-            max_new_tokens=50
+            max_new_tokens=256
         ).replace('(', '').strip()
 
         while normalized.endswith('.'):

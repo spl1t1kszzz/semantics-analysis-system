@@ -1,0 +1,56 @@
+# text =   Зачастую суммаризация предполагает работу с большими генеративными текстовыми моделями, куда надо «положить» все отзывы.
+# relations = "Method_is_applied_to_Object 0 0"
+Зачастую O
+суммаризация B-Method
+предполагает B-Method_is_applied_to_Object
+работу I-Method_is_applied_to_Object
+с I-Method_is_applied_to_Object
+большими O
+генеративными B-Object
+текстовыми I-Object
+моделями I-Object
+, O
+куда O
+надо O
+« O
+положить O
+» O
+все O
+отзывы O
+. O
+
+# text =   То есть какие аспекты искать; выделять эти аспекты в отзывах; оценивать тональность высказываний.
+# relations = ""
+То O
+есть O
+какие O
+аспекты O
+искать O
+; O
+выделять O
+эти O
+аспекты O
+в O
+отзывах O
+; O
+оценивать O
+тональность B-Subject
+высказываний I-Subject
+. O
+
+# text =   Мы начали со внутреннего инструмента Яндекса — библиотеки регулярных выражений под названием Remorph.
+# relations = "Application_hasAuthor_Organization 0 0"
+Мы O
+начали O
+со O
+внутреннего O
+инструмента O
+Яндекса B-Organization
+— O
+библиотеки B-Application
+регулярных I-Application
+выражений I-Application
+под O
+названием O
+Remorph B-Application
+. O

@@ -12,6 +12,9 @@ class Config:
     split_on_sentences: bool
     log_prompts: bool
     log_llm_responses: bool
+    use_multi_agent: bool
+    use_conflict_dialogue: bool
+    use_reverify_after_resolve: bool
 
     def __init__(
             self,
@@ -24,7 +27,10 @@ class Config:
             show_explanation: bool,
             split_on_sentences: bool,
             log_prompts: bool,
-            log_llm_responses: bool
+            log_llm_responses: bool,
+            use_multi_agent: bool = True,
+            use_conflict_dialogue: bool = False,
+            use_reverify_after_resolve: bool = False,
     ):
         self.use_dict = use_dict
         self.display_graph = display_graph
@@ -36,6 +42,9 @@ class Config:
         self.split_on_sentences = split_on_sentences
         self.log_prompts = log_prompts
         self.log_llm_responses = log_llm_responses
+        self.use_multi_agent = use_multi_agent
+        self.use_conflict_dialogue = use_conflict_dialogue
+        self.use_reverify_after_resolve = use_reverify_after_resolve
 
         if self.show_explanation:
             self.log_llm_responses = True
@@ -55,5 +64,8 @@ def load_config(file_path: str) -> Config:
         config_dict['show-explanation'],
         config_dict['split-on-sentences'],
         config_dict['log-prompts'],
-        config_dict['log-llm-responses']
+        config_dict['log-llm-responses'],
+        config_dict.get('use-multi-agent', True),
+        config_dict.get('use-conflict-dialogue', False),
+        config_dict.get('use-reverify-after-resolve', False),
     )

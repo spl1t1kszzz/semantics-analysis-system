@@ -1,0 +1,199 @@
+# text =   В Яндекс.Браузер внедрили машинный перевод видеороликов 
+# relations = "Method_isUsedIn_Application 0 0"
+В O
+Яндекс B-Technology
+. I-Technology
+Браузер I-Technology
+внедрили O
+машинный B-Method
+перевод I-Method
+видеороликов O
+
+# text =  Алгоритм отслеживает темп речи говорящего, за счет чего переводчик делает паузы, замедляет или ускоряет речь, чтобы закадровый голос совпадал с картинкой.
+# relations = ""
+Алгоритм O
+отслеживает O
+темп B-Object
+речи I-Object
+говорящего O
+, O
+за O
+счет O
+чего O
+переводчик O
+делает O
+паузы B-Object
+, O
+замедляет O
+или O
+ускоряет O
+речь B-Subject
+, O
+чтобы O
+закадровый O
+голос B-Subject
+совпадал O
+с O
+картинкой O
+. O
+
+# text =  Перевод доступен в Яндекс.Браузере для Windows и macOS.
+# relations = "Environment_isUsedIn_Application 0 0, Environment_isUsedIn_Application 1 0"
+Перевод O
+доступен O
+в O
+Яндекс B-Application
+. I-Application
+Браузере I-Application
+для O
+Windows B-Environment
+и O
+macOS B-Environment
+. O
+
+# text =   Тогда к статистической модели, которая была в «Переводчике» с момента запуска, добавили технологию перевода с помощью нейросети.
+# relations = "Application_isUsedForSolving_Task 0 0"
+Тогда O
+к O
+статистической O
+модели O
+, O
+которая O
+была O
+в O
+« O
+Переводчике B-Application
+» O
+с O
+момента O
+запуска O
+, O
+добавили O
+технологию O
+перевода B-Task
+с O
+помощью O
+нейросети O
+. O
+
+# text =   Компания объясняла, что ее технология не разбивает текст на отдельные слова, а рассматривает его целиком, чтобы лучше передать смысл.В июне Яндекс открыл доступ к нейросети «Балабоба» для всех пользователей.
+# relations = "Application_hasAuthor_Organization 0 0"
+Компания O
+объясняла O
+, O
+что O
+ее O
+технология O
+не O
+разбивает O
+текст B-Object
+на O
+отдельные O
+слова B-Subject
+, O
+а O
+рассматривает O
+его O
+целиком O
+, O
+чтобы O
+лучше O
+передать O
+смысл O
+. O
+В O
+июне O
+Яндекс B-Organization
+открыл O
+доступ O
+к O
+нейросети O
+« O
+Балабоба B-Technology
+» O
+для O
+всех O
+пользователей O
+. O
+
+# text =   Она работает на языковой модели из семейства YaLM (Yet another Language Model).
+# relations = "Model_IsShortNameFor_Model 0 1"
+Она O
+работает O
+на O
+языковой O
+модели O
+из O
+семейства O
+YaLM B-Model
+( O
+Yet B-Model
+another I-Model
+Language I-Model
+Model I-Model
+) O
+. O
+
+# text =   Она использует языковую модель из семейства YaLM (Yet another Language Model).
+# relations = "Model_IsShortNameFor_Model 0 1"
+Она O
+использует O
+языковую O
+модель O
+из O
+семейства O
+YaLM B-Model
+( O
+Yet B-Model
+another I-Model
+Language I-Model
+Model I-Model
+) O
+. O
+
+# text =   Эта модель помогает нейросети запоминать правила языка, выбирать подходящие слова и связывать их по смыслу.
+# relations = "Model_isUsedForSolving_Task 0 0, Model_isUsedForSolving_Task 0 1"
+Эта O
+модель B-Model
+помогает O
+нейросети O
+запоминать B-Task
+правила I-Task
+языка I-Task
+, O
+выбирать B-Task
+подходящие I-Task
+слова I-Task
+и O
+связывать O
+их O
+по O
+смыслу O
+. O
+
+# text =   У «Балабобы» нет своего мнения, она выдает случайные продолжения и может закончить историю, придумать подпись или написать небольшой рассказ.
+# relations = "Application_isUsedForSolving_Task 0 0, Application_isUsedForSolving_Task 0 1"
+У O
+« O
+Балабобы B-Technology
+» O
+нет O
+своего O
+мнения O
+, O
+она O
+выдает O
+случайные O
+продолжения O
+и O
+может O
+закончить O
+историю O
+, O
+придумать B-Task
+подпись I-Task
+или O
+написать B-Task
+небольшой I-Task
+рассказ I-Task
+. O

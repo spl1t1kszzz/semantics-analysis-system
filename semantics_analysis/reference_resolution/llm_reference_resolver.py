@@ -13,7 +13,7 @@ class LLMReferenceResolver(ReferenceResolver):
 
     def __init__(self,
                  progress: Progress,
-                 model: str = 'mistralai/Mixtral-8x7B-Instruct-v0.1',
+                 model: str = 'gpt-4o-mini',
                  show_explanation: bool = False,
                  log_prompts: bool = False,
                  log_llm_responses: bool = False,
@@ -47,7 +47,7 @@ class LLMReferenceResolver(ReferenceResolver):
 
             if class_ in attribute_classes:  # these classes should not have grouping
                 terms.extend([
-                    Term(class_, mention.norm_value if mention.norm_value else mention.value, mentions=[mention])
+                    Term(class_, mention.value, mentions=[mention])
 
                     for mention in term_mentions if mention not in group_by_term
                 ])
@@ -62,9 +62,9 @@ class LLMReferenceResolver(ReferenceResolver):
                 for j in range(i + 1, len(term_mentions)):
                     term1, term2 = term_mentions[i], term_mentions[j]
 
-                    if term1.norm_value.lower() == term2.norm_value.lower():
+                    if term1.value.lower() == term2.value.lower():
                         similar = True
-                    elif term1.norm_value.lower() in CLASS_ALIASES or term2.norm_value.lower() in CLASS_ALIASES:
+                    elif term1.value.lower() in CLASS_ALIASES or term2.value.lower() in CLASS_ALIASES:
                         similar = False
                     else:
                         try:
@@ -90,7 +90,7 @@ class LLMReferenceResolver(ReferenceResolver):
 
             # add single terms
             terms.extend([
-                Term(class_, mention.norm_value if mention.norm_value else mention.value, mentions=[mention])
+                Term(class_, mention.value, mentions=[mention])
 
                 for mention in term_mentions if mention not in group_by_term
             ])
@@ -104,7 +104,7 @@ class LLMReferenceResolver(ReferenceResolver):
                     terms_by_group[group].append(term)
 
             terms.extend([
-                Term(class_, mentions[0].norm_value if mentions[0].norm_value else mentions[0].value, mentions)
+                Term(class_, mentions[0].value, mentions)
 
                 for mentions in terms_by_group.values()
             ])
@@ -115,7 +115,7 @@ class LLMReferenceResolver(ReferenceResolver):
             return False
 
         input_text = (f'Текст: {text}\n'
-                      f'Являются ли "{term1.norm_value}" и "{term2.norm_value}" названиями одной и той же сущности в этом тексте?\n'
+                      f'Являются ли "{term1.value}" и "{term2.value}" названиями одной и той же сущности в этом тексте?\n'
                       f'Ответ:')
 
         prompt = self.check_synonyms_prompt_template
@@ -124,7 +124,7 @@ class LLMReferenceResolver(ReferenceResolver):
         if self.log_prompts:
             log(f'[INPUT PROMPT]: {prompt}\n')
 
-        response = self.llm_agent(prompt, max_new_tokens=2, stop_sequences=['.']).strip()
+        response = self.llm_agent(prompt, max_new_tokens=16, stop_sequences=['.']).strip()
 
         if self.log_llm_responses:
             log(f'[ SYNONYMS ]: {response}\n')

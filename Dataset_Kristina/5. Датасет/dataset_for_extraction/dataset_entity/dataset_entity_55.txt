@@ -1,0 +1,750 @@
+# text =   Однако только сейчас мы немного приблизились к сюжетам фантастических фильмов: можем попросить Алису убавить громкость, Google Assistant — заказать такси или Siri — завести будильник.
+# relations = "Application_isUsedForSolving_Task 0 0, Application_isUsedForSolving_Task 1 1, Application_isUsedForSolving_Task 2 2"
+Однако O
+только O
+сейчас O
+мы O
+немного O
+приблизились O
+к O
+сюжетам O
+фантастических O
+фильмов O
+: O
+можем O
+попросить O
+Алису B-Application
+убавить B-Task
+громкость I-Task
+, O
+Google B-Application
+Assistant I-Application
+— O
+заказать B-Task
+такси I-Task
+или O
+Siri B-Application
+— O
+завести B-Task
+будильник I-Task
+. O
+
+# text =   Технологии языкового процессинга востребованы в разработках, связанных с построением искусственного интеллекта: в поисковых системах, для извлечения фактов, оценки тональности текста, машинного перевода и диалога.
+# relations = "Method_isUsedIn_Application 0 0, Method_solves_Task 0 0, Method_solves_Task 0 1, Method_isUsedIn_Science 0 0"
+Технологии B-Method
+языкового I-Method
+процессинга I-Method
+востребованы B-Method_isUsedIn_Application
+в I-Method_isUsedIn_Application
+разработках O
+, O
+связанных O
+с O
+построением O
+искусственного O
+интеллекта O
+: O
+в O
+поисковых B-Application
+системах I-Application
+, O
+для O
+извлечения B-Task
+фактов I-Task
+, O
+оценки B-Task
+тональности I-Task
+текста I-Task
+, O
+машинного B-Science
+перевода I-Science
+и O
+диалога O
+. O
+
+# text = Технологии обработки естественного языка широко используются в разработках, связанных с созданием искусственного интеллекта, включая применение в поисковых системах и машинном переводе.
+# relations = "Method_isUsedIn_Application 0 0, Method_isUsedIn_Science 0 0"
+Технологии B-Method
+обработки I-Method
+естественного I-Method
+языка I-Method
+широко O
+используются O
+в O
+разработках O
+, O
+связанных O
+с O
+созданием O
+искусственного O
+интеллекта O
+, O
+включая O
+применение B-Method_isUsedIn_Application
+в I-Method_isUsedIn_Application
+поисковых B-Application
+системах I-Application
+и O
+машинном B-Science
+переводе I-Science
+.
+
+# text =   Первые разговоры об обработке естественного языка компьютером начались еще в 30-е годы XX-го века с философских рассуждений Айера — он предлагал отличать разумного человека от глупой машины с помощью эмпирического теста.
+# relations = ""
+Первые O
+разговоры O
+об O
+обработке B-Task
+естественного I-Task
+языка I-Task
+компьютером O
+начались O
+еще O
+в O
+30-е B-Date
+годы I-Date
+XX I-Date
+- I-Date
+го I-Date
+века I-Date
+с O
+философских O
+рассуждений O
+Айера B-Person
+— O
+он O
+предлагал O
+отличать O
+разумного O
+человека O
+от O
+глупой O
+машины O
+с O
+помощью O
+эмпирического O
+теста O
+. O
+
+# text =   В 1950 году Алан Тьюринг в философском журнале Mind предложил такой тест, где судья должен определить, с кем он ведет диалог: с человеком или компьютером.
+# relations = "Date_isDateOf_Method 0 0, Model_hasAuthor_Person 0 0"
+В O
+1950 B-Date
+году O
+Алан B-Person
+Тьюринг I-Person
+в O
+философском O
+журнале O
+Mind B-InfoResource
+предложил O
+такой O
+тест B-Method
+, O
+где O
+судья O
+должен O
+определить O
+, O
+с O
+кем O
+он O
+ведет O
+диалог O
+: O
+с O
+человеком O
+или O
+компьютером O
+. O
+
+# text =   В 1950 году Алан Тьюринг предложил такой тест в философском журнале "Mind", в котором судье необходимо определить, ведет ли он диалог с человеком или с компьютером.
+# relations = "Date_isDateOf_Method 0 0, Model_hasAuthor_Person 0 0"
+В O
+1950 B-Date
+году O
+Алан B-Person
+Тьюринг I-Person
+предложил O
+такой O
+тест B-Method
+в O
+философском O
+журнале O
+" O
+Mind B-InfoResource
+" O
+, O
+в O
+котором O
+судье O
+необходимо O
+определить O
+, O
+ведет O
+ли O
+он O
+диалог O
+с O
+человеком O
+или O
+с O
+компьютером O
+. O
+
+# text =   В 1954 году Джорджтаунский университет совместно с компанией IBM продемонстрировали программу машинного перевода с русского на английский, которая работала на базе словаря из 250 слов и набора из 6 грамматических правил.
+# relations = "Date_isDateOf_Application 0 0, Application_hasAuthor_Organization 0 0, Application_hasAuthor_Organization 0 1"
+В O
+1954 B-Date
+году O
+Джорджтаунский B-Organization
+университет I-Organization
+совместно O
+с O
+компанией O
+IBM B-Organization
+продемонстрировали B-Application_hasAuthor_Organization
+программу B-Application
+машинного I-Application
+перевода I-Application
+с O
+русского B-Lang
+на O
+английский B-Lang
+, O
+которая O
+работала O
+на O
+базе O
+словаря O
+из O
+250 O
+слов O
+и O
+набора O
+из O
+6 O
+грамматических O
+правил O
+. O
+
+# text =   Параллельно с попытками научить компьютер переводить текст, ученые и целые университеты думали над созданием робота, способного имитировать речевое поведение человека.
+# relations = ""
+Параллельно O
+с O
+попытками O
+научить O
+компьютер O
+переводить O
+текст O
+, O
+ученые O
+и O
+целые O
+университеты O
+думали O
+над O
+созданием O
+робота O
+, O
+способного O
+имитировать B-Task
+речевое I-Task
+поведение I-Task
+человека I-Task
+. O
+
+# text =   Первой успешной реализацией чат-бота стал виртуальный собеседник ELIZA, написанный в 1966 году Джозефом Вейценбаумом.
+# relations = "Date_isDateOf_Application 0 0, Application_hasAuthor_Person 0 0"
+Первой O
+успешной O
+реализацией O
+чат O
+- O
+бота O
+стал O
+виртуальный B-Technology
+собеседник I-Technology
+ELIZA B-Technology
+, O
+написанный O
+в O
+1966 B-Date
+году I-Date
+Джозефом B-Person
+Вейценбаумом I-Person
+. O
+
+# text =   Элиза пародировала поведение психотерапевта, выделяя значимые слова из фразы собеседника и задавая встречный вопрос.
+# relations = ""
+Элиза B-Technology
+пародировала O
+поведение O
+психотерапевта O
+, O
+выделяя O
+значимые O
+слова O
+из O
+фразы O
+собеседника O
+и O
+задавая O
+встречный O
+вопрос O
+. O
+
+# text =   Можно считать, что это был первый чат-бот, построенный на правилах (rule-based bot), и он положил начало целому классу таких систем.
+# relations = ""
+Можно O
+считать O
+, O
+что O
+это O
+был O
+первый O
+чат B-Application
+- I-Application
+бот I-Application
+, O
+построенный O
+на O
+правилах O
+( O
+rule B-Application
+- I-Application
+based I-Application
+bot I-Application
+) O
+, O
+и O
+он O
+положил O
+начало O
+целому O
+классу O
+таких O
+систем O
+. O
+
+# text =   Без Элизы не появились бы такие программы-собеседники, как Cleverbot, WeChat Xiaoice, Eugene Goostman — формально прошедший тест Тьюринга в 2014 году, — и даже Siri, Jarvis и Alexa.
+# relations = ""
+Без O
+Элизы B-Technology
+не O
+появились O
+бы O
+такие O
+программы O
+- O
+собеседники O
+, O
+как O
+Cleverbot B-Technology
+, O
+WeChat B-Technology
+Xiaoice I-Technology
+, O
+Eugene B-Technology
+Goostman I-Technology
+— O
+формально O
+прошедший O
+тест B-Method
+Тьюринга I-Method
+в O
+2014 B-Date
+году O
+, O
+— O
+и O
+даже O
+Siri B-Application
+, O
+Jarvis B-Application
+и O
+Alexa B-Application
+. O
+
+# text =   В 1968 году Терри Виноградом на языке LISP была разработана программа SHRDLU.
+# relations = "Environment_isUsedIn_Application 0 0, Date_isDateOf_Application 0 0, Application_hasAuthor_Person 0 0"
+В O
+1968 B-Date
+году O
+Терри B-Person
+Виноградом I-Person
+на O
+языке O
+LISP B-Environment
+была O
+разработана O
+программа O
+SHRDLU B-Technology
+. O
+
+# text =   Следующим шагом в развитии чат-ботов стала программа A.L.I.C.E., для которой Ричард Уоллес разработал специальный язык разметки — AIML (англ. Artificial Intelligence Markup Language).
+# relations = "Method_hasAuthor_Person 0 0, Application_hasAuthor_Person 0 0, Method_IsAlternativeNameFor_Method 1 2"
+Следующим O
+шагом O
+в O
+развитии O
+чат O
+- O
+ботов O
+стала O
+программа O
+A.L.I.C.E. B-Application
+, O
+для O
+которой O
+Ричард B-Person
+Уоллес I-Person
+разработал O
+специальный O
+язык O
+разметки B-Method
+— O
+AIML B-Method
+( O
+англ O
+. O
+Artificial B-Method
+Intelligence I-Method
+Markup I-Method
+Language I-Method
+) O
+. O
+
+# text =   Разговоры о нейронных сетях и глубоком обучении ходили уже в 90-е годы, а первый нейрокомпьютер «Марк-1» появился вообще в 1958 году.
+# relations = "Date_isDateOf_Application 0 1"
+Разговоры O
+о O
+нейронных B-Method_ML
+сетях I-Method_ML
+и O
+глубоком O
+обучении O
+ходили O
+уже O
+в O
+90-е O
+годы O
+, O
+а O
+первый O
+нейрокомпьютер B-Application
+« O
+Марк-1 B-Application
+» O
+появился O
+вообще O
+в O
+1958 B-Date
+году I-Date
+. O
+
+# text =   1970 г. Машинный перевод на основе правил (англ. RBMT) был первой попыткой научить машину переводить.
+# relations = "Date_isDateOf_Method 0 0, Method_IsAlternativeNameFor_Method 0 0"
+1970 B-Date
+г. I-Date
+Машинный B-Method
+перевод I-Method
+на I-Method
+основе I-Method
+правил I-Method
+( O
+англ O
+RBMT B-Method
+. O
+) O
+был O
+первой O
+попыткой O
+научить O
+машину O
+переводить O
+. O
+
+# text =   1984 г. Машинный перевод на основе примеров (англ. EBMT) был способен переводить даже совсем не похожие друг на друга языки, где задавать какие-то правила было бесполезно.
+# relations = "Date_isDateOf_Method 0 0, Method_IsAlternativeNameFor_Method 0 0"
+1984 B-Date
+г. I-Date
+Машинный B-Method
+перевод I-Method
+на I-Method
+основе I-Method
+примеров I-Method
+( O
+англ O
+. O
+EBMT B-Method
+) O
+был O
+способен O
+переводить O
+даже O
+совсем O
+не O
+похожие O
+друг O
+на O
+друга O
+языки O
+, O
+где O
+задавать O
+какие O
+- O
+то O
+правила O
+было O
+бесполезно O
+. O
+
+# text =   1990 г. Статистический машинный перевод (англ. SMT) в эпоху развития интернета позволил использовать не только готовые языковые корпуса, но даже книги и вольно переведенные статьи.
+# relations = "Date_isDateOf_Method 0 0, Method_IsAlternativeNameFor_Method 0 0"
+1990 B-Date
+г. I-Date
+Статистический B-Method
+машинный I-Method
+перевод I-Method
+( O
+англ O
+. O
+SMT B-Method
+) O
+в O
+эпоху O
+развития O
+интернета O
+позволил O
+использовать O
+не O
+только O
+готовые O
+языковые B-Object
+корпуса I-Object
+, O
+но O
+даже O
+книги O
+и O
+вольно O
+переведенные O
+статьи O
+. O
+
+# text =   Статистические методы и сейчас активно используются в языковом процессинге.
+# relations = ""
+Статистические B-Method
+методы I-Method
+и O
+сейчас O
+активно O
+используются O
+в O
+языковом B-Method
+процессинге I-Method
+. O
+
+# text =   По мере развития обработки естественного языка множество задач решалось классическими статистическими методами и множеством правил, однако проблему нечеткости и неоднозначности в языке это не решало.
+# relations = "Method_solves_Task 0 0"
+По O
+мере O
+развития O
+обработки B-Task
+естественного I-Task
+языка I-Task
+множество O
+задач O
+решалось B-Method_solves_Task
+классическими O
+статистическими B-Method
+методами I-Method
+и O
+множеством O
+правил O
+, O
+однако O
+проблему B-Task
+нечеткости I-Task
+и I-Task
+неоднозначности I-Task
+в O
+языке O
+это O
+не O
+решало O
+. O
+
+# text =   Так родился статистический метод анализа текста word2vec (англ. Word to vector).
+# relations = "Method_includes_Method 0 1, Method_IsAlternativeNameFor_Method 2 1"
+Так O
+родился O
+статистический B-Method
+метод I-Method
+анализа I-Method
+текста I-Method
+word2vec B-Method_ML
+( O
+англ O
+. O
+Word B-Method_ML
+to I-Method_ML
+vector I-Method_ML
+) O
+. O
+
+# text =   Под эти критерии отлично подходит рекуррентная нейронная сеть (RNN), однако по мере увеличения расстояния между связанными частями текста необходимо увеличивать и размер RNN, из-за чего падает качество обработки информации.
+# relations = "Method_IsAlternativeNameFor_Method 1 0, Method_IsAlternativeNameFor_Method 2 0"
+Под O
+эти O
+критерии O
+отлично O
+подходит O
+рекуррентная B-Method_ML
+нейронная I-Method_ML
+сеть I-Method_ML
+( O
+RNN B-Method_ML
+) O
+, O
+однако O
+по O
+мере O
+увеличения O
+расстояния O
+между O
+связанными O
+частями O
+текста O
+необходимо O
+увеличивать O
+и O
+размер O
+RNN B-Method_ML
+, O
+из O
+- O
+за O
+чего O
+падает O
+качество O
+обработки O
+информации O
+. O
+
+# text =   Эту проблему решает сеть LSTM (англ. Long short-term memory).
+# relations = "Method_IsAlternativeNameFor_Method 0 1"
+Эту O
+проблему O
+решает O
+сеть O
+LSTM B-Method_ML
+( O
+англ O
+. O
+Long B-Method_ML
+short I-Method_ML
+- I-Method_ML
+term I-Method_ML
+memory I-Method_ML
+) O
+. O
+
+# text =   Если говорить о языке Python, который часто используется для анализа данных, то это NLTK и Spacy.
+# relations = ""
+Если O
+говорить O
+о O
+языке O
+Python B-Environment
+, O
+который O
+часто O
+используется O
+для O
+анализа B-Method
+данных I-Method
+, O
+то O
+это O
+NLTK B-Application
+и O
+Spacy B-Application
+. O
+
+# text =   Крупные компании также принимают участие в разработке библиотек для NLP, как например NLP Architect от Intel или PyTorch от исследователей из Facebook и Uber.
+# relations = "Application_isUsedIn_Science 0 0, Application_isUsedIn_Science 1 0, Application_hasAuthor_Organization 0 0, Application_hasAuthor_Organization 1 1, Application_hasAuthor_Organization 1 2"
+Крупные O
+компании O
+также O
+принимают O
+участие O
+в O
+разработке O
+библиотек O
+для O
+NLP B-Science
+, O
+как O
+например O
+NLP B-Application
+Architect I-Application
+от B-Application_hasAuthor_Organization
+Intel B-Organization
+или O
+PyTorch B-Application
+от B-Application_hasAuthor_Organization
+исследователей I-Application_hasAuthor_Organization
+из I-Application_hasAuthor_Organization
+Facebook B-Organization
+и O
+Uber B-Organization
+. O
+
+# text =   Большие компании также активно участвуют в разработке библиотек для обработки естественного языка, таких как NLP Architect от Intel и PyTorch от исследователей из Facebook и Uber.
+# relations = "Application_isUsedIn_Science 0 0, Application_isUsedIn_Science 1 0, Application_hasAuthor_Organization 0 0, Application_hasAuthor_Organization 1 1, Application_hasAuthor_Organization 1 2"
+Большие O
+компании O
+также O
+активно O
+участвуют O
+в O
+разработке O
+библиотек O
+для B-Application_isUsedIn_Science
+обработки B-Science
+естественного I-Science
+языка I-Science
+, O
+таких O
+как O
+NLP B-Application
+Architect I-Application
+от B-Application_hasAuthor_Organization
+Intel B-Organization
+и O
+PyTorch B-Application
+от B-Application_hasAuthor_Organization
+исследователей I-Application_hasAuthor_Organization
+из I-Application_hasAuthor_Organization
+Facebook B-Organization
+и O
+Uber B-Organization
+. O
+
+# text =   Направление b2c не единственное, где можно применять чат-ботов.
+# relations = ""
+Направление O
+b2c B-Science
+не O
+единственное O
+, O
+где O
+можно O
+применять O
+чат O
+- O
+ботов O
+. O

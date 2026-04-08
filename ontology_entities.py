@@ -5,8 +5,6 @@ from typing import Dict, List, Any, Set, Tuple
 from semantics_analysis.entities import Relation, Term
 from alphabet_detector import AlphabetDetector
 
-from semantics_analysis.llm_agent import LLMAgent
-
 ATTR_CLASSES = {'Date', 'Lang', 'Value'}
 
 MAP_RELATIONS = {
@@ -164,6 +162,7 @@ def add_person_attrs(
     if not persons:
         return
 
+    from semantics_analysis.llm_agent import LLMAgent
     llm_agent = LLMAgent(use_all_tokens=True)
 
     with open('prompts/person.txt', 'r', encoding='utf-8') as f:
@@ -176,7 +175,7 @@ def add_person_attrs(
         prompt = prompt.replace('{context}', person.mentions[0].text)
         prompt = prompt.replace('{input}', person.mentions[0].value)
 
-        response = llm_agent(prompt, max_new_tokens=20, stop_sequences=['.', 'Персона:', '```', '('])
+        response = llm_agent(prompt, max_new_tokens=128, stop_sequences=['.', 'Персона:', '```', '('])
 
         match = PERSON_PATTERN.match(response)
 

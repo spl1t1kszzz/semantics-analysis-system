@@ -1,0 +1,139 @@
+# text =   Специалисты Data Science часто применяют различные методы получения датасетов.
+# relations = "Method_isUsedIn_Science 0 0, Method_is_applied_to_Object 0 0"
+Специалисты O
+Data B-Science
+Science I-Science
+часто O
+применяют B-Method_isUsedIn_Science
+различные O
+методы B-Method
+получения I-Method
+датасетов B-Object
+. O
+
+# text = Профессионалы в области Data Science часто используют различные подходы к созданию наборов данных.
+# relations = "Method_isUsedIn_Science 0 0, Method_is_applied_to_Object 0 0"
+Профессионалы O
+в O
+области O
+Data B-Science
+Science I-Science
+часто O
+используют B-Method_isUsedIn_Science
+различные O
+подходы B-Method
+к I-Method
+созданию I-Method
+наборов B-Object
+данных I-Object
+. O
+
+# text =   Цель этой статьи — представить краткий обзор трех разных методов извлечения данных с использованием языка Python.
+# relations = ""
+Цель O
+этой O
+статьи O
+— O
+представить O
+краткий O
+обзор O
+трех O
+разных O
+методов O
+извлечения O
+данных O
+с O
+использованием O
+языка O
+Python B-Environment
+. O
+
+# text =   Я расскажу, как делать это с помощью Jupyter Notebook.
+# relations = ""
+Я O
+расскажу O
+, O
+как O
+делать O
+это O
+с B-Environment_isUsedIn_Activity
+помощью I-Environment_isUsedIn_Activity
+Jupyter B-Environment
+Notebook I-Environment
+. O
+
+# text =   Библиотека SQLAlchemy позволит связать ваш код в ноутбуке с наиболее распространенными типами баз данных.
+# relations = ""
+Библиотека O
+SQLAlchemy B-Environment
+позволит O
+связать O
+ваш O
+код O
+в O
+ноутбуке O
+с O
+наиболее O
+распространенными O
+типами O
+баз B-InfoResource
+данных I-InfoResource
+. O
+
+# text =   Мы собираемся применить Beautiful Soup и библиотеку urllib, чтобы соскрапить названия отелей и цены на них с веб-сайта TripAdvisor.
+# relations = ""
+Мы O
+собираемся B-Application_isUsedIn_Activity
+применить I-Application_isUsedIn_Activity
+Beautiful B-Library
+Soup I-Library
+и O
+библиотеку O
+urllib B-Library
+, O
+чтобы O
+соскрапить O
+названия B-Object
+отелей I-Object
+и O
+цены B-Object
+на O
+них O
+с O
+веб O
+- O
+сайта O
+TripAdvisor B-InfoResource
+. O
+
+# text =   Я приведу простой пример извлечения данных о погоде с общедоступного API Dark Sky.
+# relations = "Object_isUsedInSolving_Task 0 0, Application_isUsedForSolving_Task 0 0"
+Я O
+приведу O
+простой O
+пример O
+извлечения B-Task
+данных B-Object
+о I-Object
+погоде I-Object
+с O
+общедоступного O
+API B-Application
+Dark I-Application
+Sky I-Application
+. O
+
+# text =   Для доступа к данным из Dark Sky я воспользуюсь библиотекой requests.
+# relations = ""
+Для O
+доступа O
+к O
+данным O
+из O
+Dark B-Application
+Sky I-Application
+я O
+воспользуюсь O
+библиотекой O
+requests B-Library
+. O

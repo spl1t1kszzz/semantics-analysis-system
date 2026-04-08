@@ -1,0 +1,125 @@
+# text =  В этой статье мы расскажем о методе Propensity Score Adjustment, который применим для коррекции смещений и улучшения данных, полученных на онлайн-панелях.
+# relations = "Method_solves_Task 0 0, Object_isUsedInSolving_Task 0 0"
+В O
+этой O
+статье O
+мы O
+расскажем O
+о O
+методе B-Method
+Propensity I-Method
+Score I-Method
+Adjustment I-Method
+, O
+который O
+применим B-Method_solves_Task
+для I-Method_solves_Task
+коррекции B-Task
+смещений I-Task
+и O
+улучшения B-Task
+данных B-Object
+, O
+полученных O
+на O
+онлайн O
+- O
+панелях O
+. O
+
+# text =  Итоговые коэффициенты, корректирующие смещение онлайн-выборки, можно рассчитать по методу Хорвица-Томпсона.
+# relations = "Method_is_applied_to_Object 0 0"
+Итоговые O
+коэффициенты B-Object
+, O
+корректирующие O
+смещение O
+онлайн O
+- O
+выборки O
+, O
+можно B-Method_is_applied_to_Object
+рассчитать I-Method_is_applied_to_Object
+по I-Method_is_applied_to_Object
+методу B-Method
+Хорвица I-Method
+- I-Method
+Томпсона I-Method
+. O
+
+# text =  Взвешивание (Weighting) - метод предназначен для коррекции известных перекосов выборок по социально-демографическим атрибутам.
+# relations = "Method_solves_Task 0 0, Method_is_applied_to_Object 0 0, Object_includes_Object 0 0"
+Взвешивание B-Method
+( O
+Weighting B-Method
+) O
+метод O
+предназначен B-Method_solves_Task
+для I-Method_solves_Task
+коррекции B-Task
+известных O
+перекосов B-Object
+выборок I-Object
+по O
+социально B-Subject
+- I-Subject
+демографическим I-Subject
+атрибутам I-Subject
+. O
+
+# text =  Авторы оригинального исследования Pew Research рекомендуют использовать для корректировки онлайн-опросов модели случайных лесов (random forest).
+# relations = "Method_solves_Task 0 0, , Method_is_applied_to_Object 0 0"
+Авторы O
+оригинального O
+исследования O
+Pew B-Activity
+Research I-Activity
+рекомендуют O
+использовать B-Method_solves_Task
+для O
+корректировки B-Task
+онлайн B-Object
+- I-Object
+опросов I-Object
+модели O
+случайных B-Method_ML
+лесов I-Method_ML
+( O
+random B-Method_ML
+forest I-Method_ML
+) O
+. O
+
+# text =  Сейчас стандарт коррекции онлайн-выборок находится на стадии обсуждения и разработки и метод Propensity Score Adjustment, который мы рассмотрели, может стать общепринятым способом коррекции онлайн-панелей.
+# relations = "Method_solves_Task 0 0, , Method_is_applied_to_Object 0 0"
+Сейчас O
+стандарт O
+коррекции O
+онлайн O
+- O
+выборок O
+находится O
+на O
+стадии O
+обсуждения O
+и O
+разработки O
+и O
+метод B-Method
+Propensity I-Method
+Score I-Method
+Adjustment I-Method
+, O
+который O
+мы O
+рассмотрели O
+, O
+может O
+стать B-Method_solves_Task
+общепринятым O
+способом I-Method_solves_Task
+коррекции B-Task
+онлайн B-Object
+- I-Object
+панелей I-Object
+. O

@@ -1,0 +1,82 @@
+# text =  В этой статье мы научим вас генерировать текст с помощью предварительно обученного GPT-2 — более легкого предшественника GPT-3.
+# relations = "Model_isUsedForSolving_Task 0 0"
+В O
+этой O
+статье O
+мы O
+научим O
+вас O
+генерировать B-Task
+текст I-Task
+с O
+помощью O
+предварительно O
+обученного O
+GPT-2 B-Model
+— O
+более O
+легкого O
+предшественника O
+GPT-3 B-Model
+. O
+
+# text =   Мы будем использовать именитую библиотеку Transformers, разработанную Huggingface.
+# relations = "Application_hasAuthor_Organization 0 0"
+Мы O
+будем O
+использовать O
+именитую O
+библиотеку O
+Transformers B-Library
+, O
+разработанную B-Application_hasAuthor_Organization
+Huggingface B-Organization
+. O
+
+# text =   Модель по умолчанию для конвейера генерации текста — GPT-2, самая популярная модель декодирующего трансформера для генерации языка.
+# relations = "Model_isUsedForSolving_Task 1 1, Model_isUsedForSolving_Task 0 0"
+Модель B-Model
+по O
+умолчанию O
+для B-Model_isUsedForSolving_Task
+конвейера O
+генерации B-Task
+текста I-Task
+— O
+GPT-2 B-Model
+, O
+самая O
+популярная O
+модель O
+декодирующего O
+трансформера B-Model
+для B-Model_isUsedForSolving_Task
+генерации B-Task
+языка I-Task
+. O
+
+# text =   Эта модель GPT2 от CKIPLab предварительно обучена на китайском корпусе, поэтому мы можем использовать их модель без необходимости заниматься настройкой самостоятельно.
+# relations = "Model_isTrainedOn_Dataset 0 0, Model_hasAuthor_Organization 0 0"
+Эта O
+модель O
+GPT2 B-Model
+от B-Model_hasAuthor_Organization
+CKIPLab B-Organization
+предварительно O
+обучена O
+на O
+китайском B-Corpus
+корпусе I-Corpus
+, O
+поэтому O
+мы O
+можем O
+использовать O
+их O
+модель O
+без O
+необходимости O
+заниматься O
+настройкой O
+самостоятельно O
+. O

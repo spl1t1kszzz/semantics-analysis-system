@@ -1,0 +1,116 @@
+# text =   В данной статье мы будем использовать модель трансформера для бинарной классификации текста.
+# relations = "Model_isUsedForSolving_Task 0 0"
+В O
+данной O
+статье O
+мы O
+будем O
+использовать O
+модель B-Model
+трансформера I-Model
+для B-Model_isUsedForSolving_Task
+бинарной B-Task
+классификации I-Task
+текста I-Task
+. O
+
+# text =   Самая простая и популярная связка – TF-IDF + линейная модель.
+# relations = "Metric_isUsedFor_Model 0 0"
+Самая O
+простая O
+и O
+популярная O
+связка O
+– O
+TF B-Metric
+- I-Metric
+IDF I-Metric
++ O
+линейная B-Model
+модель I-Model
+. O
+
+# text =   В случае с BERT можно (даже нужно) опустить препроцессинг и сразу перейти к токенизации и обучению.
+# relations = ""
+В O
+случае O
+с O
+BERT B-Model
+можно O
+( O
+даже O
+нужно O
+) O
+опустить O
+препроцессинг B-Method
+и O
+сразу O
+перейти O
+к O
+токенизации B-Method
+и O
+обучению O
+. O
+
+# text =   Необходимо обучить модель находить обращения с жалобой на сотрудника или другими словами – бинарная классификация.
+# relations = ""
+Необходимо O
+обучить O
+модель O
+находить O
+обращения O
+с O
+жалобой O
+на O
+сотрудника O
+или O
+другими O
+словами O
+– O
+бинарная B-Task
+классификация I-Task
+. O
+
+# text =  Для решения описанной задачи используется модель от DeepPavlov rubert-base-cased-sentence.
+# relations = "Model_hasAuthor_Organization 0 0"
+Для B-Model_isUsedForSolving_Task
+решения I-Model_isUsedForSolving_Task
+описанной O
+задачи O
+используется B-Model_isUsedForSolving_Task
+модель O
+от B-Model_hasAuthor_Organization
+DeepPavlov B-Organization
+rubert B-Model
+- I-Model
+base I-Model
+- I-Model
+cased I-Model
+- I-Model
+sentence I-Model
+. O
+
+# text =   На выходе мы получаем метрику f1 = 0.91.
+# relations = "Metric_hasValue_Value 0 0"
+На O
+выходе O
+мы O
+получаем O
+метрику O
+f1 B-Metric
+= O
+0.91 B-Value
+. O
+
+# text =   Обученные модели можно найти на сайтах HuggingFace и DeepPavlov.
+# relations = ""
+Обученные O
+модели O
+можно B-Model_isOn_InfoResource
+найти I-Model_isOn_InfoResource
+на O
+сайтах O
+HuggingFace B-InfoResource
+и O
+DeepPavlov B-InfoResource
+. O

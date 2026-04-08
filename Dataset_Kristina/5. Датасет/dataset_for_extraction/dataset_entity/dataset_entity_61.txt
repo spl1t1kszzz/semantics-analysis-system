@@ -1,0 +1,745 @@
+# text =   Участникам предлагалось определить потенциальные заболевания коров по реальным жалобам людей из открытых источников, а также научиться выделять из текстов симптомы заболеваний (NER - Named Entity Recognition).
+# relations = "Task_IsAlternativeNameFor_Task 0 1"
+Участникам O
+предлагалось O
+определить O
+потенциальные O
+заболевания O
+коров O
+по O
+реальным O
+жалобам O
+людей O
+из O
+открытых O
+источников O
+, O
+а O
+также O
+научиться O
+выделять O
+из O
+текстов O
+симптомы O
+заболеваний O
+( O
+NER B-Task
+- O
+Named B-Task
+Entity I-Task
+Recognition I-Task
+) O
+. O
+
+# text =   Эта статья будет интересна не только тем, кто специализируется в NLP (Natural Language Processing), но и начинающим исследователям данных.
+# relations = "Science_IsAlternativeNameFor_Science 0 1"
+Эта O
+статья O
+будет O
+интересна O
+не O
+только O
+тем O
+, O
+кто O
+специализируется O
+в O
+NLP B-Science
+( O
+Natural B-Science
+Language I-Science
+Processing I-Science
+) O
+, O
+но O
+и O
+начинающим O
+исследователям O
+данных O
+. O
+
+# text =   Эта статья будет интересна специалистам в области обработки естественного языка (Natural Language Processing, NLP).
+# relations = "Science_IsAlternativeNameFor_Science 0 1, Science_IsAlternativeNameFor_Science 0 2"
+Эта O
+статья O
+будет O
+интересна O
+специалистам O
+в O
+области B-Science
+обработки I-Science
+естественного I-Science
+языка I-Science
+( O
+Natural B-Science
+Language I-Science
+Processing I-Science
+, O
+NLP B-Science
+) O
+. O
+
+# text =   Спаны - это участки текста, которые содержат в себе определенный смысл.
+# relations = "Object_includes_Object 1 0"
+Спаны B-Object
+- O
+это O
+участки O
+текста B-Object
+, O
+которые O
+содержат O
+в O
+себе O
+определенный O
+смысл O
+. O
+
+# text =   Программа для разметки YEDDA и процесс разметки.
+# relations = "Method_isUsedIn_Application 0 0"
+Программа O
+для O
+разметки B-Method
+YEDDA B-Application
+и O
+процесс O
+разметки O
+. O
+
+# text =   Так как задача является составной, то и метрика состояла из двух компонентов с весом 0.8 для задачи классификации и 0.2 для задачи NER.
+# relations = "Metric_isUsedIn_Task 0 0, Metric_isUsedIn_Task 0 1, Metric_hasValue_Value 0 0, Metric_hasValue_Value 0 1"
+Так O
+как O
+задача O
+является O
+составной O
+, O
+то O
+и O
+метрика B-Metric
+состояла O
+из O
+двух O
+компонентов O
+с O
+весом B-Metric
+0.8 B-Value
+для O
+задачи O
+классификации B-Task
+и O
+0.2 B-Value
+для O
+задачи O
+NER B-Task
+. O
+
+# text =   В задаче классификации использовался logloss, вычисляемый как среднее значение метрики sklearn.metrics.log_loss по классам болезней.
+# relations = "Metric_isUsedIn_Task 0 0, Method_solves_Task 0 0"
+В O
+задаче O
+классификации B-Task
+использовался B-Method_solves_Task
+logloss B-Method
+, O
+вычисляемый O
+как O
+среднее O
+значение O
+метрики O
+sklearn.metrics.log_loss B-Metric
+по O
+классам O
+болезней O
+. O
+
+# text =  В задаче NER использовался span-based F1-score, рассчитываемый следующим образом: для каждого текста берутся предсказанные индексы начала и конца размеченных признаков болезни, по ним выделяются из текста токены (отдельные слова, разделенные пробелом) и сравниваются с истинной (экспертной) разметкой.
+# relations = "Object_includes_Object 2 3, Object_includes_Object 0 1, Metric_isUsedIn_Task 0 0"
+В O
+задаче O
+NER B-Task
+использовался B-Metric_isUsedIn_Task
+span B-Metric
+- I-Metric
+based I-Metric
+F1-score I-Metric
+, O
+рассчитываемый O
+следующим O
+образом O
+: O
+для O
+каждого O
+текста B-Object
+берутся O
+предсказанные O
+индексы B-Object
+начала O
+и O
+конца O
+размеченных O
+признаков O
+болезни O
+, O
+по O
+ним O
+выделяются O
+из O
+текста O
+токены B-Subject
+( O
+отдельные O
+слова B-Subject
+, O
+разделенные O
+пробелом O
+) O
+и O
+сравниваются O
+с O
+истинной O
+( O
+экспертной O
+) O
+разметкой B-Method
+. O
+
+# text =   Код для подсчета метрики span-based F1-score.
+# relations = ""
+Код O
+для O
+подсчета O
+метрики O
+span B-Metric
+- I-Metric
+based I-Metric
+F1-score I-Metric
+. O
+
+# text =   Этим решением стало использование классификатора CatBoost, который прямо из коробки может обрабатывать текстовые фичи.
+# relations = ""
+Этим O
+решением O
+стало O
+использование O
+классификатора O
+CatBoost B-Method
+, O
+который O
+прямо O
+из O
+коробки O
+может O
+обрабатывать O
+текстовые O
+фичи O
+. O
+
+# text =   Решение для задачи распознавания симптомов мы давать не стали, чтобы участники Data Science чемпионата могли покреативить.
+# relations = "Task_isSolvedIn_Science 0 0"
+Решение B-Task_isSolvedIn_Science
+для I-Task_isSolvedIn_Science
+задачи B-Task
+распознавания I-Task
+симптомов I-Task
+мы O
+давать O
+не O
+стали O
+, O
+чтобы O
+участники O
+Data B-Science
+Science I-Science
+чемпионата O
+могли O
+покреативить O
+. O
+
+# text =   Во-первых, конкретно для этого соревнования наиболее эффективный подход - это доразметка спанов тренировочных данных для задачи NER.
+# relations = "Method_solves_Task 0 0"
+Во O
+- O
+первых O
+, O
+конкретно O
+для O
+этого O
+соревнования O
+наиболее O
+эффективный O
+подход O
+- O
+это O
+доразметка B-Method
+спанов I-Method
+тренировочных I-Method
+данных I-Method
+для B-Method_solves_Task
+задачи O
+NER B-Task
+. O
+
+# text =   Во-вторых, участники использовали базовые подходы для NLP-задач: удаление стоп-слов и знаков пунктуации, приведение к нижнему регистру, стемминг и лемматизация.
+# relations = "Method_isUsedIn_Science 0 0, Method_isUsedIn_Science 1 0"
+Во O
+- O
+вторых O
+, O
+участники O
+использовали O
+базовые O
+подходы O
+для O
+NLP B-Science
+- O
+задач O
+: O
+удаление O
+стоп O
+- O
+слов O
+и O
+знаков O
+пунктуации O
+, O
+приведение O
+к O
+нижнему O
+регистру O
+, O
+стемминг B-Method
+и O
+лемматизация B-Method
+. O
+
+# text =  Более же продвинутым подходом является аугментация данных.
+# relations = ""
+Более O
+же O
+продвинутым O
+подходом O
+является O
+аугментация B-Method
+данных I-Method
+. O
+
+# text =   Один из возможных способов аугментации текста - перифраз текста.
+# relations = "Method_solves_Task 0 0"
+Один O
+из O
+возможных O
+способов O
+аугментации B-Task
+текста I-Task
+- O
+перифраз B-Method
+текста I-Method
+. O
+
+# text =   Примером данного решения является использование парафрайзера на основе “rut5-base-paraphraser” из библиотеки huggingface.
+# relations = ""
+Примером O
+данного O
+решения O
+является O
+использование O
+парафрайзера B-Method
+на O
+основе O
+“ O
+rut5-base B-Model
+- I-Model
+paraphraser I-Model
+” O
+из B-Library_includes_Method
+библиотеки I-Library_includes_Method
+huggingface B-Library
+. O
+
+# text =   Реализуется данный метод аналогично с предыдущим, как модель можно использовать “LaBSE-en-ru”.
+# relations = ""
+Реализуется O
+данный O
+метод O
+аналогично O
+с O
+предыдущим O
+, O
+как O
+модель O
+можно O
+использовать O
+“ O
+LaBSE B-Model
+- I-Model
+en I-Model
+- I-Model
+ru I-Model
+” O
+. O
+
+# text =   Сначала решается задача выделения симптомов (NER), после чего в текстах убираются все слова, не являющиеся симптомами.
+# relations = "Object_includes_Object 0 0, Object_isUsedInSolving_Task 0 0, Task_IsAlternativeNameFor_Task 1 0"
+Сначала O
+решается O
+задача B-Task
+выделения I-Task
+симптомов I-Task
+( O
+NER B-Task
+) O
+, O
+после O
+чего O
+в O
+текстах B-Object
+убираются O
+все O
+слова B-Subject
+, O
+не O
+являющиеся O
+симптомами O
+. O
+
+# text =   Базовым вариантом эмбеддингов является TF-IDF, который зависит от частоты употребления слова в документе.
+# relations = ""
+Базовым O
+вариантом O
+эмбеддингов B-Object
+является O
+TF B-Metric
+- I-Metric
+IDF I-Metric
+, O
+который O
+зависит O
+от O
+частоты B-Metric
+употребления I-Metric
+слова I-Metric
+в O
+документе O
+. O
+
+# text =   И чтобы его улучшить, можно использовать эмбеддинги предобученных моделей, таких как Word2Vec, FastText и тд.
+# relations = ""
+И O
+чтобы O
+его O
+улучшить O
+, O
+можно O
+использовать O
+эмбеддинги B-Object
+предобученных I-Object
+моделей I-Object
+, O
+таких O
+как O
+Word2Vec B-Model
+, O
+FastText B-Model
+и O
+тд O
+. O
+
+# text =   В частности, в одном из лучших решений использовался необычный FastText, предобученный на корпусе текстов RuDReC, который содержит отзывы потребителей на русском языке о фармацевтической продукции.
+# relations = "Model_Language_Lang 0 0, Model_isTrainedOn_Dataset 0 0"
+В O
+частности O
+, O
+в O
+одном O
+из O
+лучших O
+решений O
+использовался O
+необычный O
+FastText B-Model
+, O
+предобученный B-Model_isTrainedOn_Dataset
+на I-Model_isTrainedOn_Dataset
+корпусе O
+текстов O
+RuDReC B-Dataset
+, O
+который O
+содержит O
+отзывы O
+потребителей O
+на O
+русском B-Lang
+языке I-Lang
+о O
+фармацевтической O
+продукции O
+. O
+
+# text =   Напомним, что алгоритм работы с трансформерами можно представить следующим образом: сначала тексты преобразовываются токенизатором, далее обучается модель-трансформер.
+# relations = ""
+Напомним O
+, O
+что O
+алгоритм O
+работы O
+с O
+трансформерами B-Model
+можно O
+представить O
+следующим O
+образом O
+: O
+сначала O
+тексты O
+преобразовываются O
+токенизатором B-Method
+, O
+далее O
+обучается O
+модель B-Model
+- I-Model
+трансформер I-Model
+. O
+
+# text =   Если же говорить о выборе моделей, то наилучшие результаты были получены следующими из них: RuBERT-base, RuBERT-large, LaBSE-en-ru.
+# relations = ""
+Если O
+же O
+говорить O
+о O
+выборе O
+моделей O
+, O
+то O
+наилучшие O
+результаты O
+были O
+получены O
+следующими O
+из O
+них O
+: O
+RuBERT B-Model
+- I-Model
+base I-Model
+, O
+RuBERT B-Model
+- I-Model
+large I-Model
+, O
+LaBSE B-Model
+- I-Model
+en I-Model
+- I-Model
+ru I-Model
+. O
+
+# text =   Предположим, что вы и так слышали о моделях семейства BERT (в предыдущей статье мы описывали, как применяем BERT в других задачах), а вот LaBSE - выбор совершенно неочевидный.
+# relations = ""
+Предположим O
+, O
+что O
+вы O
+и O
+так O
+слышали O
+о O
+моделях O
+семейства O
+BERT B-Model
+( O
+в O
+предыдущей O
+статье O
+мы O
+описывали O
+, O
+как O
+применяем O
+BERT B-Model
+в O
+других O
+задачах O
+) O
+, O
+а O
+вот O
+LaBSE B-Model
+- O
+выбор O
+совершенно O
+неочевидный O
+. O
+
+# text = Далее слова в тестовом наборе текстов также приводятся к векторам и сравниваются со словами из тренировочной разметки при помощи косинусной близости.
+# relations = ""
+Далее O
+слова O
+в O
+тестовом O
+наборе O
+текстов O
+также O
+приводятся O
+к O
+векторам O
+и O
+сравниваются O
+со O
+словами O
+из O
+тренировочной O
+разметки O
+при O
+помощи O
+косинусной B-Metric
+близости I-Metric
+. O
+
+# text =   Архитектура в свою очередь может содержать LSTM, BiLSTM, RNN или GRU слои.
+# relations = ""
+Архитектура O
+в O
+свою O
+очередь O
+может O
+содержать O
+LSTM B-Model
+, O
+BiLSTM B-Model
+, O
+RNN B-Model
+или O
+GRU B-Model
+слои O
+. O
+
+# text =   Из интересных решений один из участников представил BiLSTM-сеть с CRF слоем.
+# relations = "Model_includes_Model 0 1"
+Из O
+интересных O
+решений O
+один O
+из O
+участников O
+представил O
+BiLSTM B-Model
+- I-Model
+сеть I-Model
+с O
+CRF B-Model
+слоем O
+. O
+
+# text =   Для задачи NER тексты преобразовываются с помощью токенизатора и теггинга.
+# relations = "Method_solves_Task 0 0, Method_solves_Task 1 0"
+Для O
+задачи O
+NER B-Task
+тексты O
+преобразовываются O
+с O
+помощью O
+токенизатора B-Method
+и O
+теггинга B-Method
+. O
+
+# text =   Сначала тексты при помощи токенизатора переводятся в вектора - это то, на чем обучается модель.
+# relations = "Method_is_applied_to_Object 0 0"
+Сначала O
+тексты B-Object
+при B-Method_is_applied_to_Object
+помощи I-Method_is_applied_to_Object
+токенизатора B-Method
+переводятся O
+в O
+вектора B-Object
+- O
+это O
+то O
+, O
+на O
+чем O
+обучается O
+модель O
+. O
+
+# text =   Далее создаются таргеты при помощи теггинга.
+# relations = ""
+Далее O
+создаются O
+таргеты B-Object
+при O
+помощи O
+теггинга B-Method
+. O
+
+# text =   Самым распространенным алгоритмом теггинга является “Inside–outside–beginning”.
+# relations = ""
+Самым O
+распространенным O
+алгоритмом O
+теггинга O
+является O
+“ O
+Inside B-Method
+– I-Method
+outside I-Method
+– I-Method
+beginning I-Method
+” 
+. O
+
+# text =   Тег указывает на то, что слово находится внутри спана.
+# relations = ""
+Тег B-Object
+указывает O
+на O
+то O
+, O
+что O
+слово O
+находится O
+внутри O
+спана B-Object
+. O
+
+# text =   Среди решений были как кастомный код для обучения и инференса, так и код от huggingface, который можно использовать из коробки.
+# relations = ""
+Среди O
+решений O
+были O
+как O
+кастомный O
+код O
+для O
+обучения O
+и O
+инференса O
+, O
+так O
+и O
+код O
+от O
+huggingface B-Organization
+, O
+который O
+можно O
+использовать O
+из O
+коробки O
+. O
+
+# text =   Безусловно, основной метрикой оценивания являлся лидерборд.
+# relations = ""
+Безусловно O
+, O
+основной O
+метрикой O
+оценивания O
+являлся O
+лидерборд B-Metric
+. O

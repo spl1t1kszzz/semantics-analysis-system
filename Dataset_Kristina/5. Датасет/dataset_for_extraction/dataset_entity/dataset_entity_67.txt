@@ -1,0 +1,13 @@
+# text =   Эти модели всегда ищут синонимы — даже для устоявшихся словосочетаний.
+# relations = "Model_isUsedForSolving_Task 0 0, Object_isUsedInSolving_Task 0 0"
+Эти O
+модели B-Model
+всегда O
+ищут B-Task
+синонимы I-Task
+— O
+даже O
+для O
+устоявшихся O
+словосочетаний B-Subject
+. O

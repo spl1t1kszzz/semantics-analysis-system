@@ -1,0 +1,269 @@
+# text =   AntiToxicBot — бот, распознающий токсичных пользователей в телеграм чатах.
+# relations = "Application_isUsedForSolving_Task 0 0"
+AntiToxicBot B-Technology
+— O
+бот O
+, O
+распознающий B-Task
+токсичных I-Task
+пользователей I-Task
+в O
+телеграм O
+чатах O
+. O
+
+# text =   Почему же выбрано CNN+GRU, а не просто GRU или CNN?
+# relations = ""
+Почему O
+же O
+выбрано O
+CNN+GRU B-Method_ML
+, O
+а O
+не O
+просто O
+GRU B-Method_ML
+или O
+CNN B-Method_ML
+? O
+
+# text =   Нейросеть состоит из 3-х основных частей(CNN, GRU, Linear).
+# relations = ""
+Нейросеть O
+состоит O
+из O
+3-х O
+основных O
+частей O
+( O
+CNN B-Method_ML
+, O
+GRU B-Method_ML
+, O
+Linear B-Method_ML
+) O
+. O
+
+# text =   Как и в классификации картинок, свёрточный слой выделяет “признаки”, но в нашем случае векторизированный текст.
+# relations = ""
+Как O
+и O
+в O
+классификации O
+картинок O
+, O
+свёрточный O
+слой O
+выделяет O
+“ O
+признаки O
+” O
+, O
+но O
+в O
+нашем O
+случае O
+векторизированный B-Object
+текст I-Object
+. O
+
+# text =   То-есть данная часть сети учится выделять признаки токсичных и позитивных сообщений.
+# relations = ""
+То O
+- O
+есть O
+данная O
+часть O
+сети O
+учится O
+выделять B-Task
+признаки I-Task
+токсичных I-Task
+и I-Task
+позитивных I-Task
+сообщений I-Task
+. O
+
+# text =   GRU - Recurrent Neural Network
+# relations = "Method_includes_Method 1 0"
+GRU B-Method_ML
+- O
+Recurrent B-Method_ML
+Neural I-Method_ML
+Network I-Method_ML
+
+# text =   Чтобы обрабатывать последовательности произвольной длины, используют рекуррентные слои.
+# relations = "Method_solves_Task 0 0"
+Чтобы O
+обрабатывать B-Task
+последовательности I-Task
+произвольной I-Task
+длины I-Task
+, O
+используют B-Method_solves_Task
+рекуррентные B-Method
+слои I-Method
+. O
+
+# text =   В архитектуре используется рекуррентный слой GRU.
+# relations = ""
+В O
+архитектуре O
+используется O
+рекуррентный O
+слой O
+GRU B-Method_ML
+. O
+
+# text =  Данный слой учится делать заключительное решение по определению тональности текста на основе предыдущих слоёв.
+# relations = ""
+Данный O
+слой O
+учится O
+делать O
+заключительное O
+решение O
+по O
+определению B-Task
+тональности I-Task
+текста I-Task
+на O
+основе O
+предыдущих O
+слоёв O
+. O
+
+# text =   Датасет был взят с сайта kaggle.
+# relations = ""
+Датасет B-Dataset
+был O
+взят O
+с O
+сайта O
+kaggle B-InfoResource
+. O
+
+# text =   Около 14000 комментариев с разметкой токсичное сообщение или нет.
+# relations = ""
+Около O
+14000 O
+комментариев O
+с O
+разметкой B-Method
+токсичное B-Object
+сообщение I-Object
+или O
+нет O
+. O
+
+# text =   Для решения данной проблемы была использована библиотека Yandex Speller, которая исправляет орфографические ошибки.
+# relations = "Application_isUsedForSolving_Task 0 0"
+Для O
+решения O
+данной O
+проблемы O
+была O
+использована O
+библиотека O
+Yandex B-Library
+Speller I-Library
+, O
+которая O
+исправляет B-Task
+орфографические I-Task
+ошибки I-Task
+. O
+
+# text =   Можно было обучить собственный Word2Vec на основе данного набора данных, но лучше взять уже обученный.
+# relations = ""
+Можно O
+было O
+обучить O
+собственный O
+Word2Vec B-Model
+на O
+основе O
+данного O
+набора O
+данных O
+, O
+но O
+лучше O
+взять O
+уже O
+обученный O
+. O
+
+# text =   Например: Navec.
+# relations = ""
+Например O
+: O
+Navec B-Model
+. O
+
+# text =   Модель обучали на русской литературе (~150gb), что говорит о качественной векторизации текста.
+# relations = ""
+Модель B-Model
+обучали O
+на O
+русской B-Science
+литературе I-Science
+( O
+~150 O
+gb O
+) O
+, O
+что O
+говорит O
+о O
+качественной O
+векторизации O
+текста O
+. O
+
+# text =  Для классификации используется обыкновенная функция потерь – кросс энтропия.
+# relations = "Method_solves_Task 0 0"
+Для O
+классификации B-Task
+используется O
+обыкновенная O
+функция B-Method
+потерь I-Method
+– I-Method
+кросс I-Method
+энтропия I-Method
+. O
+
+# text =  При обучении сети надо обращать внимание на основные параметры такие, как loss, precision и accuracy.
+# relations = ""
+При O
+обучении O
+сети O
+надо O
+обращать O
+внимание O
+на O
+основные O
+параметры O
+такие O
+, O
+как O
+loss B-Metric
+, O
+precision B-Metric
+и O
+accuracy B-Metric
+. O
+
+# text =   В ~80% случаев нейросеть классифицирует тональность текста правильно.
+# relations = ""
+В O
+~80 B-Value
+% I-Value
+случаев O
+нейросеть O
+классифицирует O
+тональность O
+текста O
+правильно O
+. O

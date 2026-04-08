@@ -1,0 +1,289 @@
+# text =   Как научить свою нейросеть генерировать стихи
+# relations = ""
+Как O
+научить O
+свою O
+нейросеть O
+генерировать B-Task
+стихи I-Task
+
+# text =   Языковые модели определяют вероятность появления последовательности слов  в данном языке: .
+# relations = ""
+Языковые O
+модели O
+определяют B-Task
+вероятность I-Task
+появления I-Task
+последовательности I-Task
+слов I-Task
+в O
+данном O
+языке B-Object
+: O
+. O
+
+# text =   Кажется, самым простым способом построить такую модель является использование N-граммной статистики.
+# relations = ""
+Кажется O
+, O
+самым O
+простым O
+способом O
+построить O
+такую O
+модель B-Model
+является O
+использование O
+N B-Method
+- I-Method
+граммной I-Method
+статистики I-Method
+. O
+
+# text =   Для решения такой проблемы используют обычно сглаживание Kneser–Ney или Katz’s backing-off.
+# relations = ""
+Для O
+решения O
+такой O
+проблемы O
+используют O
+обычно O
+сглаживание B-Method
+Kneser I-Method
+– I-Method
+Ney I-Method
+или O
+Katz B-Method
+’s I-Method
+backing I-Method
+- I-Method
+off I-Method
+. O
+
+# text =   За более подробной информацией про методы сглаживания N-грамм стоит обратиться к известной книге Кристофера Маннинга “Foundations of Statistical Natural Language Processing”.
+# relations = "Method_hasAuthor_Person 0 0"
+За O
+более O
+подробной O
+информацией O
+про O
+методы O
+сглаживания B-Method
+N I-Method
+- I-Method
+грамм I-Method
+стоит O
+обратиться O
+к O
+известной O
+книге O
+Кристофера B-Person
+Маннинга I-Person
+“ O
+Foundations B-InfoResource
+of I-InfoResource
+Statistical I-InfoResource
+Natural I-InfoResource
+Language I-InfoResource
+Processing I-InfoResource
+” O
+. O
+
+# text =   Хочу заметить, что 5-граммы слов я назвал не просто так: именно их (со сглаживанием, конечно) Google демонстрирует в статье “One Billion Word Benchmark for Measuring Progress in Statistical Language Modeling” — и показывает результаты, весьма сопоставимые с результатами у рекуррентных нейронных сетей — о которых, собственно, и пойдет далее речь.
+# relations = "Method_hasAuthor_Organization 0 0"
+Хочу O
+заметить O
+, O
+что O
+5-граммы O
+слов O
+я O
+назвал O
+не O
+просто O
+так O
+: O
+именно O
+их O
+( O
+со O
+сглаживанием O
+, O
+конечно O
+) O
+Google B-Organization
+демонстрирует O
+в O
+статье O
+“ B-InfoResource
+One I-InfoResource
+Billion I-InfoResource
+Word I-InfoResource
+Benchmark I-InfoResource
+for I-InfoResource
+Measuring I-InfoResource
+Progress I-InfoResource
+in I-InfoResource
+Statistical I-InfoResource
+Language I-InfoResource
+Modeling I-InfoResource
+” I-InfoResource
+— O
+и O
+показывает O
+результаты O
+, O
+весьма O
+сопоставимые O
+с O
+результатами O
+у O
+рекуррентных B-Method_ML
+нейронных I-Method_ML
+сетей I-Method_ML
+— O
+о O
+которых O
+, O
+собственно O
+, O
+и O
+пойдет O
+далее O
+речь O
+. O
+
+# text =   Преимущество рекуррентных нейронных сетей — в возможности использовать неограниченно длинный контекст.
+# relations = ""
+Преимущество O
+рекуррентных B-Method_ML
+нейронных I-Method_ML
+сетей I-Method_ML
+— O
+в O
+возможности O
+использовать O
+неограниченно B-Object
+длинный I-Object
+контекст I-Object
+. O
+
+# text =   На практике классические RNN страдают от затухания градиента — по сути, отсутствия возможности помнить контекст дальше, чем на несколько слов.
+# relations = ""
+На O
+практике O
+классические O
+RNN B-Method_ML
+страдают O
+от O
+затухания O
+градиента O
+— O
+по O
+сути O
+, O
+отсутствия O
+возможности O
+помнить O
+контекст O
+дальше O
+, O
+чем O
+на O
+несколько O
+слов O
+. O
+
+# text =   Самыми популярными являются LSTM и GRU.
+# relations = ""
+Самыми O
+популярными O
+являются O
+LSTM B-Method_ML
+и O
+GRU B-Method_ML
+. O
+
+# text =   В дальнейшем, говоря о рекуррентном слое, я всегда буду подразумевать LSTM.
+# relations = ""
+В O
+дальнейшем O
+, O
+говоря O
+о O
+рекуррентном O
+слое O
+, O
+я O
+всегда O
+буду O
+подразумевать O
+LSTM B-Method_ML
+. O
+
+# text =   Вспомним теперь, что для нашей задачи языковая модель нужна для выбора наиболее подходящего следующего слова по уже сгенерированной последовательности.
+# relations = "Object_isUsedInSolving_Task 0 0, Model_isUsedForSolving_Task 0 0"
+Вспомним O
+теперь O
+, O
+что O
+для O
+нашей O
+задачи O
+языковая O
+модель B-Model
+нужна O
+для O
+выбора B-Task
+наиболее I-Task
+подходящего I-Task
+следующего I-Task
+слова I-Task
+по O
+уже O
+сгенерированной B-Object
+последовательности I-Object
+. O
+
+# text =   Метрические правила определяют последовательность ударных и безударных слогов в строке.
+# relations = ""
+Метрические B-Object
+правила I-Object
+определяют O
+последовательность O
+ударных O
+и O
+безударных O
+слогов B-Subject
+в O
+строке O
+. O
+
+# text =   Для решения этой проблемы мы делаем лучевой поиск (beam search), выбирая на каждом шаге вместо одного сразу N путей с наивысшими вероятностями.
+# relations = "Method_IsAlternativeNameFor_Method 1 0"
+Для O
+решения O
+этой O
+проблемы O
+мы O
+делаем O
+лучевой B-Method
+поиск I-Method
+( O
+beam B-Method
+search I-Method
+) O
+, O
+выбирая O
+на O
+каждом O
+шаге O
+вместо O
+одного O
+сразу O
+N O
+путей O
+с O
+наивысшими O
+вероятностями O
+. O

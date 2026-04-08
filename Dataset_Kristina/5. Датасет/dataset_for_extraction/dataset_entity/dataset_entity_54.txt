@@ -1,0 +1,155 @@
+# text =   Для решения этой проблемы требуется архитектура, которая позволяет GPT-3 анализировать содержание письма и оценивать, какая информация актуальна для ответа.
+# relations = "Model_isUsedForSolving_Task 0 0, Model_isUsedForSolving_Task 0 1"
+Для O
+решения O
+этой O
+проблемы O
+требуется O
+архитектура O
+, O
+которая O
+позволяет O
+GPT-3 B-Model
+анализировать B-Task
+содержание I-Task
+письма I-Task
+и O
+оценивать B-Task
+, I-Task
+какая I-Task
+информация I-Task
+актуальна I-Task
+для O
+ответа O
+. O
+
+# text =   OpenAI представила модель машинного обучения GPT-3, обученную на 175 млрд параметров, в июне 2020 года.
+# relations = "Date_isDateOf_Model 0 0, Model_hasAuthor_Organization 0 0"
+OpenAI B-Organization
+представила B-Model_hasAuthor_Organization
+модель O
+машинного O
+обучения O
+GPT-3 B-Model
+, O
+обученную O
+на O
+175 O
+млрд O
+параметров O
+, O
+в O
+июне B-Date
+2020 I-Date
+года I-Date
+. O
+
+# text = В июне 2020 года OpenAI представила модель машинного обучения GPT-3, обученную на 175 миллиардах параметров.
+# relations = "Date_isDateOf_Model 0 0, Model_hasAuthor_Organization 0 0"
+В O
+июне B-Date
+2020 I-Date
+года I-Date
+OpenAI B-Model
+представила B-Model_hasAuthor_Organization
+модель O
+машинного O
+обучения O
+GPT B-Model
+- I-Model
+3 I-Model
+, O
+обученную O
+на O
+175 O
+миллиардах O
+параметров O
+. O
+
+# text =   В отличие от предшественников GPT-2 и GPT-1 ее исходный код или обучающий набор данных решили не открывать.
+# relations = ""
+В O
+отличие O
+от O
+предшественников O
+GPT-2 B-Model
+и O
+GPT-1 B-Model
+ее O
+исходный O
+код O
+или O
+обучающий O
+набор O
+данных O
+решили O
+не O
+открывать O
+. O
+
+# text =   Модель уже попытались применить в медицинской сфере для общения с пациентами, но результаты эксперимента оказались неутешительными.
+# relations = ""
+Модель B-Model
+уже O
+попытались B-Method_isUsedIn_Science
+применить I-Method_isUsedIn_Science
+в O
+медицинской B-Science
+сфере I-Science
+для O
+общения O
+с O
+пациентами O
+, O
+но O
+результаты O
+эксперимента B-Activity
+оказались O
+неутешительными O
+. O
+
+# text =  Между тем создатели проекта GPT-Neo от EleutherAI решили воссоздать аналог GPT-3, но с открытым исходным кодом.
+# relations = "Activity_hasAuthor_Organization 0 0"
+Между O
+тем O
+создатели O
+проекта O
+GPT B-Activity
+- I-Activity
+Neo I-Activity
+от B-Activity_hasAuthor_Organization
+EleutherAI B-Organization
+решили O
+воссоздать O
+аналог O
+GPT-3 B-Model
+, O
+но O
+с O
+открытым O
+исходным O
+кодом O
+. O
+
+# text =  Тем временем, разработчики проекта GPT-Neo от EleutherAI решили разработать свой аналог GPT-3 с открытым исходным кодом.
+# relations = "Activity_hasAuthor_Organization 0 0"
+Тем O
+временем O
+, O
+разработчики O
+проекта O
+GPT B-Activity
+- I-Activity
+Neo I-Activity 
+от B-Activity_hasAuthor_Organization
+EleutherAI B-Organization
+решили O
+разработать O
+свой O
+аналог O
+GPT-3 B-Model
+с O
+открытым O
+исходным O
+кодом O
+. O

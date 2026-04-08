@@ -1,0 +1,191 @@
+# text =   Британские ученые обучили ИИ трансформировать устную речь в видео с виртуальным сурдопереводчиком.
+# relations = ""
+Британские O
+ученые O
+обучили O
+ИИ O
+трансформировать O
+устную B-Subject
+речь I-Subject
+в O
+видео O
+с O
+виртуальным B-Application
+сурдопереводчиком I-Application
+. O
+
+# text =   В Университете Суррея разработчики создали алгоритм сурдоперевода нового поколения.
+# relations = "Method_hasAuthor_Organization 0 0"
+В O
+Университете B-Organization
+Суррея I-Organization
+разработчики O
+создали B-Method_hasAuthor_Organization
+алгоритм B-Method
+сурдоперевода I-Method
+нового O
+поколения O
+. O
+
+# text = В Университете Суррея инженеры разработали новейший алгоритм сурдоперевода.
+# relations = "Method_hasAuthor_Organization 0 0"
+В O
+Университете B-Organization
+Суррея I-Organization
+инженеры O
+разработали B-Method_hasAuthor_Organization
+новейший O
+алгоритм B-Method
+сурдоперевода I-Method
+. O
+
+# text =   После этого последовательность поз подается сверточной нейросети U-Net.
+# relations = ""
+После O
+этого O
+последовательность O
+поз O
+подается O
+сверточной O
+нейросети O
+U B-Method_ML
+- I-Method_ML
+Net I-Method_ML
+. O
+
+# text =   Один из самых известных продуктов — анимированный виртуальный переводчик от IBM.
+# relations = ""
+Один O
+из O
+самых O
+известных O
+продуктов O
+— O
+анимированный O
+виртуальный O
+переводчик O
+от O
+IBM B-Technology
+. O
+
+# text =   Программа, придуманная учеными из Новосибирского академгородка, распознает речь, анализирует смысл и переводит на жестовый язык.
+# relations = "Application_is_applied_to_Object 0 0, Application_isUsedForSolving_Task 0 1, Application_isUsedForSolving_Task 0 0, Application_hasAuthor_Organization 0 0"
+Программа B-Application
+, O
+придуманная O
+учеными O
+из O
+Новосибирского B-Organization
+академгородка I-Organization
+, O
+распознает B-Task
+речь I-Task
+, O
+анализирует B-Task
+смысл I-Task
+и O
+переводит O
+на O
+жестовый B-Object
+язык I-Object
+. O
+
+# text =   В то время считали, что разработка станет такой же популярной, как Google Translator.
+# relations = ""
+В O
+то O
+время O
+считали O
+, O
+что O
+разработка O
+станет O
+такой O
+же O
+популярной O
+, O
+как O
+Google B-Technology
+Translator I-Technology
+. O
+
+# text =   Российские ученые из Института проблем управления им. В.А. Трапезникова РАН (ИПУ РАН) несколько лет назад начали разработку подобного ИИ.
+# relations = "Organization_IsAlternativeNameFor_Organization 1 0"
+Российские O
+ученые O
+из O
+Института B-Organization
+проблем I-Organization
+управления I-Organization
+им. I-Organization
+В.А. I-Organization
+Трапезникова I-Organization
+РАН I-Organization
+( O
+ИПУ B-Organization
+РАН I-Organization
+) O
+несколько O
+лет O
+назад O
+начали O
+разработку O
+подобного O
+ИИ O
+. O
+
+# text =  Несколько лет назад разработку такой системы начали специалисты из Института проблем управления им. В.А. Трапезникова РАН (ИПУ РАН).
+# relations = "Organization_IsAlternativeNameFor_Organization 1 0"
+Несколько O
+лет O
+назад O
+разработку O
+такой O
+системы O
+начали O
+специалисты O
+из O
+Института B-Organization
+проблем I-Organization
+управления I-Organization
+им. I-Organization
+В.А. I-Organization
+Трапезникова I-Organization
+РАН I-Organization
+( O
+ИПУ B-Organization
+РАН I-Organization
+) O
+. O
+
+# text =  Разработка системы началась недавно в Институте проблем управления им. В.А. Трапезникова РАН (ИПУ РАН).
+# relations = "Organization_IsAlternativeNameFor_Organization 1 0"
+Разработка O
+системы O
+началась O
+недавно O
+в O
+Институте B-Organization
+проблем I-Organization
+управления I-Organization
+им. I-Organization
+В.А. I-Organization
+Трапезникова I-Organization
+РАН I-Organization
+( O
+ИПУ B-Organization
+РАН I-Organization
+) O
+. O
+
+# text =   Она несколько лет развивает сайт «Сурдосервер».
+# relations = ""
+Она O
+несколько O
+лет O
+развивает O
+сайт O
+« O
+Сурдосервер B-Technology
+» O
+. O

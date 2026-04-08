@@ -1,0 +1,99 @@
+# text =   Самый сложный кроссворд, составленный компьютером
+# relations = ""
+Самый O
+сложный O
+кроссворд B-Object
+, O
+составленный O
+компьютером O
+
+# text =   Пример Deep Blue показывает, что программы ИИ могут участвовать в викторинах и обыгрывать людей.
+# relations = ""
+Пример O
+Deep B-Technology
+Blue I-Technology
+показывает O
+, O
+что O
+программы O
+ИИ O
+могут O
+участвовать O
+в O
+викторинах B-Object
+и O
+обыгрывать O
+людей O
+. O
+
+# text =   Американский разработчик Мэтью Гинсберг (Matthew Ginsberg) создал программу под названием Dr Fill, которая справляется с кроссвордами гораздо лучше, чем абсолютное большинство людей, пишет New Scientist.
+# relations = "Application_is_applied_to_Object 0 0, Application_hasAuthor_Person 0 0"
+Американский O
+разработчик O
+Мэтью B-Person
+Гинсберг I-Person
+( O
+Matthew B-Person
+Ginsberg I-Person
+) O
+создал O
+программу O
+под O
+названием O
+Dr B-Technology
+Fill I-Technology
+, O
+которая O
+справляется O
+с O
+кроссвордами B-Object
+гораздо O
+лучше O
+, O
+чем O
+абсолютное O
+большинство O
+людей O
+, O
+пишет O
+New B-Organization
+Scientist I-Organization
+. O
+
+# text = Программа Dr Fill, разработанная американским специалистом Мэтью Гинсбергом (Matthew Ginsberg), согласно информации из издания New Scientist, проявляет более выдающуюся эффективность в решении кроссвордов по сравнению с абсолютным большинством людей.
+# relations = "Application_is_applied_to_Object 0 0, Application_hasAuthor_Person 0 0"
+Программа O
+Dr B-Technology
+Fill B-Technology
+, O
+разработанная O
+американским O
+специалистом O
+Мэтью B-Person
+Гинсбергом I-Person
+( O
+Matthew B-Person
+Ginsberg I-Person
+) O
+, O
+согласно O
+информации O
+из O
+издания O
+New B-Organization
+Scientist I-Organization
+, O
+проявляет O
+более O
+выдающуюся O
+эффективность O
+в O
+решении O
+кроссвордов B-Object
+по O
+сравнению O
+с O
+абсолютным O
+большинством O
+людей O
+. O

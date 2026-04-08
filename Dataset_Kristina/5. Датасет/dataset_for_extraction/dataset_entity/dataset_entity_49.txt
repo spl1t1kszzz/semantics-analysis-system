@@ -1,0 +1,54 @@
+# text =  Ученые Новосибирского государственного технического университета НЭТИ завершают разработку системы распознавания русского жестового языка.
+# relations = "Application_is_applied_to_Object 0 0, Application_hasAuthor_Organization 0 0"
+Ученые O
+Новосибирского B-Organization
+государственного I-Organization
+технического I-Organization
+университета I-Organization
+НЭТИ B-Organization
+завершают B-Application_hasAuthor_Organization
+разработку I-Application_hasAuthor_Organization
+системы B-App_system
+распознавания I-App_system
+русского B-Object
+жестового I-Object
+языка I-Object
+. O
+
+# text =   Точность распознавания составляет 92%.
+# relations = "Metric_hasValue_Value 0 0"
+Точность B-Metric
+распознавания O
+составляет O
+92 B-Value
+% I-Value
+. O
+
+# text =   «Мы также вели работу над выделением эпентезы (межжестовое движение).
+# relations = "Object_isUsedInSolving_Task 0 0"
+« O
+Мы O
+также O
+вели O
+работу O
+над O
+выделением B-Task
+эпентезы I-Task
+( O
+межжестовое B-Object
+движение I-Object
+) O
+. O
+
+# text =   Сейчас точность выделения жестов в видеопотоке составляет 85—90%.
+# relations = "Metric_hasValue_Value 0 0, Object_isUsedInSolving_Task 0 0"
+Сейчас O
+точность B-Metric
+выделения B-Task
+жестов I-Task
+в B-Object_isUsedInSolving_Task
+видеопотоке B-Object
+составляет O
+85—90 B-Value
+% I-Value
+. O

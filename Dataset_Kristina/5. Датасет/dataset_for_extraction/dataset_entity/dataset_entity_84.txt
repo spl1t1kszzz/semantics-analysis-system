@@ -1,0 +1,83 @@
+# text =   Поддержка NlpCraft IDL добавлена в систему начиная с версии 0.7.5.
+# relations = ""
+Поддержка O
+NlpCraft B-Environment
+IDL I-Environment
+добавлена O
+в O
+систему O
+начиная O
+с O
+версии O
+0.7.5 O
+. O
+
+# text =   Новая версия декларативного языка определения интентов, получившая название NlpCraft IDL (NlpCraft Intents Definition Language), значительно упростила процесс работы с интентами в диалоговых и поисковых системах, построенных на базе проекта Apache NlpCraft и вместе с тем расширила возможности системы.
+# relations = "Environment_isUsedIn_Application 0 0"
+Новая O
+версия O
+декларативного O
+языка O
+определения O
+интентов O
+, O
+получившая O
+название O
+NlpCraft B-Environment
+IDL I-Environment
+( O
+NlpCraft B-Environment
+Intents I-Environment
+Definition I-Environment
+Language I-Environment
+) O
+, O
+значительно O
+упростила O
+процесс O
+работы O
+с O
+интентами O
+в O
+диалоговых O
+и O
+поисковых O
+системах O
+, O
+построенных O
+на O
+базе O
+проекта O
+Apache B-Activity
+NlpCraft I-Activity
+и O
+вместе O
+с O
+тем O
+расширила O
+возможности O
+системы O
+. O
+
+# text =   NlpCraft IDL - это декларативный язык, позволяющий создавать определения интентов для их последующего использования в моделях Apache NlpCraft.
+# relations = ""
+NlpCraft B-Environment
+IDL I-Environment
+- O
+это O
+декларативный O
+язык O
+, O
+позволяющий O
+создавать O
+определения B-Task
+интентов I-Task
+для O
+их O
+последующего O
+использования O
+в O
+моделях O
+Apache B-Model
+NlpCraft I-Model
+. O

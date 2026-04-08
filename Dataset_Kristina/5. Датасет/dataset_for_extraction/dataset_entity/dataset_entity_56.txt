@@ -1,0 +1,784 @@
+# text =   Прорывы #DeepPavlov в 2019 году: обзор и итоги года Московский физико-технический институт (МФТИ).
+# relations = "Organization_IsAlternativeNameFor_Organization 1 0, Model_hasAuthor_Organization 0 0, Date_isDateOf_Model 0 0"
+Прорывы O
+# O
+DeepPavlov B-Model
+в O
+2019 B-Date
+году O
+: O
+обзор O
+и O
+итоги O
+года O
+Московский B-Organization
+физико I-Organization
+- I-Organization
+технический I-Organization
+институт I-Organization
+( O
+МФТИ B-Organization
+) O
+. O
+
+# text = Модель DeepPavlov была разработана командой из Московского физико-технического института (МФТИ).
+# relations = "Organization_IsAlternativeNameFor_Organization 1 0, Model_hasAuthor_Organization 0 0"
+Модель O
+DeepPavlov B-Model
+была B-Model_hasAuthor_Organization
+разработана I-Model_hasAuthor_Organization
+командой O
+из O
+Московского B-Organization
+физико-технического I-Organization
+института I-Organization
+( O
+МФТИ B-Organization
+) O
+. O
+
+# text = Команда исследователей из Московского физико-технического института (МФТИ) представила модель DeepPavlov.
+# relations = "Organization_IsAlternativeNameFor_Organization 1 0, Model_hasAuthor_Organization 0 0"
+Команда O
+исследователей O
+из O
+Московского B-Organization
+физико-технического I-Organization
+института I-Organization
+( O
+МФТИ B-Organization
+) O
+представила B-Model_hasAuthor_Organization
+модель O
+DeepPavlov B-Model
+. O
+
+# text =   Библиотеке #DeepPavlov, на минуточку, уже два года, и мы рады, что наше сообщество с каждым днем растет.
+# relations = ""
+Библиотеке O
+# O
+DeepPavlov B-Library
+, O
+на O
+минуточку O
+, O
+уже O
+два O
+года O
+, O
+и O
+мы O
+рады O
+, O
+что O
+наше O
+сообщество O
+с O
+каждым O
+днем O
+растет O
+. O
+
+# text =   Увеличилось количество коммерческих решений за счет state-of-art технологий, реализованных в DeepPavlov, в разных отраслях от ритейла до промышленности.
+# relations = ""
+Увеличилось O
+количество O
+коммерческих O
+решений O
+за O
+счет O
+state B-Method
+- I-Method
+of I-Method
+- I-Method
+art I-Method
+технологий O
+, O
+реализованных O
+в O
+DeepPavlov B-Model
+, O
+в O
+разных O
+отраслях O
+от O
+ритейла O
+до O
+промышленности O
+. O
+
+# text =   Вышел первый релиз DeepPavlov Agent.
+# relations = ""
+Вышел O
+первый O
+релиз O
+DeepPavlov B-Application
+Agent I-Application
+. O
+
+# text =   DeepPavlov решает проблемы такие как: классификация текста, исправление опечаток, распознавание именованных сущностей, ответы на вопросы по базе знаний и многие другие.
+# relations = "Object_isUsedInSolving_Task 0 0, Model_isUsedForSolving_Task 0 0, Model_isUsedForSolving_Task 0 1, Model_isUsedForSolving_Task 0 2, Model_isUsedForSolving_Task 0 3"
+DeepPavlov B-Model
+решает B-Model_isUsedForSolving_Task
+проблемы I-Model_isUsedForSolving_Task
+такие O
+как O
+: O
+классификация B-Task
+текста B-Object
+, O
+исправление B-Task
+опечаток I-Task
+, O
+распознавание B-Task
+именованных I-Task
+сущностей I-Task
+, O
+ответы B-Task
+на I-Task
+вопросы I-Task
+по O
+базе O
+знаний O
+и O
+многие O
+другие O
+. O
+
+# text =   Библиотека поддерживает платформы Linux и Windows.
+# relations = "Environment_isUsedIn_Application 0 0, Environment_isUsedIn_Application 1 0"
+Библиотека B-Library
+поддерживает B-Environment_isUsedIn_Application
+платформы I-Environment_isUsedIn_Application
+Linux B-Environment
+и O
+Windows B-Environment
+. O
+
+# text =   В настоящее время современные результаты во многих задачах были достигнуты благодаря применению моделей на основе BERT.
+# relations = ""
+В O
+настоящее O
+время O
+современные O
+результаты O
+во O
+многих O
+задачах O
+были O
+достигнуты O
+благодаря O
+применению O
+моделей O
+на O
+основе O
+BERT B-Model
+. O
+
+# text =   Команда DeepPavlov интегрировала BERT в три последующие задачи: классификация текста, распознавание именованных сущностей и ответы на вопросы.
+# relations = "Object_isUsedInSolving_Task 0 0, Model_isUsedForSolving_Task 0 0, Model_isUsedForSolving_Task 0 1, Model_isUsedForSolving_Task 0 2"
+Команда O
+DeepPavlov B-Organization
+интегрировала O
+BERT B-Model
+в O
+три O
+последующие O
+задачи O
+: O
+классификация B-Task
+текста I-Task
+, O
+распознавание B-Task
+именованных I-Task
+сущностей I-Task
+и O
+ответы B-Task
+на I-Task
+вопросы I-Task
+. O
+
+# text =   Модель классификации текста на основе BERT DeepPavlov служит, например, для решения проблемы обнаружения оскорблений.
+# relations = "Model_isUsedForSolving_Task 0 0"
+Модель O
+классификации O
+текста O
+на O
+основе O
+BERT B-Model
+DeepPavlov I-Model
+служит O
+, O
+например O
+, O
+для O
+решения O
+проблемы O
+обнаружения B-Task
+оскорблений I-Task
+. O
+
+# text =   В дополнение к моделям классификации текста DeepPavlov содержит модель на основе BERT для распознавания именованных сущностей (NER).
+# relations = "Task_IsAlternativeNameFor_Task 2 1, Model_isUsedForSolving_Task 0 1, Model_isUsedForSolving_Task 0 0, Object_isUsedInSolving_Task 0 0"
+В O
+дополнение O
+к O
+моделям O
+классификации B-Task
+текста B-Object
+DeepPavlov B-Model
+содержит O
+модель O
+на B-Model_isBasedOn_Model
+основе I-Model_isBasedOn_Model
+BERT B-Model
+для O
+распознавания B-Task
+именованных I-Task
+сущностей I-Task
+( O
+NER B-Task
+) O
+. O
+
+# text =   Например, модель может извлечь важную информацию из резюме, чтобы облегчить работу специалистов по кадрам.
+# relations = "Model_isUsedForSolving_Task 0 0"
+Например O
+, O
+модель B-Model
+может O
+извлечь B-Task
+важную I-Task
+информацию I-Task
+из O
+резюме O
+, O
+чтобы O
+облегчить O
+работу O
+специалистов O
+по O
+кадрам O
+. O
+
+# text =   Кроме того, NER может использоваться для идентификации соответствующих объектов в запросах клиентов, таких как спецификации продуктов, названия компаний или данные о филиалах компании.
+# relations = ""
+Кроме O
+того O
+, O
+NER B-Task
+может O
+использоваться O
+для O
+идентификации B-Task
+соответствующих I-Task
+объектов I-Task
+в O
+запросах O
+клиентов O
+, O
+таких O
+как O
+спецификации O
+продуктов O
+, O
+названия O
+компаний O
+или O
+данные O
+о O
+филиалах O
+компании O
+. O
+
+# text =   Команда DeepPavlov обучила модель NER на англоязычном корпусе OntoNotes, который имеет 19 типов разметки, включая PER (человек), LOC (местоположение), ORG (организация) и многие другие.
+# relations = "Model_isTrainedOn_Dataset 0 0, Model_hasAuthor_Organization 0 0"
+Команда O
+DeepPavlov B-Organization
+обучила B-Model_isTrainedOn_Dataset
+модель B-Model
+NER I-Model
+на O
+англоязычном O
+корпусе O
+OntoNotes B-Corpus
+, O
+который O
+имеет O
+19 O
+типов O
+разметки B-Method
+, O
+включая O
+PER O
+( O
+человек O
+) O
+, O
+LOC O
+( O
+местоположение O
+) O
+, O
+ORG O
+( O
+организация O
+) O
+и O
+многие O
+другие O
+. O
+
+# text =   Команда DeepPavlov обучила модель NER на англоязычном корпусе OntoNotes, который имеет 19 типов разметки, включая PER (человек), LOC (местоположение), ORG (организация) и многие другие.
+# relations = "Model_isTrainedOn_Dataset 0 0, Model_hasAuthor_Organization 0 0"
+Модель B-Model
+NER I-Model
+, O
+разработанная O
+командой O
+DeepPavlov B-Organization
+, O
+была O
+обучена B-Model_isTrainedOn_Dataset
+на O
+англоязычном O
+корпусе O
+OntoNotes B-Corpus
+, O
+включающем O
+19 O
+различных O
+меток O
+, O
+таких O
+как O
+PER O
+( O
+личность O
+) O
+, O
+LOC O
+( O
+местоположение O
+) O
+, O
+ORG O
+( O
+организация O
+) O
+и O
+другие O
+. O
+
+# text =   Одним из основных переломных моментов в этой области стал выпуск Стэнфордского набора данных для ответов на вопросы (SQuAD).
+# relations = "InfoResource_IsAlternativeNameFor_InfoResource 1 0"
+Одним O
+из O
+основных O
+переломных O
+моментов O
+в O
+этой O
+области O
+стал O
+выпуск O
+Стэнфордского B-InfoResource
+набора I-InfoResource
+данных I-InfoResource
+для I-InfoResource
+ответов I-InfoResource
+на I-InfoResource
+вопросы I-InfoResource
+( O
+SQuAD B-InfoResource
+) O
+. O
+
+# text =   Недавно был выпущен Стэнфордский набор данных для ответов на вопросы (SQuAD).
+# relations = "InfoResource_IsAlternativeNameFor_InfoResource 1 0"
+Недавно O
+был O
+выпущен O
+Стэнфордский B-InfoResource
+набор I-InfoResource
+данных I-InfoResource
+для I-InfoResource
+ответов I-InfoResource
+на I-InfoResource
+вопросы I-InfoResource
+( O
+SQuAD B-InfoResource
+) O
+. O
+
+# text =   Набор данных SQuAD привел к появлению бесчисленных подходов к решению задачи вопросно-ответных систем.
+# relations = "Method_solves_Task 0 0"
+Набор O
+данных O
+SQuAD B-InfoResource
+привел O
+к O
+появлению O
+бесчисленных O
+подходов B-Method
+к O
+решению B-Method_solves_Task
+задачи B-Task
+вопросно I-Task
+- I-Task
+ответных I-Task
+систем I-Task
+. O
+
+# text =   Одной из наиболее успешных является модель DeepPavlov BERT.
+# relations = ""
+Одной O
+из O
+наиболее O
+успешных O
+является O
+модель O
+DeepPavlov B-Model
+BERT I-Model
+. O
+
+# text =   Чтобы использовать модель QA на основе BERT с DeepPavlov, необходимо следующее.
+# relations = ""
+Чтобы O
+использовать O
+модель O
+QA B-Model
+на B-Model_isBasedOn_Model
+основе I-Model_isBasedOn_Model
+BERT B-Model
+с O
+DeepPavlov B-Model
+, O
+необходимо O
+следующее O
+. O
+
+# text =   DeepPavlov Agent — платформа для создания многозадачных чат-ботов.
+# relations = ""
+DeepPavlov B-Technology
+Agent I-Technology
+— O
+платформа O
+для O
+создания O
+многозадачных O
+чат O
+- O
+ботов O
+. O
+
+# text =   При разработке разговорных агентов в основном применяется модульная архитектура для целенаправленного диалога, при котором разворачивается сценарий.
+# relations = "Method_isUsedIn_Application 0 0"
+При O
+разработке O
+разговорных B-Technology
+агентов I-Technology
+в O
+основном O
+применяется B-Method_isUsedIn_Application
+модульная B-Method
+архитектура I-Method
+для O
+целенаправленного O
+диалога O
+, O
+при O
+котором O
+разворачивается O
+сценарий O
+. O
+
+# text =   Для решения этой задачи в октябре 2019 года вышел первый релиз DeepPavlov Agent 1.0 — платформы для создания многозадачных чат-ботов.
+# relations = "Date_isDateOf_Application 0 0"
+Для B-Application_isUsedForSolving_Task
+решения I-Application_isUsedForSolving_Task
+этой O
+задачи B-Task
+в O
+октябре O
+2019 B-Date
+года I-Date
+вышел O
+первый O
+релиз O
+DeepPavlov B-Technology
+Agent I-Technology
+1.0 I-Technology
+— O
+платформы O
+для O
+создания B-Task
+многозадачных I-Task
+чат I-Task
+- I-Task
+ботов I-Task
+. O
+
+# text =   Агент помогает разработчикам производственных чатботов организовать несколько NLP моделей в одном конвейере.
+# relations = ""
+Агент O
+помогает O
+разработчикам O
+производственных O
+чатботов O
+организовать B-Task
+несколько I-Task
+NLP I-Task
+моделей I-Task
+в O
+одном O
+конвейере O
+. O
+
+# text =   Чтобы упростить работу с предобученными NLP моделями из DeepPavlov, в сентябрь 2019 года был запущен SaaS сервис.
+# relations = "Date_isDateOf_Application 0 0, Model_isUsedIn_Application 0 0, Model_hasAuthor_Organization 0 0"
+Чтобы O
+упростить O
+работу O
+с O
+предобученными O
+NLP B-Model
+моделями I-Model
+из O
+DeepPavlov B-Organization
+, O
+в O
+сентябрь B-Date
+2019 I-Date
+года I-Date
+был O
+запущен O
+SaaS B-Technology
+сервис I-Technology
+. O
+
+# text =   В сентябре 2019 года был запущен сервис SaaS для упрощения взаимодействия с предварительно обученными моделями NLP от DeepPavlov.
+# relations = "Date_isDateOf_Application 0 0, Model_isUsedIn_Application 0 0, Model_hasAuthor_Organization 0 0"
+В O
+сентябре B-Date
+2019 I-Date
+года I-Date
+был O
+запущен O
+сервис O
+SaaS B-Technology
+для O
+упрощения O
+взаимодействия O
+с O
+предварительно O
+обученными O
+моделями B-Model
+NLP I-Model
+от O
+DeepPavlov B-Organization
+. O
+
+# text =   DeepPavlov Cloud позволяет анализировать текст, а также хранить документы в облачном хранилище.
+# relations = "Application_isUsedForSolving_Task 0 0, Application_isUsedForSolving_Task 0 1"
+DeepPavlov B-Technology
+Cloud I-Technology
+позволяет O
+анализировать B-Task
+текст I-Task
+, O
+а O
+также O
+хранить B-Task
+документы I-Task
+в O
+облачном O
+хранилище O
+. O
+
+# text =   Оценка состояния диалога (DST — Dialogue State Traking) является основным компонентом в таких диалоговых системах.
+# relations = "Task_IsAlternativeNameFor_Task 0 1, Task_IsAlternativeNameFor_Task 0 0"
+Оценка B-Task
+состояния I-Task
+диалога I-Task
+( O
+DST B-Task
+— O
+Dialogue B-Task
+State I-Task
+Traking I-Task
+) O
+является O
+основным O
+компонентом O
+в O
+таких O
+диалоговых O
+системах O
+. O
+
+# text =   DST отвечает за перевод высказываний на человеческом языке в семантическое представление языка, в частности, за извлечение намерений (intets) и пар слот-значение (slot, value), соответствующих цели пользователя.
+# relations = "Method_solves_Task 0 0"
+DST B-Method
+отвечает B-Method_solves_Task
+за I-Method_solves_Task
+перевод B-Task
+высказываний I-Task
+на O
+человеческом O
+языке O
+в O
+семантическое O
+представление O
+языка O
+, O
+в O
+частности O
+, O
+за O
+извлечение O
+намерений O
+( O
+intets O
+) O
+и O
+пар O
+слот O
+- O
+значение O
+( O
+slot O
+, O
+value O
+) O
+, O
+соответствующих O
+цели O
+пользователя O
+. O
+
+# text =   В ходе участия команды в DSTC8 была разработана модель GOLOMB (GOaL-Oriented Multi-task BERT-based dialogue state tracker) — целеориентированная мультизадачная модель на базе BERT для отслеживания состояния диалога.
+# relations = "Model_isUsedForSolving_Task 1 0, Model_IsShortNameFor_Model 0 1"
+В O
+ходе O
+участия O
+команды O
+в O
+DSTC8 O
+была O
+разработана O
+модель O
+GOLOMB B-Model
+( O
+GOaL B-Model
+- I-Model
+Oriented I-Model
+Multi I-Model
+- I-Model
+task I-Model
+BERT I-Model
+- I-Model
+based I-Model
+dialogue I-Model
+state I-Model
+tracker I-Model
+) O
+— O
+целеориентированная O
+мультизадачная O
+модель O
+на B-Model_isBasedOn_Model
+базе I-Model_isBasedOn_Model
+BERT B-Model
+для B-Model_isUsedForSolving_Task
+отслеживания B-Task
+состояния I-Task
+диалога I-Task
+. O
+
+# text =   В рамках участия в DSTC8 команда разработала целеориентированную мультизадачную модель отслеживания состояния диалога с использованием BERT, названную GOLOMB (GOaL-Oriented Multi-task BERT-based dialogue state tracker).
+# relations = "Model_isUsedForSolving_Task 1 0, Model_IsShortNameFor_Model 0 1"
+В O
+рамках O
+участия O
+в O
+DSTC8 O
+команда O
+разработала O
+целеориентированную O
+мультизадачную O
+модель O
+отслеживания B-Task
+состояния I-Task
+диалога I-Task
+с O
+использованием B-Model_isBasedOn_Model
+BERT B-Model
+, O
+названную O
+GOLOMB B-Model
+( O
+GOaL B-Model
+- I-Model
+Oriented I-Model
+Multi I-Model
+- I-Model
+task I-Model
+BERT I-Model
+- I-Model
+based I-Model
+dialogue I-Model
+state I-Model
+tracker I-Model
+) O
+. O
+
+# text =   Для предсказания состояния диалога модель решает несколько классификационных задач и задачу поиска подстроки.
+# relations = "Model_isUsedForSolving_Task 0 0, Model_isUsedForSolving_Task 0 1"
+Для O
+предсказания O
+состояния O
+диалога O
+модель B-Model
+решает B-Model_isUsedForSolving_Task
+несколько O
+классификационных B-Task
+задач I-Task
+и O
+задачу B-Task
+поиска I-Task
+подстроки I-Task
+. O
+
+# text =   В скором времени данная модель появится библиотеке DeepPavlov.
+# relations = ""
+В O
+скором O
+времени O
+данная O
+модель O
+появится O
+библиотеке O
+DeepPavlov B-Model
+. O
+
+# text =   Как было сказано ранее, DeepPavlov поставляется с несколькими предобученными компонентами, работающими на TensorFlow и Keras.
+# relations = ""
+Как O
+было O
+сказано O
+ранее O
+, O
+DeepPavlov B-Application
+поставляется O
+с O
+несколькими O
+предобученными O
+компонентами O
+, O
+работающими O
+на O
+TensorFlow B-Application
+и O
+Keras B-Application
+. O

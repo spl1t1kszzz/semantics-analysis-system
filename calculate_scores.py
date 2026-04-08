@@ -1,12 +1,13 @@
 import json
 import os
 import sys
+import traceback
 from typing import List, Dict, Any, Set, Optional
 
 from rich.progress import Progress
 
 from semantics_analysis.config import load_config
-from semantics_analysis.entities import read_sentences, Sentence, Relation
+from semantics_analysis.entities import read_sentences, Sentence, Relation, Term
 from semantics_analysis.ontology_utils import loaded_relation_ids
 from semantics_analysis.reference_resolution.llm_reference_resolver import LLMReferenceResolver
 from semantics_analysis.reference_resolution.reference_resolver import ReferenceResolver
@@ -85,42 +86,27 @@ def calculate_scores(
         reference_resolver: ReferenceResolver,
         sentences_to_check: List[Sentence],
         last_sent_id: int,
-        progress: Progress = Progress(),
+        progress: Progress,
         relation_to_consider: Optional[str] = None
 ) -> (int, bool):
+
     relations_to_consider = {relation_to_consider} if relation_to_consider else loaded_relation_ids
 
+    # инициализация счётчиков
     for rel_id in relations_to_consider:
-        if rel_id in scores:
-            continue
-
-        scores[rel_id] = {
-            'predicted': {
-                'incorrect': {
-                    'count': 0,
-                    'examples': []
+        if rel_id not in scores:
+            scores[rel_id] = {
+                'predicted': {
+                    'incorrect': {'count': 0, 'examples': []},
+                    'correct': {'count': 0, 'examples': []}
                 },
-                'correct': {
-                    'count': 0,
-                    'examples': []
-                }
-            },
-            'expected': {
-                'not_found': {
-                    'count': 0,
-                    'examples': []
-                },
-                'found': {
-                    'count': 0,
-                    'examples': []
+                'expected': {
+                    'not_found': {'count': 0, 'examples': []},
+                    'found': {'count': 0, 'examples': []}
                 }
             }
-        }
-
-    ignored_relations = set()
 
     counter = 1
-
     total_sentences = len(sentences_to_check)
 
     sentence_task = progress.add_task(
@@ -131,88 +117,94 @@ def calculate_scores(
     for sent in sentences_to_check:
         if sent.id <= last_sent_id:
             counter += 1
-            progress.update(sentence_task, advance=1, description=f'[green]Sentence {counter}/{total_sentences}')
+            progress.update(sentence_task, advance=1,
+                            description=f'[green]Sentence {counter}/{total_sentences}')
             continue
 
-        expected_relations = set()
-
-        #  we consider only those relations, that are actually covered at the current moment
-        for rel in sent.relations:
-            if rel.id in loaded_relation_ids:
-                expected_relations.add(rel)
+        # --- эталонные отношения ---
+        expected_relations = {
+            rel for rel in sent.relations if rel.id in loaded_relation_ids
+        }
 
         if not expected_relations:
             counter += 1
-            progress.update(sentence_task, advance=1, description=f'[green]Sentence {counter}/{total_sentences}')
+            progress.update(sentence_task, advance=1,
+                            description=f'[green]Sentence {counter}/{total_sentences}')
             continue
 
-        try:
-            grouped_terms = reference_resolver(sent.terms, sent.text, progress, normalize=False)
-        except Exception:
-            progress.remove_task(sentence_task)
+        # --- собираем mentions для resolver ---
+        term_mentions = []
+        for term in sent.terms:
+            term_mentions.extend(term.mentions)
 
+        try:
+            grouped_terms: List[Term] = reference_resolver(term_mentions, sent.text)
+        except Exception as e:
+            print(traceback.format_exc())
+            progress.remove_task(sentence_task)
             return last_sent_id, False
 
-        predicted_relations = set()
+        predicted_relations: Set[Relation] = set()
 
-        group_by_term = {}
+        # соответствие Term → все его варианты (через mentions)
+        term_variants: Dict[Term, List[Term]] = {}
 
-        for grouped_term in grouped_terms:
-            group_by_term[grouped_term.as_single()] = grouped_term.items
+        for term in grouped_terms:
+            variants = [
+                Term(term.class_, m.value, [m]) for m in term.mentions
+            ]
+            term_variants[term] = variants
 
-            if grouped_term.size() == 1:
-                continue
+            # автоматически добавляем isAlternativeNameFor
+            if len(variants) > 1:
+                for i in range(len(variants)):
+                    for j in range(i + 1, len(variants)):
+                        if variants[i].value != variants[j].value:
+                            predicted_relations.add(
+                                Relation(variants[i], 'isAlternativeNameFor', variants[j])
+                            )
 
-            for i in range(len(grouped_term.items)):
-                for j in range(i + 1, len(grouped_term.items)):
-                    term1 = grouped_term.items[i]
-                    term2 = grouped_term.items[j]
-
-                    term1_value = term1.value.lower()[:-1]  # drop word endings
-                    term2_value = term2.value.lower()[:-1]
-
-                    if len(term1_value) > len(term2_value):
-                        term1_value, term2_value = term2_value, term1_value
-
-                    if len(term1_value) >= 4 and term1_value in term2_value:
-                        continue  # the same terms
-
-                    predicted_relations.add(Relation(term1, 'isAlternativeNameFor', term2))
-
-        terms = [t.as_single() for t in grouped_terms]
-
+        # --- извлечение отношений LLM ---
         try:
             if relation_to_consider:
                 class1, _, class2 = relation_to_consider.split('_')
-                relations = relation_extractor(sent.text, terms, progress, class1, class2)
+                relations = relation_extractor(sent.text, grouped_terms, progress, class1, class2)
             else:
-                relations = relation_extractor(sent.text, terms, progress)
+                relations = relation_extractor(sent.text, grouped_terms)
 
-            for rel in relations:
-                predicted_relations.add(rel)
+                for rel in relations.items:
+                    if rel is not None:
+                        predicted_relations.add(rel)
 
-                # reference resolving
-                for term1_option in group_by_term[rel.term1]:
-                    for term2_option in group_by_term[rel.term2]:
-                        rel_option = Relation(term1_option, rel.predicate, term2_option)
-
-                        if rel_option in expected_relations:
-                            predicted_relations.add(rel_option)
+                        # coreference-aware сопоставление
+                        for t1 in term_variants.get(rel.term1, [rel.term1]):
+                            for t2 in term_variants.get(rel.term2, [rel.term2]):
+                                rel_option = Relation(t1, rel.predicate, t2)
+                                if rel_option in expected_relations:
+                                    predicted_relations.add(rel_option)
 
         except Exception as e:
+            print(traceback.format_exc())
             progress.remove_task(sentence_task)
             return last_sent_id, False
 
-        update_scores(sent, predicted_relations, expected_relations, ignored_relations, scores)
+        update_scores(
+            sent,
+            predicted_relations,
+            expected_relations,
+            ignored_relations=set(),
+            scores=scores
+        )
 
-        counter += 1
-        progress.update(sentence_task, advance=1, description=f'[green]Sentence {counter}/{total_sentences}')
         last_sent_id = sent.id
+        counter += 1
+        progress.update(sentence_task, advance=1,
+                        description=f'[green]Sentence {counter}/{total_sentences}')
 
     if counter < total_sentences:
         progress.remove_task(sentence_task)
 
-    return last_sent_id, counter >= total_sentences
+    return last_sent_id, True
 
 
 def main():
@@ -220,7 +212,7 @@ def main():
 
     argv = sys.argv
 
-    sentences_file = 'tests/sentences.json'
+    sentences_file = 'tests/short_sent.json'
 
     for arg in argv:
         if arg.endswith('.json'):
@@ -257,15 +249,15 @@ def main():
                 sentences_to_check.append(sent)
                 continue
 
-    if relation_to_consider:
-        if not os.path.exists(f'tests/{relation_to_consider}'):
-            os.makedirs(f'tests/{relation_to_consider}')
-
-        lock_path = f'tests/{relation_to_consider}/last_stop.lock'
-        scores_path = f'tests/{relation_to_consider}/scores.json'
-    else:
-        lock_path = 'tests/last_stop.lock'
-        scores_path = 'tests/scores.json'
+    # if relation_to_consider:
+    #     if not os.path.exists(f'tests/{relation_to_consider}'):
+    #         os.makedirs(f'tests/{relation_to_consider}')
+    #
+    #     lock_path = f'tests/{relation_to_consider}/last_stop.lock'
+    #     scores_path = f'tests/{relation_to_consider}/new_scores.json'
+    # else:
+    lock_path = 'tests/last_stop.lock'
+    scores_path = 'results/shot_rel_new_prompts.json'
 
     try:
         with open(lock_path, 'r', encoding='utf-8') as f:

@@ -1,0 +1,224 @@
+# text =   Типичным методом обучения без учителя является кластеризация, благодаря которому обучающая выборка разбивается на устойчивые группы или кластеры.
+# relations = "Method_includes_Method 0 1, Object_includes_Object 0 1, Object_includes_Object 0 2"
+Типичным O
+методом B-Method_ML
+обучения I-Method_ML
+без I-Method_ML
+учителя I-Method_ML
+является O
+кластеризация B-Method_ML
+, O
+благодаря O
+которому O
+обучающая O
+выборка B-Object
+разбивается B-Object_includes_Object
+на O
+устойчивые B-Object
+группы I-Object
+или O
+кластеры B-Object
+. O
+
+# text =   Другой подход обучения без учителя для текстов называется тематическим моделированием (topic modeling), позволяющим выявить в неразмеченных текстах основные тематики.
+# relations = "Method_includes_Method 0 1, Method_is_applied_to_Object 1 0, Method_solves_Task 1 0, Method_is_applied_to_Object 1 0"
+Другой O
+подход B-Method_ML
+обучения I-Method_ML
+без I-Method_ML
+учителя I-Method_ML
+для B-Method_is_applied_to_Object
+текстов B-Object
+называется O
+тематическим B-Method_ML
+моделированием I-Method_ML
+( O
+topic B-Method_ML
+modeling I-Method_ML
+) O
+, O
+позволяющим B-Method_solves_Task
+выявить B-Task
+в O
+неразмеченных B-Object
+текстах I-Object
+основные B-Object
+тематики I-Object
+. O
+
+# text =   Если отказываемся от методов unsupervised learning, то логично обратиться к методам обучения с учителем (supervised learning) и в частности к классификации.
+# relations = "Method_includes_Method 1 3"
+Если O
+отказываемся O
+от O
+методов O
+unsupervised B-Method_ML
+learning I-Method_ML
+, O
+то O
+логично O
+обратиться O
+к O
+методам B-Method_ML
+обучения I-Method_ML
+с I-Method_ML
+учителем I-Method_ML
+( O
+supervised B-Method_ML
+learning I-Method_ML
+) O
+и O
+в O
+частности O
+к O
+классификации B-Method_ML
+. O
+
+# text =   Результатом работы языковой модели являются эмбеддинги — это отображение из пространства слов в пространство векторов конкретной фиксированной длины, причем векторы, соответствующие близким по смыслу словам, будут расположены в новом пространстве рядом, а далекие по смыслу — далеко.
+# relations = ""
+Результатом O
+работы O
+языковой B-Model
+модели I-Model
+являются O
+эмбеддинги B-Object
+— O
+это O
+отображение O
+из O
+пространства O
+слов B-Subject
+в O
+пространство O
+векторов O
+конкретной O
+фиксированной O
+длины O
+, O
+причем O
+векторы O
+, O
+соответствующие O
+близким O
+по O
+смыслу B-Subject
+словам I-Subject
+, O
+будут O
+расположены O
+в O
+новом O
+пространстве O
+рядом O
+, O
+а O
+далекие O
+по O
+смыслу O
+— O
+далеко O
+. O
+
+# text =   При использовании TF-IDF (например, вот) подхода с фильтром по частотам и логистической регрессии уже можно получить прекрасные результаты: изначально в краулер отправлялись очень разные тексты, и модель прекрасно справляется.
+# relations = "Metric_isAppliedTo_Method 0 0"
+При O
+использовании B-Metric_isAppliedTo_Method
+TF B-Metric
+- I-Metric
+IDF I-Metric
+( O
+например O
+, O
+вот O
+) O
+подхода O
+с O
+фильтром O
+по O
+частотам O
+и O
+логистической B-Method_ML
+регрессии I-Method_ML
+уже O
+можно O
+получить O
+прекрасные O
+результаты O
+: O
+изначально O
+в O
+краулер O
+отправлялись O
+очень O
+разные O
+тексты O
+, O
+и O
+модель O
+прекрасно O
+справляется O
+. O
+
+# text =   Используя TF-IDF с фильтром по частотам и логистической регрессией, уже можно достичь отличных результатов.
+# relations = "Metric_isAppliedTo_Method 0 0"
+Используя B-Metric_isAppliedTo_Method
+TF B-Metric
+- I-Metric
+IDF I-Metric
+с O
+фильтром O
+по O
+частотам O
+и O
+логистической B-Method_ML
+регрессией I-Method_ML
+, O
+уже O
+можно O
+достичь O
+отличных O
+результатов O
+. O
+
+# text =   Для каждой из популяций рассчитаем word2vec расстояние до центра положительной обучающей выборки.
+# relations = ""
+Для O
+каждой O
+из O
+популяций O
+рассчитаем O
+word2vec B-Model
+расстояние O
+до O
+центра O
+положительной O
+обучающей O
+выборки B-Object
+. O
+
+# text =   Распределения можно разделить, и для оценки расстояния между распределениями в первую очередь логично обратиться к Дивергенции Кульбака-Лейблера (ДКЛ).
+# relations = ""
+Распределения O
+можно O
+разделить O
+, O
+и O
+для B-Metric_isUsed_in_Activity
+оценки B-Activity
+расстояния I-Activity
+между O
+распределениями O
+в O
+первую O
+очередь O
+логично O
+обратиться O
+к O
+Дивергенции B-Metric
+Кульбака I-Metric
+- I-Metric
+Лейблера I-Metric
+( O
+ДКЛ B-Metric
+) O
+. O

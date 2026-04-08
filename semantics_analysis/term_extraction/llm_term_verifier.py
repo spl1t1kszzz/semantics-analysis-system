@@ -47,7 +47,7 @@ class LLMTermVerifier(TermVerifier):
 
         response = self.llm_agent(
             prompt,
-            max_new_tokens=1,
+            max_new_tokens=8,
             stop_sequences=['.', '\n']
         )
 

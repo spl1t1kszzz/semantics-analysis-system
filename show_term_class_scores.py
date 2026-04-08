@@ -7,7 +7,7 @@ from display_scores import parse_scores
 
 storage = {}
 
-rel_cnt_scores = parse_scores('tests/scores.json', [], storage)
+rel_cnt_scores = parse_scores('tests/new_scores.json', [], storage)
 
 rel_f1 = []
 

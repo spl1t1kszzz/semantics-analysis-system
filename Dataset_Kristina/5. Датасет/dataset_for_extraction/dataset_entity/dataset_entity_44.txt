@@ -1,0 +1,85 @@
+# text =   Соответственно, мы приходим к стандартной задаче Machine Learning (ML) – «многоклассовая классификация».
+# relations = "Science_IsAlternativeNameFor_Science 1 0, Task_isSolvedIn_Science 0 0"
+Соответственно O
+, O
+мы O
+приходим O
+к O
+стандартной O
+задаче O
+Machine B-Science
+Learning I-Science
+( O
+ML B-Science
+) O
+– O
+« O
+многоклассовая B-Task
+классификация I-Task
+» O
+. O
+
+# text = Стандартной задачей Machine Learning (ML)  является многоклассовая классификация.
+# relations = "Science_IsAlternativeNameFor_Science 1 0, Task_isSolvedIn_Science 0 0"
+Стандартной O
+задачей O
+Machine B-Science
+Learning I-Science
+( O
+ML B-Science
+) O
+является O
+многоклассовая B-Task
+классификация I-Task
+. O
+
+# text = Многоклассовая классификация - это известная задача Machine Learning (ML).
+# relations = "Science_IsAlternativeNameFor_Science 1 0, Task_isSolvedIn_Science 0 0"
+Многоклассовая B-Task
+классификация I-Task
+- O
+это O
+известная O
+задача O
+Machine B-Science
+Learning I-Science
+( O
+ML B-Science
+) O
+. O
+
+# text =   В результате данного анализа решается задача — сбор сводной аналитики по организации.
+# relations = "Method_solves_Task 0 0"
+В O
+результате O
+данного O
+анализа B-Method
+решается B-Method_solves_Task
+задача O
+— O
+сбор B-Task
+сводной I-Task
+аналитики I-Task
+по I-Task
+организации I-Task
+. O
+
+# text =   В случае многоклассовой классификации число классов должно быть более 2 и может достигать даже многих тысяч.
+# relations = "Object_isUsedInSolving_Task 0 0"
+В O
+случае O
+многоклассовой B-Task
+классификации I-Task
+число O
+классов B-Object
+должно O
+быть O
+более O
+2 O
+и O
+может O
+достигать O
+даже O
+многих O
+тысяч O
+. O

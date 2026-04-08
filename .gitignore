@@ -1,5 +1,6 @@
 __pycache__
 .idea
+.env
 tests/scores*
 tests/last_stop.lock
 tests/*/

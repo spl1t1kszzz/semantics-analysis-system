@@ -228,3 +228,35 @@ class PredictSemanticRelations(Pipeline):
 
         state.relations = predicted_relations
         return state
+
+
+class ResolveRelationConflicts(Pipeline):
+    """
+    Мультиагентный шаг: агент разрешения конфликтов.
+    Для пар сущностей с несколькими разными предикатами оставляет один выбранный LLM.
+    """
+    def __init__(self, conflict_resolver, progress: Progress):
+        self.conflict_resolver = conflict_resolver
+        self.progress = progress
+
+    def __call__(self, state: AnalysisResult) -> AnalysisResult:
+        from semantics_analysis.multi_agent.conflict_resolution import detect_relation_conflicts
+
+        if not state.relations:
+            return state
+
+        conflicts = detect_relation_conflicts(state.relations)
+        if not conflicts:
+            return state
+
+        task = self.progress.add_task(
+            description=f'Resolving {len(conflicts)} relation conflicts',
+            total=len(conflicts),
+        )
+        resolved, n_detected, n_resolved = self.conflict_resolver.resolve_all(
+            state.text, state.relations
+        )
+        state.relations = resolved
+        self.progress.update(task, advance=len(conflicts))
+        self.progress.remove_task(task)
+        return state

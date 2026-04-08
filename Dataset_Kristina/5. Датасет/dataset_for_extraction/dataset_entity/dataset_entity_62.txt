@@ -1,0 +1,407 @@
+# text =   Для решения ситуации мы можем искусственно сгенерировать данные с помощью языка программирования.
+# relations = ""
+Для O
+решения O
+ситуации O
+мы O
+можем O
+искусственно O
+сгенерировать B-Task
+данные I-Task
+с O
+помощью O
+языка O
+программирования O
+. O
+
+# text =   Пересмотрев множество примеров и статей, была найдена англоязычная статья, в которой рассмотрены три самых интересных, в плане функциональности и простоты использования, способа генерации синтетических данных с помощью пакетов Python.
+# relations = ""
+Пересмотрев O
+множество O
+примеров O
+и O
+статей O
+, O
+была O
+найдена O
+англоязычная B-Lang
+статья O
+, O
+в O
+которой O
+рассмотрены O
+три O
+самых O
+интересных O
+, O
+в O
+плане O
+функциональности O
+и O
+простоты O
+использования O
+, O
+способа O
+генерации B-Task
+синтетических I-Task
+данных I-Task
+с O
+помощью O
+пакетов O
+Python B-Environment
+. O
+
+# text =   Faker - это пакет Python, разработанный для упрощения генерации синтетических данных.
+# relations = "Application_isUsedForSolving_Task 0 0, Environment_isUsedIn_Application 0 0"
+Faker B-Library
+- O
+это O
+пакет O
+Python B-Environment
+, O
+разработанный O
+для O
+упрощения O
+генерации B-Task
+синтетических I-Task
+данных I-Task
+. O
+
+# text =   SDV или Synthetic Data Vault - это пакет Python для генерации синтетических данных на основе предоставленного набора данных.
+# relations = "Application_IsAlternativeNameFor_Application 1 0, Environment_isUsedIn_Application 0 0, Application_isUsedForSolving_Task 0 0"
+SDV B-Library
+или O
+Synthetic B-Library
+Data I-Library
+Vault I-Library
+- O
+это O
+пакет O
+Python B-Environment
+для O
+генерации B-Task
+синтетических I-Task
+данных I-Task
+на O
+основе O
+предоставленного O
+набора O
+данных O
+. O
+
+# text = Synthetic Data Vault (SDV) - это библиотека Python, использующаяся для генерации синтетических данных на основе предоставленного набора данных.
+# relations = "Application_IsAlternativeNameFor_Application 1 0, Environment_isUsedIn_Application 0 0, Application_isUsedForSolving_Task 0 0"
+Synthetic B-Library
+Data I-Library
+Vault I-Library
+( O
+SDV B-Library
+) O
+- O
+это O
+библиотека O
+Python B-Environment
+, O
+использующаяся O
+для O
+генерации B-Task
+синтетических I-Task
+данных I-Task
+на O
+основе O
+предоставленного O
+набора O
+данных O
+. O
+
+# text =  SDV генерирует данные, применяя математические методы и модели машинного обучения.
+# relations = "Method_solves_Task 0 0, Application_isUsedForSolving_Task 0 0, Model_isUsedForSolving_Task 0 0"
+SDV B-Library
+генерирует B-Task
+данные I-Task
+, O
+применяя B-Method_solves_Task
+математические B-Method
+методы I-Method
+и O
+модели B-Model
+машинного I-Model
+обучения I-Model
+. O
+
+# text = Synthetic Data Vault (SDV) создает данные с использованием математических методов и моделей машинного обучения.
+# relations = "Application_IsAlternativeNameFor_Application 0 1, Method_solves_Task 0 0, Application_isUsedForSolving_Task 0 0, Model_isUsedForSolving_Task 0 0"
+Synthetic B-Library
+Data I-Library
+Vault I-Library
+( O
+SDV B-Library
+) O
+создает B-Task
+данные I-Task
+с B-Method_solves_Task
+использованием I-Method_solves_Task
+математических B-Method
+методов I-Method
+и O
+моделей B-Model
+машинного I-Model
+обучения I-Model
+. O
+
+# text =   С помощью SVD можно обработать данные, даже если они содержат несколько типов данных и отсутствующие значения.
+# relations = "Application_isUsedForSolving_Task 0 0"
+С O
+помощью O
+SVD B-Library
+можно O
+обработать B-Task
+данные I-Task
+, O
+даже O
+если O
+они O
+содержат O
+несколько O
+типов O
+данных O
+и O
+отсутствующие O
+значения O
+. O
+
+# text =   С помощью Synthetic Data Vault (SDV) могут быть обработаны данные нескольких типов.
+# relations = "Application_IsAlternativeNameFor_Application 0 1, Application_isUsedForSolving_Task 0 0"
+С O
+помощью O
+Synthetic B-Library
+Data I-Library
+Vault I-Library
+( O
+SDV B-Library
+) O
+могут O
+быть O
+обработаны B-Task
+данные I-Task
+нескольких O
+типов O
+. O
+
+# text =   Используем для этого одну из доступных моделей SVD Singular Table GaussianCopula.
+# relations = "Model_isUsedIn_Application 0 0"
+Используем O
+для O
+этого O
+одну O
+из O
+доступных O
+моделей O
+SVD B-Library
+Singular B-Model
+Table I-Model
+GaussianCopula I-Model
+. O
+
+# text =   Для этого применяем одну из моделей, доступных в библиотеке SVD - Singular Table GaussianCopula.
+# relations = "Model_isUsedIn_Application 0 0"
+Для O
+этого O
+применяем O
+одну O
+из O
+моделей O
+, O
+доступных O
+в O
+библиотеке O
+SVD B-Library
+- O
+Singular B-Model
+Table I-Model
+GaussianCopula I-Model
+. O
+
+# text =   Воспользуемся функцией evaluate из SDV.
+# relations = ""
+Воспользуемся O
+функцией O
+evaluate B-Method
+из B-Library_includes_Method
+SDV B-Library
+. O
+
+# text =   Возьмем для примера статистические метрики (критерии Колмогорова–Смирнова и Хи-квадрат) и метрику обнаружения, основанную на классификаторе логистической регрессии.
+# relations = ""
+Возьмем O
+для O
+примера O
+статистические B-Metric
+метрики I-Metric
+( O
+критерии B-Metric
+Колмогорова I-Metric
+– I-Metric
+Смирнова I-Metric
+и O
+Хи B-Metric
+- I-Metric
+квадрат I-Metric
+) O
+и O
+метрику B-Metric
+обнаружения I-Metric
+, O
+основанную O
+на O
+классификаторе B-Method_ML
+логистической I-Method_ML
+регрессии I-Method_ML
+. O
+
+# text =   KSTest используется для сравнения столбцов с непрерывными данными, а CSTest с дискретными данными.
+# relations = ""
+KSTest B-Metric
+используется O
+для O
+сравнения O
+столбцов O
+с O
+непрерывными O
+данными O
+, O
+а O
+CSTest B-Metric
+с O
+дискретными O
+данными O
+. O
+
+# text =   Метрика LogisticDetection при помощи машинного обучения позволяет оценить насколько сложно отличить синтетические данные от исходных.
+# relations = "Metric_isUsedIn_Task 0 0"
+Метрика O
+LogisticDetection B-Metric
+при O
+помощи O
+машинного O
+обучения O
+позволяет B-Metric_isUsedIn_Task
+оценить I-Metric_isUsedIn_Task
+насколько O
+сложно O
+отличить B-Task
+синтетические I-Task
+данные I-Task
+от I-Task
+исходных I-Task
+. O
+
+# text =   Gretel или Gretel Synthetics – это пакет Python с открытым исходным кодом, основанный на рекуррентной нейронной сети для создания структурированных и не структурированных данных.
+# relations = "Method_isUsedIn_Application 0 0, Environment_isUsedIn_Application 0 0, Application_IsAlternativeNameFor_Application 1 0"
+Gretel B-Library
+или O
+Gretel B-Library
+Synthetics I-Library
+– O
+это O
+пакет O
+Python B-Environment
+с O
+открытым O
+исходным O
+кодом O
+, O
+основанный O
+на O
+рекуррентной B-Method_ML
+нейронной I-Method_ML
+сети I-Method_ML
+для O
+создания O
+структурированных O
+и O
+не O
+структурированных O
+данных O
+. O
+
+# text = Gretel (Gretel Synthetics, GS) – это библиотека на Python.
+# relations = "Environment_isUsedIn_Application 0 0, Application_IsAlternativeNameFor_Application 1 0, Application_IsAlternativeNameFor_Application 2 0"
+Gretel B-Library
+( O
+Gretel B-Library
+Synthetics I-Library
+, O
+GS B-Library
+) O
+– O
+это O
+библиотека O
+на O
+Python B-Environment
+. O
+
+# text =   Этот модуль работает непосредственно с датафреймами данных Pandas и позволяет автоматически разбивать датафрейм на более мелкие датафреймы (по кластерам столбцов), выполнять обучение модели и генерацию для каждого фрейма независимо.
+# relations = ""
+Этот O
+модуль O
+работает O
+непосредственно O
+с O
+датафреймами O
+данных O
+Pandas B-Application
+и O
+позволяет O
+автоматически O
+разбивать O
+датафрейм O
+на O
+более O
+мелкие O
+датафреймы O
+( O
+по O
+кластерам O
+столбцов O
+) O
+, O
+выполнять O
+обучение O
+модели O
+и O
+генерацию O
+для O
+каждого O
+фрейма O
+независимо O
+. O
+
+# text =   Теперь с помощью пакета Gretel cгенерируем синтетические данные для Stroke Prediction Dataset и проанализируем их относительно данных полученных с помощью пакета SVD из пункта 2.
+# relations = ""
+Теперь O
+с O
+помощью O
+пакета O
+Gretel B-Library
+cгенерируем O
+синтетические O
+данные O
+для O
+Stroke B-Dataset
+Prediction I-Dataset
+Dataset I-Dataset
+и O
+проанализируем O
+их O
+относительно O
+данных O
+полученных O
+с O
+помощью O
+пакета O
+SVD B-Library
+из O
+пункта O
+2 O
+. O

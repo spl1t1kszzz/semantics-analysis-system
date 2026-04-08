@@ -1,0 +1,25 @@
+# text =   Он опубликовал программу (репозиторий на гитхабе), которая делает именно это: генерирует политические речи, удивительно похожие на настоящие.
+# relations = "Application_isUsedForSolving_Task 0 0"
+Он O
+опубликовал B-Application_hasAuthor_Person
+программу B-Application
+( O
+репозиторий O
+на O
+гитхабе O
+) O
+, O
+которая B-Application_isUsedForSolving_Task
+делает I-Application_isUsedForSolving_Task
+именно O
+это O
+: O
+генерирует B-Task
+политические I-Task
+речи I-Task
+, O
+удивительно O
+похожие O
+на O
+настоящие O
+. O
