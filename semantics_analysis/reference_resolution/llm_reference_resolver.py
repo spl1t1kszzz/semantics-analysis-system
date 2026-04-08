@@ -17,19 +17,16 @@ class LLMReferenceResolver(ReferenceResolver):
                  show_explanation: bool = False,
                  log_prompts: bool = False,
                  log_llm_responses: bool = False,
-                 use_all_tokens: bool = False):
+                 ):
         with open('prompts/resolve_reference.txt', 'r', encoding='utf-8') as f:
             self.check_synonyms_prompt_template = f.read().strip()
 
         self.model = model
-        self.llm_agent = LLMAgent(
-            model=model,
-            use_all_tokens=use_all_tokens
-        )
+        self.llm_agent = LLMAgent(model=model)
         self.show_explanation = show_explanation
         self.log_prompts = log_prompts
         self.log_llm_responses = log_llm_responses
-        self.use_all_tokens = use_all_tokens
+        
         self.token_idx = 0
         self.progress = progress
 

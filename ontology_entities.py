@@ -163,7 +163,7 @@ def add_person_attrs(
         return
 
     from semantics_analysis.llm_agent import LLMAgent
-    llm_agent = LLMAgent(use_all_tokens=True)
+    llm_agent = LLMAgent()
 
     with open('prompts/person.txt', 'r', encoding='utf-8') as f:
         prompt_template = f.read().strip()

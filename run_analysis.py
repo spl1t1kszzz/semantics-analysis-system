@@ -62,7 +62,6 @@ def analyze_text(app_config: Config, roberta_term_predictor: Optional[TermMentio
         show_explanation=app_config.show_explanation,
         log_prompts=app_config.log_prompts,
         log_llm_responses=app_config.log_llm_responses,
-        use_all_tokens=True
     )
 
     text = input(f'{LOG_STYLE}[      INPUT     ]{Style.RESET_ALL}: ')
@@ -74,8 +73,7 @@ def analyze_text(app_config: Config, roberta_term_predictor: Optional[TermMentio
             show_explanation=app_config.show_explanation,
             log_prompts=app_config.log_prompts,
             log_llm_responses=app_config.log_llm_responses,
-            use_all_tokens=True,
-            progress=progress
+            progress=progress,
         )
 
         if app_config.use_multi_agent:

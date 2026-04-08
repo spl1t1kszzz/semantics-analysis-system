@@ -53,7 +53,7 @@ class RelationConflictResolver:
     ):
         if llm_agent is None:
             from semantics_analysis.llm_agent import LLMAgent
-            llm_agent = LLMAgent(use_all_tokens=True)
+            llm_agent = LLMAgent()
         self.llm_agent = llm_agent
         self.log_prompts = log_prompts
         self.log_responses = log_responses

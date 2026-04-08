@@ -12,7 +12,7 @@ class LLMTermNormalizer(TermNormalizer):
         if llm_agent:
             self.llm_agent = llm_agent
         else:
-            self.llm_agent = LLMAgent(use_all_tokens=True)
+            self.llm_agent = LLMAgent()
 
         with open('prompts/normalization.txt', 'r', encoding='utf-8') as f:
             self.prompt_template = f.read()

@@ -1,9 +1,8 @@
 import os
-from typing import List, Optional
+import time
+from typing import List
 
 from openai import OpenAI
-
-from semantics_analysis.values import values
 
 try:
     from dotenv import load_dotenv
@@ -11,8 +10,10 @@ try:
 except ImportError:
     pass
 
-# По умолчанию используется OpenAI API (нужен OPENAI_API_KEY в .env или окружении).
-# OPENAI_API_BASE задаётся только для прокси или другого endpoint.
+MAX_RETRIES = 5
+RETRY_DELAY_SECONDS = 2
+
+
 def _get_openai_client():
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     base_url = os.environ.get("OPENAI_API_BASE", "").strip() or None
@@ -31,20 +32,14 @@ class LLMAgent:
     def __init__(
             self,
             model: str = 'gpt-4o-mini',
-            use_all_tokens: bool = False,
     ):
         self.model = model
         self.llm = _get_openai_client()
-        self.use_all_tokens = use_all_tokens
 
     def __call__(self, prompt: str, stop_sequences: List[str], max_new_tokens: int) -> str:
-        attempt = 0
-
-        while True:
+        for attempt in range(MAX_RETRIES):
             try:
-                messages = []
-                messages.append({"role": "user", "content": prompt})
-                # temperature не передаём: часть моделей (например o1) поддерживает только значение по умолчанию
+                messages = [{"role": "user", "content": prompt}]
                 return self.llm.chat.completions.create(
                     model=self.model,
                     messages=messages,
@@ -53,8 +48,6 @@ class LLMAgent:
                 ).choices[0].message.content.strip()
             except Exception as e:
                 print(e)
-                if attempt >= len(values):
-                    raise e
-
-                attempt += 1
-                continue
+                if attempt >= MAX_RETRIES - 1:
+                    raise
+                time.sleep(RETRY_DELAY_SECONDS * (attempt + 1))

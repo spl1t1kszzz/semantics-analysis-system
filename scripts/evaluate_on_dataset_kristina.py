@@ -179,8 +179,8 @@ def main():
     print(f"Сохранять предсказанные тройки для метрик графа: {save_triples}")
 
     with Progress() as progress:
-        ref_resolver = LLMReferenceResolver(progress=progress, model=config.llm, use_all_tokens=True)
-        relation_extractor = LLMRelationExtractor(model=config.llm, use_all_tokens=True)
+        ref_resolver = LLMReferenceResolver(progress=progress, model=config.llm)
+        relation_extractor = LLMRelationExtractor(model=config.llm)
         conflict_resolver = None
         if use_multi_agent:
             from semantics_analysis.multi_agent.conflict_resolution import RelationConflictResolver

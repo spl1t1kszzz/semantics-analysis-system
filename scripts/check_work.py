@@ -99,9 +99,8 @@ def run_full_pipeline():
         ref_resolver = LLMReferenceResolver(
             model=config.llm,
             progress=progress,
-            use_all_tokens=True,
         )
-        relation_extractor = LLMRelationExtractor(use_all_tokens=True)
+        relation_extractor = LLMRelationExtractor()
         conflict_resolver = RelationConflictResolver()
 
         orchestrator = MultiAgentOrchestrator(

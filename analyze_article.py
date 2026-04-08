@@ -39,7 +39,6 @@ def analyze_article(article_id: int, app_config: Config) -> AnalysisResult:
         show_explanation=app_config.show_explanation,
         log_prompts=app_config.log_prompts,
         log_llm_responses=app_config.log_llm_responses,
-        use_all_tokens=True
     )
 
     result = AnalysisResult(f'{article_id}')
@@ -62,8 +61,7 @@ def analyze_article(article_id: int, app_config: Config) -> AnalysisResult:
             show_explanation=app_config.show_explanation,
             log_prompts=app_config.log_prompts,
             log_llm_responses=app_config.log_llm_responses,
-            use_all_tokens=True,
-            progress=progress
+            progress=progress,
         )
 
         semantics_analysis = SequencePipeline(

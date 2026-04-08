@@ -23,19 +23,15 @@ class LLMRelationExtractor(RelationExtractor):
                  show_explanation: bool = False,
                  log_prompts: bool = False,
                  log_llm_responses: bool = False,
-                 use_all_tokens: bool = False,
+                 
                  considered_class1: Optional[str] = None,
                  considered_class2: Optional[str] = None
                  ):
 
         self.model = model
-        self.use_all_tokens = use_all_tokens
         self.token_idx = 0
 
-        self.llm_agent = LLMAgent(
-            model=model,
-            use_all_tokens=use_all_tokens
-        )
+        self.llm_agent = LLMAgent(model=model)
 
         with open('prompts/relation_extraction.txt', 'r', encoding='utf-8') as f:
             self.prompt_template = f.read().strip()

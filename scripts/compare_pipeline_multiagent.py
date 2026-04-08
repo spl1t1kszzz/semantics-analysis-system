@@ -167,8 +167,8 @@ def main():
         print(f"Ограничение: первые {limit} предложений")
     print("Сравнение: базовый пайплайн vs с разрешением конфликтов (два прохода по датасету).")
     with Progress() as progress:
-        ref_resolver = LLMReferenceResolver(progress=progress, model=config.llm, use_all_tokens=True)
-        relation_extractor = LLMRelationExtractor(model=config.llm, use_all_tokens=True)
+        ref_resolver = LLMReferenceResolver(progress=progress, model=config.llm)
+        relation_extractor = LLMRelationExtractor(model=config.llm)
         result_baseline, result_multiagent, triples_baseline, triples_multiagent = run_both(
             sentences, relation_extractor, ref_resolver, progress, limit=limit
         )

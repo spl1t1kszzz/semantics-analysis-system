@@ -10,7 +10,7 @@ class LLMTermVerifier(TermVerifier):
         if llm_agent:
             self.llm_agent = llm_agent
         else:
-            self.llm_agent = LLMAgent(use_all_tokens=True)
+            self.llm_agent = LLMAgent()
 
         with open('prompts/verify_term.txt', 'r', encoding='utf-8') as f:
             self.verification_prompt_template = f.read().strip()
