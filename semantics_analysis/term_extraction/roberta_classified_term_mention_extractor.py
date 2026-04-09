@@ -13,28 +13,7 @@ from semantics_analysis.utils import log_term_predictions
 DEFAULT_THRESHOLD = 0.7
 
 
-LABEL_LIST = [
-    'Method',
-    'Activity',
-    'Science',
-    'Object',
-    'Person',
-    'InfoResource',
-    'Task',
-    'Organization',
-    'Environment',
-    'Model',
-    'Metric',
-    'Value',
-    'Application',
-    'Date',
-    'Lang',
-    'Dataset'
-]
-
-id2label = {i: LABEL_LIST[i] for i in range(len(LABEL_LIST))}
-
-label2id = {LABEL_LIST[i]: i for i in range(len(LABEL_LIST))}
+from semantics_analysis.constants import TERM_CLASSES as LABEL_LIST, TERM_ID_TO_CLASS as id2label, TERM_CLASS_TO_ID as label2id
 
 
 class RobertaTermExtractor(TermMentionExtractor):

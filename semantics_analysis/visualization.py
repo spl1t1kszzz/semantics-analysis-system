@@ -3,7 +3,7 @@ from typing import List, Union
 from pyvis.network import Network
 
 from semantics_analysis.entities import Relation, Term, TermMention
-from semantics_analysis.term_extraction.roberta_classified_term_mention_extractor import LABEL_LIST
+from semantics_analysis.constants import TERM_CLASSES as LABEL_LIST
 
 colors = [
     '#f44336', '#e81e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4', '#009688',
