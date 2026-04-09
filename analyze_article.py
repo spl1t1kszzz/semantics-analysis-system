@@ -4,9 +4,9 @@ import sys
 from rich.console import Console
 from rich.theme import Theme
 
-from ontology_entities import convert_to_ont_entities
-from parse_habr import Doc
-from plot_graph import display_relation_graph
+from semantics_analysis.ontology_entities import convert_to_ont_entities
+from semantics_analysis.habr_parser import Doc
+from semantics_analysis.visualization import display_relation_graph
 from semantics_analysis.config import load_config, Config
 from semantics_analysis.pipelines import *
 from semantics_analysis.reference_resolution.llm_reference_resolver import LLMReferenceResolver

@@ -4,8 +4,8 @@ from typing import Optional
 import inquirer
 from colorama import init as colorama_init
 
-from ontology_entities import convert_to_ont_entities
-from plot_graph import display_relation_graph
+from semantics_analysis.ontology_entities import convert_to_ont_entities
+from semantics_analysis.visualization import display_relation_graph
 from semantics_analysis.config import load_config, Config
 from semantics_analysis.pipelines import (
     AnalysisResult,

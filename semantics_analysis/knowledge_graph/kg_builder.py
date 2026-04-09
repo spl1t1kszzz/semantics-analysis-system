@@ -46,7 +46,7 @@ def build_knowledge_graph(
     if deduplicate:
         relations = deduplicate_relations(relations)
 
-    from ontology_entities import convert_to_ont_entities
+    from semantics_analysis.ontology_entities import convert_to_ont_entities
 
     objects, ont_relations = convert_to_ont_entities(terms, relations)
     return {

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv calculate_scores.py scripts/)",
+      "Bash(mv calculate_graph_metrics.py scripts/)",
+      "Bash(mv calculate_term_ext_scores.py scripts/)",
+      "Bash(mv compare_scores.py scripts/)",
+      "Bash(mv display_scores.py scripts/)"
+    ]
+  }
+}

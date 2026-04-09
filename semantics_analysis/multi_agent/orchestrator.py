@@ -121,7 +121,7 @@ class MultiAgentOrchestrator:
         if kg_builder is not None:
             ont = kg_builder(state.terms, state.relations)
         else:
-            from ontology_entities import convert_to_ont_entities
+            from semantics_analysis.ontology_entities import convert_to_ont_entities
             objects, ont_relations = convert_to_ont_entities(state.terms, state.relations)
             ont = {
                 "objects": [o.to_json() for o in objects],

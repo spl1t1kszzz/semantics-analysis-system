@@ -4,6 +4,9 @@ from rich.console import Console
 from rich.table import Table
 from rich.text import Text
 
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 from display_scores import parse_scores
 
 # if len(sys.argv) < 1 + 2:
