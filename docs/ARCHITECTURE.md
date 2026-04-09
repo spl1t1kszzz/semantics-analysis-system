@@ -19,7 +19,7 @@ semantics-analysis-system/
 |   |-- entities.py              # TermMention, Term, Relation, Sentence
 |   |-- factory.py               # build_pipeline(), build_term_extractor()
 |   |-- pipelines.py             # Pipeline ABC, SequencePipeline, шаги пайплайна
-|   |-- llm_agent.py             # LLMAgent (OpenAI API wrapper + кэш + retry)
+|   |-- llm_agent.py             # LLMAgent (OpenAI API wrapper + retry)
 |   |
 |   |-- term_extraction/         # Извлечение терминов
 |   |   |-- term_mention_extractor.py        # ABC TermMentionExtractor
@@ -186,7 +186,6 @@ AnalysisResult { terms, relations }
 Все LLM-вызовы идут через [LLMAgent](../semantics_analysis/llm_agent.py):
 
 - **API**: OpenAI-совместимый endpoint (настраивается через `OPENAI_API_BASE`)
-- **Кэш**: in-memory кэш по хэшу промпта (одинаковые запросы не повторяются)
 - **Retry**: экспоненциальная задержка, до 5 попыток
 
 Промпт-шаблоны хранятся в `prompts/` и подставляются компонентами.
@@ -210,12 +209,15 @@ app-config:
 
 ## Мультиагентное разрешение конфликтов
 
+Подробное описание: [MULTI_AGENT.md](MULTI_AGENT.md)
+
 Когда для пары терминов найдено несколько разных предикатов, [RelationConflictResolver](../semantics_analysis/multi_agent/conflict_resolution.py) выбирает один:
 
-1. Находит конфликтные группы (пары терминов с >1 предикатом)
-2. Для каждой группы спрашивает LLM, какой предикат верный
-3. Опционально: двухшаговый диалог (обоснование + выбор)
-4. Опционально: повторная верификация выбранного отношения
+1. Агент-экстрактор возвращает **все** подходящие предикаты для пары (`detect_predicates()`)
+2. Детектор находит конфликтные группы (пары терминов с >1 предикатом)
+3. Агент-резольвер спрашивает LLM, какой предикат верный
+4. Опционально: двухшаговый диалог (обоснование + выбор)
+5. Опционально: повторная верификация выбранного отношения
 
 ## Зависимости
 
