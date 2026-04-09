@@ -4,19 +4,19 @@ from semantics_analysis.config import Config
 from semantics_analysis.llm_agent import LLMAgent
 from semantics_analysis.pipelines import (
     SequencePipeline,
-    Log,
     PredictTerms,
     PreprocessTerms,
-    LogLabeledTerms,
     VerifyTerms,
     NormalizeTerms,
-    DropEmptyTermMentions,
-    NormalizeLanguages,
-    LogNormalizedTerms,
     ResolveReference,
-    LogGroupedTerms,
     PredictSemanticRelations,
     ResolveRelationConflicts,
+    log_message,
+    log_labeled_terms_step,
+    log_normalized_terms_step,
+    log_grouped_terms_step,
+    drop_empty_term_mentions,
+    normalize_languages,
 )
 from semantics_analysis.reference_resolution.llm_reference_resolver import LLMReferenceResolver
 from semantics_analysis.relation_extraction.llm_relation_extractor import LLMRelationExtractor
@@ -69,19 +69,19 @@ def build_pipeline(config: Config, progress: Progress) -> SequencePipeline:
     )
 
     stages = [
-        Log(message='Predicting terms...'),
+        log_message('Predicting terms...'),
         PredictTerms(term_extractor),
         PreprocessTerms(ResolveLibraries(), MergeCloseTerms()),
-        LogLabeledTerms(),
+        log_labeled_terms_step,
         VerifyTerms(term_verifier, progress),
-        Log(message='Verified terms'),
-        LogLabeledTerms(),
+        log_message('Verified terms'),
+        log_labeled_terms_step,
         NormalizeTerms(term_normalizer, progress),
-        DropEmptyTermMentions(),
-        NormalizeLanguages(),
-        LogNormalizedTerms(),
+        drop_empty_term_mentions,
+        normalize_languages,
+        log_normalized_terms_step,
         ResolveReference(reference_resolver, progress),
-        LogGroupedTerms(),
+        log_grouped_terms_step,
         PredictSemanticRelations(relation_extractor, progress),
     ]
 

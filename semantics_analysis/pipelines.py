@@ -1,9 +1,8 @@
 from abc import ABC, abstractmethod
-from typing import List, Optional
+from typing import List, Optional, Callable
 
 from colorama import Style
 from rich.progress import Progress
-from rich.spinner import Spinner
 
 from semantics_analysis.entities import TermMention, Relation, Term, BoundedIterator
 from semantics_analysis.reference_resolution.reference_resolver import ReferenceResolver
@@ -16,11 +15,6 @@ from semantics_analysis.utils import log_iterations, log_labeled_terms, log, LOG
 
 
 class AnalysisResult:
-    text: str
-    term_mentions: Optional[List[TermMention]]
-    terms: Optional[List[Term]]
-    relations: Optional[List[Relation]]
-
     def __init__(
             self,
             text: str,
@@ -29,234 +23,178 @@ class AnalysisResult:
             relations: Optional[List[Relation]] = None
     ):
         self.text = text
-        self.term_mentions = term_mentions if term_mentions else []
-        self.terms = terms if terms else []
-        self.relations = relations if relations else []
+        self.term_mentions = term_mentions or []
+        self.terms = terms or []
+        self.relations = relations or []
+
+
+# A pipeline step is any callable: AnalysisResult -> AnalysisResult
+PipelineStep = Callable[[AnalysisResult], AnalysisResult]
 
 
 class Pipeline(ABC):
     @abstractmethod
     def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        raise NotImplemented('Abstract method.')
+        ...
 
 
 class SequencePipeline(Pipeline):
-
-    def __init__(self, *pipelines: Pipeline, progress: Progress):
-        self.pipelines = pipelines
+    def __init__(self, *steps: PipelineStep, progress: Progress = None):
+        self.steps = steps
         self.progress = progress
 
     def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        for idx, pipeline in enumerate(self.pipelines):
-
-            state = pipeline(state)
-
+        for step in self.steps:
+            state = step(state)
         return state
 
 
-class PredictTerms(Pipeline):
+# --- Lightweight pipeline steps as functions ---
 
-    def __init__(self, term_mention_extractor: TermMentionExtractor):
-        self.term_mention_extractor = term_mention_extractor
+def log_message(message: str) -> PipelineStep:
+    def step(state: AnalysisResult) -> AnalysisResult:
+        log(f'{LOG_STYLE}[      INFO      ]{Style.RESET_ALL}: {message}\n')
+        return state
+    return step
+
+
+def log_labeled_terms_step(state: AnalysisResult) -> AnalysisResult:
+    log_labeled_terms(state.text, state.term_mentions)
+    return state
+
+
+def log_normalized_terms_step(state: AnalysisResult) -> AnalysisResult:
+    log(f'{LOG_STYLE}[NORMALIZED TERMS]{Style.RESET_ALL}:')
+    for term in state.term_mentions:
+        log(f' - {term.value} -> {term.norm_value}')
+    log()
+    return state
+
+
+def log_grouped_terms_step(state: AnalysisResult) -> AnalysisResult:
+    log_grouped_terms(state.terms)
+    return state
+
+
+def drop_empty_term_mentions(state: AnalysisResult) -> AnalysisResult:
+    state.term_mentions = [m for m in state.term_mentions if m.norm_value and m.value]
+    return state
+
+
+def normalize_languages(state: AnalysisResult) -> AnalysisResult:
+    for term in state.term_mentions:
+        if term.class_ == 'Lang' and term.norm_value and term.norm_value.endswith(' язык'):
+            term.norm_value = term.norm_value[:-5].strip()
+    return state
+
+
+# --- Heavy pipeline steps as classes ---
+
+class PredictTerms(Pipeline):
+    def __init__(self, extractor: TermMentionExtractor):
+        self.extractor = extractor
 
     def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        if not state.text:
-            return state
-
-        mentions = self.term_mention_extractor(state.text)
-
-        state.term_mentions = mentions
+        if state.text:
+            state.term_mentions = self.extractor(state.text)
         return state
 
 
 class PreprocessTerms(Pipeline):
-
-    def __init__(self, *term_postprocessors: TermPostProcessor):
-        self.term_postprocessor = term_postprocessors
+    def __init__(self, *postprocessors: TermPostProcessor):
+        self.postprocessors = postprocessors
 
     def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        if not state.term_mentions:
-            return state
-
-        for postprocessor in self.term_postprocessor:
-            state.term_mentions = postprocessor(state.term_mentions)
-
+        for pp in self.postprocessors:
+            state.term_mentions = pp(state.term_mentions)
         return state
 
 
 class VerifyTerms(Pipeline):
-
-    def __init__(self, term_verifier: TermVerifier, progress: Progress):
-        self.term_verifier = term_verifier
+    def __init__(self, verifier: TermVerifier, progress: Progress):
+        self.verifier = verifier
         self.progress = progress
 
     def __call__(self, state: AnalysisResult) -> AnalysisResult:
         if not state.term_mentions:
             return state
-
-        iterator = self.term_verifier.filter_terms(state.term_mentions)
-
-        verified_terms = []
-
+        iterator = self.verifier.filter_terms(state.term_mentions)
+        verified = []
         log_iterations(
             description='Verifying terms',
             iterator=BoundedIterator(len(state.term_mentions), iterator),
             progress=self.progress,
-            item_handler=lambda term: verified_terms.append(term) if term else None
+            item_handler=lambda term: verified.append(term) if term else None
         )
-
-        state.term_mentions = verified_terms
-        return state
-
-
-class Log(Pipeline):
-
-    def __init__(self, message: str):
-        self.message = message
-
-    def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        log(f'{LOG_STYLE}[      INFO      ]{Style.RESET_ALL}: {self.message}\n')
-
-        return state
-
-
-class LogLabeledTerms(Pipeline):
-
-    def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        log_labeled_terms(state.text, state.term_mentions)
-
+        state.term_mentions = verified
         return state
 
 
 class NormalizeTerms(Pipeline):
-
-    def __init__(self, term_normalizer: TermNormalizer, progress: Progress):
-        self.term_normalizer = term_normalizer
+    def __init__(self, normalizer: TermNormalizer, progress: Progress):
+        self.normalizer = normalizer
         self.progress = progress
 
     def __call__(self, state: AnalysisResult) -> AnalysisResult:
         if not state.term_mentions:
             return state
-
-        normalized_terms = self.term_normalizer.normalize_all(state.term_mentions)
-
+        normalized = self.normalizer.normalize_all(state.term_mentions)
         log_iterations(
             description='Normalizing terms',
-            iterator=BoundedIterator(len(state.term_mentions), normalized_terms),
+            iterator=BoundedIterator(len(state.term_mentions), normalized),
             progress=self.progress,
             item_handler=lambda term: term
         )
-
-        return state
-
-
-class NormalizeLanguages(Pipeline):
-
-    def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        for term in state.term_mentions:
-            if term.class_ == 'Lang' and term.norm_value.endswith(' язык'):
-                term.norm_value = term.norm_value[:-5].strip()
-
-        return state
-
-
-class DropEmptyTermMentions(Pipeline):
-
-    def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        state.term_mentions = [
-            m for m in state.term_mentions
-
-            if m.norm_value and m.value
-        ]
-
-        return state
-
-
-class LogNormalizedTerms(Pipeline):
-
-    def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        log(f'{LOG_STYLE}[NORMALIZED TERMS]{Style.RESET_ALL}:')
-
-        for term in state.term_mentions:
-            log(f' - {term.value} -> {term.norm_value}')
-
-        log()
-
         return state
 
 
 class ResolveReference(Pipeline):
-    def __init__(self, reference_resolver: ReferenceResolver, progress: Progress):
-        self.reference_resolver = reference_resolver
+    def __init__(self, resolver: ReferenceResolver, progress: Progress):
+        self.resolver = resolver
         self.progress = progress
 
     def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        if not state.term_mentions:
-            return state
-
-        state.terms = self.reference_resolver(state.term_mentions, state.text)
-        return state
-
-
-class LogGroupedTerms(Pipeline):
-
-    def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        log_grouped_terms(state.terms)
-
+        if state.term_mentions:
+            state.terms = self.resolver(state.term_mentions, state.text)
         return state
 
 
 class PredictSemanticRelations(Pipeline):
-    def __init__(self, relation_extractor: RelationExtractor, progress: Progress):
-        self.relation_extractor = relation_extractor
+    def __init__(self, extractor: RelationExtractor, progress: Progress):
+        self.extractor = extractor
         self.progress = progress
 
     def __call__(self, state: AnalysisResult) -> AnalysisResult:
         if not state.terms:
             return state
-
-        predicted_relations_iterator = self.relation_extractor(state.text, state.terms)
-
-        predicted_relations = []
-
+        predicted_iter = self.extractor(state.text, state.terms)
+        predicted = []
         log_iterations(
             description='Predicting relations',
-            iterator=predicted_relations_iterator,
+            iterator=predicted_iter,
             progress=self.progress,
-            item_handler=lambda rel: predicted_relations.append(rel) if rel else None
+            item_handler=lambda rel: predicted.append(rel) if rel else None
         )
-
-        state.relations = predicted_relations
+        state.relations = predicted
         return state
 
 
 class ResolveRelationConflicts(Pipeline):
-    """
-    Мультиагентный шаг: агент разрешения конфликтов.
-    Для пар сущностей с несколькими разными предикатами оставляет один выбранный LLM.
-    """
-    def __init__(self, conflict_resolver, progress: Progress):
+    def __init__(self, conflict_resolver):
         self.conflict_resolver = conflict_resolver
-        self.progress = progress
 
     def __call__(self, state: AnalysisResult) -> AnalysisResult:
-        from semantics_analysis.multi_agent.conflict_resolution import detect_relation_conflicts
-
         if not state.relations:
             return state
-
-        conflicts = detect_relation_conflicts(state.relations)
-        if not conflicts:
-            return state
-
-        task = self.progress.add_task(
-            description=f'Resolving {len(conflicts)} relation conflicts',
-            total=len(conflicts),
-        )
-        resolved, n_detected, n_resolved = self.conflict_resolver.resolve_all(
-            state.text, state.relations
-        )
+        resolved, _, _ = self.conflict_resolver.resolve_all(state.text, state.relations)
         state.relations = resolved
-        self.progress.update(task, advance=len(conflicts))
-        self.progress.remove_task(task)
         return state
+
+
+# Backward-compatible aliases
+Log = log_message
+LogLabeledTerms = type('LogLabeledTerms', (Pipeline,), {'__call__': staticmethod(log_labeled_terms_step)})
+LogNormalizedTerms = type('LogNormalizedTerms', (Pipeline,), {'__call__': staticmethod(log_normalized_terms_step)})
+LogGroupedTerms = type('LogGroupedTerms', (Pipeline,), {'__call__': staticmethod(log_grouped_terms_step)})
+DropEmptyTermMentions = type('DropEmptyTermMentions', (Pipeline,), {'__call__': staticmethod(drop_empty_term_mentions)})
+NormalizeLanguages = type('NormalizeLanguages', (Pipeline,), {'__call__': staticmethod(normalize_languages)})
