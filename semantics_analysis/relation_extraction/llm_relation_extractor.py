@@ -1,4 +1,4 @@
-from typing import List, Optional, Iterator
+from typing import List, Optional, Iterator, Tuple
 
 import nltk.tokenize
 
@@ -105,27 +105,27 @@ class LLMRelationExtractor(RelationExtractor):
                     continue
 
                 try:
-                    predicate, should_reverse = self.detect_predicate(term1, term2, text)
+                    results = self.detect_predicates(term1, term2, text)
                 except Exception as e:
                     raise e
 
-                if not predicate:
+                if not results:
                     yield None
                     continue
 
-                if should_reverse:
-                    rel = Relation(term2, predicate, term1)
-                else:
-                    rel = Relation(term1, predicate, term2)
+                for predicate, should_reverse in results:
+                    if should_reverse:
+                        rel = Relation(term2, predicate, term1)
+                    else:
+                        rel = Relation(term1, predicate, term2)
 
-                # if classes are different then we do not need extra verification
-                if rel.term1.class_ != rel.term2.class_:
-                    yield rel
-                    continue
+                    # if classes are different then we do not need extra verification
+                    if rel.term1.class_ != rel.term2.class_:
+                        yield rel
+                        continue
 
-                if self.verify_relation(text, rel):
-                    yield rel
-                    continue
+                    if self.verify_relation(text, rel):
+                        yield rel
 
     def verify_relation(self, text: str, rel: Relation) -> bool:
         predicate = ru_by_en_predicate.get(rel.predicate, rel.predicate)
@@ -143,6 +143,67 @@ class LLMRelationExtractor(RelationExtractor):
         )
 
         return 'да' in response.lower()
+
+    def detect_predicates(self, term1: Term, term2: Term, text: str) -> List[Tuple[str, bool]]:
+        """Return all matching predicates from the LLM response (not just the first one).
+
+        This enables the multi-agent conflict resolver to detect and resolve
+        cases where multiple relations are plausible for a single term pair.
+        """
+        predicates = predicates_by_class_pair[(term1.class_, term2.class_)]
+
+        if not predicates:
+            return []
+
+        prompt = self.create_llm_prompt(term1, term2, text)
+
+        if self.log_prompts:
+            log(f'[INPUT PROMPT]: {prompt}\n')
+
+        # Don't use stop tokens so the model can list multiple predicates
+        max_new_tokens = 512 if self.show_explanation else 256
+
+        response = self.llm_agent(
+            prompt,
+            max_new_tokens=max_new_tokens,
+            stop_sequences=[]
+        )
+
+        if self.log_llm_responses:
+            log(f'[LLM RESPONSE]: {response}\n')
+
+        no_answers = ['none', 'нет', 'Нет', ' no ', 'not', ' не ']
+
+        if response.startswith('none'):
+            return []
+
+        for no in no_answers:
+            if no in response:
+                return []
+
+        results = []
+        response_lower = response.lower()
+
+        for predicate in predicates:
+            if predicate in response:
+                if term1.class_ != term2.class_:
+                    results.append((predicate, False))
+                else:
+                    term1_value = term1.value.lower()
+                    term2_value = term2.value.lower()
+
+                    if term1_value not in response_lower or term2_value not in response_lower:
+                        continue
+
+                    predicate_pos = response_lower.index(predicate.lower())
+                    term1_pos = response_lower.index(term1_value)
+
+                    if term1_pos > predicate_pos:
+                        results.append((predicate, True))
+                    else:
+                        results.append((predicate, False))
+
+        return results
 
     def detect_predicate(self, term1: Term, term2: Term, text: str) -> (Optional[str], bool):
         predicates = predicates_by_class_pair[(term1.class_, term2.class_)]

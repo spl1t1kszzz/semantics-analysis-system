@@ -1,340 +1,88 @@
 {
   "baseline": {
     "micro": {
-      "tp": 92,
-      "fp": 28,
-      "fn": 16,
-      "precision": 0.7667,
-      "recall": 0.8519,
-      "f1": 0.8071
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
     },
     "macro": {
-      "precision": 0.7709,
-      "recall": 0.8291,
-      "f1": 0.7989
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
     },
     "by_relation": {
       "Method_solves_Task": {
-        "precision": 0.875,
-        "recall": 0.6364,
-        "f1": 0.7368,
-        "support": 11
-      },
-      "Date_isDateOf_Method": {
-        "precision": 1.0,
-        "recall": 0.5,
-        "f1": 0.6667,
-        "support": 6
-      },
-      "Application_isUsedIn_Science": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 4
-      },
-      "Method_isAlternativeNameFor_Method": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 6
-      },
-      "Metric_isUsedIn_Task": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 2
-      },
-      "Model_isUsedIn_Application": {
-        "precision": 0.9,
-        "recall": 1.0,
-        "f1": 0.9474,
-        "support": 9
-      },
-      "Application_hasAuthor_Organization": {
-        "precision": 0.8,
-        "recall": 0.6667,
-        "f1": 0.7273,
-        "support": 12
-      },
-      "Method_hasAuthor_Person": {
-        "precision": 1.0,
-        "recall": 0.5,
-        "f1": 0.6667,
-        "support": 2
-      },
-      "Metric_isAlternativeNameFor_Metric": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 2
-      },
-      "Task_isSolvedIn_Science": {
-        "precision": 0.375,
-        "recall": 1.0,
-        "f1": 0.5455,
-        "support": 3
-      },
-      "Activity_hasAuthor_Organization": {
         "precision": 0.0,
         "recall": 0.0,
         "f1": 0.0,
         "support": 1
-      },
-      "Metric_isUsedFor_Model": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 4
-      },
-      "Task_isAlternativeNameFor_Task": {
-        "precision": 0.7143,
-        "recall": 1.0,
-        "f1": 0.8333,
-        "support": 5
-      },
-      "Object_isUsedInSolving_Task": {
-        "precision": 1.0,
-        "recall": 0.8333,
-        "f1": 0.9091,
-        "support": 6
       },
       "Science_isAlternativeNameFor_Science": {
         "precision": 1.0,
         "recall": 1.0,
         "f1": 1.0,
         "support": 2
-      },
-      "Application_isUsedForSolving_Task": {
-        "precision": 0.6667,
-        "recall": 0.9333,
-        "f1": 0.7778,
-        "support": 15
-      },
-      "Method_isUsedIn_Science": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 1
-      },
-      "Model_isUsedForSolving_Task": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 3
-      },
-      "Model_hasAuthor_Organization": {
-        "precision": 0.5,
-        "recall": 1.0,
-        "f1": 0.6667,
-        "support": 1
-      },
-      "Application_hasAuthor_Person": {
-        "precision": 0.4,
-        "recall": 1.0,
-        "f1": 0.5714,
-        "support": 2
-      },
-      "Metric_hasValue_Value": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 7
-      },
-      "Application_isAlternativeNameFor_Application": {
-        "precision": 0.5,
-        "recall": 1.0,
-        "f1": 0.6667,
-        "support": 3
-      },
-      "Method_isUsedIn_Application": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 1
       }
     }
   },
   "multiagent": {
     "micro": {
-      "tp": 92,
-      "fp": 27,
-      "fn": 16,
-      "precision": 0.7731,
-      "recall": 0.8519,
-      "f1": 0.8106
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
     },
     "macro": {
-      "precision": 0.7763,
-      "recall": 0.8291,
-      "f1": 0.8018
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
     },
     "by_relation": {
       "Method_solves_Task": {
-        "precision": 1.0,
-        "recall": 0.6364,
-        "f1": 0.7778,
-        "support": 11
-      },
-      "Date_isDateOf_Method": {
-        "precision": 1.0,
-        "recall": 0.5,
-        "f1": 0.6667,
-        "support": 6
-      },
-      "Application_isUsedIn_Science": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 4
-      },
-      "Method_isAlternativeNameFor_Method": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 6
-      },
-      "Metric_isUsedIn_Task": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 2
-      },
-      "Model_isUsedIn_Application": {
-        "precision": 0.9,
-        "recall": 1.0,
-        "f1": 0.9474,
-        "support": 9
-      },
-      "Application_hasAuthor_Organization": {
-        "precision": 0.8,
-        "recall": 0.6667,
-        "f1": 0.7273,
-        "support": 12
-      },
-      "Method_hasAuthor_Person": {
-        "precision": 1.0,
-        "recall": 0.5,
-        "f1": 0.6667,
-        "support": 2
-      },
-      "Metric_isAlternativeNameFor_Metric": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 2
-      },
-      "Task_isSolvedIn_Science": {
-        "precision": 0.375,
-        "recall": 1.0,
-        "f1": 0.5455,
-        "support": 3
-      },
-      "Activity_hasAuthor_Organization": {
         "precision": 0.0,
         "recall": 0.0,
         "f1": 0.0,
         "support": 1
-      },
-      "Metric_isUsedFor_Model": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 4
-      },
-      "Task_isAlternativeNameFor_Task": {
-        "precision": 0.7143,
-        "recall": 1.0,
-        "f1": 0.8333,
-        "support": 5
-      },
-      "Object_isUsedInSolving_Task": {
-        "precision": 1.0,
-        "recall": 0.8333,
-        "f1": 0.9091,
-        "support": 6
       },
       "Science_isAlternativeNameFor_Science": {
         "precision": 1.0,
         "recall": 1.0,
         "f1": 1.0,
         "support": 2
-      },
-      "Application_isUsedForSolving_Task": {
-        "precision": 0.6667,
-        "recall": 0.9333,
-        "f1": 0.7778,
-        "support": 15
-      },
-      "Method_isUsedIn_Science": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 1
-      },
-      "Model_isUsedForSolving_Task": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 3
-      },
-      "Model_hasAuthor_Organization": {
-        "precision": 0.5,
-        "recall": 1.0,
-        "f1": 0.6667,
-        "support": 1
-      },
-      "Application_hasAuthor_Person": {
-        "precision": 0.4,
-        "recall": 1.0,
-        "f1": 0.5714,
-        "support": 2
-      },
-      "Metric_hasValue_Value": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "support": 7
-      },
-      "Application_isAlternativeNameFor_Application": {
-        "precision": 0.5,
-        "recall": 1.0,
-        "f1": 0.6667,
-        "support": 3
-      },
-      "Method_isUsedIn_Application": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 1
       }
     }
   },
   "diff": {
-    "micro_precision": 0.0064,
+    "micro_precision": 0.0,
     "micro_recall": 0.0,
-    "micro_f1": 0.0035,
-    "macro_precision": 0.0054,
+    "micro_f1": 0.0,
+    "macro_precision": 0.0,
     "macro_recall": 0.0,
-    "macro_f1": 0.0029
+    "macro_f1": 0.0
   },
   "graph_triples": {
-    "baseline_count": 129,
-    "multiagent_count": 128,
-    "gold_count": 104,
+    "baseline_count": 1,
+    "multiagent_count": 1,
+    "gold_count": 2,
     "baseline": {
-      "precision": 0.5349,
-      "recall": 0.6635,
-      "f1": 0.5923
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
     },
     "multiagent": {
-      "precision": 0.5391,
-      "recall": 0.6635,
-      "f1": 0.5948
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
     },
     "diff": {
-      "precision": 0.0042,
+      "precision": 0.0,
       "recall": 0.0,
-      "f1": 0.0025
+      "f1": 0.0
     }
   }
 }

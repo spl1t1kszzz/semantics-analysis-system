@@ -249,7 +249,7 @@ def main():
         f.write("\n".join(lines))
     print(f"Отчёт (Markdown): {md_path}")
     print()
-    print("Разница (multiagent − baseline):")
+    print("Разница (multiagent - baseline):")
     print(f"  Micro F1: {d['micro_f1']:+.4f}")
     print(f"  Macro Precision: {d['macro_precision']:+.4f}, Recall: {d['macro_recall']:+.4f}, F1: {d['macro_f1']:+.4f}")
     if "graph_triples" in comparison and "diff" in comparison["graph_triples"]:
