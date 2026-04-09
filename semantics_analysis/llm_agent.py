@@ -1,3 +1,4 @@
+import hashlib
 import os
 import time
 from typing import List
@@ -32,20 +33,36 @@ class LLMAgent:
     def __init__(
             self,
             model: str = 'gpt-4o-mini',
+            enable_cache: bool = True,
     ):
         self.model = model
         self.llm = _get_openai_client()
+        self._cache = {} if enable_cache else None
+
+    def _cache_key(self, prompt: str, max_new_tokens: int) -> str:
+        raw = f"{self.model}:{max_new_tokens}:{prompt}"
+        return hashlib.sha256(raw.encode()).hexdigest()
 
     def __call__(self, prompt: str, stop_sequences: List[str], max_new_tokens: int) -> str:
+        if self._cache is not None:
+            key = self._cache_key(prompt, max_new_tokens)
+            if key in self._cache:
+                return self._cache[key]
+
         for attempt in range(MAX_RETRIES):
             try:
                 messages = [{"role": "user", "content": prompt}]
-                return self.llm.chat.completions.create(
+                result = self.llm.chat.completions.create(
                     model=self.model,
                     messages=messages,
                     n=1,
                     max_completion_tokens=max_new_tokens,
                 ).choices[0].message.content.strip()
+
+                if self._cache is not None:
+                    self._cache[key] = result
+
+                return result
             except Exception as e:
                 print(e)
                 if attempt >= MAX_RETRIES - 1:
