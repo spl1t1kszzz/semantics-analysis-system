@@ -3,6 +3,7 @@ import os
 import time
 from typing import List
 
+import httpx
 from openai import OpenAI
 
 try:
@@ -18,6 +19,7 @@ RETRY_DELAY_SECONDS = 2
 def _get_openai_client():
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     base_url = os.environ.get("OPENAI_API_BASE", "").strip() or None
+    proxy = os.environ.get("OPENAI_PROXY", "").strip() or None
     if not api_key:
         raise RuntimeError(
             "Задайте OPENAI_API_KEY в файле .env или переменных окружения. "
@@ -26,6 +28,8 @@ def _get_openai_client():
     kwargs = {"api_key": api_key}
     if base_url:
         kwargs["base_url"] = base_url
+    if proxy:
+        kwargs["http_client"] = httpx.Client(proxy=proxy)
     return OpenAI(**kwargs)
 
 
