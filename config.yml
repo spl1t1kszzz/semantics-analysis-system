@@ -1,16 +1,30 @@
 app-config:
+  # Term extraction
   use-dict: true
   device: 'cpu'
-  display-graph: true
-  show-term-predictions: false
-  show-class-predictions: false
+  term-threshold: 0.2
+  class-threshold: 0.5
+
+  # LLM
   llm: 'gpt-5.2'
-  show-explanation: false
-  split-on-sentences: false
-  log-prompts: false
-  log-llm-responses: false
+
+  # Relation extraction
+  max-term-distance: 300
+
+  # Multi-agent
   use-multi-agent: true
   # Двухшаговый диалог при разрешении конфликтов (сначала обоснование, потом выбор)
   use-conflict-dialogue: true
   # Повторная верификация выбранного отношения через LLM после разрешения конфликта
   use-reverify-after-resolve: true
+
+  # Display
+  display-graph: true
+  show-term-predictions: false
+  show-class-predictions: false
+  show-explanation: false
+  split-on-sentences: false
+
+  # Logging
+  log-prompts: false
+  log-llm-responses: false

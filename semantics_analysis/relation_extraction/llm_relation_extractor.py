@@ -23,7 +23,7 @@ class LLMRelationExtractor(RelationExtractor):
                  show_explanation: bool = False,
                  log_prompts: bool = False,
                  log_llm_responses: bool = False,
-                 
+                 max_term_distance: int = 300,
                  considered_class1: Optional[str] = None,
                  considered_class2: Optional[str] = None
                  ):
@@ -45,6 +45,7 @@ class LLMRelationExtractor(RelationExtractor):
         self.show_explanation = show_explanation
         self.log_prompts = log_prompts
         self.log_llm_responses = log_llm_responses
+        self.max_term_distance = max_term_distance
         self.considered_class1 = considered_class1
         self.considered_class2 = considered_class2
 
@@ -86,7 +87,7 @@ class LLMRelationExtractor(RelationExtractor):
 
                 end_pos = max(term1.mentions[0].end_pos, term2.mentions[0].end_pos)
 
-                if end_pos - start_pos >= 300:
+                if end_pos - start_pos >= self.max_term_distance:
                     yield None
                     continue
 

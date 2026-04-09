@@ -1,71 +1,75 @@
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Optional
+
 import yaml
 
 
+@dataclass
 class Config:
-    use_dict: bool
-    display_graph: bool
-    show_term_predictions: bool
-    show_class_predictions: bool
-    llm: str
-    device: str
-    show_explanation: bool
-    split_on_sentences: bool
-    log_prompts: bool
-    log_llm_responses: bool
-    use_multi_agent: bool
-    use_conflict_dialogue: bool
-    use_reverify_after_resolve: bool
+    # Term extraction
+    use_dict: bool = True
+    device: str = 'cpu'
+    term_threshold: float = 0.2
+    class_threshold: float = 0.5
 
-    def __init__(
-            self,
-            use_dict: bool,
-            display_graph: bool,
-            show_term_predictions: bool,
-            show_class_predictions: bool,
-            llm: str,
-            device: str,
-            show_explanation: bool,
-            split_on_sentences: bool,
-            log_prompts: bool,
-            log_llm_responses: bool,
-            use_multi_agent: bool = True,
-            use_conflict_dialogue: bool = False,
-            use_reverify_after_resolve: bool = False,
-    ):
-        self.use_dict = use_dict
-        self.display_graph = display_graph
-        self.show_term_predictions = show_term_predictions
-        self.show_class_predictions = show_class_predictions
-        self.llm = llm
-        self.device = device
-        self.show_explanation = show_explanation
-        self.split_on_sentences = split_on_sentences
-        self.log_prompts = log_prompts
-        self.log_llm_responses = log_llm_responses
-        self.use_multi_agent = use_multi_agent
-        self.use_conflict_dialogue = use_conflict_dialogue
-        self.use_reverify_after_resolve = use_reverify_after_resolve
+    # LLM
+    llm: str = 'gpt-4o-mini'
 
+    # Relation extraction
+    max_term_distance: int = 300
+
+    # Multi-agent
+    use_multi_agent: bool = True
+    use_conflict_dialogue: bool = False
+    use_reverify_after_resolve: bool = False
+
+    # Display
+    display_graph: bool = True
+    show_term_predictions: bool = False
+    show_class_predictions: bool = False
+    show_explanation: bool = False
+    split_on_sentences: bool = False
+
+    # Logging
+    log_prompts: bool = False
+    log_llm_responses: bool = False
+
+    def __post_init__(self):
         if self.show_explanation:
             self.log_llm_responses = True
 
 
-def load_config(file_path: str) -> Config:
-    with open(file_path, 'r') as stream:
-        config_dict = yaml.safe_load(stream)['app-config']
+def load_config(file_path: str = 'config.yml') -> Config:
+    path = Path(file_path)
+    if not path.exists():
+        return Config()
 
-    return Config(
-        config_dict['use-dict'],
-        config_dict['display-graph'],
-        config_dict['show-term-predictions'],
-        config_dict['show-class-predictions'],
-        config_dict['llm'],
-        config_dict['device'],
-        config_dict['show-explanation'],
-        config_dict['split-on-sentences'],
-        config_dict['log-prompts'],
-        config_dict['log-llm-responses'],
-        config_dict.get('use-multi-agent', True),
-        config_dict.get('use-conflict-dialogue', False),
-        config_dict.get('use-reverify-after-resolve', False),
-    )
+    with open(path, 'r') as stream:
+        config_dict = yaml.safe_load(stream).get('app-config', {})
+
+    field_map = {
+        'use-dict': 'use_dict',
+        'device': 'device',
+        'term-threshold': 'term_threshold',
+        'class-threshold': 'class_threshold',
+        'llm': 'llm',
+        'max-term-distance': 'max_term_distance',
+        'use-multi-agent': 'use_multi_agent',
+        'use-conflict-dialogue': 'use_conflict_dialogue',
+        'use-reverify-after-resolve': 'use_reverify_after_resolve',
+        'display-graph': 'display_graph',
+        'show-term-predictions': 'show_term_predictions',
+        'show-class-predictions': 'show_class_predictions',
+        'show-explanation': 'show_explanation',
+        'split-on-sentences': 'split_on_sentences',
+        'log-prompts': 'log_prompts',
+        'log-llm-responses': 'log_llm_responses',
+    }
+
+    kwargs = {}
+    for yaml_key, attr_name in field_map.items():
+        if yaml_key in config_dict:
+            kwargs[attr_name] = config_dict[yaml_key]
+
+    return Config(**kwargs)
