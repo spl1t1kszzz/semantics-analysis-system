@@ -1,30 +1,48 @@
 [tool.poetry]
 name = "semantics-analysis"
-version = "0.1.0"
-description = "System of several deep learning networks responsible for terms extraction, terms classification and relations extraction."
+version = "0.2.0"
+description = "System for semantic analysis: term extraction, classification, and relation extraction from Russian IT texts."
 authors = ["aiwannafly"]
 license = "Apache 2.0"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-transformers = "^4.38.2"
-torch = "^2.2.1"
+
+# Core
 PyYAML = "^6.0.1"
 colorama = "^0.4.6"
-inquirer = "^3.2.4"
-nltk = "^3.8.1"
 rich = "^13.7.1"
-termcharts = "^1.1.2"
-conllu = "^4.5.3"
-matplotlib = "^3.8.3"
-spacy = "^3.7.4"
-ru_core_news_sm = {url = "https://github.com/explosion/spacy-models/releases/download/ru_core_news_sm-3.7.0/ru_core_news_sm-3.7.0.tar.gz"}
-pyvis = "^0.3.2"
-bs4 = "^0.0.2"
-alphabet-detector = "^0.0.7"
 python-dotenv = "^1.0.0"
 openai = "^1.0.0"
+
+# NLP
+nltk = "^3.8.1"
+spacy = "^3.7.4"
+ru_core_news_sm = {url = "https://github.com/explosion/spacy-models/releases/download/ru_core_news_sm-3.7.0/ru_core_news_sm-3.7.0.tar.gz"}
+alphabet-detector = "^0.0.7"
+conllu = "^4.5.3"
+
+# ML (needed for RoBERTa-based term extraction)
+transformers = "^4.38.2"
+torch = "^2.2.1"
+
+# Visualization
+pyvis = "^0.3.2"
+matplotlib = "^3.8.3"
+
+# CLI
+inquirer = "^3.2.4"
+
+# Web scraping (for Habr article parsing)
+bs4 = "^0.0.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
 
 [build-system]
 requires = ["poetry-core"]
