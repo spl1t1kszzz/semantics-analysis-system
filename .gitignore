@@ -12,3 +12,6 @@ metadata/meaning_by_term.json
 calc_class_predictions.py
 calc_term_rel_scores.py
 fillup_dict.py
+docs/MULTIAGENT_IMPROVEMENTS.md
+docs/VERIFY.md
+docs/ОТЧЁТ_ИЗМЕНЕНИЯ_ДЛЯ_ВКР.md
