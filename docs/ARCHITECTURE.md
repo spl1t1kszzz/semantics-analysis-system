@@ -72,6 +72,8 @@ semantics-analysis-system/
 |   |-- verify_term.txt
 |   |-- normalization.txt
 |   |-- relation_extraction.txt
+|   |-- relation_extraction_multi_probe.txt  # Multi-probe: бинарный да/нет по каждому предикату
+|   |-- directed_relation_extraction.txt
 |   |-- verify_relation.txt
 |   |-- resolve_reference.txt
 |   |-- resolve_relation_conflict.txt
@@ -185,7 +187,9 @@ AnalysisResult { terms, relations }
 
 Все LLM-вызовы идут через [LLMAgent](../semantics_analysis/llm_agent.py):
 
-- **API**: OpenAI-совместимый endpoint (настраивается через `OPENAI_API_BASE`)
+- **OpenAI API**: модели GPT (gpt-4o-mini, gpt-4o, gpt-5.2 и др.)
+- **Anthropic API**: модели Claude (claude-sonnet-4, claude-opus-4 и др.) — выбор провайдера автоматический по имени модели
+- **OpenAI-совместимые провайдеры**: Groq, OpenRouter и др. — через `OPENAI_API_BASE`
 - **Retry**: экспоненциальная задержка, до 5 попыток
 
 Промпт-шаблоны хранятся в `prompts/` и подставляются компонентами.
@@ -198,26 +202,35 @@ AnalysisResult { terms, relations }
 app-config:
   use-dict: true           # Использовать словарный экстрактор
   device: 'cpu'            # cpu / cuda
-  llm: 'gpt-5.2'          # Модель LLM
+  llm: 'gpt-4o-mini'      # Модель LLM (gpt-4o-mini, claude-sonnet-4, и др.)
   term-threshold: 0.2      # Порог для RoBERTa term extraction
   class-threshold: 0.5     # Порог для RoBERTa classification
   max-term-distance: 300   # Макс. расстояние между терминами для поиска отношений
-  use-multi-agent: true    # Включить разрешение конфликтов
+  use-multi-agent: true    # Включить multi-probe + разрешение конфликтов
 ```
 
-Секреты (`OPENAI_API_KEY`) хранятся в `.env`.
+Секреты хранятся в `.env`:
+- `OPENAI_API_KEY` — для OpenAI / OpenAI-совместимых провайдеров
+- `ANTHROPIC_API_KEY` — для моделей Claude
+- `OPENAI_API_BASE` — альтернативный endpoint (Groq, OpenRouter)
+- `OPENAI_PROXY` — HTTP/SOCKS5 прокси
 
-## Мультиагентное разрешение конфликтов
+## Мультиагентное извлечение отношений
 
 Подробное описание: [MULTI_AGENT.md](MULTI_AGENT.md)
 
-Когда для пары терминов найдено несколько разных предикатов, [RelationConflictResolver](../semantics_analysis/multi_agent/conflict_resolution.py) выбирает один:
+### Multi-probe fallback
 
-1. Агент-экстрактор возвращает **все** подходящие предикаты для пары (`detect_predicates()`)
-2. Детектор находит конфликтные группы (пары терминов с >1 предикатом)
-3. Агент-резольвер спрашивает LLM, какой предикат верный
-4. Опционально: двухшаговый диалог (обоснование + выбор)
-5. Опционально: повторная верификация выбранного отношения
+При включённом мультиагентном режиме (`use-multi-agent: true`) используется двухуровневая стратегия извлечения:
+
+1. **Стандартное извлечение** (`detect_predicates()`) — свободный промпт с few-shot примерами, модель выбирает один предикат
+2. **Multi-probe fallback** (`detect_predicates_multi_probe()`) — запускается только если стандартное извлечение не нашло ничего. Бинарный «да/нет» по каждому предикату независимо
+
+Все кандидаты проходят верификацию через `verify_relation()` с описанием семантики из онтологии.
+
+### Разрешение конфликтов
+
+Если для одной пары терминов обнаружено >1 предиката, [RelationConflictResolver](../semantics_analysis/multi_agent/conflict_resolution.py) проверяет каждое через re-verify и оставляет подтверждённые.
 
 ## Зависимости
 
