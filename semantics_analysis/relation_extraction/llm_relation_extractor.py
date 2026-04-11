@@ -25,7 +25,8 @@ class LLMRelationExtractor(RelationExtractor):
                  log_llm_responses: bool = False,
                  max_term_distance: int = 300,
                  considered_class1: Optional[str] = None,
-                 considered_class2: Optional[str] = None
+                 considered_class2: Optional[str] = None,
+                 use_multi_probe: bool = False,
                  ):
 
         self.model = model
@@ -42,12 +43,16 @@ class LLMRelationExtractor(RelationExtractor):
         with open('prompts/verify_relation.txt', 'r', encoding='utf-8') as f:
             self.verification_prompt_template = f.read().strip()
 
+        with open('prompts/relation_extraction_multi_probe.txt', 'r', encoding='utf-8') as f:
+            self.multi_probe_prompt_template = f.read().strip()
+
         self.show_explanation = show_explanation
         self.log_prompts = log_prompts
         self.log_llm_responses = log_llm_responses
         self.max_term_distance = max_term_distance
         self.considered_class1 = considered_class1
         self.considered_class2 = considered_class2
+        self.use_multi_probe = use_multi_probe
 
     def __call__(self, text: str, terms: List[Term]) -> BoundedIterator[Optional[Relation]]:
         # we seek only for binary relations
@@ -109,6 +114,11 @@ class LLMRelationExtractor(RelationExtractor):
                 except Exception as e:
                     raise e
 
+                # Multi-agent: если стандартное извлечение не нашло ничего,
+                # пробуем multi-probe как fallback (ловит доп. отношения)
+                if not results and self.use_multi_probe:
+                    results = self.detect_predicates_multi_probe(term1, term2, text)
+
                 if not results:
                     yield None
                     continue
@@ -119,22 +129,32 @@ class LLMRelationExtractor(RelationExtractor):
                     else:
                         rel = Relation(term1, predicate, term2)
 
-                    # if classes are different then we do not need extra verification
-                    if rel.term1.class_ != rel.term2.class_:
-                        yield rel
+                    if not self.verify_relation(text, rel):
                         continue
 
-                    if self.verify_relation(text, rel):
-                        yield rel
+                    yield rel
 
     def verify_relation(self, text: str, rel: Relation) -> bool:
         predicate = ru_by_en_predicate.get(rel.predicate, rel.predicate)
 
         relation_str = f'{rel.term1.value} {predicate} {rel.term2.value}'
 
+        # Get relation description from ontology metadata
+        relation_description = ''
+        class1, class2 = rel.term1.class_, rel.term2.class_
+        for key in [(class1, class2), (class2, class1)]:
+            if key in relations_metadata_by_class_pair:
+                metadata = relations_metadata_by_class_pair[key]
+                if rel.predicate in metadata and 'yes' in metadata[rel.predicate]:
+                    relation_description = metadata[rel.predicate]['yes'].get('description', '')
+                    break
+        if not relation_description:
+            relation_description = predicate
+
         prompt = self.verification_prompt_template
         prompt = prompt.replace('{input}', relation_str)
         prompt = prompt.replace('{context}', text)
+        prompt = prompt.replace('{relation_description}', relation_description)
 
         response = self.llm_agent(
             prompt,
@@ -172,14 +192,15 @@ class LLMRelationExtractor(RelationExtractor):
         if self.log_llm_responses:
             log(f'[LLM RESPONSE]: {response}\n')
 
-        no_answers = ['none', 'нет', 'Нет', ' no ', 'not', ' не ']
-
-        if response.startswith('none'):
+        # Check only if the response starts with a refusal, not if "нет" appears
+        # somewhere in the middle (e.g. "нет, не isPartOf, но isModificationOf")
+        response_stripped = response.strip().lower()
+        if response_stripped.startswith(('нет', 'none', 'no ', 'not ')):
             return []
 
-        for no in no_answers:
-            if no in response:
-                return []
+        # Check for "Ответ: нет" pattern
+        if 'ответ: нет' in response_stripped or 'ответ:нет' in response_stripped:
+            return []
 
         results = []
         response_lower = response.lower()
@@ -202,6 +223,100 @@ class LLMRelationExtractor(RelationExtractor):
                         results.append((predicate, True))
                     else:
                         results.append((predicate, False))
+
+        return results
+
+    def detect_predicates_multi_probe(self, term1: Term, term2: Term, text: str) -> List[Tuple[str, bool]]:
+        """Один LLM-вызов с бинарным да/нет по каждому предикату.
+
+        Вместо того, чтобы просить модель выбрать один предикат,
+        для каждого возможного предиката задаём вопрос «да/нет».
+        Это позволяет обнаружить конфликты (несколько «да»).
+        """
+        class1, class2 = term1.class_, term2.class_
+        predicates = predicates_by_class_pair.get((class1, class2), [])
+        if not predicates:
+            return []
+
+        metadata = relations_metadata_by_class_pair.get((class1, class2), {})
+
+        # Собираем контекст вокруг терминов
+        sentences = nltk.tokenize.sent_tokenize(text)
+        start_pos = min(term1.mentions[0].start_pos, term2.mentions[0].start_pos)
+        end_pos = max(term1.mentions[0].end_pos, term2.mentions[0].end_pos)
+        offset = 0
+        first_sent_id = None
+        last_sent_id = None
+        for idx, sent in enumerate(sentences):
+            new_offset = offset + len(sent) + 1
+            if first_sent_id is None and new_offset > start_pos:
+                first_sent_id = idx
+            if last_sent_id is None and end_pos < new_offset:
+                last_sent_id = idx
+            offset = new_offset
+        if last_sent_id is None:
+            last_sent_id = len(sentences) - 1
+        context = ' '.join(sentences[first_sent_id:last_sent_id + 1])
+
+        # Собираем примеры из метаданных
+        examples_list = ''
+        counter = 1
+        for predicate, pred_meta in metadata.items():
+            for answer in ['yes', 'no']:
+                if answer not in pred_meta:
+                    continue
+                description = pred_meta[answer]['description']
+                examples_list += f'{counter}. В этих примерах {description}:\n'
+                for example in pred_meta[answer].get('examples', []):
+                    example_text = example.get('text', '')
+                    example_t1 = example.get(class1, '')
+                    example_t2 = example.get(class2, '')
+                    reply = 'да' if answer == 'yes' else 'нет'
+                    examples_list += f'```\nТекст: {example_text}\nТермин {class1}: {example_t1}\nТермин {class2}: {example_t2}\n{predicate}: {reply}\n```\n'
+                    counter += 1
+
+        # Формируем список вопросов
+        probe_lines = []
+        answer_lines = []
+        for i, predicate in enumerate(predicates, 1):
+            desc = metadata.get(predicate, {}).get('yes', {}).get('description', predicate)
+            probe_lines.append(f'{i}. {predicate} — {desc}')
+            answer_lines.append(f'{i}. {predicate}: <да/нет>')
+
+        prompt = self.multi_probe_prompt_template
+        prompt = prompt.replace('{text}', context)
+        prompt = prompt.replace('{class1}', class1)
+        prompt = prompt.replace('{class2}', class2)
+        prompt = prompt.replace('{term1}', term1.value)
+        prompt = prompt.replace('{term2}', term2.value)
+        prompt = prompt.replace('{examples_list}', examples_list)
+        prompt = prompt.replace('{probe_list}', '\n'.join(probe_lines))
+        prompt = prompt.replace('{answer_format}', '\n'.join(answer_lines))
+
+        if self.log_prompts:
+            log(f'[MULTI-PROBE PROMPT]: {prompt}\n')
+
+        response = self.llm_agent(
+            prompt,
+            max_new_tokens=256,
+            stop_sequences=[]
+        )
+
+        if self.log_llm_responses:
+            log(f'[MULTI-PROBE RESPONSE]: {response}\n')
+
+        # Парсим ответ: ищем «да» рядом с именем предиката
+        results = []
+        response_lower = response.lower()
+        for predicate in predicates:
+            predicate_lower = predicate.lower()
+            if predicate_lower not in response_lower:
+                continue
+            # Берём фрагмент после имени предиката
+            pos = response_lower.index(predicate_lower) + len(predicate_lower)
+            snippet = response_lower[pos:pos + 20]
+            if 'да' in snippet or 'yes' in snippet:
+                results.append((predicate, False))
 
         return results
 

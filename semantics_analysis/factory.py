@@ -66,6 +66,7 @@ def build_pipeline(config: Config, progress: Progress) -> SequencePipeline:
         log_prompts=config.log_prompts,
         log_llm_responses=config.log_llm_responses,
         max_term_distance=config.max_term_distance,
+        use_multi_probe=config.use_multi_agent,
     )
 
     stages = [

@@ -14,7 +14,7 @@ class Config:
     class_threshold: float = 0.5
 
     # LLM
-    llm: str = 'gpt-4o-mini'
+    llm: str = ''
 
     # Relation extraction
     max_term_distance: int = 300
@@ -36,6 +36,8 @@ class Config:
     log_llm_responses: bool = False
 
     def __post_init__(self):
+        if not self.llm:
+            raise ValueError("Модель LLM не задана. Укажите 'llm' в config.yml.")
         if self.show_explanation:
             self.log_llm_responses = True
 

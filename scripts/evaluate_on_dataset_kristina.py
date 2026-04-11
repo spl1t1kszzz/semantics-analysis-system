@@ -36,6 +36,41 @@ from semantics_analysis.relation_extraction.llm_relation_extractor import LLMRel
 from calculate_scores import update_scores
 
 
+def _aggregate_scores(scores):
+    """Агрегирует scores-словарь в micro/macro/by_relation метрики."""
+    result = {"by_relation": {}, "micro": {"tp": 0, "fp": 0, "fn": 0}, "macro": {"precision": [], "recall": []}}
+    for rel_id, s in scores.items():
+        correct = s["predicted"]["correct"]["count"]
+        incorrect = s["predicted"]["incorrect"]["count"]
+        found = s["expected"]["found"]["count"]
+        not_found = s["expected"]["not_found"]["count"]
+        if found + not_found == 0:
+            continue
+        prec = correct / (correct + incorrect) if (correct + incorrect) > 0 else 0.0
+        rec = found / (found + not_found)
+        result["by_relation"][rel_id] = {
+            "precision": round(prec, 4),
+            "recall": round(rec, 4),
+            "f1": round(2 * prec * rec / (prec + rec), 4) if (prec + rec) > 0 else 0.0,
+            "support": found + not_found,
+        }
+        result["micro"]["tp"] += correct
+        result["micro"]["fp"] += incorrect
+        result["micro"]["fn"] += not_found
+        result["macro"]["precision"].append(prec)
+        result["macro"]["recall"].append(rec)
+
+    n = len(result["macro"]["precision"])
+    result["macro"]["precision"] = round(sum(result["macro"]["precision"]) / n, 4) if n else 0.0
+    result["macro"]["recall"] = round(sum(result["macro"]["recall"]) / n, 4) if n else 0.0
+    tp, fp, fn = result["micro"]["tp"], result["micro"]["fp"], result["micro"]["fn"]
+    result["micro"]["precision"] = round(tp / (tp + fp), 4) if (tp + fp) > 0 else 0.0
+    result["micro"]["recall"] = round(tp / (tp + fn), 4) if (tp + fn) > 0 else 0.0
+    p, r = result["micro"]["precision"], result["micro"]["recall"]
+    result["micro"]["f1"] = round(2 * p * r / (p + r), 4) if (p + r) > 0 else 0.0
+    return result
+
+
 def run_evaluation(
     sentences: List[Sentence],
     relation_extractor,
@@ -52,6 +87,15 @@ def run_evaluation(
             "predicted": {"incorrect": {"count": 0, "examples": []}, "correct": {"count": 0, "examples": []}},
             "expected": {"not_found": {"count": 0, "examples": []}, "found": {"count": 0, "examples": []}},
         }
+    # Если есть conflict_resolver, отдельно считаем метрики до разрешения конфликтов
+    pre_conflict_scores = None
+    if conflict_resolver:
+        pre_conflict_scores = {}
+        for rel_id in loaded_relation_ids:
+            pre_conflict_scores[rel_id] = {
+                "predicted": {"incorrect": {"count": 0, "examples": []}, "correct": {"count": 0, "examples": []}},
+                "expected": {"not_found": {"count": 0, "examples": []}, "found": {"count": 0, "examples": []}},
+            }
     ignored = set()
     sentences_to_check = sentences[:limit] if limit else sentences
     total = len(sentences_to_check)
@@ -102,6 +146,8 @@ def run_evaluation(
             continue
 
         if conflict_resolver and len(predicted_relations) > 0:
+            if pre_conflict_scores is not None:
+                update_scores(sent, predicted_relations, expected_relations, set(), pre_conflict_scores)
             resolved, _, _ = conflict_resolver.resolve_all(sent.text, list(predicted_relations))
             predicted_relations = set(resolved)
 
@@ -113,38 +159,9 @@ def run_evaluation(
         if progress:
             progress.update(task, advance=1, description=f"Sentence {idx+1}/{total}")
 
-    # Агрегируем метрики
-    result = {"by_relation": {}, "micro": {"tp": 0, "fp": 0, "fn": 0}, "macro": {"precision": [], "recall": []}}
-    for rel_id, s in scores.items():
-        correct = s["predicted"]["correct"]["count"]
-        incorrect = s["predicted"]["incorrect"]["count"]
-        found = s["expected"]["found"]["count"]
-        not_found = s["expected"]["not_found"]["count"]
-        if found + not_found == 0:
-            continue
-        prec = correct / (correct + incorrect) if (correct + incorrect) > 0 else 0.0
-        rec = found / (found + not_found)
-        result["by_relation"][rel_id] = {
-            "precision": round(prec, 4),
-            "recall": round(rec, 4),
-            "f1": round(2 * prec * rec / (prec + rec), 4) if (prec + rec) > 0 else 0.0,
-            "support": found + not_found,
-        }
-        result["micro"]["tp"] += correct
-        result["micro"]["fp"] += incorrect
-        result["micro"]["fn"] += not_found
-        result["macro"]["precision"].append(prec)
-        result["macro"]["recall"].append(rec)
-
-    n = len(result["macro"]["precision"])
-    result["macro"]["precision"] = round(sum(result["macro"]["precision"]) / n, 4) if n else 0.0
-    result["macro"]["recall"] = round(sum(result["macro"]["recall"]) / n, 4) if n else 0.0
-    tp, fp, fn = result["micro"]["tp"], result["micro"]["fp"], result["micro"]["fn"]
-    result["micro"]["precision"] = round(tp / (tp + fp), 4) if (tp + fp) > 0 else 0.0
-    result["micro"]["recall"] = round(tp / (tp + fn), 4) if (tp + fn) > 0 else 0.0
-    p, r = result["micro"]["precision"], result["micro"]["recall"]
-    result["micro"]["f1"] = round(2 * p * r / (p + r), 4) if (p + r) > 0 else 0.0
-    return result, all_predicted_triples
+    result = _aggregate_scores(scores)
+    pre_conflict_result = _aggregate_scores(pre_conflict_scores) if pre_conflict_scores else None
+    return result, all_predicted_triples, pre_conflict_result
 
 
 def main():
@@ -187,7 +204,7 @@ def main():
             from semantics_analysis.multi_agent.conflict_resolution import RelationConflictResolver
             conflict_resolver = RelationConflictResolver()
 
-        result, predicted_triples = run_evaluation(
+        result, predicted_triples, _ = run_evaluation(
             sentences,
             relation_extractor,
             ref_resolver,
