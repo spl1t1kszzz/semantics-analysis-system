@@ -6,7 +6,7 @@ app-config:
   class-threshold: 0.5
 
   # LLM
-  llm: 'gpt-5.2'
+  llm: 'qwen2.5:7b'
 
   # Relation extraction
   max-term-distance: 300
