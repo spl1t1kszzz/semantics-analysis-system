@@ -75,6 +75,19 @@ poetry run python scripts/evaluate_on_dataset_kristina.py [sentences.json] [--li
 poetry run python scripts/compare_pipeline_multiagent.py [sentences.json] [--limit N]
 ```
 
+## Результаты
+
+Оценка на 100 предложениях, модель `qwen2.5:7b`, 114 эталонных отношений:
+
+| Метрика | Базовый | Мультиагентный | Δ |
+|---------|---------|----------------|---|
+| Precision (micro) | 0.712 | 0.715 | +0.003 |
+| Recall (micro) | 0.824 | 0.861 | +0.037 |
+| **F1 (micro)** | **0.764** | **0.782** | **+0.018** |
+| **F1 (macro)** | **0.743** | **0.794** | **+0.051** |
+
+Подробности: [`results/compare_baseline_vs_multiagent_qwen2.5_7b_100sent.md`](results/compare_baseline_vs_multiagent_qwen2.5_7b_100sent.md)
+
 ## Пример
 
 ![image](https://github.com/aiwannafly/semantics-analysis-system/assets/90191819/19ebca4e-59fd-4555-92ef-8c9d8ac18f30)
@@ -84,4 +97,3 @@ poetry run python scripts/compare_pipeline_multiagent.py [sentences.json] [--lim
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — архитектура системы
 - [`docs/MULTI_AGENT.md`](docs/MULTI_AGENT.md) — мультиагентная архитектура
 - [`docs/CHANGELOG.md`](docs/CHANGELOG.md) — список изменений
-- [`results/experiments/EXPERIMENTS.md`](results/experiments/EXPERIMENTS.md) — результаты экспериментов
