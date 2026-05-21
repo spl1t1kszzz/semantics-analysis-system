@@ -206,10 +206,10 @@ app-config:
   term-threshold: 0.2      # Порог для RoBERTa term extraction
   class-threshold: 0.5     # Порог для RoBERTa classification
   max-term-distance: 300   # Макс. расстояние между терминами для поиска отношений
-  use-multi-agent: true    # Включить multi-probe + разрешение конфликтов
+  use-multi-agent: false   # false = baseline; true = multi-probe + конфликты (см. config.multiagent.yml)
 ```
 
-Секреты хранятся в `.env`:
+Эталон baseline: [BASELINE.md](BASELINE.md). Секреты хранятся в `.env`:
 - `OPENAI_API_KEY` — для OpenAI / OpenAI-совместимых провайдеров
 - `ANTHROPIC_API_KEY` — для моделей Claude
 - `OPENAI_API_BASE` — альтернативный endpoint (Groq, OpenRouter)

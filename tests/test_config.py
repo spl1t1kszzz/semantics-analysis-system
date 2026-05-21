@@ -11,7 +11,7 @@ class TestConfig:
         assert c.device == 'cpu'
         assert c.llm == 'gpt-4o-mini'
         assert c.max_term_distance == 300
-        assert c.use_multi_agent is True
+        assert c.use_multi_agent is False
         assert c.log_prompts is False
 
     def test_show_explanation_enables_log_responses(self):

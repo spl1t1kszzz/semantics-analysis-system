@@ -20,7 +20,7 @@ class Config:
     max_term_distance: int = 300
 
     # Multi-agent
-    use_multi_agent: bool = True
+    use_multi_agent: bool = False
     use_conflict_dialogue: bool = False
     use_reverify_after_resolve: bool = False
 

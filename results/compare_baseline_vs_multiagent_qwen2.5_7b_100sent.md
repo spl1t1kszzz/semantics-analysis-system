@@ -26,24 +26,24 @@ TP=89/93, FP=36/37, FN=19/15 (baseline/multiagent)
 | Method_solves_Task | 11 | 0.88/0.64/0.74 | 0.89/0.73/0.80 | +0.06 |
 | Model_isUsedIn_Application | 9 | 0.90/1.00/0.95 | 0.90/1.00/0.95 | +0.00 |
 | Metric_hasValue_Value | 7 | 1.00/0.86/0.92 | 1.00/0.86/0.92 | +0.00 |
+| Object_isUsedInSolving_Task | 6 | 1.00/0.83/0.91 | 1.00/0.83/0.91 | +0.00 |
 | Method_isAlternativeNameFor_Method | 6 | 0.55/1.00/0.71 | 0.55/1.00/0.71 | +0.00 |
 | Date_isDateOf_Method | 6 | 1.00/0.50/0.67 | 1.00/0.50/0.67 | +0.00 |
-| Object_isUsedInSolving_Task | 6 | 1.00/0.83/0.91 | 1.00/0.83/0.91 | +0.00 |
 | Task_isAlternativeNameFor_Task | 5 | 0.71/1.00/0.83 | 0.71/1.00/0.83 | +0.00 |
-| Metric_isUsedFor_Model | 4 | 1.00/1.00/1.00 | 1.00/1.00/1.00 | +0.00 |
 | Application_isUsedIn_Science | 4 | 0.67/0.50/0.57 | 0.60/0.75/0.67 | +0.10 |
+| Metric_isUsedFor_Model | 4 | 1.00/1.00/1.00 | 1.00/1.00/1.00 | +0.00 |
 | Model_isUsedForSolving_Task | 3 | 1.00/0.33/0.50 | 1.00/0.33/0.50 | +0.00 |
-| Task_isSolvedIn_Science | 3 | 0.38/1.00/0.55 | 0.38/1.00/0.55 | +0.00 |
 | Application_isAlternativeNameFor_Application | 3 | 0.33/0.67/0.44 | 0.33/0.67/0.44 | +0.00 |
+| Task_isSolvedIn_Science | 3 | 0.38/1.00/0.55 | 0.38/1.00/0.55 | +0.00 |
 | Science_isAlternativeNameFor_Science | 2 | 1.00/1.00/1.00 | 1.00/1.00/1.00 | +0.00 |
-| Metric_isUsedIn_Task | 2 | 1.00/1.00/1.00 | 1.00/1.00/1.00 | +0.00 |
 | Metric_isAlternativeNameFor_Metric | 2 | 1.00/1.00/1.00 | 1.00/1.00/1.00 | +0.00 |
-| Application_hasAuthor_Person | 2 | 0.33/1.00/0.50 | 0.33/1.00/0.50 | +0.00 |
 | Method_hasAuthor_Person | 2 | 1.00/0.50/0.67 | 1.00/0.50/0.67 | +0.00 |
+| Application_hasAuthor_Person | 2 | 0.33/1.00/0.50 | 0.33/1.00/0.50 | +0.00 |
+| Metric_isUsedIn_Task | 2 | 1.00/1.00/1.00 | 1.00/1.00/1.00 | +0.00 |
+| Model_hasAuthor_Organization | 1 | 0.33/1.00/0.50 | 0.33/1.00/0.50 | +0.00 |
 | Method_isUsedIn_Application | 1 | 0.00/0.00/0.00 | 0.00/0.00/0.00 | +0.00 |
 | Activity_hasAuthor_Organization | 1 | 1.00/1.00/1.00 | 1.00/1.00/1.00 | +0.00 |
 | Method_isUsedIn_Science | 1 | 0.00/0.00/0.00 | 1.00/1.00/1.00 | +1.00 |
-| Model_hasAuthor_Organization | 1 | 0.33/1.00/0.50 | 0.33/1.00/0.50 | +0.00 |
 
 ## 4. Распределение классов терминов (gold)
 | Класс | Количество |

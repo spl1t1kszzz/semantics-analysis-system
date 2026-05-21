@@ -1,28 +1,23 @@
+# Мультиагентный режим: multi-probe fallback + разрешение конфликтов (re-verify).
+
 app-config:
-  # Term extraction
   use-dict: true
   device: 'cpu'
   term-threshold: 0.2
   class-threshold: 0.5
 
-  # LLM
   llm: 'qwen2.5:7b'
-
-  # Relation extraction
   max-term-distance: 300
 
-  # Multi-agent (false = baseline; см. config.multiagent.yml и docs/BASELINE.md)
-  use-multi-agent: false
-  use-conflict-dialogue: false
-  use-reverify-after-resolve: false
+  use-multi-agent: true
+  use-conflict-dialogue: true
+  use-reverify-after-resolve: true
 
-  # Display
   display-graph: true
   show-term-predictions: false
   show-class-predictions: false
   show-explanation: false
   split-on-sentences: false
 
-  # Logging
   log-prompts: false
   log-llm-responses: false

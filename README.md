@@ -45,9 +45,11 @@ OPENAI_PROXY=http://127.0.0.1:8080
 ```yaml
 app-config:
   llm: 'qwen2.5:7b'        # имя модели
-  use-multi-agent: true     # мультиагентное разрешение конфликтов
+  use-multi-agent: false    # false = baseline (эталон); true = multi-probe + конфликты
   max-term-distance: 300    # макс. дистанция между терминами для отношений
 ```
+
+Конфиги: `config.yml` (baseline по умолчанию), `config.baseline.yml`, `config.multiagent.yml`. Эталонные метрики: [`docs/BASELINE.md`](docs/BASELINE.md).
 
 ## Запуск
 

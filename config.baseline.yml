@@ -1,28 +1,24 @@
+# Эталонный baseline-пайплайн (см. docs/BASELINE.md и results/compare_baseline_vs_multiagent_qwen2.5_7b_100sent.md)
+# Стандартное извлечение отношений: detect_predicates + verify_relation, без multi-probe и без conflict resolver.
+
 app-config:
-  # Term extraction
   use-dict: true
   device: 'cpu'
   term-threshold: 0.2
   class-threshold: 0.5
 
-  # LLM
   llm: 'qwen2.5:7b'
-
-  # Relation extraction
   max-term-distance: 300
 
-  # Multi-agent (false = baseline; см. config.multiagent.yml и docs/BASELINE.md)
   use-multi-agent: false
   use-conflict-dialogue: false
   use-reverify-after-resolve: false
 
-  # Display
   display-graph: true
   show-term-predictions: false
   show-class-predictions: false
   show-explanation: false
   split-on-sentences: false
 
-  # Logging
   log-prompts: false
   log-llm-responses: false
