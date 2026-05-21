@@ -71,11 +71,13 @@ poetry run python analyze_article.py
 poetry run python scripts/evaluate_on_dataset_kristina.py [sentences.json] [--limit N]
 ```
 
-**Сравнение baseline vs мультиагентный пайплайн:**
+**Оценка multi-agent vs зафиксированный baseline** (один прогон; baseline из `benchmarks/`):
 
 ```bash
 poetry run python scripts/compare_pipeline_multiagent.py [sentences.json] [--limit N]
 ```
+
+Полный пересчёт baseline + multi-agent: добавьте `--run-both`.
 
 ## Результаты
 

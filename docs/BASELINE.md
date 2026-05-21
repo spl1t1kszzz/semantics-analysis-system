@@ -18,7 +18,7 @@
 ## Эталонные метрики (100 предложений, `qwen2.5:7b`)
 
 Датасет: `tests/dataset_kristina_sentences.json`, `--limit 100`.  
-Полный отчёт: [`results/compare_baseline_vs_multiagent_qwen2.5_7b_100sent.md`](../results/compare_baseline_vs_multiagent_qwen2.5_7b_100sent.md).
+Зафиксированный эталон (не менять): [`benchmarks/frozen_baseline_qwen2.5_7b_100sent.md`](../benchmarks/frozen_baseline_qwen2.5_7b_100sent.md) и `.json`.
 
 | Метрика | Baseline (эталон) | Мультиагент (для сравнения) |
 |---------|-------------------|-----------------------------|
@@ -35,9 +35,14 @@
 # Только baseline-оценка (конфиг по умолчанию = baseline)
 poetry run python scripts/evaluate_on_dataset_kristina.py tests/dataset_kristina_sentences.json --limit 100
 
-# Сравнение baseline vs multi-agent (два прогона)
+# Только multi-agent, сравнение с frozen baseline (один прогон)
 poetry run python scripts/compare_pipeline_multiagent.py tests/dataset_kristina_sentences.json --limit 100
+
+# Полный пересчёт baseline + multi-agent (два прогона)
+poetry run python scripts/compare_pipeline_multiagent.py tests/dataset_kristina_sentences.json --limit 100 --run-both
 ```
+
+Результаты экспериментов: `results/compare_vs_frozen_baseline_*.md` (не путать с frozen эталоном в `benchmarks/`).
 
 Мультиагентный прогон вручную:
 
