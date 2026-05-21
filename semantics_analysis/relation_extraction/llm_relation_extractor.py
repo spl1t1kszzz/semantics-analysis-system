@@ -1,3 +1,4 @@
+import re
 from typing import List, Optional, Iterator, Tuple
 
 import nltk.tokenize
@@ -275,13 +276,20 @@ class LLMRelationExtractor(RelationExtractor):
                     examples_list += f'```\nТекст: {example_text}\nТермин {class1}: {example_t1}\nТермин {class2}: {example_t2}\n{predicate}: {reply}\n```\n'
                     counter += 1
 
-        # Формируем список вопросов
+        relations_list = ''
+        questions_list = ''
         probe_lines = []
         answer_lines = []
         for i, predicate in enumerate(predicates, 1):
-            desc = metadata.get(predicate, {}).get('yes', {}).get('description', predicate)
+            pred_meta = metadata.get(predicate, {})
+            desc = pred_meta.get('yes', {}).get('description', predicate)
+            relations_list += f' - {predicate}: {desc}\n'
             probe_lines.append(f'{i}. {predicate} — {desc}')
-            answer_lines.append(f'{i}. {predicate}: <да/нет>')
+            answer_lines.append(f'{i}. {predicate}:')
+
+            questions_list += f' - {predicate}:\n'
+            for question in pred_meta.get('evaluation-questions', [])[:3]:
+                questions_list += f'     • {question}\n'
 
         prompt = self.multi_probe_prompt_template
         prompt = prompt.replace('{text}', context)
@@ -289,6 +297,8 @@ class LLMRelationExtractor(RelationExtractor):
         prompt = prompt.replace('{class2}', class2)
         prompt = prompt.replace('{term1}', term1.value)
         prompt = prompt.replace('{term2}', term2.value)
+        prompt = prompt.replace('{relations_list}', relations_list.strip())
+        prompt = prompt.replace('{questions_list}', questions_list.strip() or '—')
         prompt = prompt.replace('{examples_list}', examples_list)
         prompt = prompt.replace('{probe_list}', '\n'.join(probe_lines))
         prompt = prompt.replace('{answer_format}', '\n'.join(answer_lines))
@@ -305,19 +315,49 @@ class LLMRelationExtractor(RelationExtractor):
         if self.log_llm_responses:
             log(f'[MULTI-PROBE RESPONSE]: {response}\n')
 
-        # Парсим ответ: ищем «да» рядом с именем предиката
+        results = self._parse_multi_probe_response(response, predicates)
+        if not results:
+            results = self._parse_multi_probe_response_legacy(response, predicates)
+        return results
+
+    @staticmethod
+    def _parse_multi_probe_response(response: str, predicates: List[str]) -> List[Tuple[str, bool]]:
+        """Строки вида «1. solves: да» или «solves: нет»."""
+        if not predicates:
+            return []
+        alt = '|'.join(re.escape(p) for p in predicates)
+        pattern = re.compile(
+            rf'(?:^\s*\d+\.\s*)?({alt})\s*:\s*(да|нет|yes|no)\b',
+            re.IGNORECASE | re.MULTILINE,
+        )
+        yes_tokens = {'да', 'yes'}
+        found: List[Tuple[str, bool]] = []
+        seen = set()
+        for match in pattern.finditer(response):
+            predicate = match.group(1)
+            if predicate in seen:
+                continue
+            seen.add(predicate)
+            if match.group(2).lower() in yes_tokens:
+                found.append((predicate, False))
+        return found
+
+    @staticmethod
+    def _parse_multi_probe_response_legacy(response: str, predicates: List[str]) -> List[Tuple[str, bool]]:
         results = []
         response_lower = response.lower()
         for predicate in predicates:
             predicate_lower = predicate.lower()
             if predicate_lower not in response_lower:
                 continue
-            # Берём фрагмент после имени предиката
             pos = response_lower.index(predicate_lower) + len(predicate_lower)
-            snippet = response_lower[pos:pos + 20]
-            if 'да' in snippet or 'yes' in snippet:
+            snippet = response_lower[pos:pos + 24]
+            if re.search(r'\b(да|yes)\b', snippet):
                 results.append((predicate, False))
-
+            elif re.search(r'\b(нет|no)\b', snippet):
+                continue
+            elif 'да' in snippet or 'yes' in snippet:
+                results.append((predicate, False))
         return results
 
     def detect_predicate(self, term1: Term, term2: Term, text: str) -> (Optional[str], bool):

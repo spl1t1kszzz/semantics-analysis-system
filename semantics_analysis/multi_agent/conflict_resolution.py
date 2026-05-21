@@ -1,10 +1,11 @@
 """
 Поиск и разрешение конфликтов между извлечёнными отношениями.
 
-Конфликт: одна и та же пара сущностей (term1, term2) связана разными предикатами
-или противоречащими отношениями. Разрешение — через LLM (диалог/выбор наилучшего).
+Конфликт: одна и та же пара сущностей (term1, term2) связана разными предикатами.
+Разрешение: re-verify кандидатов → при необходимости выбор одного через LLM.
 """
 
+import re
 from collections import defaultdict
 from pathlib import Path
 from typing import List, Tuple, Optional, Callable, TYPE_CHECKING
@@ -19,32 +20,56 @@ if TYPE_CHECKING:
 
 
 def _term_pair_key(rel: Relation) -> Tuple[str, str, str, str]:
-    """Ключ пары терминов: (class1, value1, class2, value2) нормализованный."""
     t1, t2 = rel.term1, rel.term2
     return (t1.class_, t1.value.strip().lower(), t2.class_, t2.value.strip().lower())
 
 
 def detect_relation_conflicts(relations: List[Relation]) -> List[List[Relation]]:
-    """
-    Группирует отношения по паре (term1, term2). Возвращает только группы,
-    где есть разные предикаты (настоящий конфликт).
-    Группы с одинаковым предикатом (варианты — разные формы термина) — не конфликт.
-    """
     by_pair: dict = defaultdict(list)
     for rel in relations:
-        key = _term_pair_key(rel)
-        by_pair[key].append(rel)
+        by_pair[_term_pair_key(rel)].append(rel)
 
-    return [group for group in by_pair.values()
-            if len(set(r.predicate for r in group)) > 1]
+    return [
+        group for group in by_pair.values()
+        if len(set(r.predicate for r in group)) > 1
+    ]
+
+
+def parse_conflict_choice(response: str, n_options: int) -> Optional[int]:
+    """
+    Индекс выбранного варианта 1..n_options или None («нет» / не распознано как выбор).
+    """
+    if n_options <= 0:
+        return None
+
+    text = response.strip()
+    lower = text.lower()
+
+    if re.match(r'^(нет|none|ни одн|ничего)\b', lower):
+        return None
+
+    for pattern in (
+        r'(?:вариант|ответ|выбор|option)?\s*[#№]?\s*(\d+)',
+        r'^(\d+)\s*[.:)\-]',
+        r'\b(\d+)\b',
+    ):
+        match = re.search(pattern, lower)
+        if match:
+            idx = int(match.group(1))
+            if 1 <= idx <= n_options:
+                return idx
+
+    return None
 
 
 class RelationConflictResolver:
     """
-    Агент разрешения конфликтов: для каждой конфликтной группы отношений
-    запрашивает у LLM выбор одного корректного отношения (или ни одного).
-    Опционально: двухшаговый диалог (сначала обоснование, потом выбор) и
-    повторная верификация выбранного отношения через callback.
+    Для конфликтной группы (>1 предикат на одну пару терминов):
+    1) re-verify каждого кандидата (если задан callback);
+    2) 0 подтверждённых → LLM выбирает один или «нет»;
+    3) 1 подтверждённый → возвращаем его;
+    4) 2+ подтверждённых → LLM выбирает лучший среди них;
+    5) опционально повторная verify выбранного отношения.
     """
 
     def __init__(
@@ -73,28 +98,18 @@ class RelationConflictResolver:
     def _default_prompt(self) -> str:
         return """Текст: {context}
 
-Для пары сущностей «{term1_value}» ({term1_class}) и «{term2_value}» ({term2_class}) из текста выше предложены следующие отношения:
+Для пары «{term1_value}» ({term1_class}) и «{term2_value}» ({term2_class}) предложены отношения:
 {options}
 
-Выбери ровно одно отношение, которое верно в данном контексте, или ответь «нет», если ни одно не подходит.
-Ответ (только номер варианта или слово «нет»):"""
-
-    def _dialogue_reasoning_prompt(self) -> str:
-        return """Текст: {context}
-
-Для пары сущностей «{term1_value}» ({term1_class}) и «{term2_value}» ({term2_class}) предложены отношения:
-{options}
-
-Кратко обоснуй (1–2 предложения), какие варианты подходят к тексту, а какие нет. Не выбирай пока — только оцени."""
-
-    def _dialogue_choice_prompt(self) -> str:
-        return """{reasoning}
-
-Исходя из твоего обоснования выше, выбери ровно один вариант по номеру (1, 2, …) или ответь «нет», если ни один не подходит.
+Выбери ровно одно отношение или ответь «нет».
 Ответ (номер или «нет»):"""
 
+    def _log(self, label: str, content: str) -> None:
+        if self.log_prompts or self.log_responses:
+            from semantics_analysis.utils import log
+            log(f'[{label}]: {content}\n')
+
     def _get_predicate_description(self, class1: str, class2: str, predicate: str) -> str:
-        """Получить описание предиката из метаданных онтологии."""
         for key in [(class1, class2), (class2, class1)]:
             if key in relations_metadata_by_class_pair:
                 metadata = relations_metadata_by_class_pair[key]
@@ -102,15 +117,25 @@ class RelationConflictResolver:
                     return metadata[predicate]['yes'].get('description', '')
         return ''
 
+    def _format_options(self, relations: List[Relation]) -> str:
+        lines = []
+        for i, rel in enumerate(relations, 1):
+            desc = self._get_predicate_description(
+                rel.term1.class_, rel.term2.class_, rel.predicate
+            )
+            line = f'{i}. {rel.predicate} — «{rel.term1.value}» → «{rel.term2.value}»'
+            if desc:
+                line += f'\n   Смысл: {desc}'
+            lines.append(line)
+        return '\n'.join(lines)
+
     def _extract_context_around_terms(self, text: str, t1: Term, t2: Term, margin: int = 500) -> str:
-        """Вырезать фрагмент текста вокруг терминов, а не с начала."""
         start_pos = min(t1.mentions[0].start_pos, t2.mentions[0].start_pos)
         end_pos = max(t1.mentions[0].end_pos, t2.mentions[0].end_pos)
 
         ctx_start = max(0, start_pos - margin)
         ctx_end = min(len(text), end_pos + margin)
 
-        # Расширить до границ предложений
         sentences = nltk.tokenize.sent_tokenize(text)
         offset = 0
         first_sent_id = 0
@@ -126,46 +151,100 @@ class RelationConflictResolver:
 
         return ' '.join(sentences[first_sent_id:last_sent_id + 1])
 
-    def resolve_group(self, text: str, group: List[Relation]) -> List[Relation]:
-        """
-        Для группы конфликтующих отношений (>1 предикат для одной пары):
-        если есть reverify_callback — проверить каждое независимо,
-        оставить подтверждённые. Если ни одно не подтвердилось — оставить все
-        (чтобы не терять recall).
-        """
+    def _build_choice_prompt(
+        self,
+        context: str,
+        t1: Term,
+        t2: Term,
+        candidates: List[Relation],
+    ) -> str:
+        prompt = self.prompt_template
+        prompt = prompt.replace('{context}', context)
+        prompt = prompt.replace('{term1_value}', t1.value)
+        prompt = prompt.replace('{term1_class}', t1.class_)
+        prompt = prompt.replace('{term2_value}', t2.value)
+        prompt = prompt.replace('{term2_class}', t2.class_)
+        prompt = prompt.replace('{options}', self._format_options(candidates))
+        return prompt.strip()
+
+    def _llm_choose_one(
+        self,
+        text: str,
+        group: List[Relation],
+        candidates: List[Relation],
+    ) -> Optional[Relation]:
+        if not candidates:
+            return None
+
+        t1, t2 = group[0].term1, group[0].term2
+        context = self._extract_context_around_terms(text, t1, t2)
+
+        if self.use_dialogue and len(candidates) > 1:
+            reasoning_prompt = (
+                f'Текст: {context}\n\n'
+                f'Пара: «{t1.value}» ({t1.class_}) и «{t2.value}» ({t2.class_}).\n'
+                f'Варианты:\n{self._format_options(candidates)}\n\n'
+                'Кратко (1–2 предложения): какие варианты подходят к тексту, какие нет. '
+                'Не выбирай номер — только оценка.'
+            )
+            self._log('CONFLICT REASONING PROMPT', reasoning_prompt)
+            reasoning = self.llm_agent(reasoning_prompt, max_new_tokens=128, stop_sequences=[])
+            self._log('CONFLICT REASONING RESPONSE', reasoning)
+
+            choice_prompt = (
+                f'{reasoning.strip()}\n\n'
+                f'Исходя из оценки выше, выбери ровно один номер (1–{len(candidates)}) '
+                f'или ответь «нет».\nОтвет:'
+            )
+        else:
+            choice_prompt = self._build_choice_prompt(context, t1, t2, candidates)
+
+        self._log('CONFLICT CHOICE PROMPT', choice_prompt)
+        response = self.llm_agent(choice_prompt, max_new_tokens=16, stop_sequences=['\n\n'])
+        self._log('CONFLICT CHOICE RESPONSE', response)
+
+        idx = parse_conflict_choice(response, len(candidates))
+        if idx is None:
+            return None
+        return candidates[idx - 1]
+
+    def _filter_by_reverify(self, text: str, group: List[Relation]) -> List[Relation]:
         if self.reverify_callback is None:
+            return list(group)
+        return [rel for rel in group if self.reverify_callback(text, rel)]
+
+    def resolve_group(self, text: str, group: List[Relation]) -> List[Relation]:
+        if len(group) <= 1:
             return group
 
-        verified = []
-        for rel in group:
-            if self.reverify_callback(text, rel):
-                verified.append(rel)
+        verified = self._filter_by_reverify(text, group)
 
-        # Если ни одно не прошло верификацию, сохраняем все —
-        # лучше FP, чем потерять TP
-        return verified if verified else group
+        chosen: Optional[Relation]
+        if len(verified) == 1:
+            chosen = verified[0]
+        elif len(verified) == 0:
+            chosen = self._llm_choose_one(text, group, group)
+        else:
+            chosen = self._llm_choose_one(text, group, verified)
+
+        if chosen is None:
+            return []
+
+        if self.reverify_callback is not None and chosen not in verified:
+            if not self.reverify_callback(text, chosen):
+                return []
+
+        return [chosen]
 
     def resolve_all(self, text: str, relations: List[Relation]) -> Tuple[List[Relation], int, int]:
-        """
-        Находит все конфликтные группы, разрешает каждую.
-        Возвращает (список отношений без конфликтов, число конфликтов, число разрешённых).
-        """
         conflicts = detect_relation_conflicts(relations)
         if not conflicts:
             return relations, 0, 0
+
         conflict_set = {rel for group in conflicts for rel in group}
         non_conflict_rels = [rel for rel in relations if rel not in conflict_set]
-        resolved = []
+        resolved: List[Relation] = []
         for group in conflicts:
-            chosen = self.resolve_group(text, group)
-            resolved.extend(chosen)
-        result = non_conflict_rels + resolved
-        n_in = len(relations)
-        n_out = len(set(result))
-        if n_out != n_in:
-            print(f"[DEBUG resolve_all] IN={n_in} OUT={n_out} conflicts={len(conflicts)} conflict_rels={len(conflict_set)} non_conflict={len(non_conflict_rels)} resolved={len(resolved)}")
-            for group in conflicts:
-                predicates = [r.predicate for r in group]
-                t1, t2 = group[0].term1, group[0].term2
-                print(f"  conflict: ({t1.value}) -- {predicates} -- ({t2.value})")
-        return result, len(conflicts), len(conflicts)
+            resolved.extend(self.resolve_group(text, group))
+
+        return non_conflict_rels + resolved, len(conflicts), len(conflicts)
