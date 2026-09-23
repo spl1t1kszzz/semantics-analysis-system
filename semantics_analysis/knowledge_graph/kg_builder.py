@@ -2,7 +2,7 @@
 Построение графа знаний: дедупликация отношений и вызов конвертации в онтологические сущности.
 """
 
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 
 from semantics_analysis.entities import Term, Relation
 
@@ -34,6 +34,7 @@ def build_knowledge_graph(
     terms: List[Term],
     relations: List[Relation],
     deduplicate: bool = True,
+    llm_model: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Строит граф знаний (objects + ont_relations) из терминов и отношений.
@@ -48,7 +49,7 @@ def build_knowledge_graph(
 
     from semantics_analysis.ontology_entities import convert_to_ont_entities
 
-    objects, ont_relations = convert_to_ont_entities(terms, relations)
+    objects, ont_relations = convert_to_ont_entities(terms, relations, llm_model=llm_model)
     return {
         "objects": [o.to_json() for o in objects],
         "relations": [r.to_json() for r in ont_relations],

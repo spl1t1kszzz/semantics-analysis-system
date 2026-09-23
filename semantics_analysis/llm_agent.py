@@ -26,6 +26,22 @@ def _is_anthropic_model(model: str) -> bool:
     return model in ANTHROPIC_MODELS or model.startswith('claude-')
 
 
+def _default_model_from_config() -> str:
+    from pathlib import Path
+    from semantics_analysis.config import load_config
+
+    for name in ('config.multiagent.yml', 'config.yml'):
+        path = Path(name)
+        if path.is_file():
+            try:
+                return load_config(str(path)).llm
+            except ValueError:
+                continue
+    raise RuntimeError(
+        "Модель LLM не задана. Укажите model= в LLMAgent или 'llm' в config.yml."
+    )
+
+
 def _get_openai_client():
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     base_url = os.environ.get("OPENAI_API_BASE", "").strip() or None
@@ -58,8 +74,8 @@ class LLMAgent:
             self,
             model: str = '',
     ):
-        self.model = model
-        self._use_anthropic = _is_anthropic_model(model)
+        self.model = model or _default_model_from_config()
+        self._use_anthropic = _is_anthropic_model(self.model)
         if self._use_anthropic:
             self.llm = _get_anthropic_client()
         else:

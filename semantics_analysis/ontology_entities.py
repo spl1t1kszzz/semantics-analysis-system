@@ -1,6 +1,6 @@
 import json
 import re
-from typing import Dict, List, Any, Set, Tuple
+from typing import Dict, List, Any, Set, Tuple, Optional
 
 from semantics_analysis.entities import Relation, Term
 from alphabet_detector import AlphabetDetector
@@ -155,7 +155,8 @@ def term_to_attribute(
 def add_person_attrs(
         terms: Set[Term],
         attrs_by_term: Dict[Term, List[Attribute]],
-        ad: AlphabetDetector
+        ad: AlphabetDetector,
+        llm_model: Optional[str] = None,
 ):
     persons = [t for t in terms if t.class_ == 'Person']
 
@@ -163,7 +164,7 @@ def add_person_attrs(
         return
 
     from semantics_analysis.llm_agent import LLMAgent
-    llm_agent = LLMAgent()
+    llm_agent = LLMAgent(model=llm_model or '')
 
     with open('prompts/person.txt', 'r', encoding='utf-8') as f:
         prompt_template = f.read().strip()
@@ -202,7 +203,8 @@ def add_person_attrs(
 
 def convert_to_ont_entities(
         terms: List[Term],
-        relations: List[Relation]
+        relations: List[Relation],
+        llm_model: Optional[str] = None,
 ) -> Tuple[List[Object], List[OntRelation]]:
     ad = AlphabetDetector()
 
@@ -263,7 +265,7 @@ def convert_to_ont_entities(
             attrs_by_term[term] = alt_name_attrs
 
     # we should also add names and surnames as attrs for persons
-    add_person_attrs(considered_terms, attrs_by_term, ad)
+    add_person_attrs(considered_terms, attrs_by_term, ad, llm_model=llm_model)
 
     # now we can turn terms into objects
 

@@ -36,6 +36,7 @@ inquirer = "^3.2.4"
 
 # Web scraping (for Habr article parsing)
 bs4 = "^0.0.2"
+pydantic = ">=2.10,<3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0"
